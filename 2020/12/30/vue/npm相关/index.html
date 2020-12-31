@@ -1,122 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Z.A.M.">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="npm相关"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Site Title -->
-  <title>Z. A. M. 的个人博客</title>
-
-  <!-- Bootstrap CSS -->
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
-
-  <!-- Custom CSS -->
-  
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+    <meta name="author" content="Z.A.M.">
 
 
-  <!-- Google Analytics -->
-  
+
+
+
+<title>npm相关 | Z. A. M. 的个人博客</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">npm相关</p>
-          <p class="subtitle"></p>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
         </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/">
-                  
-                  文档
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/archives">
-                  
-                  分类
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://gitee.com/aidemin">
-                  
-                  码云
-                  
-                </a>
-              </li>
-            
-          </ul>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </nav>
+
 </header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By Z.A.M.</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2020-12-30</span>
-            <span class="time">16:43:58</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
 
-<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
-</span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
 
-<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
 
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
 
-          </div>
-        
-        <!-- Post Main Content -->
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">npm相关</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
         <div class="post-content">
-          <h2 id="1-npm-相关"><a href="#1-npm-相关" class="headerlink" title="1 npm 相关"></a>1 npm 相关</h2><h3 id="1-1-npm-是-基于-Node-js-的，所以要先安装-Node-js"><a href="#1-1-npm-是-基于-Node-js-的，所以要先安装-Node-js" class="headerlink" title="1.1 npm 是 基于 Node.js 的，所以要先安装 Node.js"></a>1.1 npm 是 基于 Node.js 的，所以要先安装 Node.js</h3><p>在浏览器地址栏输入<code>https://nodejs.org/en/</code>, 进入<code>Node.js</code>官网后，点击下载左边的稳定版本，如下图所示：</p>
+            <h2 id="1-npm-相关"><a href="#1-npm-相关" class="headerlink" title="1 npm 相关"></a>1 npm 相关</h2><h3 id="1-1-npm-是-基于-Node-js-的，所以要先安装-Node-js"><a href="#1-1-npm-是-基于-Node-js-的，所以要先安装-Node-js" class="headerlink" title="1.1 npm 是 基于 Node.js 的，所以要先安装 Node.js"></a>1.1 npm 是 基于 Node.js 的，所以要先安装 Node.js</h3><p>在浏览器地址栏输入<code>https://nodejs.org/en/</code>, 进入<code>Node.js</code>官网后，点击下载左边的稳定版本，如下图所示：</p>
 <p><img src="https://img2018.cnblogs.com/blog/1426850/201811/1426850-20181114175124912-557196367.png" alt="img"></p>
 <h3 id="1-2-npm-管理工作目录"><a href="#1-2-npm-管理工作目录" class="headerlink" title="1.2 npm 管理工作目录"></a>1.2 npm 管理工作目录</h3><p>对于要创建 Vue 项目的工作目录先通过 “npm init -y”的命令进行管理</p>
 <h3 id="1-3-npm-下载依赖包"><a href="#1-3-npm-下载依赖包" class="headerlink" title="1.3 npm 下载依赖包"></a>1.3 npm 下载依赖包</h3><p>npm install(可以简写成 i）包的名称 @xxx(@xxx 是包的版本)</p>
@@ -137,43 +219,73 @@
 <h3 id="3-4-打包文件"><a href="#3-4-打包文件" class="headerlink" title="3.4 打包文件"></a>3.4 打包文件</h3><p>npm run build</p>
 
         </div>
-      </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Z.A.M.</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/npm%E7%9B%B8%E5%85%B3/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/npm%E7%9B%B8%E5%85%B3/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/vue/"># vue</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/vue/map%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/">map遍历方式</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/vue/vue-cli%EF%BC%88vue%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%89/">vue-cli（脚手架使用）</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-  </div>
-</article>
-
-
-
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
-    </div>
-  </div>
 </footer>
 
-
-    <!-- After Footer Scripts -->
-
-<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
-
-  </body>
+    </div>
+</body>
 </html>
-

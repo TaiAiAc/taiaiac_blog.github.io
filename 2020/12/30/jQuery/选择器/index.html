@@ -1,122 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Z.A.M.">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="选择器"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Site Title -->
-  <title>Z. A. M. 的个人博客</title>
-
-  <!-- Bootstrap CSS -->
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
-
-  <!-- Custom CSS -->
-  
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+    <meta name="author" content="Z.A.M.">
 
 
-  <!-- Google Analytics -->
-  
+
+
+
+<title>选择器 | Z. A. M. 的个人博客</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">选择器</p>
-          <p class="subtitle"></p>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
         </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/">
-                  
-                  文档
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/archives">
-                  
-                  分类
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://gitee.com/aidemin">
-                  
-                  码云
-                  
-                </a>
-              </li>
-            
-          </ul>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </nav>
+
 </header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By Z.A.M.</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2020-12-30</span>
-            <span class="time">16:43:58</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
 
-<a href="/taiaiac.gitee.io/categories/jQuery/">jQuery</a>
-</span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
 
-<a class="tag" href="/taiaiac.gitee.io/tags/jQuery/">#jQuery</a>
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
 
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
 
-          </div>
-        
-        <!-- Post Main Content -->
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">选择器</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/jQuery/">jQuery</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
         <div class="post-content">
-          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、标签选择器</span></span><br><span class="line">$(<span class="string">&#x27;div&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, <span class="string">&#x27;30px&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;p&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、类选择器</span></span><br><span class="line">$(<span class="string">&#x27;.p1&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3、id选择器</span></span><br><span class="line">$(<span class="string">&#x27;#div4&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;green&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4、并集选择器</span></span><br><span class="line">$(<span class="string">&#x27;p,.p1,#div4&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5、通用选择器（全局选择器）</span></span><br><span class="line">$(<span class="string">&#x27;*&#x27;</span>).css(&#123;</span><br><span class="line">  margin: <span class="number">0</span>,</span><br><span class="line">  padding: <span class="number">0</span>,</span><br><span class="line">  boxSizing: <span class="string">&#x27;border-box&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+            <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、标签选择器</span></span><br><span class="line">$(<span class="string">&#x27;div&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, <span class="string">&#x27;30px&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;p&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、类选择器</span></span><br><span class="line">$(<span class="string">&#x27;.p1&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3、id选择器</span></span><br><span class="line">$(<span class="string">&#x27;#div4&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;green&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4、并集选择器</span></span><br><span class="line">$(<span class="string">&#x27;p,.p1,#div4&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5、通用选择器（全局选择器）</span></span><br><span class="line">$(<span class="string">&#x27;*&#x27;</span>).css(&#123;</span><br><span class="line">  margin: <span class="number">0</span>,</span><br><span class="line">  padding: <span class="number">0</span>,</span><br><span class="line">  boxSizing: <span class="string">&#x27;border-box&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、后代选择器 是包括子及孙元素</span></span><br><span class="line">$(<span class="string">&#x27;ul li&#x27;</span>).css(<span class="string">&#x27;border-bottom&#x27;</span>, <span class="string">&#x27;1px solid black&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ul li:first&#x27;</span>).css(<span class="string">&#x27;border-top&#x27;</span>, <span class="string">&#x27;1px solid black&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ol li&#x27;</span>).css(<span class="string">&#x27;border&#x27;</span>, <span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、子选择器  父元素的直接子元素，不包括孙及以下元素</span></span><br><span class="line">$(<span class="string">&#x27;ul&gt;li&#x27;</span>).css(<span class="string">&#x27;border-bottom&#x27;</span>, <span class="string">&#x27;1px solid blue&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ul&gt;li:first&#x27;</span>).css(<span class="string">&#x27;border-top&#x27;</span>, <span class="string">&#x27;1px solid blue&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3、相邻兄弟选择器</span></span><br><span class="line">$(<span class="string">&#x27;li.second+li&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4、li.second同级别的兄弟元素li</span></span><br><span class="line">$(<span class="string">&#x27;li.second~li&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、有属性class的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、有属性class=box-alink的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class=box-alink]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//3、有属性class值不等于box-alink的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class!=box-alink]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;pink&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、href以www开头</span></span><br><span class="line">$(<span class="string">&#x27;a[href^=www]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;blue&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//5、href以.cn结尾</span></span><br><span class="line">$(<span class="string">&#x27;a[href$=\\.cn]&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//6、href包含#</span></span><br><span class="line">$(<span class="string">&#x27;a[href*=\\#]&#x27;</span>).css(&#123;</span><br><span class="line">  backgroundColor: <span class="string">&#x27;#ddd&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//7、多个属性交集</span></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;input[id][name$=man]&#x27;</span>).val())</span><br></pre></td></tr></table></figure>
 <h2 id="过滤选择器（17）"><a href="#过滤选择器（17）" class="headerlink" title="过滤选择器（17）"></a>过滤选择器（17）</h2><h4 id="li中的第一个元素"><a href="#li中的第一个元素" class="headerlink" title="li中的第一个元素"></a><code>li中的第一个元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:first&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br></pre></td></tr></table></figure>
@@ -152,43 +234,73 @@
 <h4 id="所有选中的元素-checked-包含-radio、checkbox、option"><a href="#所有选中的元素-checked-包含-radio、checkbox、option" class="headerlink" title="所有选中的元素 :checked 包含 radio、checkbox、option"></a>所有选中的元素 :checked 包含 radio、<code>checkbox</code>、option</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> checked = $(<span class="string">&#x27;input[type=checkbox]:not(:checked)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> checked) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="选中的-option-selected"><a href="#选中的-option-selected" class="headerlink" title="选中的 option :selected"></a>选中的 option :selected</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> select = $(<span class="string">&#x27;option:not(:selected)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> select) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
-      </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Z.A.M.</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/jQuery/"># jQuery</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/jQuery/%E4%BE%A7%E8%BE%B9slide/">侧边slide</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E8%8D%A7%E5%85%89%E8%BE%B9%E6%A1%86/">荧光边框</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-  </div>
-</article>
-
-
-
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
-    </div>
-  </div>
 </footer>
 
-
-    <!-- After Footer Scripts -->
-
-<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
-
-  </body>
+    </div>
+</body>
 </html>
-

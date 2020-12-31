@@ -1,122 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Z.A.M.">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="文件路径问题"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- Site Title -->
-  <title>Z. A. M. 的个人博客</title>
-
-  <!-- Bootstrap CSS -->
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
-
-  <!-- Custom CSS -->
-  
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+    <meta name="author" content="Z.A.M.">
 
 
-  <!-- Google Analytics -->
-  
+
+
+
+<title>文件路径问题 | Z. A. M. 的个人博客</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-
-  <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">文件路径问题</p>
-          <p class="subtitle"></p>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
         </div>
-        <div class="site-menu with-background-image">
-          <ul>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/">
-                  
-                  文档
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="/taiaiac.gitee.io/archives">
-                  
-                  分类
-                  
-                </a>
-              </li>
-            
-              <li>
-                <a href="https://gitee.com/aidemin">
-                  
-                  码云
-                  
-                </a>
-              </li>
-            
-          </ul>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </nav>
+
 </header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By Z.A.M.</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2020-12-30</span>
-            <span class="time">16:43:58</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
 
-<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
-</span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
 
-<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
 
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
 
-          </div>
-        
-        <!-- Post Main Content -->
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">文件路径问题</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
         <div class="post-content">
-          <h1 id="vue-cli3-项目模板怎么使用-public-目录下的静态文件"><a href="#vue-cli3-项目模板怎么使用-public-目录下的静态文件" class="headerlink" title="vue@cli3 项目模板怎么使用 public 目录下的静态文件"></a>vue@cli3 项目模板怎么使用 public 目录下的静态文件</h1><p><a target="_blank" rel="noopener" href="https://www.suibianlu.com/c/jishu/webqianduan/">WEB 前端</a> 2020-07-07 15</p>
+            <h1 id="vue-cli3-项目模板怎么使用-public-目录下的静态文件"><a href="#vue-cli3-项目模板怎么使用-public-目录下的静态文件" class="headerlink" title="vue@cli3 项目模板怎么使用 public 目录下的静态文件"></a>vue@cli3 项目模板怎么使用 public 目录下的静态文件</h1><p><a target="_blank" rel="noopener" href="https://www.suibianlu.com/c/jishu/webqianduan/">WEB 前端</a> 2020-07-07 15</p>
 <p>作为图片最好放在 static 目录下，但是 vue@cli3 没有 static，网上都说放在 public 目录下，行，那就放吧，可问题是图片放了怎么使用</p>
 <p><strong>第一次尝试</strong></p>
 <p>肯定用绝对路径这就不说了，用相对路径，webpack 会解析成 base64，可是绝对路径怎么输都不对，咋回事</p>
@@ -128,43 +210,73 @@
 <p>如此设置，完美解决问题，如果你留心观察过，你会发现，index.html 文件的 ico 图标就已经这么使用了</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;er&quot;&gt;</span><br><span class="line">    &lt;el-scrollbar style&#x3D;&quot;height:100%&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;ds&quot;&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;sdde&quot; :src&#x3D;&quot;&#96;$&#123;publicPath&#125;imges&#x2F;but_play.png&#96;&quot; \ &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-scrollbar&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      publicPath: process.env.BASE_URL,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
         </div>
-      </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Z.A.M.</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/vue%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/vue%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/vue/"># vue</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/">富文本编辑器</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D/">项目目录介绍</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
     </div>
-  </div>
-</article>
-
-
-
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
-      </div>
-    </div>
-  </div>
 </footer>
 
-
-    <!-- After Footer Scripts -->
-
-<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
-
-  </body>
+    </div>
+</body>
 </html>
-
