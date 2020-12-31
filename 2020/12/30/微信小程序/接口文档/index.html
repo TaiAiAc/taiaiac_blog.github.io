@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="接口文档"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">接口文档</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">#微信小程序</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="小程序接口文档"><a href="#小程序接口文档" class="headerlink" title="小程序接口文档"></a>小程序接口文档</h1><h2 id="1-首页"><a href="#1-首页" class="headerlink" title="1.首页"></a>1.首页</h2><h3 id="1-1-轮播图"><a href="#1-1-轮播图" class="headerlink" title="1.1.轮播图"></a>1.1.轮播图</h3><ul>
+<li><p>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata">https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata</a></p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数：无</p>
+</li>
+<li><p>响应参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>message</td>
+<td>Array</td>
+<td>响应的商品数组</td>
+<td></td>
+</tr>
+<tr>
+<td>meta</td>
+<td>Object</td>
+<td>响应数据的状态</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>响应数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/banner1.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="string">&quot;goods_id&quot;</span>: <span class="number">129</span>,</span><br><span class="line">            <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=129&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/banner2.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="string">&quot;goods_id&quot;</span>: <span class="number">395</span>,</span><br><span class="line">            <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=395&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/banner3.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">            <span class="string">&quot;goods_id&quot;</span>: <span class="number">38</span>,</span><br><span class="line">            <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_detail/main?goods_id=38&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-导航"><a href="#1-2-导航" class="headerlink" title="1.2.导航"></a>1.2.导航</h3></li>
+<li><p>请求路径: <a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/home/catitems">https://api-hmugo-web.itheima.net/api/public/v1/home/catitems</a></p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数：无</p>
+</li>
+<li><p>响应参数</p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>String</td>
+<td>标题名称</td>
+<td></td>
+</tr>
+<tr>
+<td>image_src</td>
+<td>String</td>
+<td>图片路径</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>响应数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;分类&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/icon_index_nav_4@2x.png&quot;</span>,</span><br><span class="line">            <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;switchTab&quot;</span>,</span><br><span class="line">            <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/category/index&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;秒杀拍&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/icon_index_nav_3@2x.png&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;超市购&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/icon_index_nav_2@2x.png&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;name&quot;</span>: <span class="string">&quot;母婴品&quot;</span>,</span><br><span class="line">            <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/icon_index_nav_1@2x.png&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-楼层"><a href="#1-3-楼层" class="headerlink" title="1.3.楼层"></a>1.3.楼层</h3></li>
+<li><p>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/home/floordata">https://api-hmugo-web.itheima.net/api/public/v1/home/floordata</a></p>
+</li>
+<li><p>请求方法：GET</p>
+</li>
+<li><p>请求参数：无</p>
+</li>
+<li><p>响应参数：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>floor_title</td>
+<td>String</td>
+<td>一级分类标题</td>
+<td></td>
+</tr>
+<tr>
+<td>product_list</td>
+<td>Array</td>
+<td>存放一级分类对象数组</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>分类对象名称</td>
+<td></td>
+</tr>
+<tr>
+<td>image_src</td>
+<td>String</td>
+<td>分类对象图片路径</td>
+<td></td>
+</tr>
+<tr>
+<td>image_width</td>
+<td>String</td>
+<td>分类图片宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>open_type</td>
+<td>String</td>
+<td>打开方式</td>
+<td></td>
+</tr>
+<tr>
+<td>navigator_url</td>
+<td>String</td>
+<td>跳转链接</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;时尚女装&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;优质服饰&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=服饰&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;春季热门&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=热&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;爆款清仓&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=爆款&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;倒春寒&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=春季&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;怦然心动&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor01_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;233&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=心动&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外活动&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;勇往直前&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=户外&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外登山包&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=登山包&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;超强手套&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=手套&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;户外运动鞋&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=运动鞋&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;冲锋衣系列&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor02_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list/index?query=冲锋衣&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="string">&quot;floor_title&quot;</span>: &#123;</span><br><span class="line">                <span class="string">&quot;name&quot;</span>: <span class="string">&quot;箱包配饰&quot;</span>,</span><br><span class="line">                <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_title.png&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="string">&quot;product_list&quot;</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;清新气质&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_1@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;232&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=饰品&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;复古胸针&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_2@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;263&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=胸针&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;韩版手链&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_3@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;203&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=手链&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;水晶项链&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_4@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;193&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=水晶项链&quot;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;情侣表&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_src&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/pyg/pic_floor03_5@2x.png&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;image_width&quot;</span>: <span class="string">&quot;273&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;open_type&quot;</span>: <span class="string">&quot;navigate&quot;</span>,</span><br><span class="line">                    <span class="string">&quot;navigator_url&quot;</span>: <span class="string">&quot;/pages/goods_list?query=情侣表&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="2-分类"><a href="#2-分类" class="headerlink" title="2.分类"></a>2.分类</h2><h3 id="2-1-商品分类"><a href="#2-1-商品分类" class="headerlink" title="2.1.商品分类"></a>2.1.商品分类</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/categories">https://api-hmugo-web.itheima.net/api/public/v1/categories</a></li>
+<li>请求方式：GET</li>
+<li>请求参数：无</li>
+<li>响应参数：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cat_id</td>
+<td>Number</td>
+<td>分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_name</td>
+<td>String</td>
+<td>分类名称</td>
+<td></td>
+</tr>
+<tr>
+<td>children</td>
+<td>Array</td>
+<td>分类子节点</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_icon</td>
+<td>String</td>
+<td>分类的图标地址</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;message&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">&quot;cat_id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;大家电&quot;</span>,</span><br><span class="line">      <span class="string">&quot;cat_pid&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="string">&quot;cat_level&quot;</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="string">&quot;cat_id&quot;</span>: <span class="number">3</span>,</span><br><span class="line">          <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;电视&quot;</span>,</span><br><span class="line">          <span class="string">&quot;cat_pid&quot;</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">&quot;cat_level&quot;</span>: <span class="number">1</span>,</span><br><span class="line">          <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">          <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">          <span class="string">&quot;children&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">              <span class="string">&quot;cat_id&quot;</span>: <span class="number">5</span>,</span><br><span class="line">              <span class="string">&quot;cat_name&quot;</span>: <span class="string">&quot;曲面电视&quot;</span>,</span><br><span class="line">              <span class="string">&quot;cat_pid&quot;</span>: <span class="number">3</span>,</span><br><span class="line">              <span class="string">&quot;cat_level&quot;</span>: <span class="number">2</span>,</span><br><span class="line">              <span class="string">&quot;cat_deleted&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">              <span class="string">&quot;cat_icon&quot;</span>: <span class="string">&quot;https://api-hmugo-web.itheima.net/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">    <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-商品"><a href="#3-商品" class="headerlink" title="3.商品"></a>3.商品</h2><h3 id="3-1-商品列表搜索"><a href="#3-1-商品列表搜索" class="headerlink" title="3.1.商品列表搜索"></a>3.1.商品列表搜索</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/goods/search">https://api-hmugo-web.itheima.net/api/public/v1/goods/search</a></li>
+<li>请求方式：GET</li>
+<li>请求参数：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数类型</th>
+<th>必须</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>query</td>
+<td>String</td>
+<td>否</td>
+<td>查询参数</td>
+</tr>
+<tr>
+<td>cid</td>
+<td>String</td>
+<td>否</td>
+<td>分类 id</td>
+</tr>
+<tr>
+<td>pagenum</td>
+<td>Number</td>
+<td>否</td>
+<td>页码</td>
+</tr>
+<tr>
+<td>pagesize</td>
+<td>Number</td>
+<td>否</td>
+<td>页面显示条数</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;total&quot;</span>: <span class="number">10</span>,</span><br><span class="line">        <span class="string">&quot;pagenum&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&quot;goods&quot;</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">&quot;goods_id&quot;</span>: <span class="number">57445</span>,</span><br><span class="line">                <span class="string">&quot;cat_id&quot;</span>: <span class="number">9</span>,</span><br><span class="line">                <span class="string">&quot;goods_name&quot;</span>: <span class="string">&quot;创维（Skyworth）65V9E 65英寸25核4K HDR高清智能电视&quot;</span>,</span><br><span class="line">                <span class="string">&quot;goods_price&quot;</span>: <span class="number">6499</span>,</span><br><span class="line">                <span class="string">&quot;goods_number&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="string">&quot;goods_weight&quot;</span>: <span class="number">100</span>,</span><br><span class="line">                <span class="string">&quot;goods_big_logo&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                <span class="string">&quot;goods_small_logo&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">                <span class="string">&quot;add_time&quot;</span>: <span class="number">1516663280</span>,</span><br><span class="line">                <span class="string">&quot;upd_time&quot;</span>: <span class="number">1516663280</span>,</span><br><span class="line">                <span class="string">&quot;hot_mumber&quot;</span>: <span class="number">0</span>,</span><br><span class="line">                <span class="string">&quot;is_promote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="string">&quot;cat_one_id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">                <span class="string">&quot;cat_two_id&quot;</span>: <span class="number">3</span>,</span><br><span class="line">                <span class="string">&quot;cat_three_id&quot;</span>: <span class="number">9</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;meta&quot;</span>: &#123;</span><br><span class="line">        <span class="string">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">        <span class="string">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//图片不存在使用此图：https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>total</td>
+<td>Number</td>
+<td>总条数</td>
+<td></td>
+</tr>
+<tr>
+<td>pagenum</td>
+<td>Number</td>
+<td>当前页码</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_id</td>
+<td>Number</td>
+<td>商品 ID</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_id</td>
+<td>Number</td>
+<td>分类 ID</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>String</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td>Number</td>
+<td>商品价格</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_number</td>
+<td>Number</td>
+<td>商品数量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_weight</td>
+<td>Number</td>
+<td>商品重量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_big_logo</td>
+<td>String</td>
+<td>商品大图标</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_small_logo</td>
+<td>String</td>
+<td>商品小图标</td>
+<td></td>
+</tr>
+<tr>
+<td>add_time</td>
+<td>Number</td>
+<td>商品添加时间</td>
+<td>毫秒数</td>
+</tr>
+<tr>
+<td>upd_time</td>
+<td>Number</td>
+<td>商品修改时间</td>
+<td>毫秒数</td>
+</tr>
+<tr>
+<td>hot_mumber</td>
+<td>Number</td>
+<td>热门商品数</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_one_id</td>
+<td>Number</td>
+<td>商品所属一级分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_two_id</td>
+<td>Number</td>
+<td>商品所属二级分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_three_id</td>
+<td>Number</td>
+<td>商品所属三级分类 id</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="3-2-商品详情"><a href="#3-2-商品详情" class="headerlink" title="3.2.商品详情"></a>3.2.商品详情</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/goods/detail">https://api-hmugo-web.itheima.net/api/public/v1/goods/detail</a></li>
+<li>请求方式：GET</li>
+<li>请求参数：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>必须</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>Number</td>
+<td>是</td>
+<td>商品 id</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;goods_id&quot;</span>: <span class="number">8888</span>,</span><br><span class="line">    <span class="attr">&quot;cat_id&quot;</span>: <span class="number">1085</span>,</span><br><span class="line">    <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;spike 经典武士大马士革直刀(微型) 户外野营直刀 收藏礼品刀 饰品刀具&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;goods_price&quot;</span>: <span class="number">500</span>,</span><br><span class="line">    <span class="attr">&quot;goods_number&quot;</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="attr">&quot;goods_weight&quot;</span>: <span class="number">100</span>,</span><br><span class="line">    <span class="attr">&quot;goods_introduce&quot;</span>: <span class="string">&quot;富文本内容&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;goods_state&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">&quot;is_del&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;add_time&quot;</span>: <span class="number">1516361489</span>,</span><br><span class="line">    <span class="attr">&quot;upd_time&quot;</span>: <span class="number">1516361489</span>,</span><br><span class="line">    <span class="attr">&quot;delete_time&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hot_mumber&quot;</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">&quot;is_promote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">&quot;cat_one_id&quot;</span>: <span class="number">995</span>,</span><br><span class="line">    <span class="attr">&quot;cat_two_id&quot;</span>: <span class="number">1075</span>,</span><br><span class="line">    <span class="attr">&quot;cat_three_id&quot;</span>: <span class="number">1085</span>,</span><br><span class="line">    <span class="attr">&quot;goods_cat&quot;</span>: <span class="string">&quot;995,1075,1085&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;pics&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;pics_id&quot;</span>: <span class="number">38711</span>,</span><br><span class="line">        <span class="attr">&quot;goods_id&quot;</span>: <span class="number">8888</span>,</span><br><span class="line">        <span class="attr">&quot;pics_big&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_800x800.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pics_mid&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_400x400.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pics_sma&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pics_big_url&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_800x800.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pics_mid_url&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_400x400.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pics_sma_url&quot;</span>: <span class="string">&quot;http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;attrs&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;goods_id&quot;</span>: <span class="number">8888</span>,</span><br><span class="line">        <span class="attr">&quot;attr_id&quot;</span>: <span class="number">9210</span>,</span><br><span class="line">        <span class="attr">&quot;attr_value&quot;</span>: <span class="string">&quot;户外直刀&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;add_price&quot;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">&quot;attr_name&quot;</span>: <span class="string">&quot;主体参数-类别&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;attr_sel&quot;</span>: <span class="string">&quot;only&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;attr_write&quot;</span>: <span class="string">&quot;manual&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;attr_vals&quot;</span>: <span class="string">&quot;放大镜&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>Number</td>
+<td>商品 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_id</td>
+<td>Number</td>
+<td>商品分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>String</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td>Number</td>
+<td>商品价格</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_number</td>
+<td>Number</td>
+<td>商品数量</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_weight</td>
+<td>Number</td>
+<td>商品重量</td>
+<td></td>
+</tr>
+<tr>
+<td>add_time</td>
+<td>Number</td>
+<td>商品添加时间</td>
+<td>毫秒数</td>
+</tr>
+<tr>
+<td>upd_time</td>
+<td>Number</td>
+<td>商品修改时间</td>
+<td>毫秒数</td>
+</tr>
+<tr>
+<td>hot_mumber</td>
+<td>Number</td>
+<td>热门商品数量</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_one_id</td>
+<td>Number</td>
+<td>商品一级分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_two_id</td>
+<td>Number</td>
+<td>商品二级分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>cat_three_id</td>
+<td>Number</td>
+<td>商品三级分类 id</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_introduce</td>
+<td>String</td>
+<td>商品的介绍</td>
+<td></td>
+</tr>
+<tr>
+<td>pics</td>
+<td>Array</td>
+<td>商品的图片列表</td>
+<td></td>
+</tr>
+<tr>
+<td>attrs</td>
+<td>Array</td>
+<td>商品属性列表</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="3-3-商品搜索"><a href="#3-3-商品搜索" class="headerlink" title="3.3.商品搜索"></a>3.3.商品搜索</h3><ul>
+<li><p>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch">https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch</a></p>
+</li>
+<li><p>请求方式：GET</p>
+</li>
+<li><p>请求参数：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>必须</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>query</td>
+<td>String</td>
+<td>是</td>
+<td>商品查询参数</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goods_id&quot;</span>: <span class="number">57444</span>,</span><br><span class="line">      <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;创维（Skyworth）42X6 42英寸10核智能酷开网络平板液晶电视（黑色）&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>Number</td>
+<td>商品编号</td>
+<td></td>
+</tr>
+<tr>
+<td>goods_name</td>
+<td>String</td>
+<td>商品名称</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="4-用户"><a href="#4-用户" class="headerlink" title="4.用户"></a>4.用户</h2><h3 id="4-1-获取用户-token"><a href="#4-1-获取用户-token" class="headerlink" title="4.1.获取用户 token"></a>4.1.获取用户 token</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin">https://api-hmugo-web.itheima.net/api/public/v1/users/wxlogin</a></li>
+<li>请求方式：POST</li>
+<li>请求参数：(以下字段主要用作后台服务器生成用户 token 所有，无特殊用意)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>必选</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>encryptedData</td>
+<td>是</td>
+<td>string</td>
+<td>执行小程序 获取用户信息后 得到</td>
+</tr>
+<tr>
+<td>rawData</td>
+<td>是</td>
+<td>string</td>
+<td>执行小程序 获取用户信息后 得到</td>
+</tr>
+<tr>
+<td>iv</td>
+<td>是</td>
+<td>string</td>
+<td>执行小程序 获取用户信息后 得到</td>
+</tr>
+<tr>
+<td>signature</td>
+<td>是</td>
+<td>string</td>
+<td>执行小程序 获取用户信息后 得到</td>
+</tr>
+<tr>
+<td>code</td>
+<td>是</td>
+<td>string</td>
+<td>执行小程序登录后获取</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;user_id&quot;</span>: <span class="number">23</span>,</span><br><span class="line">    <span class="attr">&quot;user_email_code&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;is_active&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;user_sex&quot;</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_qq&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_tel&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_xueli&quot;</span>: <span class="string">&quot;本科&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_hobby&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;user_introduce&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;create_time&quot;</span>: <span class="number">1562221487</span>,</span><br><span class="line">    <span class="attr">&quot;update_time&quot;</span>: <span class="number">1562221487</span>,</span><br><span class="line">    <span class="attr">&quot;token&quot;</span>: <span class="string">&quot;Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIzLCJpYXQiOjE1NjQ3MzAwNzksImV4cCI6MTAwMTU2NDczMDA3OH0.YPt-XeLnjV-_1ITaXGY2FhxmCe4NvXuRnRB8OMCfnPo&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;登录成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数名称</th>
+<th align="left">参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">token</td>
+<td align="left">String</td>
+<td>用户的唯一凭据，后期用在其他接口的验证</td>
+</tr>
+</tbody></table>
+<h2 id="5-支付"><a href="#5-支付" class="headerlink" title="5.支付"></a>5.支付</h2><h3 id="5-1-获取支付参数"><a href="#5-1-获取支付参数" class="headerlink" title="5.1.获取支付参数"></a>5.1.获取支付参数</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/my/orders/req_unifiedorder">https://api-hmugo-web.itheima.net/api/public/v1/my/orders/req_unifiedorder</a></li>
+<li>请求方式：POST</li>
+<li>请求头参数：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>必选</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authorization</td>
+<td>是</td>
+<td>String</td>
+<td>用户登录成功获取的 token 值</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求体参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>必选</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_number</td>
+<td>是</td>
+<td>String</td>
+<td>订单编号</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;pay&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;timeStamp&quot;</span>: <span class="string">&quot;1564730510&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;nonceStr&quot;</span>: <span class="string">&quot;SReWbt3nEmpJo3tr&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;package&quot;</span>: <span class="string">&quot;prepay_id=wx02152148991420a3b39a90811023326800&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;signType&quot;</span>: <span class="string">&quot;MD5&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;paySign&quot;</span>: <span class="string">&quot;3A6943C3B865FA2B2C825CDCB33C5304&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;HMDD20190802000000000422&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;预付订单生成成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数名称</th>
+<th align="left">参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">pay</td>
+<td align="left">Object</td>
+<td>该对象内的参数，为调用微信支付所必须</td>
+</tr>
+</tbody></table>
+<h2 id="6-订单"><a href="#6-订单" class="headerlink" title="6.订单"></a>6.订单</h2><h3 id="6-1-创建订单"><a href="#6-1-创建订单" class="headerlink" title="6.1.创建订单"></a>6.1.创建订单</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/my/orders/create">https://api-hmugo-web.itheima.net/api/public/v1/my/orders/create</a></li>
+<li>请求方式：POST</li>
+<li>请求头参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>必选</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authorization</td>
+<td>是</td>
+<td>String</td>
+<td>用户登录成功获取的 token 值</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求体参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">参数名称</th>
+<th align="left">必选</th>
+<th align="left">参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">order_price</td>
+<td align="left">是</td>
+<td align="left">string</td>
+<td>订单总价格</td>
+</tr>
+<tr>
+<td align="left">consignee_addr</td>
+<td align="left">是</td>
+<td align="left">string</td>
+<td>收货地址</td>
+</tr>
+<tr>
+<td align="left">goods</td>
+<td align="left">是</td>
+<td align="left">Array</td>
+<td>订单数组</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>goods 字段说明</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>必选</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>goods_id</td>
+<td>是</td>
+<td>number</td>
+<td>商品 id</td>
+</tr>
+<tr>
+<td>goods_number</td>
+<td>是</td>
+<td>number</td>
+<td>购买的数量</td>
+</tr>
+<tr>
+<td>goods_price</td>
+<td>是</td>
+<td>number</td>
+<td>单价</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;error_code&quot;</span>: <span class="number">0</span>,</span><br><span class="line">  <span class="attr">&quot;data&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;uid&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;username&quot;</span>: <span class="string">&quot;12154545&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;吴系挂&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;groupid&quot;</span>: <span class="number">2</span>,</span><br><span class="line">    <span class="attr">&quot;reg_time&quot;</span>: <span class="string">&quot;1436864169&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;last_login_time&quot;</span>: <span class="string">&quot;0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>响应参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_id</td>
+<td>string</td>
+<td>订单唯一 ID</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+<td>用户 ID</td>
+</tr>
+<tr>
+<td>order_number</td>
+<td>string</td>
+<td>订单编号</td>
+</tr>
+<tr>
+<td>order_price</td>
+<td>number</td>
+<td>订单价格</td>
+</tr>
+<tr>
+<td>order_pay</td>
+<td>number</td>
+<td>订单支付方式</td>
+</tr>
+<tr>
+<td>consignee_addr</td>
+<td>string</td>
+<td>订单地址</td>
+</tr>
+<tr>
+<td>pay_status</td>
+<td>number</td>
+<td>订单支付状态</td>
+</tr>
+</tbody></table>
+<h3 id="6-2-查看订单支付状态"><a href="#6-2-查看订单支付状态" class="headerlink" title="6.2.查看订单支付状态"></a>6.2.查看订单支付状态</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/my/orders/chkOrder">https://api-hmugo-web.itheima.net/api/public/v1/my/orders/chkOrder</a></li>
+<li>请求方式：POST</li>
+<li>请求头参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authorization</td>
+<td>是</td>
+<td>string</td>
+<td>用户登录成功获取的 token 值</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求体参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order_number</td>
+<td>是</td>
+<td>string</td>
+<td>订单编号</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: <span class="string">&quot;支付成功&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;验证成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-3-历史订单查询"><a href="#6-3-历史订单查询" class="headerlink" title="6.3.历史订单查询"></a>6.3.历史订单查询</h3><ul>
+<li>请求路径：<a target="_blank" rel="noopener" href="https://api-hmugo-web.itheima.net/api/public/v1/my/orders/all">https://api-hmugo-web.itheima.net/api/public/v1/my/orders/all</a></li>
+<li>请求方式：GET</li>
+<li>请求头参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authorization</td>
+<td>是</td>
+<td>string</td>
+<td>用户登录成功获取的 token 值</td>
+</tr>
+</tbody></table>
+<ul>
+<li>请求体参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>是</td>
+<td>number</td>
+<td>1:全部订单 2:待付款 3:待发货</td>
+</tr>
+</tbody></table>
+<ul>
+<li>响应数据</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;message&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;count&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;orders&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;order_id&quot;</span>: <span class="number">428</span>,</span><br><span class="line">        <span class="attr">&quot;user_id&quot;</span>: <span class="number">23</span>,</span><br><span class="line">        <span class="attr">&quot;order_number&quot;</span>: <span class="string">&quot;HMDD20190802000000000428&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;order_price&quot;</span>: <span class="number">13999</span>,</span><br><span class="line">        <span class="attr">&quot;order_pay&quot;</span>: <span class="string">&quot;0&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;is_send&quot;</span>: <span class="string">&quot;否&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;trade_no&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;order_fapiao_title&quot;</span>: <span class="string">&quot;个人&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;order_fapiao_company&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;order_fapiao_content&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;consignee_addr&quot;</span>: <span class="string">&quot;广东省广州市海珠区新港中路397号&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;pay_status&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;create_time&quot;</span>: <span class="number">1564731518</span>,</span><br><span class="line">        <span class="attr">&quot;update_time&quot;</span>: <span class="number">1564731518</span>,</span><br><span class="line">        <span class="attr">&quot;order_detail&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">&quot;goods&quot;</span>: [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">&quot;id&quot;</span>: <span class="number">717</span>,</span><br><span class="line">            <span class="attr">&quot;order_id&quot;</span>: <span class="number">428</span>,</span><br><span class="line">            <span class="attr">&quot;goods_id&quot;</span>: <span class="number">43986</span>,</span><br><span class="line">            <span class="attr">&quot;goods_price&quot;</span>: <span class="number">13999</span>,</span><br><span class="line">            <span class="attr">&quot;goods_number&quot;</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">&quot;goods_total_price&quot;</span>: <span class="number">13999</span>,</span><br><span class="line">            <span class="attr">&quot;goods_name&quot;</span>: <span class="string">&quot;海信(Hisense)LED55MU9600X3DUC 55英寸 4K超高清量子点电视 ULED画质 VIDAA系统&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;goods_small_logo&quot;</span>: <span class="string">&quot;http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg&quot;</span></span><br><span class="line">          &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">&quot;total_count&quot;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="attr">&quot;total_price&quot;</span>: <span class="number">13999</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;meta&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;msg&quot;</span>: <span class="string">&quot;获取订单列表成功&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;status&quot;</span>: <span class="number">200</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

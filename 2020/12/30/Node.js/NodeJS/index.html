@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Node JS入门"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Node JS入门</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/NodeJS/">#NodeJS</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="1-Node-介绍"><a href="#1-Node-介绍" class="headerlink" title="1.Node 介绍"></a>1.Node 介绍</h1><h2 id="1-1-为什么要学习-Node-js"><a href="#1-1-为什么要学习-Node-js" class="headerlink" title="1.1.为什么要学习 Node.js"></a>1.1.为什么要学习 Node.js</h2><p>企业需求</p>
+<ul>
+<li>具有服务端开发经验更改</li>
+<li>front-end</li>
+<li>back-end</li>
+<li>全栈开发工程师</li>
+<li>基本的网站开发能力<ul>
+<li>服务端</li>
+<li>前端</li>
+<li>运维部署</li>
+</ul>
+</li>
+<li>多人社区</li>
+</ul>
+<h2 id="1-2-Node-js-是什么"><a href="#1-2-Node-js-是什么" class="headerlink" title="1.2.Node.js 是什么"></a>1.2.Node.js 是什么</h2><ul>
+<li>Node.js 是 JavaScript 运行时</li>
+<li>通俗易懂的讲，Node.js 是 JavaScript 的运行平台</li>
+<li>Node.js 既不是语言，也不是框架，它是一个平台</li>
+<li>浏览器中的 JavaScript<ul>
+<li>EcmaScript<ul>
+<li>基本语法</li>
+<li>if</li>
+<li>var</li>
+<li>function</li>
+<li>Object</li>
+<li>Array</li>
+</ul>
+</li>
+<li>Bom</li>
+<li>Dom</li>
+</ul>
+</li>
+<li>Node.js 中的 JavaScript<ul>
+<li>没有 Bom，Dom</li>
+<li>EcmaScript</li>
+<li>在 Node 中这个 JavaScript 执行环境为 JavaScript 提供了一些服务器级别的 API<ul>
+<li>例如文件的读写</li>
+<li>网络服务的构建</li>
+<li>网络通信</li>
+<li>http 服务器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>构建与 Chrome 的 V8 引擎之上<ul>
+<li>代码只是具有特定格式的字符串</li>
+<li>引擎可以认识它，帮你解析和执行</li>
+<li>Google Chrome 的 V8 引擎是目前公认的解析执行 JavaScript 代码最快的</li>
+<li>Node.js 的作者把 Google Chrome 中的 V8 引擎移植出来，开发了一个独立的 JavaScript 运行时环境</li>
+</ul>
+</li>
+<li>Node.js uses an envent-driven,non-blocking I/O mode that makes it lightweight and efficent.<ul>
+<li>envent-driven 事件驱动</li>
+<li>non-blocking I/O mode 非阻塞 I/O 模型（异步）</li>
+<li>ightweight and efficent. 轻量和高效</li>
+</ul>
+</li>
+<li>Node.js package ecosystem,npm,is the larget scosystem of open sourcr libraries in the world<ul>
+<li>npm 是世界上最大的开源生态系统</li>
+<li>绝大多数 JavaScript 相关的包都存放在 npm 上，这样做的目的是为了让开发人员更方便的去下载使用</li>
+<li>npm install jquery</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-Node-能做什么"><a href="#1-3-Node-能做什么" class="headerlink" title="1.3.Node 能做什么"></a>1.3.Node 能做什么</h2><ul>
+<li>web 服务器后台</li>
+<li>命令行工具<ul>
+<li>npm(node)</li>
+<li>git(c 语言)</li>
+<li>hexo（node）</li>
+<li>…</li>
+</ul>
+</li>
+<li>对于前端工程师来讲，接触最多的是它的命令行工具<ul>
+<li>自己写的很少，主要是用别人第三方的</li>
+<li>webpack</li>
+<li>gulp</li>
+<li>npm</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-起步"><a href="#2-起步" class="headerlink" title="2.起步"></a>2.起步</h1><h2 id="2-1-安装-Node-环境"><a href="#2-1-安装-Node-环境" class="headerlink" title="2.1.安装 Node 环境"></a>2.1.安装 Node 环境</h2><ul>
+<li>查看 Node 环境的版本号</li>
+<li>下载：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
+<li>安装：<ul>
+<li>傻瓜式安装，一路<code>next</code></li>
+<li>安装过再次安装会升级</li>
+</ul>
+</li>
+<li>确认 Node 环境是否安装成功<ul>
+<li>查看 node 的版本号：<code>node --version</code></li>
+<li>或者<code>node -v</code></li>
+</ul>
+</li>
+<li>配置环境变量</li>
+</ul>
+<h2 id="2-2-解析执行-Javascript"><a href="#2-2-解析执行-Javascript" class="headerlink" title="2.2.解析执行 Javascript"></a>2.2.解析执行 Javascript</h2><ol>
+<li>创建编写 JavaScript 脚本文件</li>
+<li>打开终端，定位脚本文件的所属目录</li>
+<li>输入<code>node 文件名</code>执行对应的文件</li>
+</ol>
+<p>注意：文件名不要用<code>node.js</code>来命名，也就是说除了<code>node</code>这个名字随便起，最好不要使用中文。</p>
+<h2 id="2-3-文件的读写"><a href="#2-3-文件的读写" class="headerlink" title="2.3.文件的读写"></a>2.3.文件的读写</h2><p>文件读取:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//浏览器中的JavaScript是没有文件操作能力的</span></span><br><span class="line"><span class="comment">//但是Node中的JavaScript具有文件操作能力</span></span><br><span class="line"><span class="comment">//fs是file-system的简写，就是文件系统的意思</span></span><br><span class="line"><span class="comment">//在Node中如果想要进行文件的操作就必须引用fs这个核心模块</span></span><br><span class="line"><span class="comment">//在fs这个核心模块中，就提供了人所有文件操作相关的API</span></span><br><span class="line"><span class="comment">//例如 fs.readFile就是用来读取文件的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  1.使用fs核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.读取文件</span></span><br><span class="line">fs.readFile(<span class="string">&#x27;./data/a.txt&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;文件读取失败&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>文件写入：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  1.使用fs核心模块</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.将数据写入文件</span></span><br><span class="line">fs.writeFile(<span class="string">&#x27;./data/a.txt&#x27;</span>, <span class="string">&#x27;我是文件写入的信息&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;文件写入失败&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="2-4-http"><a href="#2-4-http" class="headerlink" title="2.4.http"></a>2.4.http</h2><p>服务器：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.加载http核心模块</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.使用http.createServer()创建一个web服务器</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.服务器要做的事儿</span></span><br><span class="line"><span class="comment">// 提供服务：对数据服务</span></span><br><span class="line"><span class="comment">// 发请求</span></span><br><span class="line"><span class="comment">//	接收请求</span></span><br><span class="line"><span class="comment">//	处理请求</span></span><br><span class="line"><span class="comment">//	反馈（发送响应）</span></span><br><span class="line"><span class="comment">//	当客户端请求过来，就会自动触发服务器的request请求事件，然后执行第二个参数：回调处理函数</span></span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;收到客户的请求了&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.绑定端口号，启动服务</span></span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;runing...&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="3-Node-中的模块系统"><a href="#3-Node-中的模块系统" class="headerlink" title="3.Node 中的模块系统"></a>3.Node 中的模块系统</h1><p>使用 Node 编写应用程序主要就是在使用：</p>
+<ul>
+<li>EcmaScript 语言<ul>
+<li>没有 Bom 和 Dom</li>
+</ul>
+</li>
+<li>核心模块<ul>
+<li>文件操作的 fs</li>
+<li>http 服务操作的 http</li>
+<li>url 路径操作模块</li>
+<li>path 路径处理模块</li>
+<li>os 操作系统信息</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>art-template</li>
+<li>必须通过 npm 来下载才可以使用</li>
+</ul>
+</li>
+<li>自己写的模块<ul>
+<li>自己创建的文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1-什么是模块化"><a href="#3-1-什么是模块化" class="headerlink" title="3.1.什么是模块化"></a>3.1.什么是模块化</h2><ul>
+<li>文件作用域(模块是独立的，在不同的文件使用必须要重新引用)【在 node 中没有全局作用域，它是文件模块作用域】</li>
+<li>通信规则<ul>
+<li>加载 require</li>
+<li>导出 exports</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-CommomJS-模块规范"><a href="#3-2-CommomJS-模块规范" class="headerlink" title="3.2.CommomJS 模块规范"></a>3.2.CommomJS 模块规范</h2><p>在 Node 中的 JavaScript 还有一个重要的概念，模块系统。</p>
+<ul>
+<li><p>模块作用域</p>
+</li>
+<li><p>使用 require 方法来加载模块</p>
+</li>
+<li><p>使用 exports 接口对象来导出模板中的成员</p>
+<h3 id="加载require"><a href="#加载require" class="headerlink" title="加载require"></a>加载<code>require</code></h3><p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 自定义变量名 = <span class="built_in">require</span>(<span class="string">&#x27;模块&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>作用：</p>
+<ul>
+<li>执行被加载模块中的代码</li>
+<li>得到被加载模块中的<code>exports</code>导出接口对象</li>
+</ul>
+<h3 id="导出exports"><a href="#导出exports" class="headerlink" title="导出exports"></a>导出<code>exports</code></h3><ul>
+<li><p>Node 中是模块作用域，默认文件中所有的成员只在当前模块有效</p>
+</li>
+<li><p>对于希望可以被其他模块访问到的成员，我们需要把这些公开的成员都挂载到<code>exports</code>接口对象中就可以了</p>
+<p>导出多个成员（必须在对象中）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.a = <span class="number">123</span></span><br><span class="line"><span class="built_in">exports</span>.b = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;bbb&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exports</span>.c = &#123;</span><br><span class="line">  foo: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exports</span>.d = <span class="string">&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>导出单个成员（拿到的就是函数，字符串）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>以下情况会覆盖：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="comment">//后者会覆盖前者</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以通过以下方法来导出多个成员：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    foo = <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">    add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="3-3-模块原理"><a href="#3-3-模块原理" class="headerlink" title="3.3.模块原理"></a>3.3.模块原理</h2></li>
+</ul>
+</li>
+</ul>
+<p>exports 和<code>module.exports</code>的一个引用：</p>
+<p>module.exports 是 require 后 return module.exports 里的内容</p>
+<p>module.exports 始终指向文件导出内存</p>
+<p>给 exports 赋值会断开和 module.exports 之间的引用<br>同理，给 module.exports 重新赋值也会断开</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span> === <span class="built_in">module</span>.exports);	<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.foo = <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="built_in">module</span>.exports.foo = <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line">当给<span class="built_in">exports</span>重新赋值后，<span class="built_in">exports</span>！= <span class="built_in">module</span>.exports.</span><br><span class="line">最终<span class="keyword">return</span>的是<span class="built_in">module</span>.exports,无论<span class="built_in">exports</span>中的成员是什么都没用。</span><br><span class="line">真正去使用的时候：</span><br><span class="line">导出多个成员：<span class="built_in">exports</span>.xxx = xxx</span><br><span class="line">导出多个成员也可以：<span class="built_in">module</span>.exports = &#123;&#125;</span><br><span class="line">导出单个成员：<span class="built_in">module</span>.exports = xxx</span><br></pre></td></tr></table></figure>
+<h2 id="3-4-总结"><a href="#3-4-总结" class="headerlink" title="3.4.总结"></a>3.4.总结</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用服务</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">// 引用模板</span></span><br><span class="line"><span class="keyword">var</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art-template&#x27;</span>);</span><br><span class="line"><span class="comment">// 创建服务</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer();</span><br><span class="line"><span class="comment">// 公共路径</span></span><br><span class="line"><span class="keyword">var</span> wwwDir = <span class="string">&#x27;D:/app/www&#x27;</span>;</span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> url = req.url;</span><br><span class="line">    <span class="comment">// 读取文件</span></span><br><span class="line">    fs.readFile(<span class="string">&#x27;./template-apche.html&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="keyword">return</span> res.end(<span class="string">&#x27;404 Not Found&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        fs.readdir(wwwDir, <span class="function"><span class="keyword">function</span> (<span class="params">err, files</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="keyword">return</span> res.end(<span class="string">&#x27;Can not find www Dir.&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 使用模板引擎解析替换data中的模板字符串</span></span><br><span class="line">            <span class="comment">// 去xmpTempleteList.html中编写模板语法</span></span><br><span class="line">            <span class="keyword">var</span> htmlStr = template.render(data.toString(), &#123;</span><br><span class="line">                title: <span class="string">&#x27;D:/app/www/ 的索引&#x27;</span>,</span><br><span class="line">                files:files</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="comment">// 发送响应数据</span></span><br><span class="line">            res.end(htmlStr);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running....&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="number">1.</span>jQuery中的each 和 原生JavaScript方法forEach的区别：</span><br><span class="line">	提供源头：</span><br><span class="line">    	原生js是es5提供的（不兼容IE8）,</span><br><span class="line">        jQuery的each是jQuery第三方库提供的（如果要使用需要用<span class="number">2</span>以下的版本也就是<span class="number">1.</span>版本）,它的each方法主要用来遍历jQuery实例对象（伪数组）,同时也可以做低版本forEach的替代品,jQuery的实例对象不能使用forEach方法，如果想要使用必须转为数组（[].slice.call(jQuery实例对象)）才能使用</span><br><span class="line"><span class="number">2.</span>模块中导出多个成员和导出单个成员</span><br><span class="line"><span class="number">3.301</span>和<span class="number">302</span>的区别：</span><br><span class="line">	<span class="number">301</span>永久重定向,浏览器会记住</span><br><span class="line">    <span class="number">302</span>临时重定向</span><br><span class="line"><span class="number">4.</span><span class="built_in">exports</span>和<span class="built_in">module</span>.exports的区别:</span><br><span class="line">	每个模块中都有一个<span class="built_in">module</span>对象</span><br><span class="line">    <span class="built_in">module</span>对象中有一个<span class="built_in">exports</span>对象</span><br><span class="line">    我们可以把需要导出的成员都挂载到<span class="built_in">module</span>.exports接口对象中</span><br><span class="line">	也就是<span class="string">`module.exports.xxx = xxx`</span>的方式</span><br><span class="line">    但是每次写太多了就很麻烦，所以Node为了简化代码，就在每一个模块中都提供了一个成员叫<span class="string">`exports`</span></span><br><span class="line">    <span class="string">`exports === module.exports`</span>结果为<span class="literal">true</span>,所以完全可以<span class="string">`exports.xxx = xxx`</span></span><br><span class="line">    当一个模块需要导出单个成员的时候必须使用<span class="string">`module.exports = xxx`</span>的方式，=,使用<span class="string">`exports = xxx`</span>不管用,因为每个模块最终<span class="keyword">return</span>的是<span class="built_in">module</span>.exports,而<span class="built_in">exports</span>只是<span class="built_in">module</span>.exports的一个引用,所以<span class="string">`exports`</span>即使重新赋值,也不会影响<span class="string">`module.exports`</span>。</span><br><span class="line">    有一种赋值方式比较特殊：<span class="string">`exports = module.exports`</span>这个用来新建立引用关系的。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="4-require-的加载规则"><a href="#4-require-的加载规则" class="headerlink" title="4.require 的加载规则"></a>4.require 的加载规则</h1><ul>
+<li>核心模块<ul>
+<li>模块名</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>模块名</li>
+</ul>
+</li>
+<li>用户自己写的<ul>
+<li>路径</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-1-require-的加载规则"><a href="#4-1-require-的加载规则" class="headerlink" title="4.1.require 的加载规则"></a>4.1.require 的加载规则</h2><ul>
+<li><p>优先从缓存加载</p>
+</li>
+<li><p>判断模块标识符</p>
+<ul>
+<li><p>核心模块</p>
+</li>
+<li><p>自己写的模块（路径形式的模块）</p>
+</li>
+<li><p>第三方模块（node_modules）</p>
+<ul>
+<li><p>第三方模块的标识就是第三方模块的名称（不可能有第三方模块和核心模块的名字一致）</p>
+</li>
+<li><p>npm</p>
+<ul>
+<li>开发人员可以把写好的框架库发布到 npm 上</li>
+<li>使用者通过 npm 命令来下载</li>
+</ul>
+</li>
+<li><p>使用方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 名称 = <span class="built_in">require</span>(<span class="string">&#x27;npm install【下载包】 的包名&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>node_modules/express/package.json main</li>
+<li>如果 package.json 或者 main 不成立，则查找被选择项：index.js</li>
+<li>如果以上条件都不满足，则继续进入上一级目录中的 node_modules 按照上面的规则依次查找，直到当前文件所属此盘根目录都找不到最后报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果非路径形式的标识</span></span><br><span class="line"><span class="comment">// 路径形式的标识：</span></span><br><span class="line"><span class="comment">// ./  当前目录 不可省略</span></span><br><span class="line"><span class="comment">// ../  上一级目录  不可省略</span></span><br><span class="line"><span class="comment">//  /xxx也就是D:/xxx</span></span><br><span class="line"><span class="comment">// 带有绝对路径几乎不用（D:/a/foo.js）</span></span><br><span class="line"><span class="comment">// 首位表示的是当前文件模块所属磁盘根目录</span></span><br><span class="line"><span class="comment">// require(&#x27;./a&#x27;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 核心模块</span></span><br><span class="line"><span class="comment">// 核心模块本质也是文件，核心模块文件已经被编译到了二进制文件中了，我们只需要按照名字来加载就可以了</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三方模块</span></span><br><span class="line"><span class="comment">// 凡是第三方模块都必须通过npm下载（npm i node_modules），使用的时候就可以通过require(&#x27;包名&#x27;)来加载才可以使用</span></span><br><span class="line"><span class="comment">// 第三方包的名字不可能和核心模块的名字是一样的</span></span><br><span class="line"><span class="comment">// 既不是核心模块，也不是路径形式的模块</span></span><br><span class="line"><span class="comment">//      先找到当前文所述目录的node_modules</span></span><br><span class="line"><span class="comment">//      然后找node_modules/art-template目录</span></span><br><span class="line"><span class="comment">//      node_modules/art-template/package.json</span></span><br><span class="line"><span class="comment">//      node_modules/art-template/package.json中的main属性</span></span><br><span class="line"><span class="comment">//      main属性记录了art-template的入口模块</span></span><br><span class="line"><span class="comment">//      然后加载使用这个第三方包</span></span><br><span class="line"><span class="comment">//      实际上最终加载的还是文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//      如果package.json不存在或者mian指定的入口模块不存在</span></span><br><span class="line"><span class="comment">//      则node会自动找该目录下的index.js</span></span><br><span class="line"><span class="comment">//      也就是说index.js是一个备选项，如果main没有指定，则加载index.js文件</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 如果条件都不满足则会进入上一级目录进行查找</span></span><br><span class="line"><span class="comment">// 注意：一个项目只有一个node_modules，放在项目根目录中，子目录可以直接调用根目录的文件</span></span><br><span class="line"><span class="keyword">var</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art-template&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="4-2-模块标识中的-和文件操作路径中的"><a href="#4-2-模块标识中的-和文件操作路径中的" class="headerlink" title="4.2.模块标识中的 / 和文件操作路径中的 /"></a>4.2.模块标识中的 <code>/</code> 和文件操作路径中的 <code>/</code></h2><p>文件操作路径：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 咱们所使用的所有文件操作的API都是异步的</span></span><br><span class="line"><span class="comment">// 就像ajax请求一样</span></span><br><span class="line"><span class="comment">// 读取文件</span></span><br><span class="line"><span class="comment">// 文件操作中 ./ 相当于当前模块所处磁盘根目录</span></span><br><span class="line"><span class="comment">// ./index.txt    相对于当前目录</span></span><br><span class="line"><span class="comment">// /index.txt    相对于当前目录</span></span><br><span class="line"><span class="comment">// /index.txt   绝对路径,当前文件模块所处根目录</span></span><br><span class="line"><span class="comment">// d:express/index.txt   绝对路径</span></span><br><span class="line">fs.readFile(<span class="string">&#x27;./index.txt&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>模块操作路径：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在模块加载中，相对路径中的./不能省略</span></span><br><span class="line"><span class="comment">// 这里省略了.也是磁盘根目录</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./index&#x27;</span>)(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="5-npm"><a href="#5-npm" class="headerlink" title="5.npm"></a>5.npm</h1><ul>
+<li>node package manage(node 包管理器)</li>
+<li>通过 npm 命令安装 jQuery 包（npm install –save jquery），在安装时加上–save 会主动生成说明书文件信息（将安装文件的信息添加到 package.json 里面）</li>
+</ul>
+<h2 id="5-1-npm-网站"><a href="#5-1-npm-网站" class="headerlink" title="5.1.npm 网站"></a>5.1.npm 网站</h2><blockquote>
+<p>​ npmjs.com 网站 是用来搜索 npm 包的</p>
+</blockquote>
+<h2 id="5-2-npm-命令行工具"><a href="#5-2-npm-命令行工具" class="headerlink" title="5.2.npm 命令行工具"></a>5.2.npm 命令行工具</h2><p>npm 是一个命令行工具，只要安装了 node 就已经安装了 npm。</p>
+<p>npm 也有版本概念，可以通过<code>npm --version</code>来查看 npm 的版本</p>
+<p>升级 npm(自己升级自己)：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">install</span> <span class="selector-tag">--global</span> <span class="selector-tag">npm</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-3-常用命令"><a href="#5-3-常用命令" class="headerlink" title="5.3.常用命令"></a>5.3.常用命令</h2><ul>
+<li>npm init(生成 package.json 说明书文件)<ul>
+<li>npm init -y(可以跳过向导，快速生成)</li>
+</ul>
+</li>
+<li>npm install<ul>
+<li>一次性把 dependencies 选项中的依赖项全部安装</li>
+<li>简写（npm i）</li>
+</ul>
+</li>
+<li>npm install 包名<ul>
+<li>只下载</li>
+<li>简写（npm i 包名）</li>
+</ul>
+</li>
+<li>npm install –save 包名<ul>
+<li>下载并且保存依赖项（package.json 文件中的 dependencies 选项）</li>
+<li>简写（npm i 包名）</li>
+</ul>
+</li>
+<li>npm uninstall 包名<ul>
+<li>只删除，如果有依赖项会依然保存</li>
+<li>简写（npm un 包名）</li>
+</ul>
+</li>
+<li>npm uninstall –save 包名<ul>
+<li>删除的同时也会把依赖信息全部删除</li>
+<li>简写（npm un 包名）</li>
+</ul>
+</li>
+<li>npm help<ul>
+<li>查看使用帮助</li>
+</ul>
+</li>
+<li>npm 命令 –help<ul>
+<li>查看具体命令的使用帮助（npm uninstall –help）</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-4-解决-npm-被墙的问题"><a href="#5-4-解决-npm-被墙的问题" class="headerlink" title="5.4.解决 npm 被墙的问题"></a>5.4.解决 npm 被墙的问题</h2><p>npm 存储包文件的服务器在国外，有时候会被墙，速度很慢，所以需要解决这个问题。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/mirror/NPM?from=tnpm%E6%B7%98%E5%AE%9D%E7%9A%84%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E6%8A%8Anpm%E5%9C%A8%E5%9B%BD%E5%86%85%E5%81%9A%E4%BA%86%E4%B8%80%E4%B8%AA%E9%95%9C%E5%83%8F%EF%BC%88%E4%B9%9F%E5%B0%B1%E6%98%AF%E4%B8%80%E4%B8%AA%E5%A4%87%E4%BB%BD%EF%BC%89%E3%80%82">https://developer.aliyun.com/mirror/NPM?from=tnpm淘宝的开发团队把npm在国内做了一个镜像（也就是一个备份）。</a></p>
+</blockquote>
+<p>安装淘宝的 cnpm：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org;</span></span><br><span class="line">#在任意目录执行都可以</span><br><span class="line">#--global表示安装到全局，而非当前目录</span><br><span class="line">#--global不能省略，否则不管用</span><br><span class="line">npm install --<span class="built_in">global</span> cnpm</span><br></pre></td></tr></table></figure>
+<p>安装包的时候把以前的<code>npm</code>替换成<code>cnpm</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#走国外的npm服务器下载jQuery包，速度比较慢</span><br><span class="line">npm install jQuery;</span><br><span class="line"></span><br><span class="line">#使用cnpm就会通过淘宝的服务器来下载jQuery</span><br><span class="line">cnpm install jQuery;</span><br></pre></td></tr></table></figure>
+<p>如果不想安装<code>cnpm</code>又想使用淘宝的服务器来下载：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install jquery --registry&#x3D;https:&#x2F;&#x2F;npm.taobao.org;</span><br></pre></td></tr></table></figure>
+<p>但是每次手动加参数就很麻烦，所以我们可以把这个选项加入到配置文件中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https:<span class="comment">//npm.taobao.org;</span></span><br><span class="line"></span><br><span class="line">#查看npm配置信息</span><br><span class="line">npm config list;</span><br></pre></td></tr></table></figure>
+<p>只要经过上面的配置命令，则以后所有的<code>npm install</code>都会通过淘宝的服务器来下载</p>
+<h1 id="6-package-json"><a href="#6-package-json" class="headerlink" title="6.package.json"></a>6.package.json</h1><p>每一个项目都要有一个<code>package.json</code>文件（包描述文件，就像产品的说明书一样）</p>
+<p>这个文件可以通过<code>npm init</code>自动初始化出来</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">D:\code\node中的模块系统&gt;npm init</span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See <span class="string">`npm help json`</span> <span class="keyword">for</span> definitive documentation on these fields</span><br><span class="line">and exactly what they <span class="keyword">do</span>.</span><br><span class="line"></span><br><span class="line">Use <span class="string">`npm install &lt;pkg&gt;`</span> afterwards to install a package and</span><br><span class="line">save it <span class="keyword">as</span> a dependency <span class="keyword">in</span> the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">package name: (node中的模块系统)</span><br><span class="line">Sorry, name can only contain URL-friendly characters.</span><br><span class="line">package name: (node中的模块系统) cls</span><br><span class="line">version: (<span class="number">1.0</span><span class="number">.0</span>)</span><br><span class="line">description: 这是一个测试项目</span><br><span class="line">entry point: (main.js)</span><br><span class="line">test command:</span><br><span class="line">git repository:</span><br><span class="line">keywords:</span><br><span class="line">author: xiaochen</span><br><span class="line">license: (ISC)</span><br><span class="line">About to write to D:\code\node中的模块系统\package.json:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;cls&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;这是一个测试项目&quot;</span>,</span><br><span class="line">  <span class="string">&quot;main&quot;</span>: <span class="string">&quot;main.js&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;author&quot;</span>: <span class="string">&quot;xiaochen&quot;</span>,</span><br><span class="line">  <span class="string">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Is <span class="built_in">this</span> OK? (yes) yes</span><br></pre></td></tr></table></figure>
+<p>对于目前来讲，最有用的是<code>dependencies</code>选项，可以用来帮助我们保存第三方包的依赖信息。</p>
+<p>如果<code>node_modules</code>删除了也不用担心，只需要在控制面板中<code>npm install</code>就会自动把<code>package.json</code>中的<code>dependencies</code>中所有的依赖项全部都下载回来。</p>
+<ul>
+<li>建议每个项目的根目录下都有一个<code>package.json</code>文件</li>
+<li>建议执行<code>npm install 包名</code>的时候都加上<code>--save</code>选项，目的是用来保存依赖信息</li>
+</ul>
+<h2 id="6-1-package-json-和-package-lock-json"><a href="#6-1-package-json-和-package-lock-json" class="headerlink" title="6.1.package.json 和 package.lock.json"></a>6.1.package.json 和 package.lock.json</h2><p>npm 5 以前是不会有<code>package-lock.json</code>这个文件</p>
+<p>npm5 以后才加入这个文件</p>
+<p>当你安装包的时候，npm 都会生成或者更新<code>package-lock.json</code>这个文件</p>
+<ul>
+<li><p>npm5 以后的版本安装都不要加<code>--save</code>参数，它会自动保存依赖信息</p>
+</li>
+<li><p>当你安装包的时候，会自动创建或者更新<code>package-lock.json</code>文件</p>
+</li>
+<li><pre><code class="css">package-lock.json
+里面会保存具体的包的版本号
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这个文件会包含&#96;node_modules&#96;中所有包的信息（版本，下载地址。。。）</span><br><span class="line"></span><br><span class="line">- 这样的话重新&#96;npm install&#96;的时候速度就可以提升</span><br><span class="line"></span><br><span class="line">- 从文件来看，有一个&#96;lock&#96;称之为锁</span><br><span class="line"></span><br><span class="line">  - 这个&#96;lock&#96;使用来锁版本的</span><br><span class="line">  - 如果项目依赖了&#96;1.1.1&#96;版本</span><br><span class="line">  - 如果你重新 install 其实会下载最新版本，而不是&#96;1.1.1&#96;</span><br><span class="line"></span><br><span class="line">- &#96;package-lock.json&#96;的另外一个作用就是锁定版本号，防止自动升级</span><br><span class="line"></span><br><span class="line">## 6.2.path 路径操作模块</span><br><span class="line"></span><br><span class="line">&gt; 参考文档：https:&#x2F;&#x2F;nodejs.org&#x2F;docs&#x2F;latest-v13.x&#x2F;api&#x2F;path.html</span><br><span class="line"></span><br><span class="line">- path.basename：获取路径的文件名，默认包含扩展名</span><br><span class="line">- path.dirname：获取路径中的目录部分</span><br><span class="line">- path.extname：获取一个路径中的扩展名部分</span><br><span class="line">- path.parse：把路径转换为对象</span><br><span class="line">  - root：根路径</span><br><span class="line">  - dir：目录</span><br><span class="line">  - base：包含后缀名的文件名</span><br><span class="line">  - ext：后缀名</span><br><span class="line">  - name：不包含后缀名的文件名</span><br><span class="line">- path.join：拼接路径</span><br><span class="line">- path.isAbsolute：判断一个路径是否为绝对路径</span><br><span class="line"></span><br><span class="line"># 7.Node 中的其他成员（dirname，filename）</span><br><span class="line"></span><br><span class="line">在每个模块中，除了&#96;require&#96;,&#96;exports&#96;等模块相关的 API 之外，还有两个特殊的成员：</span><br><span class="line"></span><br><span class="line">- &#96;__dirname&#96;，是一个成员，可以用来**动态**获取当前文件模块所属目录的绝对路径</span><br><span class="line">- &#96;__filename&#96;，可以用来**动态**获取当前文件的绝对路径（包含文件名）</span><br><span class="line">- &#96;__dirname&#96;和&#96;filename&#96;是不受执行 node 命令所属路径影响的</span><br><span class="line"></span><br><span class="line">在文件操作中，使用相对路径是不可靠的，因为 node 中文件操作的路径被设计为相对于执行 node 命令所处的路径。</span><br><span class="line"></span><br><span class="line">所以为了解决这个问题，只需要把相对路径变为绝对路径（绝对路径不受任何影响）就可以了。</span><br><span class="line"></span><br><span class="line">就可以使用&#96;__dirname&#96;或者&#96;__filename&#96;来帮助我们解决这个问题</span><br><span class="line"></span><br><span class="line">在拼接路径的过程中，为了避免手动拼接带来的一些低级错误，推荐使用&#96;path.join()&#96;来辅助拼接</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;js</span><br><span class="line">var fs &#x3D; require(&#39;fs&#39;)</span><br><span class="line">var path &#x3D; require(&#39;path&#39;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; console.log(__dirname + &#39;a.txt&#39;);</span><br><span class="line">&#x2F;&#x2F; path.join方法会将文件操作中的相对路径都统一的转为动态的绝对路径</span><br><span class="line">fs.readFile(path.join(__dirname + &#39;&#x2F;a.txt&#39;), &#39;utf8&#39;, function (err, data) &#123;</span><br><span class="line">  if (err) &#123;</span><br><span class="line">    throw err</span><br><span class="line">  &#125;</span><br><span class="line">  console.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+&gt; 补充：模块中的路径标识和这里的路径没关系，不受影响（就是相对于文件模块）
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p><strong>模块中的路径标识和文件操作中的相对路径标识不一致</strong></p>
+<p><strong>模块中的路径标识就是相对于当前文件模块，不受 node 命令所处路径影响</strong></p>
+</blockquote>
+<h1 id="8-Express（快速的）"><a href="#8-Express（快速的）" class="headerlink" title="8.Express（快速的）"></a>8.Express（快速的）</h1><p>作者：Tj</p>
+<p>原生的 http 在某些方面表现不足以应对我们的开发需求，所以就需要使用框架来加快我们的开发效率，框架的目的就是提高效率，让我们的代码高度统一。</p>
+<p>在 node 中有很多 web 开发框架。主要学习 express</p>
+<ul>
+<li><p><code>http://expressjs.com/</code>,其中主要封装的是 http。</p>
+</li>
+<li><pre><code class="js">// 1 安装
+// 2 引包
+var express = require(&#39;express&#39;)
+// 3 创建服务器应用程序
+//      也就是原来的http.createServer();
+var app = express()
+
+// 公开指定目录
+// 只要通过这样做了，就可以通过/public/xx的方式来访问public目录中的所有资源
+// 在Express中开放资源就是一个API的事
+app.use(&#39;/public/&#39;, express.static(&#39;/public/&#39;))
+
+//模板引擎在Express中开放模板也是一个API的事
+
+// 当服务器收到get请求 / 的时候，执行回调处理函数
+app.get(&#39;/&#39;, function (req, res) &#123;
+  res.send(&#39;hello express&#39;)
+&#125;)
+
+// 相当于server.listen
+app.listen(3000, function () &#123;
+  console.log(&#39;app is runing at port 3000&#39;)
+&#125;)
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 8.1.起步</span><br><span class="line"></span><br><span class="line">#### 安装</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;css</span><br><span class="line">cnpm install express</span><br></pre></td></tr></table></figure>
+#### hello world
+</code></pre>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入express</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. 创建app</span></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">//  2.</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 1</span></span><br><span class="line">  <span class="comment">// res.write(&#x27;Hello&#x27;);</span></span><br><span class="line">  <span class="comment">// res.write(&#x27;World&#x27;);</span></span><br><span class="line">  <span class="comment">// res.end()</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2</span></span><br><span class="line">  <span class="comment">// res.end(&#x27;hello world&#x27;);</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 3</span></span><br><span class="line">  res.send(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;express app is runing...&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="基本路由"><a href="#基本路由" class="headerlink" title="基本路由"></a>基本路由</h4><p>路由：</p>
+<ul>
+<li>请求方法</li>
+<li>请求路径</li>
+<li>请求处理函数</li>
+</ul>
+<p>get:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当你以get方法请求/的时候，执行对应的处理函数</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>post:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当你以post方法请求/的时候，执行对应的处理函数</span></span><br><span class="line">app.post(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="Express-静态服务-API"><a href="#Express-静态服务-API" class="headerlink" title="Express 静态服务 API"></a>Express 静态服务 API</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.use不仅仅是用来处理静态资源的，还可以做很多工作(body-parser的配置)</span></span><br><span class="line">app.use(express.static(<span class="string">&#x27;public&#x27;</span>))</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">&#x27;files&#x27;</span>))</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">&#x27;/stataic&#x27;</span>, express.static(<span class="string">&#x27;public&#x27;</span>))</span><br><span class="line"><span class="comment">// 引入express</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建app</span></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 开放静态资源</span></span><br><span class="line"><span class="comment">// 1.当以/public/开头的时候，去./public/目录中找对应资源</span></span><br><span class="line"><span class="comment">// 访问：http://127.0.0.1:3000/public/login.html</span></span><br><span class="line">app.use(<span class="string">&#x27;/public/&#x27;</span>, express.static(<span class="string">&#x27;./public/&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.当省略第一个参数的时候，只可以通过省略/public的方式来访问</span></span><br><span class="line"><span class="comment">// 访问：http://127.0.0.1:3000/login.html</span></span><br><span class="line"><span class="comment">// app.use(express.static(&#x27;./public/&#x27;));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.访问：http://127.0.0.1:3000/a/login.html</span></span><br><span class="line"><span class="comment">// a相当于public的别名</span></span><br><span class="line"><span class="comment">// app.use(&#x27;/a/&#x27;,express.static(&#x27;./public/&#x27;));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.end(<span class="string">&#x27;hello world&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;express app is runing...&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="在-Express-中配置使用-art-templete-模板引擎"><a href="#在-Express-中配置使用-art-templete-模板引擎" class="headerlink" title="在 Express 中配置使用 art-templete 模板引擎"></a>在 Express 中配置使用 <code>art-templete</code> 模板引擎</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://aui.github.io/art-template/">art-template 官方文档</a></p>
+</li>
+<li><p>在 node 中，有很多第三方模板引擎都可以使用，不是只有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">art-template</span><br></pre></td></tr></table></figure>
+<ul>
+<li>还有 ejs，jade（pug），handlebars，nunjucks</li>
+</ul>
+</li>
+</ul>
+<p>安装：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install --save art-template</span><br><span class="line">npm install --save express-art-template</span><br><span class="line"></span><br><span class="line"><span class="comment">//两个一起安装</span></span><br><span class="line">npm i --save art-template express-art-template</span><br></pre></td></tr></table></figure>
+<p>配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 配置使用 art-template 模板引擎</span></span><br><span class="line"><span class="comment">// 第一个参数，表示，当渲染以 .art 结尾的文件的时候，使用 art-template 模板引擎</span></span><br><span class="line"><span class="comment">// express-art-template 是专门用来在 Express 中把 art-template 整合到 Express 中</span></span><br><span class="line"><span class="comment">// 虽然外面这里不需要记载 art-template 但是也必须安装</span></span><br><span class="line"><span class="comment">// 原因就在于 express-art-template 依js赖了 art-template</span></span><br><span class="line"></span><br><span class="line">app.engine(<span class="string">&#x27;html&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;express-art-template&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Express 为 Response 相应对象提供了一个方法：render</span></span><br><span class="line"><span class="comment">// render 方法默认是不可以使用，但是如果配置了模板引擎就可以使用了</span></span><br><span class="line"><span class="comment">// res.render(&#x27;html模板名&#x27;, &#123;模板数据&#125;)</span></span><br><span class="line"><span class="comment">// 第一个参数不能写路径，默认会去项目中的 views 目录查找该模板文件</span></span><br><span class="line"><span class="comment">// 也就是说 Express 有一个约定：开发人员把所有的视图文件都放到 views 目录中</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果想要修改默认的 views 目录，则可以</span></span><br><span class="line"><span class="comment">// app.set(&#x27;views&#x27;, render函数的默认路径)</span></span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// express默认会去views目录找index.html</span></span><br><span class="line">  res.render(<span class="string">&#x27;index.html&#x27;</span>, &#123;</span><br><span class="line">    title: <span class="string">&#x27;hello world&#x27;</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>如果希望修改默认的<code>views</code>视图渲染存储目录，可以：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第一个参数views千万不要写错</span></span><br><span class="line">app.set(<span class="string">&#x27;views&#x27;</span>, 目录路径)</span><br></pre></td></tr></table></figure>
+<h3 id="8-2-在-Express-中获取表单请求数据"><a href="#8-2-在-Express-中获取表单请求数据" class="headerlink" title="8.2.在 Express 中获取表单请求数据"></a>8.2.在 Express 中获取表单请求数据</h3><h5 id="获取-get-请求数据："><a href="#获取-get-请求数据：" class="headerlink" title="获取 get 请求数据："></a>获取 get 请求数据：</h5><p>Express 内置了一个 api，可以直接通过<code>req.query</code>来获取数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过requery方法获取用户输入的数据</span></span><br><span class="line"><span class="comment">// req.query只能拿到get请求的数据</span></span><br><span class="line"><span class="keyword">var</span> comment = req.query</span><br></pre></td></tr></table></figure>
+<h5 id="获取-post-请求数据："><a href="#获取-post-请求数据：" class="headerlink" title="获取 post 请求数据："></a>获取 post 请求数据：</h5><p>在 Express 中没有内置获取表单 post 请求体的 api，这里我们需要使用一个第三方包<code>body-parser</code>来获取数据。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save body-parser;</span><br></pre></td></tr></table></figure>
+<p>配置：</p>
+<p>// 配置解析表单 POST 请求体插件（注意：一定要在 app.use(router) 之前 ）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="comment">// 引包</span></span><br><span class="line"><span class="keyword">var</span> bodyParser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 配置body-parser</span></span><br><span class="line"><span class="comment">// 只要加入这个配置，则在req请求对象上会多出来一个属性：body</span></span><br><span class="line"><span class="comment">// 也就是说可以直接通过req.body来获取表单post请求数据</span></span><br><span class="line"><span class="comment">// parse application/x-www-form-urlencoded</span></span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// parse application/json</span></span><br><span class="line">app.use(bodyParser.json())</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.setHeader(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;text/plain&#x27;</span>)</span><br><span class="line">  res.write(<span class="string">&#x27;you posted:\n&#x27;</span>)</span><br><span class="line">  <span class="comment">// 可以通过req.body来获取表单请求数据</span></span><br><span class="line">  res.end(<span class="built_in">JSON</span>.stringify(req.body, <span class="literal">null</span>, <span class="number">2</span>))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="8-3-在-Express-中配置使用-express-session-插件操作"><a href="#8-3-在-Express-中配置使用-express-session-插件操作" class="headerlink" title="8.3.在 Express 中配置使用 express-session 插件操作"></a>8.3.在 Express 中配置使用 <code>express-session</code> 插件操作</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://github.com/expressjs/session">https://github.com/expressjs/session</a></p>
+</blockquote>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express-session</span><br></pre></td></tr></table></figure>
+<p>配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//该插件会为req请求对象添加一个成员:req.session默认是一个对象</span></span><br><span class="line"><span class="comment">//这是最简单的配置方式</span></span><br><span class="line"><span class="comment">//Session是基于Cookie实现的</span></span><br><span class="line">app.use(</span><br><span class="line">  session(&#123;</span><br><span class="line">    <span class="comment">//配置加密字符串，他会在原有的基础上和字符串拼接起来去加密</span></span><br><span class="line">    <span class="comment">//目的是为了增加安全性，防止客户端恶意伪造</span></span><br><span class="line">    secret: <span class="string">&#x27;keyboard cat&#x27;</span>,</span><br><span class="line">    resave: <span class="literal">false</span>,</span><br><span class="line">    saveUninitialized: <span class="literal">true</span>, <span class="comment">//无论是否适用Session，都默认直接分配一把钥匙</span></span><br><span class="line">    cookie: &#123; <span class="attr">secure</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读</span></span><br><span class="line"><span class="comment">//添加Session数据</span></span><br><span class="line"><span class="comment">//session就是一个对象</span></span><br><span class="line">req.session.foo = <span class="string">&#x27;bar&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//写</span></span><br><span class="line"><span class="comment">//获取session数据</span></span><br><span class="line">req.session.foo</span><br><span class="line"></span><br><span class="line"><span class="comment">//删</span></span><br><span class="line">req.session.foo = <span class="literal">null</span></span><br><span class="line"><span class="keyword">delete</span> req.session.foo</span><br></pre></td></tr></table></figure>
+<p>提示：</p>
+<p>默认 Session 数据时内存储数据，服务器一旦重启，真正的生产环境会把 Session 进行持久化存储。</p>
+<h2 id="8-4-利用-Express-实现-ADUS-项目"><a href="#8-4-利用-Express-实现-ADUS-项目" class="headerlink" title="8.4.利用 Express 实现 ADUS 项目"></a>8.4.利用 Express 实现 ADUS 项目</h2><h3 id="模块化思想"><a href="#模块化思想" class="headerlink" title="模块化思想"></a>模块化思想</h3><p>模块如何划分:</p>
+<ul>
+<li>模块职责要单一</li>
+</ul>
+<p>javascript 模块化：</p>
+<ul>
+<li>Node 中的 CommonJS</li>
+<li>浏览器中的：<ul>
+<li>AMD require.js</li>
+<li>CMD sea.js</li>
+</ul>
+</li>
+<li>es6 中增加了官方支持</li>
+</ul>
+<h3 id="起步"><a href="#起步" class="headerlink" title="起步"></a>起步</h3><ul>
+<li>初始化</li>
+<li>安装依赖</li>
+<li>模板处理</li>
+</ul>
+<h3 id="路由设计"><a href="#路由设计" class="headerlink" title="路由设计"></a>路由设计</h3><table>
+<thead>
+<tr>
+<th>请求方法</th>
+<th>请求路径</th>
+<th>get 参数</th>
+<th>post 参数</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET</td>
+<td>/students</td>
+<td></td>
+<td></td>
+<td>渲染首页</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/students/new</td>
+<td></td>
+<td></td>
+<td>渲染添加学生页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/students/new</td>
+<td></td>
+<td>name,age,gender,hobbies</td>
+<td>处理添加学生请求</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/students/edit</td>
+<td>id</td>
+<td></td>
+<td>渲染编辑页面</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/students/edit</td>
+<td></td>
+<td>id,name,age,gender,hobbies</td>
+<td>处理编辑请求</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/students/delete</td>
+<td>id</td>
+<td></td>
+<td>处理删除请求</td>
+</tr>
+</tbody></table>
+<h3 id="提取路由模块"><a href="#提取路由模块" class="headerlink" title="提取路由模块"></a>提取路由模块</h3><p>router.js:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * router.js路由模块</span></span><br><span class="line"><span class="comment"> * 职责：</span></span><br><span class="line"><span class="comment"> *      处理路由</span></span><br><span class="line"><span class="comment"> *      根据不同的请求方法+请求路径设置具体的请求函数</span></span><br><span class="line"><span class="comment"> * 模块职责要单一，我们划分模块的目的就是增强代码的可维护性，提升开发效率</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Express专门提供了一种更好的方式</span></span><br><span class="line"><span class="comment">// 专门用来提供路由的</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="comment">// 1 创建一个路由容器</span></span><br><span class="line"><span class="keyword">var</span> router = express.Router()</span><br><span class="line"><span class="comment">// 2 把路由都挂载到路由容器中</span></span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&#x27;/students&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// res.send(&#x27;hello world&#x27;);</span></span><br><span class="line">  <span class="comment">// readFile的第二个参数是可选的，传入utf8就是告诉他把读取到的文件直接按照utf8编码，直接转成我们认识的字符</span></span><br><span class="line">  <span class="comment">// 除了这样来转换，也可以通过data.toString（）来转换</span></span><br><span class="line">  fs.readFile(<span class="string">&#x27;./db.json&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.status(<span class="number">500</span>).send(<span class="string">&#x27;Server error.&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 读取到的文件数据是string类型的数据</span></span><br><span class="line">    <span class="comment">// console.log(data);</span></span><br><span class="line">    <span class="comment">// 从文件中读取到的数据一定是字符串，所以一定要手动转换成对象</span></span><br><span class="line">    <span class="keyword">var</span> students = <span class="built_in">JSON</span>.parse(data).students</span><br><span class="line">    res.render(<span class="string">&#x27;index.html&#x27;</span>, &#123;</span><br><span class="line">      <span class="comment">// 读取文件数据</span></span><br><span class="line">      students: students,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&#x27;/students/new&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;new.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&#x27;/students/edit&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line">router.post(<span class="string">&#x27;/students/edit&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">&#x27;/students/delete&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 把router导出</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
+<p>app.js:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="built_in">require</span>(<span class="string">&#x27;./router&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// router(app);</span></span><br><span class="line"><span class="comment">// 把路由容器挂载到app服务中</span></span><br><span class="line"><span class="comment">// 挂载路由</span></span><br><span class="line">app.use(router)</span><br></pre></td></tr></table></figure>
+<h3 id="设计操作数据的-API-文件模块"><a href="#设计操作数据的-API-文件模块" class="headerlink" title="设计操作数据的 API 文件模块"></a>设计操作数据的 API 文件模块</h3><p>es6 中的 find 和 findIndex：</p>
+<p>find 接受一个方法作为参数，方法内部返回一个条件</p>
+<p>find 会便利所有的元素，执行你给定的带有条件返回值的函数</p>
+<p>符合该条件的元素会作为 find 方法的返回值</p>
+<p>如果遍历结束还没有符合该条件的元素，则返回 undefined</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * student.js</span></span><br><span class="line"><span class="comment"> * 数据操作文件模块</span></span><br><span class="line"><span class="comment"> * 职责：操作文件中的数据，只处理数据，不关心业务</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取所有学生列表</span></span><br><span class="line"><span class="comment"> * return []</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">exports</span>.find = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取添加保存学生</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">exports</span>.save = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 更新学生</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">exports</span>.update = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 删除学生</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">exports</span>.delete = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ul>
+<li><p>处理模板</p>
+</li>
+<li><p>配置静态开放资源</p>
+</li>
+<li><p>配置模板引擎</p>
+</li>
+<li><p>简单的路由，/studens 渲染静态页出来</p>
+</li>
+<li><p>路由设计</p>
+</li>
+<li><p>提取路由模块</p>
+</li>
+<li><p>由于接下来的一系列业务操作都需要处理文件数据，所以我们需要封装 Student.js’</p>
+</li>
+<li><p>先写好 student.js 文件结构</p>
+<ul>
+<li>查询所有学生列别哦的 API</li>
+<li>findById</li>
+<li>save</li>
+<li>updateById</li>
+<li>deleteById</li>
+</ul>
+</li>
+<li><p>实现具体功能</p>
+<ul>
+<li>通过路由收到请求</li>
+<li>接受请求中的参数（get，post）<ul>
+<li>req.query</li>
+<li>req.body</li>
+</ul>
+</li>
+<li>调用数据操作 API 处理数据</li>
+<li>根据操作结果给客户端发送请求</li>
+</ul>
+</li>
+<li><p>业务功能顺序</p>
+<ul>
+<li>列表</li>
+<li>添加</li>
+<li>编辑</li>
+<li>删除</li>
+</ul>
+</li>
+<li><p>find 方法</p>
+</li>
+<li><pre><code class="js">// EcmaScript 6 中的一个数组方法：find
+// 需要接收一个函数作为参数
+// 当某个遍历项符合 item.id === student.id 条件的时候，find 会终止遍历，同时返回遍历项
+let stu = students.find((item) =&gt; &#123;
+  return item.id === student.id
+&#125;)
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- findIndex 方法</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;js</span><br><span class="line">  &#x2F;&#x2F; findIndex 方法专门用来根据条件查找元素的下标</span><br><span class="line">  let deleteId &#x3D; students.findIndex((item) &#x3D;&gt; &#123;</span><br><span class="line">    return item.id &#x3D;&#x3D;&#x3D; parseInt(id)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+### 子模板和模板的继承（模板引擎高级语法）【include，extend，block】
+</code></pre>
+</li>
+</ul>
+<p>注意:</p>
+<p>模板页：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;zh&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">	&lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">	&lt;meta http-equiv=<span class="string">&quot;X-UA-Compatible&quot;</span> content=<span class="string">&quot;ie=edge&quot;</span>&gt;</span><br><span class="line">	&lt;title&gt;模板页&lt;/title&gt;</span><br><span class="line">	&lt;link rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;/node_modules/bootstrap/dist/css/bootstrap.css&quot;</span>/&gt;</span><br><span class="line">	&#123;&#123; block <span class="string">&#x27;head&#x27;</span> &#125;&#125;&#123;&#123; /block &#125;&#125;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;!-- 通过include导入公共部分 --&gt;</span><br><span class="line">	&#123;&#123;include <span class="string">&#x27;./header.html&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 留一个位置 让别的内容去填充 --&gt;</span><br><span class="line">	&#123;&#123; block  <span class="string">&#x27;content&#x27;</span> &#125;&#125;</span><br><span class="line">		&lt;h1&gt;默认内容&lt;/h1&gt;</span><br><span class="line">	&#123;&#123; /block &#125;&#125;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 通过include导入公共部分 --&gt;</span><br><span class="line">	&#123;&#123;include <span class="string">&#x27;./footer.html&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 公共样式 --&gt;</span><br><span class="line">	&lt;script src=<span class="string">&quot;/node_modules/jquery/dist/jquery.js&quot;</span> &gt;&lt;/script&gt;</span><br><span class="line">	&lt;script src=<span class="string">&quot;/node_modules/bootstrap/dist/js/bootstrap.js&quot;</span> &gt;&lt;/script&gt;</span><br><span class="line">	&#123;&#123; block <span class="string">&#x27;script&#x27;</span> &#125;&#125;&#123;&#123; /block &#125;&#125;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>模板的继承：</p>
+<p>​ header 页面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>公共的头部<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>​ footer 页面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>公共的底部<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>模板页的使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 继承(extend:延伸，扩展)模板也layout.html --&gt;</span><br><span class="line">&lt;!-- 把layout.html页面的内容都拿进来作为index.html页面的内容 --&gt;</span><br><span class="line">&#123;&#123;extend <span class="string">&#x27;./layout.html&#x27;</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- 向模板页面填充新的数据 --&gt;</span><br><span class="line">&lt;!-- 填充后就会替换掉layout页面content中的数据 --&gt;</span><br><span class="line">&lt;!-- style样式方面的内容 --&gt;</span><br><span class="line">&#123;&#123; block <span class="string">&#x27;head&#x27;</span> &#125;&#125;</span><br><span class="line">	&lt;style type=<span class="string">&quot;text/css&quot;</span>&gt;</span><br><span class="line">		body&#123;</span><br><span class="line">			background-color: skyblue;</span><br><span class="line">		&#125;</span><br><span class="line">	&lt;/style&gt;</span><br><span class="line">&#123;&#123; /block &#125;&#125;</span><br><span class="line">&#123;&#123; block <span class="string">&#x27;content&#x27;</span> &#125;&#125;</span><br><span class="line">	&lt;div id=<span class="string">&quot;&quot;</span>&gt;</span><br><span class="line">		&lt;h1&gt;Index页面的内容&lt;/h1&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&#123;&#123; /block &#125;&#125;</span><br><span class="line">&lt;!-- js部分的内容 --&gt;</span><br><span class="line">&#123;&#123; block <span class="string">&#x27;script&#x27;</span> &#125;&#125;</span><br><span class="line">	&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&#123;&#123; /block &#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>最终的显示效果：</p>
+<h1 id="9-异步编程"><a href="#9-异步编程" class="headerlink" title="9.异步编程"></a>9.异步编程</h1><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201224134656280.png" alt="image-20201224134656280"></p>
+<p>JavaScript 编程的一大特色，就是异步编程</p>
+<p>异步函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span></span><br><span class="line">readFile</span><br><span class="line">wirteFile</span><br><span class="line">readdir</span><br><span class="line">ajax</span><br><span class="line"><span class="comment">// 往往异步 API 都伴随有一个回调函数</span></span><br><span class="line"><span class="keyword">var</span> ret = fn()</span><br><span class="line">$.get(<span class="string">&#x27;dsadas&#x27;</span>, fucntion () &#123;&#125;)</span><br><span class="line"><span class="keyword">var</span> ret = $.get()</span><br></pre></td></tr></table></figure>
+<h2 id="9-1-回调函数"><a href="#9-1-回调函数" class="headerlink" title="9.1.回调函数"></a>9.1.回调函数</h2><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201224135623580.png" alt="image-20201224135623580"></p>
+<p>不成立的情况下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">var</span> ret = x + y <span class="comment">//这一步会执行不到</span></span><br><span class="line">    <span class="keyword">return</span> ret</span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">  <span class="comment">//到这里执行就结束了，不会i等到前面的定时器，所以直接返回了默认值 undefined</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line"><span class="comment">// 结果是 1 3 undefined 4</span></span><br></pre></td></tr></table></figure>
+<p>使用回调函数解决：</p>
+<p>回调函数：通过一个函数，获取函数内部的操作。（根据输入得到输出结果）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ret</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y, callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// callback就是回调函数</span></span><br><span class="line">  <span class="comment">// var x = 10;</span></span><br><span class="line">  <span class="comment">// var y = 20;</span></span><br><span class="line">  <span class="comment">// var callback = function(ret)&#123;console.log(ret);&#125;</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">1</span>)</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ret = x + y</span><br><span class="line">    callback(ret)</span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="number">3</span>)</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">10</span>, <span class="number">20</span>, <span class="function"><span class="keyword">function</span> (<span class="params">ret</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(ret)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201222191541919.png" alt="image-20201222191541919"></p>
+<p>注意：</p>
+<p>​ 凡是需要得到一个函数内部异步操作的结果（setTimeout,readFile,writeFile,ajax,readdir）</p>
+<p>​ 这种情况必须通过 回调函数 (异步 API 都会伴随着一个回调函数)</p>
+<p>ajax:</p>
+<p>基于原生 XMLHttpRequest 封装 get 方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line"><span class="comment">// 当请求加载成功要调用指定的函数</span></span><br><span class="line">oReq.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(oReq.responseText)</span><br><span class="line">&#125;</span><br><span class="line">oReq.open(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;请求路径&#x27;</span>, <span class="literal">true</span>)</span><br><span class="line">oReq.send()</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params">url, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> oReq = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">  <span class="comment">// 当请求加载成功要调用指定的函数</span></span><br><span class="line">  oReq.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//console.log(oReq.responseText);</span></span><br><span class="line">    callback(oReq.responseText)</span><br><span class="line">  &#125;</span><br><span class="line">  oReq.open(<span class="string">&#x27;GET&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line">  oReq.send()</span><br><span class="line">&#125;</span><br><span class="line">get(<span class="string">&#x27;data.json&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="9-2-Promise"><a href="#9-2-Promise" class="headerlink" title="9.2.Promise"></a>9.2.Promise</h2><p>只要出现异步回调，就可以使用.then（）的方式处理</p>
+<p>callback hell（回调地狱）:</p>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201223160628461.png" alt="image-20201223160628461"></p>
+<p>文件的读取无法判断执行顺序（文件的执行顺序是依据文件的大小来决定的）(异步 api 无法保证文件的执行顺序)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">&#x27;./data/a.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="comment">// 1 读取失败直接打印输出读取失败</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">    <span class="comment">// 2 抛出异常</span></span><br><span class="line">    <span class="comment">// 		阻止程序的执行</span></span><br><span class="line">    <span class="comment">// 		把错误信息打印到控制台</span></span><br><span class="line">    <span class="keyword">throw</span> err</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">&#x27;./data/b.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="comment">// 1 读取失败直接打印输出读取失败</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">    <span class="comment">// 2 抛出异常</span></span><br><span class="line">    <span class="comment">// 		阻止程序的执行</span></span><br><span class="line">    <span class="comment">// 		把错误信息打印到控制台</span></span><br><span class="line">    <span class="keyword">throw</span> err</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>通过回调嵌套的方式来保证顺序：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line">fs.readFile(<span class="string">&#x27;./data/a.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="comment">// 1 读取失败直接打印输出读取失败</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">    <span class="comment">// 2 抛出异常</span></span><br><span class="line">    <span class="comment">// 		阻止程序的执行</span></span><br><span class="line">    <span class="comment">// 		把错误信息打印到控制台</span></span><br><span class="line">    <span class="keyword">throw</span> err</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">  fs.readFile(<span class="string">&#x27;./data/b.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="comment">// 1 读取失败直接打印输出读取失败</span></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">      <span class="comment">// 2 抛出异常</span></span><br><span class="line">      <span class="comment">// 		阻止程序的执行</span></span><br><span class="line">      <span class="comment">// 		把错误信息打印到控制台</span></span><br><span class="line">      <span class="keyword">throw</span> err</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    fs.readFile(<span class="string">&#x27;./data/a.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="comment">// 1 读取失败直接打印输出读取失败</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">        <span class="comment">// 2 抛出异常</span></span><br><span class="line">        <span class="comment">// 		阻止程序的执行</span></span><br><span class="line">        <span class="comment">// 		把错误信息打印到控制台</span></span><br><span class="line">        <span class="keyword">throw</span> err</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(data)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>为了解决以上编码方式带来的问题（回调地狱嵌套），所以在 EcmaScript6 新增了一个 API:<code>Promise</code>。</p>
+<ul>
+<li>Promise：承诺，保证，期约</li>
+<li>Promise 本身不是异步的，但往往都是内部封装一个异步任务</li>
+<li><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201223165614747.png" alt="image-20201223165614747"></li>
+</ul>
+<h3 id="基本语法："><a href="#基本语法：" class="headerlink" title="基本语法："></a>基本语法：</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在EcmaScript 6中新增了一个API Promise</span></span><br><span class="line"><span class="comment">// Promise 是一个构造函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="comment">// 1 创建Promise容器		resolve:解决   reject：失败</span></span><br><span class="line"><span class="comment">// Promise 容器一旦创建就开始执行里面的代码</span></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;./a.text&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="comment">// 失败了，promise中的异步任务失败了</span></span><br><span class="line">      <span class="comment">// console.log(err);</span></span><br><span class="line">      <span class="comment">// 把容器的Pending状态变为rejected</span></span><br><span class="line">      <span class="comment">// 调用reject就相当于调用了then方的第二个参数函数</span></span><br><span class="line">      reject(err)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 	console.log(data);</span></span><br><span class="line">      <span class="comment">//	Promise中的异步任务成功了</span></span><br><span class="line">      <span class="comment">// 把容器的Pending状态变为resolve</span></span><br><span class="line">      <span class="comment">// 也就是说这里调用的 resolve 方法实际上就是 then 方法传递的那个function</span></span><br><span class="line">      resolve(<span class="number">1234</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当p1成功了，然后就（then）做指定的操作</span></span><br><span class="line"><span class="comment">// then方法接收的function就是容器中的resolve函数</span></span><br><span class="line">p1.then(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;读取文件失败了&#x27;</span>, err)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201223165905008.png" alt="image-20201223165905008"></p>
+<p>链式循环：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;./data/a.txt&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      resolve(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;./data/b.txt&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      resolve(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p3 = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">  fs.readFile(<span class="string">&#x27;./data/c.txt&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      resolve(data)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">p1.then(</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="comment">// 当 p1 读取成功的时候</span></span><br><span class="line">    <span class="comment">// 当前函数中 return 的结果就可以在后面的 then 中 function 接收到</span></span><br><span class="line">    <span class="comment">// 当你 return 123 后面就接收到 123</span></span><br><span class="line">    <span class="comment">//      return &#x27;hello&#x27; 后面就接收到 &#x27;hello&#x27;</span></span><br><span class="line">    <span class="comment">//      没有 return 后面收到的就是 undefined</span></span><br><span class="line">    <span class="comment">// 上面那些 return 的数据没什么卵用</span></span><br><span class="line">    <span class="comment">// 真正有用的是：我们可以 return 一个 Promise 对象</span></span><br><span class="line">    <span class="comment">// 当 return 一个 Promise 对象的时候，后续的 then 中的 方法的第一个参数会作为 p2 的 resolve</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="keyword">return</span> p2</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;读取文件失败了&#x27;</span>, err)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="keyword">return</span> p3</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201223170433735.png" alt="image-20201223170433735"></p>
+<p>Promise 和 callback 回调函数解决异步问题</p>
+<p>封装 Promise 的<code>readFile</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pReadFile</span>(<span class="params">filePath</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    fs.readFile(filePath, <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        reject(err)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        resolve(data)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pReadFile(<span class="string">&#x27;./a.txt&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="keyword">return</span> pReadFile(<span class="string">&#x27;./b.txt&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">    <span class="keyword">return</span> pReadFile(<span class="string">&#x27;./a.txt&#x27;</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data)</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>mongoose 所有的 API 都支持 Promise：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询所有</span></span><br><span class="line">User.find().then(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注册：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用户注册</span></span><br><span class="line"><span class="comment">// 1. 判断用户是否存在</span></span><br><span class="line"><span class="comment">//    如果已存在，结束注册</span></span><br><span class="line"><span class="comment">//    如果不存在，注册（保存一条用户信息）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// callback回调函数式</span></span><br><span class="line">User.findOne(&#123;<span class="attr">username</span>:<span class="string">&#x27;admin&#x27;</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(user)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;用户已存在&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> User(&#123;</span><br><span class="line">             username:<span class="string">&#x27;aaa&#x27;</span>,</span><br><span class="line">             password:<span class="string">&#x27;123&#x27;</span>,</span><br><span class="line">             email:<span class="string">&#x27;fffff&#x27;</span></span><br><span class="line">        &#125;).save(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;注册成功&#x27;</span>);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Promise.then()方法处理</span></span><br><span class="line">User.findOne(&#123;</span><br><span class="line">    username:<span class="string">&#x27;admin&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">user</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(user)&#123;</span><br><span class="line">            <span class="comment">// 用户已经存在不能注册</span></span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">&#x27;用户已存在&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// 用户不存在可以注册</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> User(&#123;</span><br><span class="line">                username:<span class="string">&#x27;aaa&#x27;</span>,</span><br><span class="line">                password:<span class="string">&#x27;123&#x27;</span>,</span><br><span class="line">                email:<span class="string">&#x27;fffff&#x27;</span></span><br><span class="line">            &#125;).save();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(<span class="function"><span class="title">funciton</span>(<span class="params">ret</span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&#x27;注册成功&#x27;</span>);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="9-3-Genertator-生成器函数"><a href="#9-3-Genertator-生成器函数" class="headerlink" title="9.3.Genertator 生成器函数"></a>9.3.Genertator 生成器函数</h2><h3 id="async-函数"><a href="#async-函数" class="headerlink" title="async 函数"></a>async 函数</h3><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201224140023310.png" alt="image-20201224140023310"></p>
+<ul>
+<li><p>ES7 提供了<code>async</code>函数，使得异步操作变得更加方便。<code>async</code>函数是什么？一句话，<code>async</code>函数就是 Generator 函数的语法糖。</p>
+</li>
+<li><p><code>async</code>表示函数里有异步操作，<code>await</code>表示紧跟在后面的表达式需要等待结果。</p>
+</li>
+<li><p>返回值是 Promise。</p>
+<ul>
+<li><code>async</code>函数的返回值是 Promise 对象，你可以用<code>then</code>方法指定下一步的操作。</li>
+</ul>
+</li>
+<li><p>进一步说，<code>async</code>函数完全可以看作多个异步操作，包装成的一个 Promise 对象，而<code>await</code>命令就是内部<code>then</code>命令的语法糖。</p>
+</li>
+</ul>
+<h1 id="10-其他"><a href="#10-其他" class="headerlink" title="10.其他"></a>10.其他</h1><h2 id="10-1-修改完代码自动重启"><a href="#10-1-修改完代码自动重启" class="headerlink" title="10.1.修改完代码自动重启"></a>10.1.修改完代码自动重启</h2><p>我们在这里可以使用一个第三方命名行工具：<code>nodemon</code>来帮助我们解决频繁修改代码重启服务器的问题。</p>
+<p><code>nodemon</code>是一个基于 Node.js 开发的一个第三方命令行工具，我们使用的时候需要独立安装：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#在任意目录执行该命令都可以</span><br><span class="line">#也就是说，所有需要 --global安装的包都可以在任意目录执行</span><br><span class="line">npm install --<span class="built_in">global</span> nodemon</span><br><span class="line">npm install -g nodemon</span><br><span class="line"></span><br><span class="line">#如果安装不成功的话，可以使用cnpm安装</span><br><span class="line">cnpm install -g nodemon</span><br></pre></td></tr></table></figure>
+<p>安装完毕之后使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br><span class="line"></span><br><span class="line">#使用nodemon</span><br><span class="line">nodemon app.js</span><br></pre></td></tr></table></figure>
+<p>只要是通过<code>nodemon</code>启动的服务，则他会监视你的文件变化，当文件发生变化的时候，会自动帮你重启服务器。</p>
+<h2 id="10-2-封装异步-API"><a href="#10-2-封装异步-API" class="headerlink" title="10.2.封装异步 API"></a>10.2.封装异步 API</h2><p>回调函数：获取异步操作的结果</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// var callback = funtion(data)&#123; console.log(data); &#125;</span></span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> data = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line">    callback(data)</span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 如果需要获取一个函数中异步操作的结果，则必须通过回调函数的方式来获取</span></span><br><span class="line">fn(<span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="10-3-数组的遍历方法，都是对函数作为一种参数"><a href="#10-3-数组的遍历方法，都是对函数作为一种参数" class="headerlink" title="10.3.数组的遍历方法，都是对函数作为一种参数"></a>10.3.数组的遍历方法，都是对函数作为一种参数</h2><h2 id="10-4-EcmaScript-6"><a href="#10-4-EcmaScript-6" class="headerlink" title="10.4.EcmaScript 6"></a>10.4.EcmaScript 6</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/">https://es6.ruanyifeng.com/</a></p>
+</blockquote>
+<h1 id="11-Express-中间件"><a href="#11-Express-中间件" class="headerlink" title="11.Express 中间件"></a>11.Express 中间件</h1><h2 id="11-1-中间件的概念"><a href="#11-1-中间件的概念" class="headerlink" title="11.1.中间件的概念"></a>11.1.中间件的概念</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/guide/using-middleware.html">http://expressjs.com/en/guide/using-middleware.html</a></p>
+</blockquote>
+<p>中间件：把很复杂的事情分割成单个，然后依次有条理的执行。就是一个中间处理环节，有输入，有输出。</p>
+<p>说的通俗易懂点儿，中间件就是一个（从请求到响应调用的方法）方法。</p>
+<p>把数据从请求到响应分步骤来处理，每一个步骤都是一个中间处理环节。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cookie = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/cookie&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> query = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/query&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> postBody = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/post-body&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">// 解析请求地址中的get参数</span></span><br><span class="line">	<span class="comment">// var obj = url.parse(req.url,true);</span></span><br><span class="line">	<span class="comment">// req.query = obj.query;</span></span><br><span class="line">	query(req,res);	<span class="comment">//中间件</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 解析请求地址中的post参数</span></span><br><span class="line">	req.body = &#123;</span><br><span class="line">		foo:<span class="string">&#x27;bar&#x27;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(req.url === <span class="string">&#x27;xxx&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">// 处理请求</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;3000 runing...&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>同一个请求对象所经过的中间件都是同一个请求对象和响应对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"><span class="comment">// 中间件：处理请求的，本质就是个函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 Express 中，对中间件有几种分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当请求进来，会从第一个中间件开始进行匹配</span></span><br><span class="line"><span class="comment">//    如果匹配，则进来</span></span><br><span class="line"><span class="comment">//       如果请求进入中间件之后，没有调用 next 则代码会停在当前中间件</span></span><br><span class="line"><span class="comment">//       如果调用了 next 则继续向后找到第一个匹配的中间件</span></span><br><span class="line"><span class="comment">//    如果不匹配，则继续判断匹配下一个中间件</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 不关心请求路径和请求方法的中间件</span></span><br><span class="line"><span class="comment">// 也就是说任何请求都会进入这个中间件</span></span><br><span class="line"><span class="comment">// 中间件本身是一个方法，该方法接收三个参数：</span></span><br><span class="line"><span class="comment">//    Request 请求对象</span></span><br><span class="line"><span class="comment">//    Response 响应对象</span></span><br><span class="line"><span class="comment">//    next     下一个中间件</span></span><br><span class="line"><span class="comment">// 当一个请求进入一个中间件之后，如果不调用 next 则会停留在当前中间件</span></span><br><span class="line"><span class="comment">// 所以 next 是一个方法，用来调用下一个中间件的</span></span><br><span class="line"><span class="comment">// 调用 next 方法也是要匹配的（不是调用紧挨着的那个）</span></span><br><span class="line">app.get(<span class="string">&#x27;/abc&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 同一个请求的req和res是一样的，</span></span><br><span class="line">  <span class="comment">// 可以前面存储下面调用</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/abc&#x27;</span>)</span><br><span class="line">  <span class="comment">// req.foo = &#x27;bar&#x27;;</span></span><br><span class="line">  req.body = &#123;</span><br><span class="line">    name: <span class="string">&#x27;xiaoxiao&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br><span class="line">app.get(<span class="string">&#x27;/abc&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// console.log(req.foo);</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.body)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/abc&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;app is running at port 3000.&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="11-2-中间件的分类："><a href="#11-2-中间件的分类：" class="headerlink" title="11.2.中间件的分类："></a>11.2.中间件的分类：</h2><h3 id="应用程序级别的中间件"><a href="#应用程序级别的中间件" class="headerlink" title="应用程序级别的中间件"></a>应用程序级别的中间件</h3><p>万能匹配（不关心任何请求路径和请求方法的中间件）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>, <span class="built_in">Date</span>.now())</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>关心请求路径和请求方法的中间件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>, <span class="built_in">Date</span>.now())</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="路由级别的中间件严格匹配请求路径和请求方法的中间件"><a href="#路由级别的中间件严格匹配请求路径和请求方法的中间件" class="headerlink" title="路由级别的中间件严格匹配请求路径和请求方法的中间件"></a>路由级别的中间件严格匹配请求路径和请求方法的中间件</h3><p>get:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;get&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>post：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;post&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>put:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.put(<span class="string">&#x27;/user&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;put&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>delete:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.delete(<span class="string">&#x27;/delete&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;delete&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中间件：处理请求，本质就是个函数</span></span><br><span class="line"><span class="comment">// 在express中，对中间件有几种分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 不关心任何请求路径和请求方法的中间件</span></span><br><span class="line"><span class="comment">// 也就是说任何请求都会进入这个中间件</span></span><br><span class="line"><span class="comment">// 中间件本身是一个方法，该方法接收三个参数</span></span><br><span class="line"><span class="comment">// Request 请求对象</span></span><br><span class="line"><span class="comment">// Response 响应对象</span></span><br><span class="line"><span class="comment">// next 下一个中间件</span></span><br><span class="line"><span class="comment">// // 全局匹配中间件</span></span><br><span class="line"><span class="comment">// app.use(function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(&#x27;1&#x27;);</span></span><br><span class="line"><span class="comment">// 	// 当一个请求进入中间件后</span></span><br><span class="line"><span class="comment">// 	// 如果需要请求另外一个方法则需要使用next（）方法</span></span><br><span class="line"><span class="comment">// 	next();</span></span><br><span class="line"><span class="comment">// 	// next是一个方法，用来调用下一个中间件</span></span><br><span class="line"><span class="comment">//  // 注意：next（）方法调用下一个方法的时候，也会匹配（不是调用紧挨着的哪一个）</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"><span class="comment">// app.use(function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(&#x27;2&#x27;);</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// // 2 关心请求路径的中间件</span></span><br><span class="line"><span class="comment">// // 以/xxx开头的中间件</span></span><br><span class="line"><span class="comment">// app.use(&#x27;/a&#x27;,function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(req.url);</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 严格匹配请求方法和请求路径的中间件</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.post(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/a&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;app is running at port 3000.&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="11-3-错误处理中间件"><a href="#11-3-错误处理中间件" class="headerlink" title="11.3.错误处理中间件"></a>11.3.错误处理中间件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">err, req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.error(err, stack)</span><br><span class="line">  res.status(<span class="number">500</span>).send(<span class="string">&#x27;Something broke&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>配置使用 404 中间件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;404.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>配置全局错误处理中间件:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">	fs.readFile(<span class="string">&#x27;.a/bc&#x27;</span>, <span class="function"><span class="title">funtion</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (err) &#123;</span><br><span class="line">        	<span class="comment">// 当调用next()传参后，则直接进入到全局错误处理中间件方法中</span></span><br><span class="line">        	<span class="comment">// 当发生全局错误的时候，我们可以调用next传递错误对象</span></span><br><span class="line">        	<span class="comment">// 然后被全局错误处理中间件匹配到并进行处理</span></span><br><span class="line">        	<span class="comment">// 带有参数的next函数会直接跳过去找到四个参数的中间件</span></span><br><span class="line">			next(err);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//全局错误处理中间件</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err,req,res,next</span>)</span>&#123;</span><br><span class="line">    res.status(<span class="number">500</span>).json(&#123;</span><br><span class="line">        err_code:<span class="number">500</span>,</span><br><span class="line">        message:err.message</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="11-4-内置中间件"><a href="#11-4-内置中间件" class="headerlink" title="11.4.内置中间件"></a>11.4.内置中间件</h2><ul>
+<li>express.static(提供静态文件)<ul>
+<li><a target="_blank" rel="noopener" href="http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express">http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="11-5-第三方中间件"><a href="#11-5-第三方中间件" class="headerlink" title="11.5.第三方中间件"></a>11.5.第三方中间件</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/resources/middleware.html">http://expressjs.com/en/resources/middleware.html</a></p>
+</blockquote>
+<ul>
+<li>body-parser</li>
+<li>compression</li>
+<li>cookie-parser</li>
+<li>mogran</li>
+<li>response-time</li>
+<li>server-static</li>
+<li>session</li>
+</ul>
+<h1 id="12-MongoDB"><a href="#12-MongoDB" class="headerlink" title="12.MongoDB"></a>12.MongoDB</h1><h2 id="12-1-关系型和非关系型数据库"><a href="#12-1-关系型和非关系型数据库" class="headerlink" title="12.1.关系型和非关系型数据库"></a>12.1.关系型和非关系型数据库</h2><h3 id="关系型数据库（表就是关系，或者说表与表之间存在关系）"><a href="#关系型数据库（表就是关系，或者说表与表之间存在关系）" class="headerlink" title="关系型数据库（表就是关系，或者说表与表之间存在关系）"></a>关系型数据库（表就是关系，或者说表与表之间存在关系）</h3><ul>
+<li>所有的关系型数据库都需要通过<code>sql</code>语言来操作</li>
+<li>所有的关系型数据库在操作之前都需要设计表结构</li>
+<li>而且数据表还支持约束<ul>
+<li>唯一的</li>
+<li>主键</li>
+<li>默认值</li>
+<li>非空</li>
+</ul>
+</li>
+</ul>
+<h3 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h3><ul>
+<li>非关系型数据库非常的灵活</li>
+<li>有的关系型数据库就是 key-value 对儿</li>
+<li>但 MongDB 是长得最像关系型数据库的非关系型数据库<ul>
+<li>数据库 -》 数据库</li>
+<li>数据表 -》 集合（数组）</li>
+<li>表记录 -》文档对象</li>
+</ul>
+</li>
+<li>一个数据库中可以有多个数据库</li>
+<li>一个数据库中可以有多个集合（数组）</li>
+<li>一个集合中可以有多个文档（表记录）</li>
+<li>文档解构很灵活，没有任何限制</li>
+<li>mongoDB 非常灵活，不需要像 MySQL 一样先创建数据库、表、设计表结构<ul>
+<li>当你需要插入数据的时候，只需要指定往那个数据库的哪个集合操作就可以了</li>
+<li>一切都有 MongoDB 来帮你自动完成建库建表。。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    qq:&#123;</span><br><span class="line">       user:[</span><br><span class="line">           &#123;&#125;,&#123;&#125;,&#123;&#125;...</span><br><span class="line">       ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>也就是说你可以任意的往里面存数据，没有结构性这么一说</li>
+</ul>
+<h2 id="12-2-安装"><a href="#12-2-安装" class="headerlink" title="12.2.安装"></a>12.2.安装</h2><ul>
+<li><p>下载</p>
+<ul>
+<li>下载地址：<a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">https://www.mongodb.com/download-center/community</a></li>
+</ul>
+</li>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i mongoose</span><br></pre></td></tr></table></figure></li>
+<li><p>配置环境变量</p>
+</li>
+<li><p>最后输入<code>mongod --version</code>测试是否安装成功</p>
+</li>
+</ul>
+<h2 id="12-3-启动和关闭数据库"><a href="#12-3-启动和关闭数据库" class="headerlink" title="12.3.启动和关闭数据库"></a>12.3.启动和关闭数据库</h2><p>启动：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> mongodb 默认使用执行mongod 命令所处盼复根目录下的/data/db作为自己的数据存储目录</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 所以在第一次执行该命令之前先自己手动新建一个 /data/db</span></span><br><span class="line">mongod</span><br></pre></td></tr></table></figure>
+<p>如果想要修改默认的数据存储目录，可以：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongod --dbpath = 数据存储目录路径</span><br></pre></td></tr></table></figure>
+<p>停止：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在开启服务的控制台，直接Ctrl+C;</span><br><span class="line">或者直接关闭开启服务的控制台。</span><br></pre></td></tr></table></figure>
+<h2 id="12-4-连接数据库"><a href="#12-4-连接数据库" class="headerlink" title="12.4.连接数据库"></a>12.4.连接数据库</h2><p>连接：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 该命令默认连接本机的 MongoDB 服务</span></span><br><span class="line">mongo</span><br></pre></td></tr></table></figure>
+<p>退出：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 在连接状态输入 <span class="built_in">exit</span> 退出连接</span></span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h2 id="12-5-基本命令"><a href="#12-5-基本命令" class="headerlink" title="12.5.基本命令"></a>12.5.基本命令</h2><ul>
+<li><p><code>show dbs</code></p>
+<ul>
+<li>查看数据库列表(数据库中的所有数据库)</li>
+</ul>
+</li>
+<li><p><code>db</code></p>
+<ul>
+<li>查看当前连接的数据库</li>
+</ul>
+</li>
+<li><p><code>use 数据库名称</code></p>
+<ul>
+<li>切换到指定的数据库，（如果没有会新建）</li>
+</ul>
+</li>
+<li><p>插入数据</p>
+</li>
+<li><p><code>show collections</code></p>
+<ul>
+<li>查看当前目录下的所有数据表</li>
+</ul>
+</li>
+<li><p><code>db.表名.find()</code></p>
+<ul>
+<li>查看表中的详细信息</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-6-在-Node-中如何操作-MongoDB-数据库"><a href="#12-6-在-Node-中如何操作-MongoDB-数据库" class="headerlink" title="12.6.在 Node 中如何操作 MongoDB 数据库"></a>12.6.在 Node 中如何操作 MongoDB 数据库</h2><h3 id="使用官方的MongoDB-包来操作"><a href="#使用官方的MongoDB-包来操作" class="headerlink" title="使用官方的MongoDB 包来操作"></a>使用官方的<code>MongoDB</code> 包来操作</h3><blockquote>
+<p>​ <a target="_blank" rel="noopener" href="http://mongodb.github.io/node-mongodb-native/">http://mongodb.github.io/node-mongodb-native/</a></p>
+</blockquote>
+<h3 id="使用第三方包-mongoose-来操作-MongoDB-数据库"><a href="#使用第三方包-mongoose-来操作-MongoDB-数据库" class="headerlink" title="使用第三方包 mongoose 来操作 MongoDB 数据库"></a>使用第三方包 <code>mongoose</code> 来操作 MongoDB 数据库</h3><p>第三方包：<code>mongoose</code>基于 MongoDB 官方的<code>mongodb</code>包再一次做了封装，名字叫<code>mongoose</code>，是 WordPress 项目团队开发的。</p>
+<blockquote>
+<p>​ <a target="_blank" rel="noopener" href="https://mongoosejs.com/">https://mongoosejs.com/</a></p>
+</blockquote>
+<h2 id="12-7-学习指南（步骤）"><a href="#12-7-学习指南（步骤）" class="headerlink" title="12.7.学习指南（步骤）"></a>12.7.学习指南（步骤）</h2><blockquote>
+<p>官方学习文档：<a target="_blank" rel="noopener" href="https://mongoosejs.com/docs/index.html">https://mongoosejs.com/docs/index.html</a></p>
+</blockquote>
+<h3 id="设计-Scheme-发布-Model-（创建表）"><a href="#设计-Scheme-发布-Model-（创建表）" class="headerlink" title="设计 Scheme 发布 Model （创建表）"></a>设计 Scheme 发布 Model （创建表）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1.引包</span></span><br><span class="line"><span class="comment">// 注意：按照后才能require使用</span></span><br><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拿到schema图表</span></span><br><span class="line"><span class="keyword">var</span> Schema = mongoose.Schema</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.连接数据库</span></span><br><span class="line"><span class="comment">// 指定连接数据库后不需要存在，当你插入第一条数据库后会自动创建数据库</span></span><br><span class="line">mongoose.connect(<span class="string">&#x27;mongodb://localhost/test&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.设计集合结构（表结构）</span></span><br><span class="line"><span class="comment">// 用户表</span></span><br><span class="line"><span class="keyword">var</span> userSchema = <span class="keyword">new</span> Schema(&#123;</span><br><span class="line">  username: &#123;</span><br><span class="line">    <span class="comment">//姓名</span></span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    <span class="built_in">require</span>: <span class="literal">true</span>, <span class="comment">//添加约束，保证数据的完整性，让数据按规矩统一</span></span><br><span class="line">  &#125;,</span><br><span class="line">  password: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">    <span class="built_in">require</span>: <span class="literal">true</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  email: &#123;</span><br><span class="line">    type: <span class="built_in">String</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4.将文档结构发布为模型</span></span><br><span class="line"><span class="comment">// mongoose.model方法就是用来将一个架构发布为 model</span></span><br><span class="line"><span class="comment">// 		第一个参数：传入一个大写名词单数字符串用来表示你的数据库的名称</span></span><br><span class="line"><span class="comment">// 					mongoose 会自动将大写名词的字符串生成 小写复数 的集合名称</span></span><br><span class="line"><span class="comment">// 					例如 这里会变成users集合名称</span></span><br><span class="line"><span class="comment">// 		第二个参数：架构</span></span><br><span class="line"><span class="comment">// 	返回值：模型构造函数</span></span><br><span class="line"><span class="keyword">var</span> User = mongoose.model(<span class="string">&#x27;User&#x27;</span>, userSchema)</span><br></pre></td></tr></table></figure>
+<h3 id="添加（增）"><a href="#添加（增）" class="headerlink" title="添加（增）"></a>添加（增）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 5.通过模型构造函数对User中的数据进行操作</span></span><br><span class="line"><span class="keyword">var</span> user = <span class="keyword">new</span> User(&#123;</span><br><span class="line">  username: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">  password: <span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">  email: <span class="string">&#x27;xiaochen@qq.com&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">user.save(<span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;保存失败&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;保存成功&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="删除（删）"><a href="#删除（删）" class="headerlink" title="删除（删）"></a>删除（删）</h3><p>根据条件删除所有：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">User.remove(</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">&#x27;xiaoxiao&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;删除失败&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;删除成功&#x27;</span>)</span><br><span class="line">      <span class="built_in">console</span>.log(ret)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>根据条件删除一个：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Model.findOneAndRemove(conditions,[options],[callback]);</span><br></pre></td></tr></table></figure>
+<p>根据 id 删除一个：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.findByIdAndRemove(id,[options],[callback]);</span><br></pre></td></tr></table></figure>
+<h3 id="更新（改）"><a href="#更新（改）" class="headerlink" title="更新（改）"></a>更新（改）</h3><p>更新所有：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.remove(conditions,doc,[options],[callback]);</span><br></pre></td></tr></table></figure>
+<p>根据指定条件更新一个：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User.FindOneAndUpdate([conditions],[update],[options],[callback]);</span><br></pre></td></tr></table></figure>
+<p>根据 id 更新一个：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 更新	根据id来修改表数据</span></span><br><span class="line">User.findByIdAndUpdate(</span><br><span class="line">  <span class="string">&#x27;5e6c5264fada77438c45dfcd&#x27;</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">&#x27;junjun&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;更新失败&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;更新成功&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="查询（查）"><a href="#查询（查）" class="headerlink" title="查询（查）"></a>查询（查）</h3><p>查询所有：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 查询所有</span></span><br><span class="line">User.find(<span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;查询失败&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>条件查询所有：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据条件查询</span></span><br><span class="line">User.find(&#123; <span class="attr">username</span>: <span class="string">&#x27;xiaoxiao&#x27;</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;查询失败&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(ret)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>条件查询单个：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 按照条件查询单个，查询出来的数据是一个对象（&#123;&#125;）</span></span><br><span class="line"><span class="comment">// 没有条件查询使用findOne方法，查询的是表中的第一条数据</span></span><br><span class="line">User.findOne(</span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">&#x27;xiaoxiao&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err, ret</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&#x27;查询失败&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(ret)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h1 id="13-MySQL"><a href="#13-MySQL" class="headerlink" title="13.MySQL"></a>13.MySQL</h1><blockquote>
+<p>文档：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mysql">https://www.npmjs.com/package/mysql</a></p>
+</blockquote>
+<p>安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save  mysql</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入mysql包</span></span><br><span class="line"><span class="keyword">var</span> mysql = <span class="built_in">require</span>(<span class="string">&#x27;mysql&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建连接</span></span><br><span class="line"><span class="keyword">var</span> connection = mysql.createConnection(&#123;</span><br><span class="line">  host: <span class="string">&#x27;localhost&#x27;</span>, <span class="comment">//本机</span></span><br><span class="line">  user: <span class="string">&#x27;me&#x27;</span>, <span class="comment">//账号root</span></span><br><span class="line">  password: <span class="string">&#x27;secret&#x27;</span>, <span class="comment">//密码12345</span></span><br><span class="line">  database: <span class="string">&#x27;my_db&#x27;</span>, <span class="comment">//数据库名</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 连接数据库	（打开冰箱门）</span></span><br><span class="line">connection.connect()</span><br><span class="line"></span><br><span class="line"><span class="comment">//执行数据操作	（把大象放到冰箱）</span></span><br><span class="line">connection.query(<span class="string">&#x27;SELECT * FROM `users` &#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error, results, fields</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (error) <span class="keyword">throw</span> error <span class="comment">//抛出异常阻止代码往下执行</span></span><br><span class="line">  <span class="comment">// 没有异常打印输出结果</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;The solution is: &#x27;</span>, results)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//关闭连接	（关闭冰箱门）</span></span><br><span class="line">connection.end()</span><br></pre></td></tr></table></figure>
+<h1 id="14-项目案例"><a href="#14-项目案例" class="headerlink" title="14.项目案例"></a>14.项目案例</h1><h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">app.js	项目的入口文件</span><br><span class="line">controllers</span><br><span class="line">models	存储使用mongoose设计的数据模型</span><br><span class="line">node_modules	第三方包</span><br><span class="line">package.json	包描述文件</span><br><span class="line">package-lock.json	第三方包版本锁定文件（npm5之后才有）</span><br><span class="line">public	公共静态资源</span><br><span class="line">routes</span><br><span class="line">views	存储视图目录</span><br></pre></td></tr></table></figure>
+<h2 id="模板页"><a href="#模板页" class="headerlink" title="模板页"></a>模板页</h2><ul>
+<li>子模板</li>
+<li>模板继承</li>
+</ul>
+<h2 id="路由设计-1"><a href="#路由设计-1" class="headerlink" title="路由设计"></a>路由设计</h2><table>
+<thead>
+<tr>
+<th>路由</th>
+<th>方法</th>
+<th>get 参数</th>
+<th>post 参数</th>
+<th>是否需要登录</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/</td>
+<td>get</td>
+<td></td>
+<td></td>
+<td></td>
+<td>渲染首页</td>
+</tr>
+<tr>
+<td>/register(登录)</td>
+<td>get</td>
+<td></td>
+<td></td>
+<td></td>
+<td>渲染注册页面</td>
+</tr>
+<tr>
+<td>/register</td>
+<td>post</td>
+<td></td>
+<td>email,nickname,password</td>
+<td></td>
+<td>处理注册请求</td>
+</tr>
+<tr>
+<td>/login</td>
+<td>get</td>
+<td></td>
+<td></td>
+<td></td>
+<td>渲染登陆界面</td>
+</tr>
+<tr>
+<td>/login</td>
+<td>post</td>
+<td></td>
+<td>email,password</td>
+<td></td>
+<td>处理登录请求</td>
+</tr>
+<tr>
+<td>/loginout</td>
+<td>get</td>
+<td></td>
+<td></td>
+<td></td>
+<td>处理退出请求</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="模型设计"><a href="#模型设计" class="headerlink" title="模型设计"></a>模型设计</h2><h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><h2 id="步骤-1"><a href="#步骤-1" class="headerlink" title="步骤"></a>步骤</h2><ul>
+<li>创建目录结构</li>
+<li>整合静态也-模板页<ul>
+<li>include</li>
+<li>block</li>
+<li>extend</li>
+</ul>
+</li>
+<li>设计用户登陆，退出，注册的路由</li>
+<li>用户注册<ul>
+<li>先处理客户端页面的内容（表单控件的 name，收集表单数据，发起请求）</li>
+<li>服务端<ul>
+<li>获取从客户端收到的数据</li>
+<li>操作数据库<ul>
+<li>如果有错，发送 500 告诉客户端服务器错了‘</li>
+<li>其他的根据业务发送不同的响应数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>登录</li>
+<li>退出</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

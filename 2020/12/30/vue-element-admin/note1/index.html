@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="笔记"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">笔记</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/vue-element-admin/">vue-element-admin</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/vue-element-admin/">#vue-element-admin</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">├── build                      <span class="comment"># 构建相关</span></span><br><span class="line">├── mock                       <span class="comment"># 项目mock 模拟数据</span></span><br><span class="line">├── plop-templates             <span class="comment"># 基本模板</span></span><br><span class="line">├── public                     <span class="comment"># 静态资源</span></span><br><span class="line">│   │── favicon.ico            <span class="comment"># favicon图标</span></span><br><span class="line">│   └── index.html             <span class="comment"># html模板</span></span><br><span class="line">├── src                        <span class="comment"># 源代码</span></span><br><span class="line">│   ├── api                    <span class="comment"># 所有请求</span></span><br><span class="line">│   ├── assets                 <span class="comment"># 主题 字体等静态资源</span></span><br><span class="line">│   ├── components             <span class="comment"># 全局公用组件</span></span><br><span class="line">│   ├── directive              <span class="comment"># 全局指令</span></span><br><span class="line">│   ├── filters                <span class="comment"># 全局 filter</span></span><br><span class="line">│   ├── icons                  <span class="comment"># 项目所有 svg icons</span></span><br><span class="line">│   ├── lang                   <span class="comment"># 国际化 language</span></span><br><span class="line">│   ├── layout                 <span class="comment"># 全局 layout</span></span><br><span class="line">│   ├── router                 <span class="comment"># 路由</span></span><br><span class="line">│   ├── store                  <span class="comment"># 全局 store管理</span></span><br><span class="line">│   ├── styles                 <span class="comment"># 全局样式</span></span><br><span class="line">│   ├── utils                  <span class="comment"># 全局公用方法</span></span><br><span class="line">│   ├── vendor                 <span class="comment"># 公用vendor</span></span><br><span class="line">│   ├── views                  <span class="comment"># views 所有页面</span></span><br><span class="line">│   ├── App.vue                <span class="comment"># 入口页面</span></span><br><span class="line">│   ├── main.js                <span class="comment"># 入口文件 加载组件 初始化等</span></span><br><span class="line">│   └── permission.js          <span class="comment"># 权限管理</span></span><br><span class="line">├── tests                      <span class="comment"># 测试</span></span><br><span class="line">├── .env.xxx                   <span class="comment"># 环境变量配置</span></span><br><span class="line">├── .eslintrc.js               <span class="comment"># eslint 配置项</span></span><br><span class="line">├── .babelrc                   <span class="comment"># babel-loader 配置</span></span><br><span class="line">├── .travis.yml                <span class="comment"># 自动化CI配置</span></span><br><span class="line">├── vue.config.js              <span class="comment"># vue-cli 配置</span></span><br><span class="line">├── postcss.config.js          <span class="comment"># postcss 配置</span></span><br><span class="line">└── package.json               <span class="comment"># package.json</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装（中文版）"><a href="#安装（中文版）" class="headerlink" title="安装（中文版）"></a>安装（中文版）</h2><p>下载地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;PanJiaChen&#x2F;vue-element-admin&#x2F;tree&#x2F;i18n</span><br></pre></td></tr></table></figure>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p><img src="https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/7066d74f-12c5-47d6-b6ad-f22b43fec917.png" alt="img"></p>
+<h2 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h2><p>路由配置项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当设置 true 的时候该路由不会在侧边栏出现 如401，login等页面，或者如一些编辑页面/edit/1</span></span><br><span class="line">hidden: <span class="literal">true</span> <span class="comment">// (默认 false)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//当设置 noRedirect 的时候该路由在面包屑导航中不可被点击</span></span><br><span class="line">redirect: <span class="string">&#x27;noRedirect&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当你一个路由下面的 children 声明的路由大于1个时，自动会变成嵌套的模式--如组件页面</span></span><br><span class="line"><span class="comment">// 只有一个时，会将那个子路由当做根路由显示在侧边栏--如引导页面</span></span><br><span class="line"><span class="comment">// 若你想不管路由下面的 children 声明的个数都显示你的根路由</span></span><br><span class="line"><span class="comment">// 你可以设置 alwaysShow: true，这样它就会忽略之前定义的规则，一直显示根路由</span></span><br><span class="line">alwaysShow: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">name: <span class="string">&#x27;router-name&#x27;</span> <span class="comment">// 设定路由的名字，一定要填写不然使用&lt;keep-alive&gt;时会出现各种问题</span></span><br><span class="line">meta: &#123;</span><br><span class="line">  roles: [<span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;editor&#x27;</span>] <span class="comment">// 设置该路由进入的权限，支持多个权限叠加</span></span><br><span class="line">  title: <span class="string">&#x27;title&#x27;</span> <span class="comment">// 设置该路由在侧边栏和面包屑中展示的名字</span></span><br><span class="line">  icon: <span class="string">&#x27;svg-name&#x27;</span> <span class="comment">// 设置该路由的图标，支持 svg-class，也支持 el-icon-x element-ui 的 icon</span></span><br><span class="line">  noCache: <span class="literal">true</span> <span class="comment">// 如果设置为true，则不会被 &lt;keep-alive&gt; 缓存(默认 false)</span></span><br><span class="line">  breadcrumb: <span class="literal">false</span> <span class="comment">//  如果设置为false，则不会在breadcrumb面包屑中显示(默认 true)</span></span><br><span class="line">  affix: <span class="literal">true</span> <span class="comment">// 若果设置为true，它则会固定在tags-view中(默认 false)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 当路由设置了该属性，则会高亮相对应的侧边栏。</span></span><br><span class="line">  <span class="comment">// 这在某些场景非常有用，比如：一个文章的列表页路由为：/article/list</span></span><br><span class="line">  <span class="comment">// 点击文章进入文章详情页，这时候路由为/article/1，但你想在侧边栏高亮文章列表的路由，就可以进行如下设置</span></span><br><span class="line">  activeMenu: <span class="string">&#x27;/article/list&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  path: <span class="string">&#x27;/permission&#x27;</span>,</span><br><span class="line">  component: Layout,</span><br><span class="line">  redirect: <span class="string">&#x27;/permission/index&#x27;</span>, <span class="comment">//重定向地址，在面包屑中点击会重定向去的地址</span></span><br><span class="line">  hidden: <span class="literal">true</span>, <span class="comment">// 不在侧边栏线上</span></span><br><span class="line">  alwaysShow: <span class="literal">true</span>, <span class="comment">//一直显示根路由</span></span><br><span class="line">  meta: &#123; <span class="attr">roles</span>: [<span class="string">&#x27;admin&#x27;</span>,<span class="string">&#x27;editor&#x27;</span>] &#125;, <span class="comment">//你可以在根路由设置权限，这样它下面所以的子路由都继承了这个权限</span></span><br><span class="line">  children: [&#123;</span><br><span class="line">    path: <span class="string">&#x27;index&#x27;</span>,</span><br><span class="line">    component: <span class="function">()=&gt;</span><span class="keyword">import</span>(<span class="string">&#x27;permission/index&#x27;</span>),</span><br><span class="line">    name: <span class="string">&#x27;permission&#x27;</span>,</span><br><span class="line">    meta: &#123;</span><br><span class="line">      title: <span class="string">&#x27;permission&#x27;</span>,</span><br><span class="line">      icon: <span class="string">&#x27;lock&#x27;</span>, <span class="comment">//图标</span></span><br><span class="line">      roles: [<span class="string">&#x27;admin&#x27;</span>,<span class="string">&#x27;editor&#x27;</span>], <span class="comment">//或者你可以给每一个子路由设置自己的权限</span></span><br><span class="line">      noCache: <span class="literal">true</span> <span class="comment">// 不会被 &lt;keep-alive&gt; 缓存</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>这里的路由分为两种，<code>constantRoutes</code> 和 <code>asyncRoutes</code>。</p>
+<p>constantRoutes： 代表那些不需要动态判断权限的路由，如登录页、404、等通用页面。</p>
+<p>asyncRoutes ： 代表那些需求动态判断权限并通过 <code>addRoutes</code> 动态添加的页面。</p>
+<p>注意事项</p>
+<p>如果这里有一个需要非常注意的地方就是 <code>404</code> 页面一定要最后加载，如果放在 constantRoutes 一同声明了 <code>404</code> ，后面的所以页面都会被拦截到<code>404</code></p>
+<h3 id="this-route-变量"><a href="#this-route-变量" class="headerlink" title="this.$route 变量"></a>this.$route 变量</h3><p>this.$route.name : 页面名字。这个 name 就是在 router.js 中配置的那个 name, 这个 name 也是有大用处的，比如在<router-link>中使用“命名路由”的时候就是用到它，举例说明，通过在路由链接标签的 to 属性设置 name 和相应的参数，然后跳转效果和设置路由 path 是一样的：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">:to</span>=<span class="string">&quot;&#123; name: &#x27;pageA&#x27;, params: &#123; id: 5188, name:&#x27;王大锤&#x27; &#125;&#125;&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span>命名路由pageA&lt;/router-link</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>this.$route.path: 路由路径，包含路径参数，不包含查询参数</p>
+</li>
+<li><p>this.$route.fullPath： 路由全路径，包含路径参数和查询参数</p>
+</li>
+<li><p>this.$route.query: 路径所有查询参数</p>
+</li>
+<li><p>this.$route.params: 路径所有路径参数</p>
+</li>
+<li><p>this.$route.meta: 路由元信息，在配置路由的时候可以把自定义的一些数据存在 meta 中，用作其他用途</p>
+</li>
+<li><p>this.$route.matched: 里面包含了路由的一些匹配信息</p>
+<h3 id="重定向页面-src-views-redirect"><a href="#重定向页面-src-views-redirect" class="headerlink" title="重定向页面 src\views\redirect"></a>重定向页面 src\views\redirect</h3></li>
+</ul>
+<h2 id="面包屑"><a href="#面包屑" class="headerlink" title="面包屑"></a>面包屑</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

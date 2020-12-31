@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="项目目录介绍"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">项目目录介绍</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p><strong>项目目录介绍：</strong></p>
+<p><img src="../public%5Cimage-20201030142935452.png" alt="image-20201030142935452"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1、<span class="selector-tag">build</span>  文件夹：<span class="selector-tag">webpack</span>的一些相关配置；</span><br><span class="line"></span><br><span class="line">2、<span class="selector-tag">config</span>  文件夹：项目开发环境和生产环境的一些相关配置；</span><br><span class="line"></span><br><span class="line">3、<span class="selector-tag">node_modules</span>  文件夹 ：这里存放的是安装包，比如<span class="selector-tag">webpack</span>、第三方插件库、项目的依赖文件；</span><br><span class="line"></span><br><span class="line">4、<span class="selector-tag">src</span>  文件夹：我们将要写的代码放在这里面，打包上线时会进行编译、压缩等操作。</span><br><span class="line"></span><br><span class="line">5、<span class="selector-tag">static</span> 文件夹：这里存放的是一些静态文件比如图片、<span class="selector-tag">css</span>文件、不需要进行压缩的<span class="selector-tag">js</span>文件，打包时这个文件夹将原封不动的放到<span class="selector-tag">dist</span>（打包时自动生产的文件夹）文件夹下面。</span><br><span class="line"></span><br><span class="line">6、<span class="selector-class">.babelrc</span> 文件：<span class="selector-tag">ES6</span>语法编译配置，主要是将<span class="selector-tag">ES</span> 转成<span class="selector-tag">ES</span> 需要适配那些浏览器</span><br><span class="line"></span><br><span class="line">7、<span class="selector-class">.editorconfig</span> 文件：定义代码格式，对代码的风格进行一个统一。</span><br><span class="line"></span><br><span class="line">8、<span class="selector-class">.gitignore</span> 文件：<span class="selector-tag">git</span>上传需要忽略的文件格式</span><br><span class="line"></span><br><span class="line">9、  <span class="selector-class">.postcssrc</span><span class="selector-class">.js</span> 文件：<span class="selector-tag">postcss</span>配置文件</span><br><span class="line"></span><br><span class="line">10、 <span class="selector-tag">index</span><span class="selector-class">.html</span>  文件：要进行访问的首页面</span><br><span class="line"></span><br><span class="line">11、<span class="selector-tag">package-lock</span><span class="selector-class">.json</span> 文件：锁定依赖模块和子模块的版本号</span><br><span class="line"></span><br><span class="line">12、<span class="selector-tag">package</span><span class="selector-class">.json</span> 文件：项目基本信息,包依赖信息等</span><br><span class="line"></span><br><span class="line">13、<span class="selector-tag">README</span><span class="selector-class">.md</span>  文件：项目说明文件</span><br></pre></td></tr></table></figure>
+<p><img src="../public%5Cimage-20201030143142940.png" alt="image-20201030143142940"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1、<span class="selector-tag">node_modules</span>  文件夹 ：这里存放的是安装包，比如<span class="selector-tag">webpack</span>、第三方插件库、项目的依赖文件；</span><br><span class="line"></span><br><span class="line">2、<span class="selector-tag">public</span> 文件夹：这里存放的是一些静态文件比如图片、<span class="selector-tag">css</span>文件、不需要进行压缩的<span class="selector-tag">js</span>文件，打包时这个文件夹将原封不动的放到<span class="selector-tag">dist</span>（打包时自动生产的文件夹）文件夹下面。</span><br><span class="line"></span><br><span class="line">3、<span class="selector-tag">src</span>  文件夹：我们将要写的代码放在这里面，打包上线时会进行编译、压缩等操作。</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

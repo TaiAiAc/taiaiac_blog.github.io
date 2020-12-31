@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="日期格式化"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">日期格式化</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Javascript/">#Javascript</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="comment">//日期格式化函数</span></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">dateFormat</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> yyyy = now.getFullYear()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> MM = (now.getMonth() + <span class="number">1</span> + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> dd = (now.getDate() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> hh = (now.getHours() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> mm = (now.getMinutes() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> ss = (now.getSeconds() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> st = <span class="string">`<span class="subst">$&#123;yyyy&#125;</span>-<span class="subst">$&#123;MM&#125;</span>-<span class="subst">$&#123;dd&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

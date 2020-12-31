@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="事件模型"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">事件模型</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">#移动端</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <table>
+<thead>
+<tr>
+<th align="center">事件</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>touchstart</code></td>
+<td align="center">手指刚接触屏幕时触发</td>
+</tr>
+<tr>
+<td align="center"><code>touchmove</code></td>
+<td align="center">手指在屏幕上移动时触发</td>
+</tr>
+<tr>
+<td align="center"><code>touchend</code></td>
+<td align="center">手指从屏幕上移开时触发</td>
+</tr>
+<tr>
+<td align="center"><code>touchcancel</code></td>
+<td align="center">一些更高级别的操作</td>
+</tr>
+</tbody></table>
+<h2 id="移动端事件"><a href="#移动端事件" class="headerlink" title="移动端事件"></a>移动端事件</h2><ol>
+<li><p>点击事件</p>
+</li>
+<li><p>双击事件</p>
+</li>
+<li><p>滑动事件</p>
+<ul>
+<li>上滑、下滑、左滑、右滑</li>
+</ul>
+</li>
+<li><p>长按事件</p>
+</li>
+<li><p>摇一摇、重力感应等</p>
+</li>
+</ol>
+<h2 id="touch-事件模型"><a href="#touch-事件模型" class="headerlink" title="touch 事件模型"></a>touch 事件模型</h2><ol>
+<li><code>touchstart</code> 手指刚接触屏幕时触发</li>
+<li><code>touchmove</code> 手指在屏幕上移动时触发</li>
+<li><code>touchend</code> 手指从屏幕上移开时触发</li>
+<li><code>touchcancel</code> 一些更高级别的事件发生时（如电话接入或者弹出信息）会取消当前的 touch 操作，即触发<code>touchcancel</code>。一般会在<code>touchcancel</code>时暂停游戏、存档等操作</li>
+</ol>
+<p>* 在 Chrome 移动模拟器中模拟，发现鼠标触摸 span 元素没有任何效果 解决方法：<code>addEventListener</code></p>
+<h2 id="addEventListener"><a href="#addEventListener" class="headerlink" title="addEventListener"></a><code>addEventListener</code></h2><ol>
+<li><p>是一个侦听事件并处理相应的函数</p>
+</li>
+<li><p>一般有三个参数，第一个是事件的类型，第二个是侦听到事件后处理事件的函数，第三个参数是事件捕获（值就只有两个，true 或 false）</p>
+</li>
+<li><pre><code class="javascript">app.addEventListener(&#39;事件&#39;,function()&#123;
+    ...
+&#125;,false)
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 跟踪触摸的属性</span><br><span class="line"></span><br><span class="line">1. touches：表示当前跟踪的触摸操作的 touch 对象的数组</span><br><span class="line"></span><br><span class="line">2. - 当一个手指在触屏上时，&#96;event.touches.length&#x3D;1&#96;</span><br><span class="line">   - 当两个手指在触屏上时，&#96;event.touches.length&#x3D;2&#96;，以此类推</span><br><span class="line"></span><br><span class="line">3. &#96;changedTouches&#96;：导致触摸事件被触发的触摸点数组</span><br><span class="line"></span><br><span class="line">4. &#96;targetTouches&#96;：特定于事件目标的 touch 对象数组</span><br><span class="line"></span><br><span class="line">## 触摸事件坐标</span><br><span class="line"></span><br><span class="line">|    属性    |           属性            |</span><br><span class="line">| :--------: | :-----------------------: |</span><br><span class="line">| &#96;clientX&#96;  | 触摸目标在视口中的 x 坐标 |</span><br><span class="line">| &#96;clientY&#96;  | 触摸目标在视口中的 y 坐标 |</span><br><span class="line">| identifier |     标识触摸的唯一 ID     |</span><br><span class="line">|  &#96;pageX&#96;   | 触摸目标在页面中的 x 坐标 |</span><br><span class="line">|  &#96;pageY&#96;   | 触摸目标在页面中的 y 坐标 |</span><br><span class="line">| &#96;screenX&#96;  | 触摸目标在屏幕中的 x 坐标 |</span><br><span class="line">| &#96;screenY&#96;  | 触摸目标在屏幕中的 y 坐标 |</span><br><span class="line">|  &#96;target&#96;  |    触摸的 DOM 节点目标    |</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">&#x2F;* 触摸事件坐标的使用方法 *&#x2F;</span><br><span class="line">function handleTouch(e)&#123;</span><br><span class="line">&#x2F;&#x2F;  如果需要，用pageX或pageY代替clientX或clientY</span><br><span class="line">var touch &#x3D; e.changedTouches[0];</span><br><span class="line">var coorX &#x3D; touch.clientX;</span><br><span class="line">var coorY &#x3D; touch.clientY;</span><br><span class="line">&#125;</span><br><span class="line">* clientX&#x2F;Y和pageX&#x2F;Y的区别在于前者相对于视觉视口的左上角，后者相对布局视口的左上角。布局视口 是可以滚动的</span><br></pre></td></tr></table></figure>
+## 移动端事件封装
+</code></pre>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 单击事件 */</span></span><br><span class="line">element.addEventListener(‘touchstart‘, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> touches = e.touches[<span class="number">0</span>];</span><br><span class="line">    startTx = touches.clientX;</span><br><span class="line">    startTy = touches.clientY;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br><span class="line">* 案例中通过调用tap（封装的单击事件），可以很大程度上简化代码量，方便我们开发</span><br><span class="line"><span class="comment">/* 长按事件 */</span></span><br><span class="line"><span class="keyword">var</span> touches = e.touches[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// 长按 750ms 才去执行 fn函数</span></span><br><span class="line">lTapTimer = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  fn();  &#125;, <span class="number">750</span>);</span><br><span class="line">e.preventDefault();</span><br><span class="line">* 在touchmove中需要判断水平或者垂直方向的坐标距离，如果大于某个值，我们就不再认为是长按操作了</span><br></pre></td></tr></table></figure>
+<h2 id="FastClick库"><a href="#FastClick库" class="headerlink" title="FastClick库"></a><code>FastClick</code>库</h2><ol>
+<li><p>定义</p>
+</li>
+<li><ul>
+<li>一个简单易用的库，用于消除 click 移动浏览器上物理点击和事件触发之间的 300 毫秒延迟</li>
+</ul>
+</li>
+<li><p>网址</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ftlabs/fastclick">https://github.com/ftlabs/fastclick</a></li>
+<li>截至 2015 年底，大多数移动浏览器（特别是 Chrome 和 Safari）不再具有<code>300ms</code>的触摸延迟，因此<code>fastclick</code>对新型浏览器没有任何好处，并且可能会在应用程序中引入错误。仔细考虑你是否真的需要使用它</li>
+</ul>
+</li>
+<li><p>使用方法</p>
+</li>
+<li><ul>
+<li><p>引入插件的<code>javascript</code>文件到你的 HTML 网页中</p>
+</li>
+<li><pre><code class="html">&lt;script type=&quot;application/javascript&quot; src=&quot;/path/to/fastclick.js&quot;&gt;&lt;/script&gt;
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   - 注意：</span><br><span class="line"></span><br><span class="line">   - - type 属性在&#96;HTML5&#96;网页中可以省略不写</span><br><span class="line">     - 脚本必须加载到实例化&#96;fastclick&#96;在页面的任何元素之前</span><br><span class="line">     - 实例化 &#96;fastclick&#96; 最好在 body 元素的前面</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">1 &#x2F;*  实例化 *&#x2F;</span><br><span class="line">2 if (‘addEventListener‘ in document) &#123;</span><br><span class="line">3     document.addEventListener(‘DOMContentLoaded‘, function() &#123;</span><br><span class="line">4         FastClick.attach(document.body);</span><br><span class="line">5     &#125;, false);</span><br><span class="line">6 &#125;</span><br><span class="line">7 * 引入库和实例化推荐写到body元素的前面</span><br></pre></td></tr></table></figure>
+## 移动端事件库</code></pre>
+</li>
+</ul>
+</li>
+<li><p><code>touch.js</code></p>
+</li>
+<li><ul>
+<li>百度<code>touch.js</code> 是 Web 移动端 touch 点击事件不错的解决方案</li>
+</ul>
+</li>
+<li><p>网站</p>
+</li>
+<li><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Clouda-team/touchjs">https://github.com/Clouda-team/touchjs</a></li>
+</ul>
+</li>
+<li><p>支持移动端事件</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>tap</code></td>
+<td align="center">单击屏幕</td>
+</tr>
+<tr>
+<td align="center"><code>doubletap</code></td>
+<td align="center">双击屏幕</td>
+</tr>
+<tr>
+<td align="center"><code>hold</code></td>
+<td align="center">长安屏幕</td>
+</tr>
+<tr>
+<td align="center"><code>swipe</code></td>
+<td align="center">滑动</td>
+</tr>
+<tr>
+<td align="center"><code>swipeleft</code></td>
+<td align="center">向左滑动</td>
+</tr>
+<tr>
+<td align="center"><code>swiperight</code></td>
+<td align="center">向右滑动</td>
+</tr>
+<tr>
+<td align="center"><code>swipeup</code></td>
+<td align="center">向上滑动</td>
+</tr>
+<tr>
+<td align="center"><code>swipedown</code></td>
+<td align="center">向下滑动</td>
+</tr>
+</tbody></table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

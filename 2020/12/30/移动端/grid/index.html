@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="grid网格布局"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">grid网格布局</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">#移动端</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="grid-网格布局"><a href="#grid-网格布局" class="headerlink" title="grid 网格布局"></a>grid 网格布局</h1><ul>
+<li><p>​ grid 布局是一个二维的布局方法，纵横两个方向总是同时存在。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span>：<span class="selector-tag">grid</span>；</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="center">作用在 grid 容器上</th>
+<th align="center">作用在 grid 子项上</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">grid-template-columns</td>
+<td align="center">grid-column-start</td>
+</tr>
+<tr>
+<td align="center">grid-template-rows</td>
+<td align="center">grid-column-end</td>
+</tr>
+<tr>
+<td align="center">grid-template-ares</td>
+<td align="center">grid-row-start</td>
+</tr>
+<tr>
+<td align="center">grid-column-gap</td>
+<td align="center">grid-cloumn</td>
+</tr>
+<tr>
+<td align="center">grid-gap</td>
+<td align="center">grid-row</td>
+</tr>
+<tr>
+<td align="center">justify-items</td>
+<td align="center">grid-area</td>
+</tr>
+<tr>
+<td align="center">align-items</td>
+<td align="center">align-self</td>
+</tr>
+<tr>
+<td align="center">palace-items</td>
+<td align="center">place-self</td>
+</tr>
+<tr>
+<td align="center">justify-content</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">align-content</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">space-content</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="1、grid-template-cloumns-和-grid-template-rows"><a href="#1、grid-template-cloumns-和-grid-template-rows" class="headerlink" title="1、grid-template-cloumns 和 grid-template-rows"></a>1、grid-template-cloumns 和 grid-template-rows</h2><ul>
+<li><p>对网格进行纵横划分，形成二维布局。单位可以使像素，百分比，自适应以及 fr 单位（网格剩余空间比例单位）。</p>
+</li>
+<li><pre><code class="css">grid-template-cloumns：1fr 1fr 1fr；（三行，每行三分之一）
+grid-template-rows：1fr 1fr 1fr；（三列，每列三分之一）
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 有时候，我们网格的划分是很规律的，如果需要添加多个纵横网格时，可以利用 repeat（）语法进行简化操作。</span><br><span class="line"></span><br><span class="line">- 简写方式：</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;css</span><br><span class="line">  grid-template-cloumns：repeat（3,1fr）；（三行，每行三分之一）</span><br><span class="line">  grid-template-rows：repeat（3,1fr）；（三列，每列三分之一）</span><br></pre></td></tr></table></figure>
+## 2、grid-template-areas 和 grid-template</code></pre>
+</li>
+<li><p>area 是区域的意思，grid-template-areas 就是给我们的网格划分区域的。此时 grid 子项只要使用 grid-area 属性指定其隶属于那个区。</p>
+</li>
+<li><pre><code class="css">grid-template-ateas：
+                        “a1 a1 a1”
+                        “a2 a2 a3”
+                        “a2 a2 a3”；
+                        grid-area：a1；
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- grid-template 是 grid-template-rows，grid-template-cloumns 和 grid-template-areas 属性的缩写。</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;css</span><br><span class="line">  grid-template：</span><br><span class="line">                  “a1 a1 a1” 1fr</span><br><span class="line">                  “a2 a2 a3” 1fr</span><br><span class="line">                  “a2 a2 a3” 1fr</span><br><span class="line">                  &#x2F;1fr 1fr 1fr;</span><br></pre></td></tr></table></figure>
+## 3、grid-column-gap 和 grid-row-gap</code></pre>
+</li>
+<li><p>​ grid-column-gap 和 grid-row-gap 属性用来定义网格中网格间隙的尺寸。</p>
+</li>
+<li><pre><code class="css">grid-column-gap：**px；grid-row-gap：**px；
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- CSS grid-gap 属性是 grid-column-gap 和 grid-row-gap 属性的缩写。</span><br><span class="line"></span><br><span class="line">- &#96;&#96;&#96;css</span><br><span class="line">  grid-gap：横向间距px 纵向间距px；</span><br></pre></td></tr></table></figure>
+## 4、justify-itemsalign-items</code></pre>
+</li>
+<li><p>​ justify-items 指定了网格元素的水平呈现方式，是水平拉伸显示，还是左中右对齐。</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">stretch</td>
+<td align="center">默认值，拉伸。表现为水平或垂直填充。</td>
+</tr>
+<tr>
+<td align="center">start</td>
+<td align="center">表现为容器左侧或顶部对齐</td>
+</tr>
+<tr>
+<td align="center">end</td>
+<td align="center">表现为容器右侧或底部对齐</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td align="center">表现为水平或垂直居中对齐</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>​ align-items 指定了网格元素的垂直呈现方式，是垂直拉伸显示，还是上中下对齐。</p>
+</li>
+<li><p>​ placa-items 可以让 align-items 和 justify-items 属性写在单个声明中。</p>
+<ul>
+<li><pre><code class="css">place-items：start end；</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5、justify-congtent-和-align-congtent"><a href="#5、justify-congtent-和-align-congtent" class="headerlink" title="5、justify-congtent 和 align-congtent"></a>5、justify-congtent 和 align-congtent</h2><ul>
+<li><p>​ justify-content 指定了网格元素的水平分布方式。</p>
+</li>
+<li><p>​ align-content 指定了网格元素的垂直分布方式。</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">stretch</td>
+<td align="center">默认值，拉伸。表现为水平或垂直填充。</td>
+</tr>
+<tr>
+<td align="center">start</td>
+<td align="center">表现为容器左侧或顶部对齐</td>
+</tr>
+<tr>
+<td align="center">end</td>
+<td align="center">表现为容器右侧或底部对齐</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td align="center">表现为水平或垂直居中对齐</td>
+</tr>
+<tr>
+<td align="center">space-between</td>
+<td align="center">表现为两端对齐</td>
+</tr>
+<tr>
+<td align="center">space-around</td>
+<td align="center">享有独立不重叠的空白空间</td>
+</tr>
+<tr>
+<td align="center">space-evenly</td>
+<td align="center">平均分配空白空间</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>​ place-content 可以让 align-content 和 justify-content 属性写在一个 css 声明中。</p>
+</li>
+</ul>
+<h2 id="6、作用在-grid-子项上的-css-属性"><a href="#6、作用在-grid-子项上的-css-属性" class="headerlink" title="6、作用在 grid 子项上的 css 属性"></a>6、作用在 grid 子项上的 css 属性</h2><table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">grid-column-start</td>
+<td align="center">水平方向上占据的起始位置。（值是第 x 条线）</td>
+</tr>
+<tr>
+<td align="center">grid-column-end</td>
+<td align="center">水平方向上占据的结束位置。（span 属性）</td>
+</tr>
+<tr>
+<td align="center">grid-row-start</td>
+<td align="center">垂直方向上占据的起始位置。（值是第 x 条线）</td>
+</tr>
+<tr>
+<td align="center">grid-row-end</td>
+<td align="center">垂直方向上占据的结束位置。（span 属性 单位）</td>
+</tr>
+<tr>
+<td align="center">grid-column</td>
+<td align="center">grid-column-start+grid-cloumn-end 的缩写。grid-column：2/3;</td>
+</tr>
+<tr>
+<td align="center">grid-row</td>
+<td align="center">grid-row-start+grid-row-end 的缩写。 grid-row:2/3；</td>
+</tr>
+<tr>
+<td align="center">grid-area</td>
+<td align="center">表示当前网格所占用的区域，名字和位置两种表示方法。grid-area：2/2/2/2;横向的起始/纵向的起始/横向的结束/纵向的结束；</td>
+</tr>
+<tr>
+<td align="center">justify-self</td>
+<td align="center">单个网格元素的水平对齐方式</td>
+</tr>
+<tr>
+<td align="center">align-self</td>
+<td align="center">单个网格元素的垂直对齐方式</td>
+</tr>
+<tr>
+<td align="center">place-self</td>
+<td align="center">align-self 和 justify-self 的缩写</td>
+</tr>
+</tbody></table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

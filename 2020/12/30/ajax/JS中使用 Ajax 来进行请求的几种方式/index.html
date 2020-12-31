@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JS中使用 Ajax 来进行请求的几种方式"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JS中使用 Ajax 来进行请求的几种方式</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Ajax/">Ajax</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Ajax/">#Ajax</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="1-什么是-AJAX"><a href="#1-什么是-AJAX" class="headerlink" title="1.什么是 AJAX"></a>1.什么是 AJAX</h2><p>术语 AJAX 表示 <strong>异步的 JavaScript 和 XML</strong>。</p>
+<p><strong>AJAX</strong> 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。</p>
+<p>有多种方法可以发出网络请求并从服务器获取数据。 我们将一一介绍。</p>
+<h2 id="2-XMLHttpRequest"><a href="#2-XMLHttpRequest" class="headerlink" title="2.XMLHttpRequest"></a>2.XMLHttpRequest</h2><p><code>XMLHttpRequest</code>对象（简称<strong>XHR</strong>）在较早的时候用于从服务器异步检索数据。</p>
+<p>之所以使用<strong>XML</strong>，是因为它首先用于检索 XML 数据。现在，它也可以用来检索 JSON, HTML 或纯文本。</p>
+<h3 id="事例-2-1-GET"><a href="#事例-2-1-GET" class="headerlink" title="事例 2.1: GET"></a>事例 2.1: GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.responseText)</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Error Occurred:&#x27;</span>, err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.onload = success</span><br><span class="line">xhr.onerror = error</span><br><span class="line">xhr.open(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;</span>)</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure>
+<p>我们看到，要发出一个简单的 GET 请求，需要两个侦听器来处理请求的成功和失败。我们还需要调用<code>open()</code>和<code>send()</code>方法。来自服务器的响应存储在<code>responseText</code>变量中，该变量使用<code>JSON.parse()</code>转换为 JavaScript 对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.responseText)</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Error Occurred :&#x27;</span>, err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.onload = success</span><br><span class="line">xhr.onerror = error</span><br><span class="line">xhr.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts&#x27;</span>)</span><br><span class="line">xhr.setRequestHeader(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json; charset=UTF-8&#x27;</span>)</span><br><span class="line">xhr.send(</span><br><span class="line">  <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">    title: <span class="string">&#x27;foo&#x27;</span>,</span><br><span class="line">    body: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">    userId: <span class="number">1</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>我们看到 POST 请求类似于 GET 请求。 我们需要另外使用<code>setRequestHeader</code>设置请求标头“Content-Type” ，并使用 send 方法中的<code>JSON.stringify</code>将 JSON 正文作为字符串发送。</p>
+<h3 id="2-3-XMLHttpRequest-vs-Fetch"><a href="#2-3-XMLHttpRequest-vs-Fetch" class="headerlink" title="2.3 XMLHttpRequest vs Fetch"></a>2.3 XMLHttpRequest vs Fetch</h3><p>早期的开发人员，已经使用了好多年的 <code>XMLHttpRequest</code>来请求数据了。 现代的<code>fetch API</code>允许我们发出类似于<code>XMLHttpRequest（XHR）</code>的网络请求。 主要区别在于<code>fetch() </code>API 使用<strong>Promises</strong>，它使 API 更简单，更简洁，避免了回调地狱。</p>
+<h2 id="3-Fetch-API"><a href="#3-Fetch-API" class="headerlink" title="3. Fetch API"></a>3. Fetch API</h2><p>Fetch 是一个用于进行 AJAX 调用的原生 JavaScript API，它得到了大多数浏览器的支持，现在得到了广泛的应用。</p>
+<h3 id="3-1-API-用法"><a href="#3-1-API-用法" class="headerlink" title="3.1 API 用法"></a>3.1 API 用法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, options)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// handle response data</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// handle errors</span></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="API-参数"><a href="#API-参数" class="headerlink" title="API 参数"></a>API 参数</h4><p><code>fetch()</code> API 有两个参数</p>
+<ol>
+<li><p><strong>url</strong>是必填参数，它是您要获取的资源的路径。</p>
+</li>
+<li><pre><code class="js">options
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">是一个可选参数。不需要提供这个参数来发出简单的 GET 请求。</span><br><span class="line"></span><br><span class="line">- method: GET | POST | PUT | DELETE | PATCH</span><br><span class="line"></span><br><span class="line">- headers: 请求头，如</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;js</span><br><span class="line">  &#123; “Content-type”: “application&#x2F;json; charset&#x3D;UTF-8” &#125;</span><br></pre></td></tr></table></figure>
+  - mode: cors | no-cors | same-origin | navigate
+  - cache: default | reload | no-cache
+  - body: 一般用于 POST 请求
+</code></pre>
+</li>
+</ol>
+<p><strong>API 返回 Promise 对象</strong></p>
+<p><code>fetch()</code> API 返回一个 promise 对象。</p>
+<ul>
+<li>如果存在网络错误，则将拒绝，这会在<code>.catch()</code>块中处理。</li>
+<li>如果来自服务器的响应带有任何状态码(如<code>200</code>、<code>404</code>、<code>500</code>)，则 promise 将被解析。响应对象可以在<code>.then()</code>块中处理。</li>
+</ul>
+<p><strong>错误处理</strong></p>
+<p>请注意，对于成功的响应，我们期望状态代码为<code>200</code>（正常状态），但是即使响应带有错误状态代码（例如<code>404</code>（未找到资源）和<code>500</code>（内部服务器错误）），<code>fetch()</code> API 的状态也是 <code>resolved</code>，我们需要在<code>.then()</code> 块中显式地处理那些。</p>
+<p>我们可以在<code>response</code> 对象中看到 HTTP 状态：</p>
+<ul>
+<li>HTTP 状态码，例如 200。</li>
+<li>ok –布尔值，如果 HTTP 状态代码为 200-299，则为<code>true</code>。</li>
+</ul>
+<h3 id="3-3-示例：GET"><a href="#3-3-示例：GET" class="headerlink" title="3.3 示例：GET"></a>3.3 示例：GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getTodoItem = fetch(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(err));</span><br><span class="line"></span><br><span class="line">getTodoItem.then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response));</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line"> &#123; <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">&quot;delectus aut autem&quot;</span>, <span class="attr">completed</span>: <span class="literal">false</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的代码中需要注意两件事:</p>
+<ol>
+<li><code>fetch</code> API 返回一个 promise 对象，我们可以将其分配给变量并稍后执行。</li>
+<li>我们还必须调用<code>response.json()</code>将响应对象转换为 JSON</li>
+</ol>
+<h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p>我们来看看当 HTTP <code>GET</code>请求抛出 500 错误时会发生什么：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>) <span class="comment">// this API throw 500 error</span></span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Inside first then block&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> response.json();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">json</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&quot;Inside second then block&quot;</span>, json))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line">Inside first then block</span><br><span class="line">➤ ⓧ Inside <span class="keyword">catch</span> block: <span class="built_in">SyntaxError</span>: Unexpected token I <span class="keyword">in</span> <span class="built_in">JSON</span> at position <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>我们看到，即使 API 抛出 500 错误，它仍然会首先进入<code>then()</code>块，在该块中它无法解析错误 JSON 并抛出<code>catch()</code>块捕获的错误。</p>
+<p>这意味着如果我们使用<code>fetch()</code>API，则需要像这样显式地处理此类错误：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>)</span><br><span class="line">  .then(handleErrors)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleErrors</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!response.ok) &#123; <span class="comment">// throw error based on custom conditions on response</span></span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(response.statusText);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> response;</span><br><span class="line">&#125;</span><br><span class="line"> ➤ Inside <span class="keyword">catch</span> block: <span class="built_in">Error</span>: Internal Server <span class="built_in">Error</span> at handleErrors (Script snippet %<span class="number">239</span>:<span class="number">9</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-示例：POST"><a href="#3-3-示例：POST" class="headerlink" title="3.3 示例：POST"></a>3.3 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">    method: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    body: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">      completed: <span class="literal">true</span>,</span><br><span class="line">      title: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      userId: <span class="number">1</span></span><br><span class="line">    &#125;),</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">&quot;Content-type&quot;</span>: <span class="string">&quot;application/json; charset=UTF-8&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">json</span> =&gt;</span> <span class="built_in">console</span>.log(json))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line">➤ &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的代码中需要注意两件事:-</p>
+<ol>
+<li><code>POST</code>请求类似于<code>GET</code>请求。 我们还需要在<code>fetch()</code> API 的第二个参数中发送<code>method</code>，<code>body</code> 和<code>headers</code> 属性。</li>
+<li>我们必须需要使用 <code>JSON.stringify()</code> 将对象转成字符串请求<code>body</code> 参数</li>
+</ol>
+<h2 id="4-Axios-API"><a href="#4-Axios-API" class="headerlink" title="4.Axios API"></a>4.Axios API</h2><p>Axios API 非常类似于 fetch API，只是做了一些改进。我个人更喜欢使用 Axios API 而不是<code>fetch()</code> API，原因如下：</p>
+<ul>
+<li>为 GET 请求提供 <code>axios.get()</code>，为 POST 请求提供 <code>axios.post()</code>等提供不同的方法，这样使我们的代码更简洁。</li>
+<li>将响应代码（例如 404、500）视为可以在<code>catch()</code>块中处理的错误，因此我们无需显式处理这些错误。</li>
+<li>它提供了与 IE11 等旧浏览器的向后兼容性</li>
+<li>它将响应作为 JSON 对象返回，因此我们无需进行任何解析</li>
+</ul>
+<h3 id="4-1-示例：GET"><a href="#4-1-示例：GET" class="headerlink" title="4.1 示例：GET"></a>4.1 示例：GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在chrome控制台中引入脚本的方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">script.type = <span class="string">&#x27;text/javascript&#x27;</span>;</span><br><span class="line">script.src = <span class="string">&#x27;https://unpkg.com/axios/dist/axios.min.js&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.head.appendChild(script);</span><br><span class="line">axios.get(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(err));</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line">&#123; <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">&quot;delectus aut autem&quot;</span>, <span class="attr">completed</span>: <span class="literal">false</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>我们可以看到，我们直接使用 response 获得响应数据。数据没有任何解析对象，不像<code>fetch()</code> API。</p>
+<h4 id="错误处理-1"><a href="#错误处理-1" class="headerlink" title="错误处理"></a>错误处理</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line">Inside <span class="keyword">catch</span> block: <span class="built_in">Error</span>: Network <span class="built_in">Error</span></span><br></pre></td></tr></table></figure>
+<p>我们看到，500 错误也被<code>catch()</code>块捕获，不像<code>fetch()</code> API，我们必须显式处理它们。</p>
+<h3 id="4-2-示例：POST"><a href="#4-2-示例：POST" class="headerlink" title="4.2 示例：POST"></a>4.2 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">      completed: <span class="literal">true</span>,</span><br><span class="line">      title: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      userId: <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line"> &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>我们看到 POST 方法非常简短，可以直接传递请求主体参数，这与<code>fetch()</code> API 不同。</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

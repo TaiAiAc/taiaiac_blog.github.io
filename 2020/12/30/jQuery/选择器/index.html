@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="选择器"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">选择器</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/jQuery/">jQuery</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/jQuery/">#jQuery</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、标签选择器</span></span><br><span class="line">$(<span class="string">&#x27;div&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, <span class="string">&#x27;30px&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;p&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、类选择器</span></span><br><span class="line">$(<span class="string">&#x27;.p1&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3、id选择器</span></span><br><span class="line">$(<span class="string">&#x27;#div4&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;green&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4、并集选择器</span></span><br><span class="line">$(<span class="string">&#x27;p,.p1,#div4&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 5、通用选择器（全局选择器）</span></span><br><span class="line">$(<span class="string">&#x27;*&#x27;</span>).css(&#123;</span><br><span class="line">  margin: <span class="number">0</span>,</span><br><span class="line">  padding: <span class="number">0</span>,</span><br><span class="line">  boxSizing: <span class="string">&#x27;border-box&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、后代选择器 是包括子及孙元素</span></span><br><span class="line">$(<span class="string">&#x27;ul li&#x27;</span>).css(<span class="string">&#x27;border-bottom&#x27;</span>, <span class="string">&#x27;1px solid black&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ul li:first&#x27;</span>).css(<span class="string">&#x27;border-top&#x27;</span>, <span class="string">&#x27;1px solid black&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ol li&#x27;</span>).css(<span class="string">&#x27;border&#x27;</span>, <span class="string">&#x27;none&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、子选择器  父元素的直接子元素，不包括孙及以下元素</span></span><br><span class="line">$(<span class="string">&#x27;ul&gt;li&#x27;</span>).css(<span class="string">&#x27;border-bottom&#x27;</span>, <span class="string">&#x27;1px solid blue&#x27;</span>)</span><br><span class="line">$(<span class="string">&#x27;ul&gt;li:first&#x27;</span>).css(<span class="string">&#x27;border-top&#x27;</span>, <span class="string">&#x27;1px solid blue&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3、相邻兄弟选择器</span></span><br><span class="line">$(<span class="string">&#x27;li.second+li&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4、li.second同级别的兄弟元素li</span></span><br><span class="line">$(<span class="string">&#x27;li.second~li&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1、有属性class的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//2、有属性class=box-alink的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class=box-alink]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;red&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//3、有属性class值不等于box-alink的a标签</span></span><br><span class="line">$(<span class="string">&#x27;a[class!=box-alink]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;pink&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//4、href以www开头</span></span><br><span class="line">$(<span class="string">&#x27;a[href^=www]&#x27;</span>).css(&#123;</span><br><span class="line">  color: <span class="string">&#x27;blue&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//5、href以.cn结尾</span></span><br><span class="line">$(<span class="string">&#x27;a[href$=\\.cn]&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid black&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//6、href包含#</span></span><br><span class="line">$(<span class="string">&#x27;a[href*=\\#]&#x27;</span>).css(&#123;</span><br><span class="line">  backgroundColor: <span class="string">&#x27;#ddd&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//7、多个属性交集</span></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="string">&#x27;input[id][name$=man]&#x27;</span>).val())</span><br></pre></td></tr></table></figure>
+<h2 id="过滤选择器（17）"><a href="#过滤选择器（17）" class="headerlink" title="过滤选择器（17）"></a>过滤选择器（17）</h2><h4 id="li中的第一个元素"><a href="#li中的第一个元素" class="headerlink" title="li中的第一个元素"></a><code>li中的第一个元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:first&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="li中的最后一个元素"><a href="#li中的最后一个元素" class="headerlink" title="li中的最后一个元素"></a><code>li中的最后一个元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:last&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="index-0的偶数行"><a href="#index-0的偶数行" class="headerlink" title="index=0的偶数行"></a><code>index=0的偶数行</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:even&#x27;</span>).css(<span class="string">&#x27;background-color&#x27;</span>, <span class="string">&#x27;skyblue&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="index-0的奇数行"><a href="#index-0的奇数行" class="headerlink" title="index=0的奇数行"></a><code>index=0的奇数行</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:odd&#x27;</span>).css(&#123;</span><br><span class="line">  border: <span class="string">&#x27;1px solid blue&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="不是指定选择器的li"><a href="#不是指定选择器的li" class="headerlink" title="不是指定选择器的li"></a><code>不是指定选择器的li</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:not(.list-item)&#x27;</span>).css(&#123;</span><br><span class="line">  fontSize: <span class="string">&#x27;24px&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="等于指定index的li-index-0"><a href="#等于指定index的li-index-0" class="headerlink" title="等于指定index的li index=0"></a><code>等于指定index的li index=0</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:eq(3)&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;red&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="下标大于index"><a href="#下标大于index" class="headerlink" title="下标大于index"></a><code>下标大于index</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:gt(3)&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;brown&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="下标小于index"><a href="#下标小于index" class="headerlink" title="下标小于index"></a><code>下标小于index</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;li:lt(3)&#x27;</span>).css(<span class="string">&#x27;color&#x27;</span>, <span class="string">&#x27;green&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="找到所有h1-h6元素"><a href="#找到所有h1-h6元素" class="headerlink" title="找到所有h1-h6元素"></a><code>找到所有h1-h6元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;:header:odd&#x27;</span>).css(<span class="string">&#x27;background-color&#x27;</span>, <span class="string">&#x27;skyblue&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="非动画效果的元素执行动画效果"><a href="#非动画效果的元素执行动画效果" class="headerlink" title="非动画效果的元素执行动画效果"></a><code>非动画效果的元素执行动画效果</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;#run&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">&#x27;#app:not(:animated)&#x27;</span>).animate(</span><br><span class="line">    &#123;</span><br><span class="line">      left: <span class="string">&#x27;+=20&#x27;</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="number">1000</span></span><br><span class="line">  )</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="获得焦点的元素"><a href="#获得焦点的元素" class="headerlink" title="获得焦点的元素"></a><code>获得焦点的元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;#username&#x27;</span>).focus(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.value)</span><br><span class="line">  <span class="built_in">console</span>.log($(<span class="built_in">this</span>).val())</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//获得焦点的元素document.activeElement</span></span><br><span class="line">    <span class="comment">//$(document.activeElement).addClass(&#x27;focused&#x27;)</span></span><br><span class="line">    $(<span class="string">&#x27;:focus&#x27;</span>).addClass(<span class="string">&#x27;focused&#x27;</span>)</span><br><span class="line">  &#125;, <span class="number">2000</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="所有的隐藏元素"><a href="#所有的隐藏元素" class="headerlink" title="所有的隐藏元素"></a><code>所有的隐藏元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> hideElement = $(<span class="string">&#x27;:hidden&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; hideElement.length; i++) &#123;</span><br><span class="line">  <span class="comment">//使用元素下标找到元素都是原生的dom元素</span></span><br><span class="line">  <span class="comment">// console.log(hideElement[i])</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="所有的可见元素"><a href="#所有的可见元素" class="headerlink" title="所有的可见元素"></a><code>所有的可见元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> visibleElement = $(<span class="string">&#x27;:visible&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; visibleElement.length; i++) &#123;</span><br><span class="line">  <span class="comment">//使用元素下标找到元素都是原生的dom元素</span></span><br><span class="line">  <span class="comment">//console.log(visibleElement[i])</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="root-html元素"><a href="#root-html元素" class="headerlink" title=":root===html元素"></a><code>:root===html元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="contains-text-判断是否有文本"><a href="#contains-text-判断是否有文本" class="headerlink" title=":contains(text) 判断是否有文本"></a><em>:contains(text) 判断是否有文本</em></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> divs = $(<span class="string">&#x27;p:contains(John)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; divs.length; i++) &#123;</span><br><span class="line">  <span class="comment">//使用元素下标找到元素都是原生的dom元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(divs[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="empty-找空的元素没有子元素和子节点"><a href="#empty-找空的元素没有子元素和子节点" class="headerlink" title=":empty 找空的元素没有子元素和子节点"></a>:empty 找空的元素没有子元素和子节点</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;div:empty)&#x27;</span>).html(<span class="string">&#x27;&lt;p&gt;这是在空的div中添加的p&lt;/p&gt;&#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> (confirm(<span class="string">&#x27;empty?&#x27;</span>)) &#123;</span><br><span class="line">  <span class="comment">//清空元素函数</span></span><br><span class="line">  $(<span class="string">&#x27;#app&#x27;</span>).empty()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="判断是否有指定内容的元素-username并不是直接子元素"><a href="#判断是否有指定内容的元素-username并不是直接子元素" class="headerlink" title="判断是否有指定内容的元素,#username并不是直接子元素"></a><code>判断是否有指定内容的元素,#username并不是直接子元素</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = $(<span class="string">&#x27;div:has(#username)&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr)</span><br></pre></td></tr></table></figure>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 找到同是兄弟关系的span元素且是第二个</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> $(<span class="string">&#x27;span:nth-of-type(2)&#x27;</span>)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item.innerHTML)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="表单选择器-14"><a href="#表单选择器-14" class="headerlink" title="表单选择器(14)"></a>表单选择器(14)</h2><h4 id="表单选择器-匹配所有-input-textarea-select-和-button-元素"><a href="#表单选择器-匹配所有-input-textarea-select-和-button-元素" class="headerlink" title="表单选择器 匹配所有 input, textarea, select 和 button 元素"></a>表单选择器 匹配所有 input, <code>textarea</code>, select 和 button 元素</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> input = $(<span class="string">&#x27;:input&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> input) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="找文本框"><a href="#找文本框" class="headerlink" title="找文本框"></a>找文本框</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> text = $(<span class="string">&#x27;:text&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> text) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="找密码框"><a href="#找密码框" class="headerlink" title="找密码框"></a>找密码框</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> pass = $(<span class="string">&#x27;:password&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> pass) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="找单选框"><a href="#找单选框" class="headerlink" title="找单选框"></a>找单选框</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> radio = $(<span class="string">&#x27;:radio:not(:checked)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> radio) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="获得checkbox"><a href="#获得checkbox" class="headerlink" title="获得checkbox"></a>获得<code>checkbox</code></h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> checkbox = $(<span class="string">&#x27;:checkbox&#x27;</span>)</span><br><span class="line">checkbox.change(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>.value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="submit-默认找所有的-button-和-submit"><a href="#submit-默认找所有的-button-和-submit" class="headerlink" title=":submit 默认找所有的 button 和 submit"></a>:submit 默认找所有的 button 和 submit</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> submit = $(<span class="string">&#x27;input:submit&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> submit) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="image-匹配-input-type-’image’的元素，不找img元素"><a href="#image-匹配-input-type-’image’的元素，不找img元素" class="headerlink" title=":image 匹配 input type=’image’的元素，不找img元素"></a>:image 匹配 input type=’image’的元素，不找<code>img</code>元素</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> image = $(<span class="string">&#x27;:image&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> image) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="reset-匹配-reset-按钮"><a href="#reset-匹配-reset-按钮" class="headerlink" title=":reset 匹配 reset 按钮"></a>:reset 匹配 reset 按钮</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> reset = $(<span class="string">&#x27;:reset&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> reset) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="button-匹配-input-type-’button’和-button-元素"><a href="#button-匹配-input-type-’button’和-button-元素" class="headerlink" title=":button 匹配 input type=’button’和 button 元素"></a>:button 匹配 input type=’button’和 button 元素</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> button = $(<span class="string">&#x27;:button&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> button) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="file-找文件"><a href="#file-找文件" class="headerlink" title=":file 找文件"></a>:file 找文件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> flies = $(<span class="string">&#x27;:file&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> flies) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="disabled-不可用元素"><a href="#disabled-不可用元素" class="headerlink" title=":disabled 不可用元素"></a>:disabled 不可用元素</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> disables = $(<span class="string">&#x27;:disabled&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> disables) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="可用的元素-enabled"><a href="#可用的元素-enabled" class="headerlink" title="可用的元素 :enabled"></a>可用的元素 :enabled</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> enables = $(<span class="string">&#x27;:enabled&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> enables) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="所有选中的元素-checked-包含-radio、checkbox、option"><a href="#所有选中的元素-checked-包含-radio、checkbox、option" class="headerlink" title="所有选中的元素 :checked 包含 radio、checkbox、option"></a>所有选中的元素 :checked 包含 radio、<code>checkbox</code>、option</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> checked = $(<span class="string">&#x27;input[type=checkbox]:not(:checked)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> checked) &#123;</span><br><span class="line">  <span class="comment">//console.log(item)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="选中的-option-selected"><a href="#选中的-option-selected" class="headerlink" title="选中的 option :selected"></a>选中的 option :selected</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> select = $(<span class="string">&#x27;option:not(:selected)&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> select) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

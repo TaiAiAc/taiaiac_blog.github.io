@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="发布部署"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">发布部署</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="发布部署"><a href="#发布部署" class="headerlink" title="发布部署"></a>发布部署</h1><p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600575821528-bc8e0361-1c92-4641-ace5-a3c043ca471c.png" alt="图片.png"></p>
+<h2 id="1-购买服务器"><a href="#1-购买服务器" class="headerlink" title="1. 购买服务器"></a>1. 购买服务器</h2><ul>
+<li><p>一台具有公网 ip 地址 24 小时不关机的计算机</p>
+</li>
+<li><p>阿里云</p>
+</li>
+<li><ul>
+<li>ECS 云服务</li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com/</a></li>
+</ul>
+</li>
+<li><p>腾讯云</p>
+</li>
+<li><p>华为云</p>
+</li>
+<li><p>banwagonhost 搬瓦工</p>
+</li>
+</ul>
+<blockquote>
+<p>国内的服务器都需要备案，个人信息、身份证、照片、拍摄遵守互联网法规的背景图</p>
+<p>香港结点不需要备案</p>
+</blockquote>
+<p>买到服务器之后可以登录控制台，查看服务器的公网 ip 地址。</p>
+<h3 id="服务器操作系统选择"><a href="#服务器操作系统选择" class="headerlink" title="服务器操作系统选择"></a>服务器操作系统选择</h3><ul>
+<li><p>Linux</p>
+</li>
+<li><ul>
+<li>Centos</li>
+<li>Ubuntu</li>
+</ul>
+</li>
+<li><p>Windows</p>
+</li>
+</ul>
+<h2 id="2-购买域名"><a href="#2-购买域名" class="headerlink" title="2. 购买域名"></a>2. 购买域名</h2><ul>
+<li>新网</li>
+<li>godaddy</li>
+<li>万网 -&gt; 现在被阿里云收购了</li>
+</ul>
+<p><strong>如何做域名映射 id 地址</strong>：</p>
+<ol>
+<li>拿到服务器公网 ip 地址</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600577389653-6c596127-d691-4e6d-ac47-963ae6ef1f19.png" alt="图片.png"></p>
+<ol>
+<li>在域名管理控制台中找到域名解析</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600577518751-c59a597e-bf3a-4481-92fb-3ec8175113fb.png" alt="图片.png"></p>
+<ol>
+<li>添加解析记录</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600577607784-fe003765-a511-4488-9c06-145b2e3e2e2c.png" alt="图片.png"></p>
+<h2 id="3-使用-SSH-连接服务器"><a href="#3-使用-SSH-连接服务器" class="headerlink" title="3. 使用 SSH 连接服务器"></a>3. 使用 SSH 连接服务器</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">SSH 原理与运用（一）：远程登录</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/12/ssh_port_forwarding.html">SSH 原理与运用（二）：远程操作与端口转发</a></li>
+</ul>
+<p>SSH 是一种协议，主要用于远程登录。使用 SSH 的目的在于连接远程服务器，操作服务器。</p>
+<p>如果是在 Linux 上可以直接使用 ssh 命令。</p>
+<p>如果是在 Window 上则可以有多种选择：</p>
+<ul>
+<li>Git Bash</li>
+<li>Putty</li>
+</ul>
+<p>连接远程服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># root 就是远程计算机的用户名</span><br><span class="line"># 在 Linux 上如果没有特殊设置默认就是 root 超级管理员</span><br><span class="line"># 47.91.253.116 就是服务器公网 ip 地址</span><br><span class="line">ssh root@47.91.253.116</span><br><span class="line"></span><br><span class="line"># 回车执行，它会让你输入密码</span><br><span class="line"># 如果你是刚买的服务器，则需要在阿里云控制台修改设置一个密码</span><br><span class="line"># 注意：修改设置完毕之后要在控制台重启你的服务器才能生效</span><br><span class="line"># 输入密码完毕之后敲回车</span><br><span class="line">#   如果是第一次使用 ssh 连接远程服务器，它会给你发送一些字符内容，你只需要输入 yes 即可</span><br><span class="line">#   如果不是第一次则不会出现这个提示</span><br><span class="line"># 最后，如果密码正确，则可以正常登陆你的远程服务器</span><br></pre></td></tr></table></figure>
+<p>退出远程服务器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 如果是一段时间没有操作，则 ssh 会自动断开连接</span><br><span class="line"></span><br><span class="line"># 手动断开连接</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
+<h2 id="4-安装-Nginx"><a href="#4-安装-Nginx" class="headerlink" title="4. 安装 Nginx"></a>4. 安装 Nginx</h2><p>当你确保可以登录到你的远程服务器之后，就可以在里面操作了。</p>
+<p><strong>默认你的服务器是没有任何服务的能力的</strong>。</p>
+<p>如果是需要提供 Web 服务，则需要安装 Web 服务器软件：</p>
+<ul>
+<li><p>Apache</p>
+</li>
+<li><ul>
+<li>老牌的服务器软件，稳定可靠</li>
+</ul>
+</li>
+<li><p>Nginx</p>
+</li>
+<li><ul>
+<li>比较新，但是在高性能、并发处理能力上比 Apache 好</li>
+</ul>
+</li>
+</ul>
+<p>安装 Nginx：（这里以 mac 电脑安装为例）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 在 Linux 中，有许多命令都需要管理员权限</span><br><span class="line"># sudo 的意思就是使用管理员权限来执行命令</span><br><span class="line"># 在 Linux 上安装软件非常方便，尤其是命令行工具，因为它有一些类似于 npm 一样的管理工具</span><br><span class="line"># 只不过他们管理的是 Linux 软件包，而不是 Node 包</span><br><span class="line"># MacOS 上常用的包管理工具就是：brew</span><br><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600580296446-fd8b781a-4277-4503-987b-335746d3e3f2.png" alt="图片.png"></p>
+<p>检查是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
+<p>命令检查不方便，你可以启动 nignx 服务后，直接通过 ip 地址或者你的域名放到 80 端口（或 8080）进行测试。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
+<p>启动 Nginx 服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure>
+<p>停止 Nginx 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services stop nginx</span><br></pre></td></tr></table></figure>
+<p>重启 Nginx 服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart nginx</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600581272325-9b456adb-400b-4196-9b17-cade8b12d306.png" alt="图片.png"></p>
+<h3 id="Nginx-目录"><a href="#Nginx-目录" class="headerlink" title="Nginx 目录"></a>Nginx 目录</h3><ul>
+<li><code>/usr/local/var/www/</code> 就是默认的 <code>www</code> 目录</li>
+<li><code>/usr/local/etc/nginx/servers/</code> 就是配置文件目录</li>
+<li><code>/usr/local/etc/nginx/nginx.conf</code> 默认配置文件</li>
+</ul>
+<h3 id="网站和服务器"><a href="#网站和服务器" class="headerlink" title="网站和服务器"></a>网站和服务器</h3><ul>
+<li>如果你有钱，就可以买多个服务器，每个服务器部署一个网站</li>
+<li>没钱的话，可以在一个服务器中部署多个网站</li>
+</ul>
+<h3 id="反向代理图示"><a href="#反向代理图示" class="headerlink" title="反向代理图示"></a>反向代理图示</h3><p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600586717155-f718f341-20a8-465f-ab8f-a08d143f7cfb.png" alt="图片.png"></p>
+<h3 id="反向代理实践"><a href="#反向代理实践" class="headerlink" title="反向代理实践"></a>反向代理实践</h3><ul>
+<li>本地启动的两个服务：（一个位于 3000 端口，一个位于 8080 端口）</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590062638-70bb89a5-9691-49d2-9d4c-0841639c422b.png" alt="图片.png"> <img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590101011-17165098-6c85-4e4b-9a28-b439d00aef40.png" alt="图片.png"></p>
+<ul>
+<li>配置反向代理之后：</li>
+<li>这里之所以使用 9000 端口而非默认的 80 端口，是因为 80 端口浏览器会强制使用 https</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590237647-9187c827-c956-496f-953c-6def118414b7.png" alt="图片.png"> <img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590255751-66829dcc-cbc2-4c54-8bb0-033dbe57f8b7.png" alt="图片.png"></p>
+<ul>
+<li>域名解析配置：</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590355023-5ee9a8b9-bbe3-4fc4-a47f-78995b0f7ee2.png" alt="图片.png"></p>
+<ul>
+<li>nginx.conf 配置：（<strong>虽然监听的都是 9000 端口，但是可以通过域名即 server_name 来区分</strong>）</li>
+</ul>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600590548664-3fb1e5f0-e483-4d3c-8d3e-edefdf1c2e56.png" alt="图片.png"></p>
+<h2 id="5-使用-nvm-安装管理-Node-版本"><a href="#5-使用-nvm-安装管理-Node-版本" class="headerlink" title="5. 使用 nvm 安装管理 Node 版本"></a>5. 使用 nvm 安装管理 Node 版本</h2><blockquote>
+<p>nvm(Node Version Manager) 工具专门用来安装管理 Node.js 环境</p>
+</blockquote>
+<p>在 Linux 或者 MacOS 操作系统中，我们可以使用第三方工具：<a target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm">nvm </a>来帮助我们安装和管理 node 环境。</p>
+<p>执行以下的安装脚本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;nvm-sh&#x2F;nvm&#x2F;v0.35.3&#x2F;install.sh | bash</span><br></pre></td></tr></table></figure>
+<p>安装完毕之后，我们需要重启终端才可以生效，但是我们也可以执行下面的命令使其立即生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR&#x3D;&quot;$([ -z &quot;$&#123;XDG_CONFIG_HOME-&#125;&quot; ] &amp;&amp; printf %s &quot;$&#123;HOME&#125;&#x2F;.nvm&quot; || printf %s &quot;$&#123;XDG_CONFIG_HOME&#125;&#x2F;nvm&quot;)&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR&#x2F;nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR&#x2F;nvm.sh&quot; # This loads nvm</span><br></pre></td></tr></table></figure>
+<p>校验是否安装成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm --version</span><br></pre></td></tr></table></figure>
+<p>查看使用帮助：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm --help</span><br></pre></td></tr></table></figure>
+<p>安装指定版本的 Node 环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14.11.0</span><br></pre></td></tr></table></figure>
+<p>切换使用指定版本的 Node 环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14.11.0</span><br></pre></td></tr></table></figure>
+<p>查看已安装的所有 Node 版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
+<p>设置默认 Node 的版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm alias default 14.11.0</span><br></pre></td></tr></table></figure>
+<p>测试 Node 环境是否安装成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600583684371-63ff3784-e7db-4091-b779-f8e8066215af.png" alt="图片.png"></p>
+<h2 id="6-安装-MySQL"><a href="#6-安装-MySQL" class="headerlink" title="6. 安装 MySQL"></a>6. 安装 MySQL</h2><h2 id="7-安装-Git"><a href="#7-安装-Git" class="headerlink" title="7. 安装 Git"></a>7. 安装 Git</h2><h2 id="8-发布服务端代码-API-Server"><a href="#8-发布服务端代码-API-Server" class="headerlink" title="8. 发布服务端代码 API Server"></a>8. 发布服务端代码 API Server</h2><ol>
+<li><p>把源代码发布到远程仓库</p>
+</li>
+<li><p>在远程仓库使用 <code>git</code> 来下载项目代码</p>
+</li>
+<li><p>在远程服务器的项目工程目录中执行 <code>npm install</code> 安装依赖</p>
+</li>
+<li><p>创建 <code>cms</code> 数据库： <code>CREATE DATABASE cms DEFAULT CHARSET utf8;</code></p>
+</li>
+<li><p>执行 <code>cms.sql</code> 导入数据表</p>
+</li>
+<li><ol>
+<li>先切换到 <code>cms</code> 数据库：<code>use cms</code></li>
+<li>然后再导入该 SQL 文件：<code>source cms.sql文件路径</code></li>
+</ol>
+</li>
+<li><p>使用 <code>forever</code> 让你的 node 离开终端也能执行</p>
+</li>
+</ol>
+<h2 id="9-守护进程"><a href="#9-守护进程" class="headerlink" title="9. 守护进程"></a>9. 守护进程</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/foreversd/forever">https://github.com/foreversd/forever</a></p>
+</blockquote>
+<p>由于服务端控制台一旦关闭就会导致服务也关闭了。所以我们这里使用一个工具： <code>forever</code></p>
+<p>forever 可以帮助我们把 Node 服务运行在后台。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g forever</span><br></pre></td></tr></table></figure>
+<p>后台运行一个 Node 服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever start node脚本</span><br></pre></td></tr></table></figure>
+<p>查看所有正在后台运行的服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever list</span><br></pre></td></tr></table></figure>
+<p>停止单个服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever stop node脚本</span><br></pre></td></tr></table></figure>
+<p>停止所有服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever stopall</span><br></pre></td></tr></table></figure>
+<p>重启指定服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever restart node脚本</span><br></pre></td></tr></table></figure>
+<p>重启所有服务：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever restartall</span><br></pre></td></tr></table></figure>
+<h2 id="10-发布客户端代码-SPA"><a href="#10-发布客户端代码-SPA" class="headerlink" title="10. 发布客户端代码 SPA"></a>10. 发布客户端代码 SPA</h2><ol>
+<li>执行 <code>npm run build</code> 在项目根目录下生成 <code>dist</code> 目录</li>
+<li>拷贝项目根目录下的 <code>package.json</code> ，<code>package-lock.json</code> 到 <code>dist</code> 目录</li>
+<li>将 <code>dist</code> 目录下的文件上传到服务器的 <code>www</code> 目录下</li>
+<li>在 <code>www</code> 目录下执行 <code>npm install --production</code> 安装生产环境所需的依赖</li>
+<li>确保远程主机启动了 API Server 服务，根据客户端请求配置反向代理，发布成功</li>
+</ol>
+<p><img src="https://cdn.nlark.com/yuque/0/2020/png/706453/1600593863265-df85fba9-6194-4ff7-9927-e689f594b2d0.png" alt="图片.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># scp 是一个文件上传命令行工具</span><br><span class="line"># -r 表示上传的是目录</span><br><span class="line"># &#x2F;root 表示上传到远程服务器的 &#x2F;root 目录下</span><br><span class="line"># scp [-r] 本地目录 用户名@公网id:远程目录</span><br><span class="line">scp -r dist&#x2F; root@47.91.253.116:&#x2F;root</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

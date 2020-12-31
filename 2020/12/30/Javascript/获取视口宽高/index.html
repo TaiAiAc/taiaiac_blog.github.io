@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="获取视口宽高"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">获取视口宽高</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Javascript/">#Javascript</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="window-对象和-document-对象"><a href="#window-对象和-document-对象" class="headerlink" title="window 对象和 document 对象"></a><strong>window 对象和 document 对象</strong></h2><ul>
+<li>window 对象表示浏览器打开的窗口，window 可省略，常见的 window 属性有 innerWidth，parseInt，parseFloat</li>
+<li>document 对象属于 window 对象，表示一个 DOM 树</li>
+</ul>
+<h2 id="视口宽高"><a href="#视口宽高" class="headerlink" title="视口宽高"></a><strong>视口宽高</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jquery获取视口宽高，不包括工具栏和滚动条</span></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="built_in">window</span>).width()) <span class="comment">// 939</span></span><br><span class="line"><span class="built_in">console</span>.log($(<span class="built_in">window</span>).height()) <span class="comment">// 734</span></span><br><span class="line"><span class="comment">// 原生获取视口宽高，包括横纵向滚动条的宽高度，ie8</span></span><br><span class="line"><span class="built_in">console</span>.log(innerWidth) <span class="comment">// 939</span></span><br><span class="line"><span class="built_in">console</span>.log(innerHeight) <span class="comment">// 734</span></span><br><span class="line"><span class="comment">// 不包括工具栏和滚动条</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientWidth) <span class="comment">// 939</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.clientHeight) <span class="comment">// 734</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.offsetWidth) <span class="comment">// 939</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.documentElement.offsetHeight) <span class="comment">// 158</span></span><br><span class="line"><span class="comment">// 工具栏和滚动条的宽高</span></span><br><span class="line"><span class="built_in">console</span>.log(outerWidth) <span class="comment">// 1536</span></span><br><span class="line"><span class="built_in">console</span>.log(outerHeight) <span class="comment">// 824</span></span><br><span class="line"><span class="comment">// 默认获取body内容的宽高</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.style.width) <span class="comment">// 没设置，返回空</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.style.height) <span class="comment">// 空</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientWidth) <span class="comment">// 923</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.clientHeight) <span class="comment">// 142</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.offsetWidth) <span class="comment">// 923</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">document</span>.body.offsetHeight) <span class="comment">// 142</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> content = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;content&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(content.style.width) <span class="comment">// 120px（样式width）</span></span><br><span class="line"><span class="built_in">console</span>.log(content.clientWidth) <span class="comment">// 140（样式width+padding）</span></span><br><span class="line"><span class="built_in">console</span>.log(content.offsetWidth) <span class="comment">// 142（样式width+padding+border）</span></span><br></pre></td></tr></table></figure>
+<p><strong>如果没设置某个元素的宽高，那么用 style.width 获取时返回的是空，而 clientWidth 和 offsetWidth 依旧有值</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offsetWidth = width + padding + border</span><br></pre></td></tr></table></figure>
+<h1 id="js-获取元素相对窗口位置"><a href="#js-获取元素相对窗口位置" class="headerlink" title="js 获取元素相对窗口位置"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jidi/p/get_position.html">js 获取元素相对窗口位置</a></h1><p><strong>JS 获取元素的 offsetTop,offsetLeft 等属性</strong><br>obj.clientWidth //获取元素的宽度（width+padding）<br>obj.clientHeight //元素的高度<br>obj.offsetLeft //元素相对于父元素的 left<br>obj.offsetTop //元素相对于父元素的 top<br>obj.offsetWidth //元素的宽度(width+padding+border)<br>obj.offsetHeight //元素的高度</p>
+<p>//获取元素的纵坐标（相对于窗口）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="function"><span class="keyword">function</span> <span class="title">getTop</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line"><span class="number">2</span>   <span class="keyword">var</span> offset=e.offsetTop;</span><br><span class="line"><span class="number">3</span>   <span class="keyword">if</span>(e.offsetParent!=<span class="literal">null</span>) offset+=getTop(e.offsetParent);</span><br><span class="line"><span class="number">4</span>   <span class="keyword">return</span> offset;</span><br><span class="line"><span class="number">5</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>//获取元素的横坐标（相对于窗口）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="function"><span class="keyword">function</span> <span class="title">getLeft</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line"><span class="number">2</span>   <span class="keyword">var</span> offset=e.offsetLeft;</span><br><span class="line"><span class="number">3</span>   <span class="keyword">if</span>(e.offsetParent!=<span class="literal">null</span>) offset+=getLeft(e.offsetParent);</span><br><span class="line"><span class="number">4</span>   <span class="keyword">return</span> offset;</span><br><span class="line"><span class="number">5</span> &#125;</span><br></pre></td></tr></table></figure>
+<p><em>上面的方法无疑影响性能，好在浏览器给我提供了相应的接口 getBoundingClientRect，这个方法最早出现在 IE 浏览器中，后来的浏览器也跟着支持了这个方法，而且还更加完善，IE 中只能获取到元素的 left,top,bottom,right 的属性，而后面的现代浏览器还能获取到元素的 width 和 height.</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Chrome</strong></th>
+<th><strong>Firefox (Gecko)</strong></th>
+<th><strong>Internet Explorer</strong></th>
+<th><strong>Opera</strong></th>
+<th><strong>Safari</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><em>1.0</em></td>
+<td><em>3.0 (1.9)</em></td>
+<td><em>4.0</em></td>
+<td><em>(Yes)</em></td>
+<td><em>4.0</em></td>
+</tr>
+</tbody></table>
+<p>*这里要注意的是，bottom 是元素底部相对于窗口顶部的距离，而不是像 css 里面 position 的 bottom 相对于窗口底部，同理，rihgt 属性是元素最右边相对于窗口左边的距离。</p>
+<p>-</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">&quot;box&quot;</span>);</span><br><span class="line"><span class="number">2</span> <span class="keyword">var</span> pos = box.getBoundingClientRect();</span><br><span class="line"><span class="number">3</span> box.innerHTML = <span class="string">&quot;top:&quot;</span>+pos.top +</span><br><span class="line"><span class="number">4</span>   <span class="string">&quot;left:&quot;</span>+pos.left +</span><br><span class="line"><span class="number">5</span>   <span class="string">&quot;bottom:&quot;</span>+pos.bottom +</span><br><span class="line"><span class="number">6</span>   <span class="string">&quot;right:&quot;</span>+pos.right +</span><br><span class="line"><span class="number">7</span>   <span class="string">&quot;width:&quot;</span>+pos.width +</span><br><span class="line"><span class="number">8</span>   <span class="string">&quot;height:&quot;</span>+pos.height</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

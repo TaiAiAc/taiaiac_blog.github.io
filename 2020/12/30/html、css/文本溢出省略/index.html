@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="文本溢出省略"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">文本溢出省略</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/HTML%E3%80%81CSS/">HTML、CSS</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/HTML%E3%80%81CSS/">#HTML、CSS</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="不支持多行文本溢出显示省略号"><a href="#不支持多行文本溢出显示省略号" class="headerlink" title="不支持多行文本溢出显示省略号"></a>不支持多行文本溢出显示省略号</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="WebKit-浏览器或移动端的页面"><a href="#WebKit-浏览器或移动端的页面" class="headerlink" title="WebKit 浏览器或移动端的页面"></a>WebKit 浏览器或移动端的页面</h2><p>这个属性比较合适 WebKit 浏览器或移动端（绝大部分是 WebKit 内核的）浏览器。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span>;</span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">-webkit-line-clamp</span>: 2;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>;</span><br></pre></td></tr></table></figure>
+<p>在 WebKit 浏览器或移动端（绝大部分是 WebKit 内核的浏览器）的页面实现比较简单，可以直接使用 WebKit 的 CSS 扩展属性(WebKit 是私有属性)<code>-webkit-line-clamp</code> ；注意：这是一个 不规范的属性（<a target="_blank" rel="noopener" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-UnsupportedProperties">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p><code>-webkit-line-clamp</code>用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的 WebKit 属性。查看 <code>text-overflow</code> 属性文档：<a target="_blank" rel="noopener" href="https://www.html.cn/book/css/webkit/text/line-clamp.htm">https://www.html.cn/book/css/webkit/text/line-clamp.htm</a></p>
+<p>常见结合属性：</p>
+<ol>
+<li><code>display: -webkit-box;</code> 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。</li>
+<li><code>-webkit-box-orient</code> 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。</li>
+<li><code>text-overflow: ellipsis;</code>，可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。查看 <code>text-overflow</code> 属性文档：<a target="_blank" rel="noopener" href="https://www.html.cn/book/css/properties/user-interface/text-overflow.htm">https://www.html.cn/book/css/properties/user-interface/text-overflow.htm</a></li>
+</ol>
+<h3 id="跨浏览器兼容的方案"><a href="#跨浏览器兼容的方案" class="headerlink" title="跨浏览器兼容的方案"></a>跨浏览器兼容的方案</h3><p>比较靠谱简单的做法就是设置相对定位的容器高度，用包含省略号(…)的元素模拟实现；</p>
+<p>例如：</p>
+<p>css 代码:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.4em</span>; <span class="comment">/* 3 times the line-height to show 3 lines */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">4.2em</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;...&#x27;</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span> <span class="number">1px</span> <span class="number">45px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(/newimg88/<span class="number">2014</span>/<span class="number">09</span>/ellipsis_bg.png) repeat-y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看 demo：</p>
+<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="265" name="cp_embed_1" scrolling="no" src="https://codepen.io/feiwen8772/embed/gQJXzO?height=265&amp;theme-id=0&amp;slug-hash=gQJXzO&amp;default-tab=result&amp;animations=run&amp;editable=&amp;embed-version=2&amp;user=feiwen8772&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" id="cp_embed_gQJXzO" style="box-sizing: border-box; max-width: 100%; display: block; margin: 0px auto 16px; width: 718px; overflow: hidden;"></iframe>
+
+<p>这里注意几点：</p>
+<ol>
+<li>height 高度真好是<code>line-height</code>的 3 倍；</li>
+<li>结束的省略好用了半透明的 png 做了减淡的效果，或者设置背景颜色；</li>
+<li>IE6-7 不显示<code>content</code>内容，所以要兼容 IE6-7 可以是在内容中加入一个标签，比如用<code>&lt;span class=&quot;line-clamp&quot;&gt;...&lt;/span&gt;</code>去模拟；</li>
+<li>要支持 IE8，需要将<code>::after</code>替换成<code>:after</code>；</li>
+</ol>
+<h3 id="JavaScript-方案"><a href="#JavaScript-方案" class="headerlink" title="JavaScript 方案"></a>JavaScript 方案</h3><p>用 js 也可以根据上面的思路去模拟，实现也很简单，推荐几个做类似工作的成熟小工具：</p>
+<h4 id="1-Clamp-js"><a href="#1-Clamp-js" class="headerlink" title="1.Clamp.js"></a>1.Clamp.js</h4><p>下载及文档地址：<a target="_blank" rel="noopener" href="https://github.com/josephschmitt/Clamp.js">https://github.com/josephschmitt/Clamp.js</a><br>使用也非常简单：</p>
+<p>js 代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;clamp-this-module&#x27;</span>)</span><br><span class="line">$clamp(<span class="built_in">module</span>, &#123; <span class="attr">clamp</span>: <span class="number">3</span> &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="2-jQuery-插件-jQuery-dotdotdot"><a href="#2-jQuery-插件-jQuery-dotdotdot" class="headerlink" title="2.jQuery 插件-jQuery.dotdotdot"></a>2.jQuery 插件-jQuery.dotdotdot</h4><p>这个使用起来也很方便：</p>
+<p>js 代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">&quot;#wrapper&quot;</span>).dotdotdot(&#123;        <span class="comment">//  configuration goes here    &#125;);</span></span><br><span class="line"></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

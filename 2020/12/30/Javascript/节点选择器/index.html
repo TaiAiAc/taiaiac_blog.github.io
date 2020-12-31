@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="节点选择器"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">节点选择器</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Javascript/">#Javascript</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="5-种获得元素的方式"><a href="#5-种获得元素的方式" class="headerlink" title="5 种获得元素的方式"></a>5 种获得元素的方式</h2><ul>
+<li><h4 id="1、通过-id-获得的元素，可以直接使用，不要获得元素"><a href="#1、通过-id-获得的元素，可以直接使用，不要获得元素" class="headerlink" title="1、通过 id 获得的元素，可以直接使用，不要获得元素"></a>1、通过 id 获得的元素，可以直接使用，不要获得元素</h4><ul>
+<li>```javascript<br>let id = document.getElementById(‘id’)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 2、通过类名获得元素集合 &#96;HTMLCollection&#96;不是数组，不能用&#96;forEach&#96;</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;javascript</span><br><span class="line">    let class &#x3D; document.getElementsByClassName(&#39;class&#39;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h4 id="3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach"><a href="#3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach" class="headerlink" title="3、通过标签名获得元素集合 HTMLCollection不是数组，不能用forEach"></a>3、通过标签名获得元素集合 <code>HTMLCollection</code>不是数组，不能用<code>forEach</code></h4><ul>
+<li>```javascript<br>let div = document.getElementsByTagName(‘div’)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 4、使用&#96;css&#96;的选择器,只找第一个元素</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;javascript</span><br><span class="line">    let css &#x3D; document.querySelector(&#39;.css&#39;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h4 id="5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach"><a href="#5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach" class="headerlink" title="5、使用css的选择器,找全部,NodeList类型，不是数组，不能用forEach"></a>5、使用<code>css</code>的选择器,找全部,<code>NodeList</code>类型，不是数组，不能用<code>forEach</code></h4><ul>
+<li><p>```javascript<br>let item = document.querySelectorAll(‘.item’)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 节点选择器</span><br><span class="line"></span><br><span class="line">- ### 1、子元素</span><br><span class="line"></span><br><span class="line">  - #### 所有子元素&#96;children&#96;</span><br><span class="line"></span><br><span class="line">    - &#96;&#96;&#96;javascript</span><br><span class="line">      let children &#x3D; ul.children</span><br></pre></td></tr></table></figure></li>
+<li><h4 id="第一个firstElementChild"><a href="#第一个firstElementChild" class="headerlink" title="第一个firstElementChild"></a>第一个<code>firstElementChild</code></h4><ul>
+<li>```javascript<br>let first = ul.firstElementChild<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 最后一个&#96;lastElementChild&#96;</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;javascript</span><br><span class="line">    let last &#x3D; ul.lastElementChild</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="2、兄弟元素"><a href="#2、兄弟元素" class="headerlink" title="2、兄弟元素"></a>2、兄弟元素</h3><ul>
+<li><h4 id="上一个previousElementSibling"><a href="#上一个previousElementSibling" class="headerlink" title="上一个previousElementSibling"></a>上一个<code>previousElementSibling</code></h4><ul>
+<li>```javascript<br>let prev = ul.previousElementSibling<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 下一个&#96;nextElementSibling&#96;</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;javascript</span><br><span class="line">    let next &#x3D; ul.nextElementSibling</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="3、父级元素"><a href="#3、父级元素" class="headerlink" title="3、父级元素"></a>3、父级元素</h3><ul>
+<li><h3 id="父级parentElement"><a href="#父级parentElement" class="headerlink" title="父级parentElement"></a>父级<code>parentElement</code></h3><ul>
+<li><pre><code class="javascript">let parent = ul.parentElement</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

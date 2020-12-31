@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Vue.config"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Vue.config</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/%E7%BB%8F%E9%AA%8C/">#经验</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  publicPath: <span class="string">&#x27;/&#x27;</span>, <span class="comment">// 项目部署的基础路径 我们默认假设你的应用将会部署在域名的根部</span></span><br><span class="line">  outputDir: <span class="string">&#x27;dist&#x27;</span>, <span class="comment">// 构建好的文件的输出地址</span></span><br><span class="line">  assetsDir: <span class="string">&#x27;static&#x27;</span>, <span class="comment">// 静态资源打包的地址</span></span><br><span class="line">  lintOnSave: process.env.NODE_ENV === <span class="string">&#x27;development&#x27;</span>, <span class="comment">// 是否在保存时使用‘eslint-loader’进行检查 // 有效值: true | false | &#x27;error&#x27; ,设置为error时，检查出的错误会触发编译失败</span></span><br><span class="line">  productionSourceMap: <span class="literal">false</span>, <span class="comment">// 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度  映射文件 打包时使用</span></span><br><span class="line">  devServer: &#123;</span><br><span class="line">    <span class="comment">// 设置跨域</span></span><br><span class="line">    port: <span class="string">&#x27;9527&#x27;</span>, <span class="comment">// 端口号</span></span><br><span class="line">    open: <span class="literal">true</span>, <span class="comment">// 配置自动启动浏览器</span></span><br><span class="line">    overlay: &#123;</span><br><span class="line">      warnings: <span class="literal">false</span>,</span><br><span class="line">      errors: <span class="literal">true</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">    proxy: &#123;</span><br><span class="line">      <span class="comment">// 代理服务器设置</span></span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment">       * 原理理解： 假设我的本地地址为: http://192.168.163.100:9527 (即http://localhost:9527)</span></span><br><span class="line"><span class="comment">       *            服务器地址为: http://11.12.11.205:9301;</span></span><br><span class="line"><span class="comment">       *            该服务器上的接口为：/api/xxx/xxx</span></span><br><span class="line"><span class="comment">       *            如果我通过axios将接口直接写成</span></span><br><span class="line"><span class="comment">       *            axios.get(http://11.12.11.205:9301/api/xxx/xxx)</span></span><br><span class="line"><span class="comment">       *            那么这个时候从http://192.168.163.100:9527 到 http://11.12.11.205:9301/api/xxx/xxx</span></span><br><span class="line"><span class="comment">       *            是存在跨域限制的。</span></span><br><span class="line"><span class="comment">       *</span></span><br><span class="line"><span class="comment">       *            所以，项目中在设置axios时是这样做的</span></span><br><span class="line"><span class="comment">       *            1. 设置了一个baseURL 为process.env.VUE_APP_BASE_API, 即&#x27;/api&#x27;</span></span><br><span class="line"><span class="comment">       *            2. 将axios的接口写成 baseURL+ 接口路径，即 /api +/api/xxx/xxx  (axios会在url前面加上配置的baseURL)</span></span><br><span class="line"><span class="comment">       *            3.请求的时候 浏览器上显示的是http://localhost:9527/api/api/xxx/xxx</span></span><br><span class="line"><span class="comment">       *            4.因为有config里面的代理设置，即遇到&#x27;/api&#x27;，将它前面的地址代理到http://11.12.11.205:9301，并且允许跨域</span></span><br><span class="line"><span class="comment">       *            5. 并且将&#x27;/api&#x27;重写为&#x27;&#x27;，即http://localhost:9527 变为了http://11.12.11.205:9301，&#x27;/api&#x27;变为了&#x27;&#x27;</span></span><br><span class="line"><span class="comment">       *            6. 那么现在请求到的地址变为http://11.12.11.205:9301/api/xxx/xxx</span></span><br><span class="line"><span class="comment">       *            7. 即成功代理给我们要访问的服务器，并解决了跨域问题</span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line">      <span class="comment">// process.env.VUE_APP_BASE_API      &#x27;/api&#x27;</span></span><br><span class="line">      [process.env.VUE_APP_BASE_API]: &#123;</span><br><span class="line">        <span class="comment">// 当遇到&#x27;/api&#x27;的时候</span></span><br><span class="line">        target: <span class="string">`http://11.12.11.205:9301`</span>, <span class="comment">// 需要将目前的地址代理至target</span></span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          [<span class="string">&#x27;^&#x27;</span> + process.env.VUE_APP_BASE_API]: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 将&#x27;/api&#x27; 重写为&#x27;&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">      [process.env.VUE_APP_BASE_FILES]: &#123;</span><br><span class="line">        target: <span class="string">`http://11.12.11.205:9300`</span>,</span><br><span class="line">        changeOrigin: <span class="literal">true</span>,</span><br><span class="line">        pathRewrite: &#123;</span><br><span class="line">          [<span class="string">&#x27;^&#x27;</span> + process.env.VUE_APP_BASE_FILES]: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

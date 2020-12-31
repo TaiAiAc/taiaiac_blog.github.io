@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="jQuery Ajax获取远程数据"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">jQuery Ajax获取远程数据</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Ajax/">Ajax</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Ajax/">#Ajax</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="Ajax-获取数据"><a href="#Ajax-获取数据" class="headerlink" title="Ajax 获取数据"></a>Ajax 获取数据</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="comment">//请求地址</span></span><br><span class="line">  url: <span class="string">&#x27;https://192.168.102.32.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求方法</span></span><br><span class="line">  type: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line">  <span class="comment">//是否异步</span></span><br><span class="line">  <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//是否使用缓存</span></span><br><span class="line">  cache: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//请求失败执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">error</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//在发送请求前执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">beforeSend</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//启动进度条</span></span><br><span class="line">    NProgress.start()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求成功执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">    <span class="keyword">let</span> app = $(<span class="string">&#x27;#app&#x27;</span>)</span><br><span class="line">    res.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> div = <span class="string">`渲染数据`</span></span><br><span class="line">      app.append(div)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求结束执行函数</span></span><br><span class="line">  <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//结束进度条</span></span><br><span class="line">    NProgress.done()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">login</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 使用promise函数保存请求到的值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//模拟登录过程,post类型的带参请求</span></span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">      url: <span class="string">&#x27;http://192.168.102.32:8888/api/private/v1/login&#x27;</span>,</span><br><span class="line">      type: <span class="string">&#x27;post&#x27;</span>,</span><br><span class="line">      <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">      data: &#123;</span><br><span class="line">        username: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">        password: <span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// 请求发送前执行的函数</span></span><br><span class="line">      <span class="function"><span class="title">beforeSend</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="comment">// 启动进度条</span></span><br><span class="line">        NProgress.start()</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">        <span class="comment">// 保存为标记&#x27;LOGIN_USER&#x27;的JSON字符串</span></span><br><span class="line">        sessionStorage.setItem(<span class="string">&#x27;LOGIN_USER&#x27;</span>, <span class="built_in">JSON</span>.stringify(res))</span><br><span class="line">        <span class="comment">// 保存数据</span></span><br><span class="line">        resolve(res)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="function"><span class="title">error</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">        <span class="comment">// 返回错误状态</span></span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="comment">// 最终都会执行的函数不管成功失败</span></span><br><span class="line">      <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">        <span class="comment">// 结束进度条</span></span><br><span class="line">        NProgress.done()</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用async  await获取</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">get</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 等待login()执行结束</span></span><br><span class="line">  <span class="keyword">let</span> promise = <span class="keyword">await</span> login()</span><br><span class="line">  <span class="comment">// 以下是同步执行</span></span><br><span class="line">  <span class="built_in">console</span>.log(promise)</span><br><span class="line">  location = <span class="string">&#x27;jQ-44goods-cate.html&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  get()</span><br><span class="line">  <span class="comment">// 第二种方法</span></span><br><span class="line">  <span class="comment">// let promise = login()</span></span><br><span class="line">  <span class="comment">// then正确信息</span></span><br><span class="line">  <span class="comment">// promise.then(function(res) &#123;</span></span><br><span class="line">  <span class="comment">//     console.log(res)</span></span><br><span class="line">  <span class="comment">// catch保存错误信息</span></span><br><span class="line">  <span class="comment">// &#125;).catch(function(e) &#123;</span></span><br><span class="line">  <span class="comment">//     console.log(e)</span></span><br><span class="line">  <span class="comment">// &#125;)</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="get-方法"><a href="#get-方法" class="headerlink" title="get 方法"></a>get 方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置同步请求</span></span><br><span class="line">$.ajaxSettings.async = <span class="literal">false</span></span><br><span class="line">$.get(</span><br><span class="line">  <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/topic.json&#x27;</span>, <span class="comment">//url</span></span><br><span class="line">  &#123;&#125;, <span class="comment">//data</span></span><br><span class="line">  <span class="comment">//callback</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.data.commentList)</span><br><span class="line">    <span class="keyword">let</span> arr = res.data.commentList</span><br><span class="line">    appendElement(arr)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br><span class="line"><span class="comment">//恢复异步请求</span></span><br><span class="line">$.ajaxSettings.async = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h1 id="post-方法"><a href="#post-方法" class="headerlink" title="post 方法"></a>post 方法</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$.post(</span><br><span class="line">  <span class="comment">//url</span></span><br><span class="line">  <span class="string">&#x27;http://192.168.102.7:8888/api/private/v1/login&#x27;</span>,</span><br><span class="line">  <span class="comment">//data</span></span><br><span class="line">  &#123;</span><br><span class="line">    username: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">    password: <span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//callback</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

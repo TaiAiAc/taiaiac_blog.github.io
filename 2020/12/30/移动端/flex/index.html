@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="flex弹性盒模型"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">flex弹性盒模型</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">移动端</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">#移动端</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="flex-弹性盒模型"><a href="#flex-弹性盒模型" class="headerlink" title="flex 弹性盒模型"></a>flex 弹性盒模型</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">flex</span>;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th align="center">作用在 flex 容器上</th>
+<th align="center">作用在 flex 子项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">flex-direction</td>
+<td align="center">order</td>
+</tr>
+<tr>
+<td align="center">flex-wrap</td>
+<td align="center">flex-grow</td>
+</tr>
+<tr>
+<td align="center">flex-flow</td>
+<td align="center">flex-shrink</td>
+</tr>
+<tr>
+<td align="center">justify-content</td>
+<td align="center">flex-basis</td>
+</tr>
+<tr>
+<td align="center">align-items</td>
+<td align="center">flex</td>
+</tr>
+<tr>
+<td align="center"><code>align-centent</code></td>
+<td align="center">align-self</td>
+</tr>
+</tbody></table>
+<h2 id="1、flex-direction"><a href="#1、flex-direction" class="headerlink" title="1、flex-direction"></a>1、<code>flex-direction</code></h2><ul>
+<li><h6 id="flex-direction用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。"><a href="#flex-direction用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。" class="headerlink" title="flex-direction用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。"></a><code>flex-direction</code>用来控制子项整体布局方向，是从左往右还是从右往左，是从上往下还是从下往上。</h6></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">row</td>
+<td align="center">默认值，显示为行。方向为当前文档水平流方向，默认情况下是从左往右。(从左向右排列)</td>
+</tr>
+<tr>
+<td align="center">row-reverse</td>
+<td align="center">显示为行。但方向和 row 属性值是反的（从右向左排列）</td>
+</tr>
+<tr>
+<td align="center">column</td>
+<td align="center">显示为列（从上向下排列）</td>
+</tr>
+<tr>
+<td align="center">clunmn-reverse</td>
+<td align="center">显示为列，但方向和 column 属性值是反的（从下向上排列）</td>
+</tr>
+</tbody></table>
+<h2 id="2、flex-wrap"><a href="#2、flex-wrap" class="headerlink" title="2、flex-wrap"></a>2、<code>flex-wrap</code></h2><ul>
+<li><h6 id="flex-wrap用来控制子项整体是单行显示还是换行显示。"><a href="#flex-wrap用来控制子项整体是单行显示还是换行显示。" class="headerlink" title="flex-wrap用来控制子项整体是单行显示还是换行显示。"></a><code>flex-wrap</code>用来控制子项整体是单行显示还是换行显示。</h6></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>nowrap</code></td>
+<td align="center">默认值，表示单行显示，不换行</td>
+</tr>
+<tr>
+<td align="center">wrap</td>
+<td align="center">宽度不足换行显示</td>
+</tr>
+<tr>
+<td align="center">wrap-reverse</td>
+<td align="center">宽度不足换行显示，但是从下往上开始，也就是原本换行在下面的子项现在跑到上面。</td>
+</tr>
+</tbody></table>
+<h2 id="3、flex-flow"><a href="#3、flex-flow" class="headerlink" title="3、flex-flow"></a>3、flex-flow</h2><ul>
+<li><h6 id="flex-flow-属性是flex-directinon和-flex-wrap-的缩写，表示-flex-布局的-flow-流动特性。第一个值表示方向，第二个值表示换行，中间用空格隔开。"><a href="#flex-flow-属性是flex-directinon和-flex-wrap-的缩写，表示-flex-布局的-flow-流动特性。第一个值表示方向，第二个值表示换行，中间用空格隔开。" class="headerlink" title="flex-flow 属性是flex-directinon和 flex-wrap 的缩写，表示 flex 布局的 flow 流动特性。第一个值表示方向，第二个值表示换行，中间用空格隔开。"></a>flex-flow 属性是<code>flex-directinon</code>和 flex-wrap 的缩写，表示 flex 布局的 flow 流动特性。第一个值表示方向，第二个值表示换行，中间用空格隔开。</h6></li>
+<li><pre><code class="css">flex-flow：column wrap；</code></pre>
+</li>
+</ul>
+<h2 id="4、-justify-content"><a href="#4、-justify-content" class="headerlink" title="4、 justify-content"></a>4、 justify-content</h2><ul>
+<li><h6 id="justify-content-属性决定了主轴方向上子项的对齐和分布方式。"><a href="#justify-content-属性决定了主轴方向上子项的对齐和分布方式。" class="headerlink" title="justify-content 属性决定了主轴方向上子项的对齐和分布方式。"></a>justify-content 属性决定了主轴方向上子项的对齐和分布方式。</h6></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">flex-start</td>
+<td align="center">默认值，表现为起始位置对齐</td>
+</tr>
+<tr>
+<td align="center">flex-end</td>
+<td align="center">表现为结束位置对齐</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td align="center">表现为居中对齐</td>
+</tr>
+<tr>
+<td align="center">space-between</td>
+<td align="center">表现为两端对齐。between 是中间的意思，意思是多余的空白间距只在元素中间区域分配。</td>
+</tr>
+<tr>
+<td align="center">space-around</td>
+<td align="center">around 是环绕的意思，意思是每个 flex 子项两侧都环绕互不干扰的等宽的空白间距，最终视觉上边缘两侧的空白只有中间空白宽度一半。</td>
+</tr>
+<tr>
+<td align="center">space-evenly</td>
+<td align="center">evenly 是匀称、平等的意思。也就是视觉上，每个 flex 子项两侧空白间距完全相等。</td>
+</tr>
+</tbody></table>
+<h2 id="5、align-items"><a href="#5、align-items" class="headerlink" title="5、align-items"></a>5、align-items</h2><ul>
+<li><h6 id="align-items-中的-items-值得就是-flex-子项们，因此-align-items-指的就是-flex-子项们相对于-flex-容器在侧轴方向上的对齐方式。"><a href="#align-items-中的-items-值得就是-flex-子项们，因此-align-items-指的就是-flex-子项们相对于-flex-容器在侧轴方向上的对齐方式。" class="headerlink" title="align-items 中的 items 值得就是 flex 子项们，因此 align-items 指的就是 flex 子项们相对于 flex 容器在侧轴方向上的对齐方式。"></a>align-items 中的 items 值得就是 flex 子项们，因此 align-items 指的就是 flex 子项们相对于 flex 容器在侧轴方向上的对齐方式。</h6></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">stretch</td>
+<td align="center">默认值，flex 子项拉伸</td>
+</tr>
+<tr>
+<td align="center">flex-start</td>
+<td align="center">表现为容器顶部对齐</td>
+</tr>
+<tr>
+<td align="center">flex-end</td>
+<td align="center">表现为容器底部对齐</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td align="center">表现为垂直居中对齐</td>
+</tr>
+</tbody></table>
+<h2 id="6、align-content"><a href="#6、align-content" class="headerlink" title="6、align-content"></a>6、align-content</h2><ul>
+<li><h6 id="align-content-可以看成和-justify-content-是相似且对立的属性，如果所有-flex-子项只有一行则-align-content-属性是没有任何效果的。"><a href="#align-content-可以看成和-justify-content-是相似且对立的属性，如果所有-flex-子项只有一行则-align-content-属性是没有任何效果的。" class="headerlink" title="align-content 可以看成和 justify-content 是相似且对立的属性，如果所有 flex 子项只有一行则 align-content 属性是没有任何效果的。"></a>align-content 可以看成和 justify-content 是相似且对立的属性，如果所有 flex 子项只有一行则 align-content 属性是没有任何效果的。</h6></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">stretch</td>
+<td align="center">默认值。每一行 flex 子元素都等比例拉伸。例如，如果共两行 flex 子元素，则每一行拉伸高度是 50%。</td>
+</tr>
+<tr>
+<td align="center">flex-start</td>
+<td align="center">表现为起始位置对齐</td>
+</tr>
+<tr>
+<td align="center">flex-end</td>
+<td align="center">表现为结束位置对齐。</td>
+</tr>
+<tr>
+<td align="center">center</td>
+<td align="center">表现为居中对齐。</td>
+</tr>
+<tr>
+<td align="center">space-between</td>
+<td align="center">表现为两端对齐。</td>
+</tr>
+<tr>
+<td align="center">space-around</td>
+<td align="center">每一行元素上下都有享有独立不重叠的空白空间</td>
+</tr>
+<tr>
+<td align="center">space-evenly</td>
+<td align="center">每一行元素都完全上下等分</td>
+</tr>
+</tbody></table>
+<h2 id="7、作用在-flex-子项上的css属性"><a href="#7、作用在-flex-子项上的css属性" class="headerlink" title="7、作用在 flex 子项上的css属性"></a>7、作用在 flex 子项上的<code>css</code>属性</h2><blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">取值</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">order</td>
+<td align="center">可以通过设置 order 改变某一个 flex 子项的排序位置。所有 flex 子项的默认 order 属性值是 0.</td>
+</tr>
+<tr>
+<td align="center">flex-grow</td>
+<td align="center">属性中的 grow 是扩展的意思，扩展的就是 flex 子项所占据的宽度，扩展所侵占的空间就是除去元素外的剩余的空白间隙。默认值是 0.</td>
+</tr>
+<tr>
+<td align="center">flex-shrink</td>
+<td align="center">属性中的 shrink 是“收缩”的意思，flex-shrink 主要处理当 flex 容器空间不足时候，单个元素的收缩比例。默认值是 1.</td>
+</tr>
+<tr>
+<td align="center">flex-basis</td>
+<td align="center">flex-basis 定义了在分配剩余空间之前元素的默认大小。</td>
+</tr>
+<tr>
+<td align="center">flex</td>
+<td align="center">flex 属性是 flex-grow，flex-shrink 和 flex-basis 的缩写。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><code>flex：0 1 auto；</code>（默认值）</td>
+</tr>
+<tr>
+<td align="center">align-self</td>
+<td align="center">align-self 指控制单独某一个 flex 子项的垂直对齐方式。</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">align-self 和 align-items 功能相同作用对象不同</td>
+</tr>
+</tbody></table>
+</blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

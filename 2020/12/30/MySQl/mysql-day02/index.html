@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="MySQL"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">MySQL</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/MySQl/">MySQl</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/MySQl/">#MySQl</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--</span> 这是<span class="selector-tag">sql</span>的注释</span><br><span class="line"># <span class="selector-tag">sql</span>的注释</span><br><span class="line"><span class="comment">/*sql的注释*/</span></span><br></pre></td></tr></table></figure>
+<h2 id="1、创建表格-person"><a href="#1、创建表格-person" class="headerlink" title="1、创建表格 person"></a>1、创建表格 person</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">CREATE</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">person</span> (</span><br><span class="line">	`id` BIGINT ( 10 ) PRIMARY KEY auto_increment COMMENT &#x27;用户的id&#x27;,</span><br><span class="line">	`name` VARCHAR ( 50 ) NOT NULL UNIQUE COMMENT &#x27;用户名&#x27;,</span><br><span class="line">	`age` BIGINT ( 3 ) COMMENT &#x27;年龄&#x27;,</span><br><span class="line">	`gender` CHAR ( 1 ) NOT NULL DEFAULT &#x27;男&#x27; COMMENT &#x27;用户性别&#x27;,</span><br><span class="line">	`birthday` datetime NOT NULL DEFAULT now() COMMENT &#x27;生日&#x27;,</span><br><span class="line">	`photo` VARCHAR ( 150 ) COMMENT &#x27;头像地址&#x27;,</span><br><span class="line">	`phone` VARCHAR ( 11 ) NOT NULL UNIQUE COMMENT &#x27;电话&#x27;,</span><br><span class="line">	`address` VARCHAR ( 100 ) COMMENT &#x27;地址&#x27;,</span><br><span class="line">	`email` VARCHAR ( 150 ) NOT NULL UNIQUE COMMENT &#x27;邮箱&#x27;,</span><br><span class="line">	`identityNo` VARCHAR ( 18 ) NOT NULL UNIQUE COMMENT &#x27;身份证号码&#x27;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="2、删除表格"><a href="#2、删除表格" class="headerlink" title="2、删除表格"></a>2、删除表格</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">drop</span> <span class="selector-tag">table</span> <span class="selector-tag">person</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="3、查看表结构"><a href="#3、查看表结构" class="headerlink" title="3、查看表结构"></a>3、查看表结构</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">DESC</span> <span class="selector-tag">person</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="4、添加数据"><a href="#4、添加数据" class="headerlink" title="4、添加数据"></a>4、添加数据</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 1, &quot;<span class="selector-tag">tom1</span>&quot;, 20, &quot;男&quot;, &quot;1992<span class="selector-tag">-09-09</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284523<span class="selector-class">.jpg</span>&quot;, &quot;13877779999&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom1</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;340101192809091230&quot;</span> );</span><br><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 2, &quot;<span class="selector-tag">tom2</span>&quot;, 21, &quot;女&quot;, &quot;1998<span class="selector-tag">-09-09</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284524<span class="selector-class">.jpg</span>&quot;, &quot;13877774444&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom2</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;34010119980909123x&quot;</span> );</span><br><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 3, &quot;<span class="selector-tag">tom3</span>&quot;, 20, &quot;男&quot;, &quot;1997<span class="selector-tag">-09-08</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284525<span class="selector-class">.jpg</span>&quot;, &quot;13877773333&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom3</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;340101199709091233&quot;</span> );</span><br><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 4, &quot;<span class="selector-tag">tom4</span>&quot;, 21, &quot;女&quot;, &quot;1998<span class="selector-tag">-08-09</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284526<span class="selector-class">.jpg</span>&quot;, &quot;13877772222&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom4</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;340101199808091235&quot;</span> );</span><br><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 5, &quot;<span class="selector-tag">tom5</span>&quot;, 20, &quot;男&quot;, &quot;1998<span class="selector-tag">-07-09</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284527<span class="selector-class">.jpg</span>&quot;, &quot;13877771111&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom5</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;340101199809091234&quot;</span> );</span><br><span class="line"><span class="selector-tag">INSERT</span> <span class="selector-tag">INTO</span> <span class="selector-tag">person</span></span><br><span class="line"><span class="selector-tag">VALUES</span></span><br><span class="line">	( 6, &quot;<span class="selector-tag">tom6</span>&quot;, 21, &quot;女&quot;, &quot;1999<span class="selector-tag">-09-19</span> 10<span class="selector-pseudo">:08</span><span class="selector-pseudo">:09&quot;</span>, &quot;/<span class="selector-tag">upload</span>/15009284528<span class="selector-class">.jpg</span>&quot;, &quot;13877770000&quot;, &quot;不详&quot;, &quot;<span class="selector-tag">tom6</span><span class="keyword">@qq</span>.com&quot;, <span class="string">&quot;340101199909191530&quot;</span> );</span><br></pre></td></tr></table></figure>
+<h2 id="5、修改字段的值"><a href="#5、修改字段的值" class="headerlink" title="5、修改字段的值"></a>5、修改字段的值</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">update person set name = &#x27;tom&#x27; where id = 1;</span><br><span class="line">update person set name = &#x27;tom1234&#x27; ,birthday= now()  where id = 1;</span><br></pre></td></tr></table></figure>
+<h3 id="修改-id-gt-1-的-address-为空"><a href="#修改-id-gt-1-的-address-为空" class="headerlink" title="修改 id&gt;1 的 address 为空"></a>修改 id&gt;1 的 address 为空</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update person set address = &quot;&quot; where id&gt;1;</span><br></pre></td></tr></table></figure>
+<h2 id="6、删除表记录-会重置自增序列"><a href="#6、删除表记录-会重置自增序列" class="headerlink" title="6、删除表记录 会重置自增序列"></a>6、删除表记录 会重置自增序列</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">truncate</span> <span class="selector-tag">table</span> <span class="selector-tag">person</span> ;</span><br></pre></td></tr></table></figure>
+<h2 id="7、删除表记录，不会重置自增序列"><a href="#7、删除表记录，不会重置自增序列" class="headerlink" title="7、删除表记录，不会重置自增序列"></a>7、删除表记录，不会重置自增序列</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">delete</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> ;</span><br></pre></td></tr></table></figure>
+<h2 id="8、指定条件的删除"><a href="#8、指定条件的删除" class="headerlink" title="8、指定条件的删除"></a>8、指定条件的删除</h2><h3 id="删除-id-gt-2-并且-age-20-的用户"><a href="#删除-id-gt-2-并且-age-20-的用户" class="headerlink" title="删除 id&gt;2,并且 age=20 的用户"></a>删除 id&gt;2,并且 age=20 的用户</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from person where id &gt;2 &amp;&amp; age =20;</span><br></pre></td></tr></table></figure>
+<h3 id="删除-id-gt-2-并且-gender-”男”的用户"><a href="#删除-id-gt-2-并且-gender-”男”的用户" class="headerlink" title="删除 id&gt;2,并且 gender=”男”的用户"></a>删除 id&gt;2,并且 gender=”男”的用户</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from person where id &gt;2 and gender =&#x27;男&#x27;;</span><br></pre></td></tr></table></figure>
+<h2 id="9、查询语句-select-指令"><a href="#9、查询语句-select-指令" class="headerlink" title="9、查询语句 select 指令"></a>9、查询语句 select 指令</h2><h3 id="查询所有用户的-name、id"><a href="#查询所有用户的-name、id" class="headerlink" title="查询所有用户的 name、id"></a>查询所有用户的 name、id</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id as &#x27;编号&#x27;,name as &#x27;姓名&#x27; ,age as &#x27;年龄&#x27; from person where id&gt;3;</span><br></pre></td></tr></table></figure>
+<h3 id="查询所有"><a href="#查询所有" class="headerlink" title="查询所有"></a>查询所有</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from person where id = 3;</span><br></pre></td></tr></table></figure>
+<p>把表作为对象进行描述</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">p</span>.* <span class="selector-tag">from</span> <span class="selector-tag">person</span> <span class="selector-tag">p</span> <span class="selector-tag">where</span> <span class="selector-tag">p</span><span class="selector-class">.id</span> &gt;3;</span><br><span class="line"><span class="selector-tag">select</span> 2*3+5+4 <span class="selector-tag">num</span> ; # 15</span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">md5</span>(&quot;1234&quot;); <span class="selector-id">#81dc9bdb52d04dc20036dbd8313ed055</span></span><br></pre></td></tr></table></figure>
+<h2 id="10、聚合函数-sum-字段名-count-字段名-avg-字段名-max-字段名-min-字段名"><a href="#10、聚合函数-sum-字段名-count-字段名-avg-字段名-max-字段名-min-字段名" class="headerlink" title="10、聚合函数 sum(字段名) count(字段名) avg(字段名) max(字段名) min(字段名)"></a>10、聚合函数 sum(字段名) count(字段名) avg(字段名) max(字段名) min(字段名)</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">sum</span>(<span class="selector-tag">age</span>) <span class="selector-tag">sum</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> ; <span class="selector-id">#123</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">count</span>(*) <span class="selector-tag">num</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> <span class="selector-tag">where</span> <span class="selector-tag">age</span>&gt;20; <span class="selector-id">#4</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">avg</span>(<span class="selector-tag">age</span>) <span class="selector-tag">avg</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> ;<span class="selector-id">#20</span>.6667</span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">max</span>(<span class="selector-tag">age</span>) <span class="selector-tag">maxAge</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> ;<span class="selector-id">#30</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">min</span>(<span class="selector-tag">age</span>) <span class="selector-tag">minAge</span> <span class="selector-tag">from</span> <span class="selector-tag">person</span> ;<span class="selector-id">#19</span></span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">max</span>(<span class="selector-tag">year</span>(<span class="selector-tag">now</span>())<span class="selector-tag">-year</span>(<span class="selector-tag">birthday</span>))  <span class="selector-tag">from</span> <span class="selector-tag">person</span>;</span><br><span class="line"><span class="selector-tag">select</span> <span class="selector-tag">min</span>(<span class="selector-tag">year</span>(<span class="selector-tag">now</span>())<span class="selector-tag">-year</span>(<span class="selector-tag">birthday</span>)) <span class="selector-tag">from</span> <span class="selector-tag">person</span>;</span><br><span class="line"><span class="selector-tag">--</span> 查询最大年龄的用户信息</span><br><span class="line">select * from person where birthday = (select min( birthday) from person );</span><br></pre></td></tr></table></figure>
+<h2 id="11、主键、外键"><a href="#11、主键、外键" class="headerlink" title="11、主键、外键"></a>11、主键、外键</h2><p>主键是一张表某个字段的属性，属性名 primary key ,主键字段标定与之关联的其它字段<br>一般给 id 设置主键属性，可以设置多个主键<br>特性：主键字段的值唯一，非空</p>
+<h2 id="12、外键-foreign-key"><a href="#12、外键-foreign-key" class="headerlink" title="12、外键(foreign key)"></a>12、外键(foreign key)</h2><h3 id="表中某个字段的值与其它表主键字段值之间的对应关系"><a href="#表中某个字段的值与其它表主键字段值之间的对应关系" class="headerlink" title="表中某个字段的值与其它表主键字段值之间的对应关系"></a>表中某个字段的值与其它表主键字段值之间的对应关系</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="selector-tag">create</span> <span class="selector-tag">table</span> <span class="selector-tag">employ</span>(</span><br><span class="line">	<span class="selector-tag">id</span> <span class="selector-tag">int</span>(10) <span class="selector-tag">primary</span> <span class="selector-tag">key</span> <span class="selector-tag">auto_increment</span> ,</span><br><span class="line">	<span class="selector-tag">username</span> <span class="selector-tag">varchar</span>(40) <span class="selector-tag">not</span> <span class="selector-tag">null</span> <span class="selector-tag">unique</span> ,</span><br><span class="line">	<span class="selector-tag">password</span> <span class="selector-tag">varchar</span>(40) <span class="selector-tag">not</span> <span class="selector-tag">null</span>,</span><br><span class="line">	<span class="selector-tag">departId</span> <span class="selector-tag">int</span>(10) <span class="selector-tag">not</span> <span class="selector-tag">null</span></span><br><span class="line">	) ;</span><br><span class="line"></span><br><span class="line">	<span class="selector-tag">create</span> <span class="selector-tag">table</span> <span class="selector-tag">department</span>(</span><br><span class="line">	id int(10) primary key auto_increment comment&#x27;部门的主键id&#x27;,</span><br><span class="line">	<span class="selector-tag">name</span> <span class="selector-tag">varchar</span>(30) <span class="selector-tag">not</span> <span class="selector-tag">null</span> <span class="selector-tag">unique</span> <span class="selector-tag">comment</span>&quot;部门名称&quot;</span><br><span class="line">	) ;</span><br></pre></td></tr></table></figure>
+<h3 id="设置主键语法"><a href="#设置主键语法" class="headerlink" title="设置主键语法"></a>设置主键语法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ALTER</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">employ</span> <span class="selector-tag">ADD</span> <span class="selector-tag">CONSTRAINT</span> <span class="selector-tag">pk_employ_id</span> <span class="selector-tag">primary</span> <span class="selector-tag">KEY</span> ( <span class="selector-tag">id</span> )</span><br><span class="line"><span class="selector-tag">--</span> 设置外键的语法</span><br><span class="line"><span class="selector-tag">ALTER</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">employ</span> <span class="selector-tag">ADD</span> <span class="selector-tag">CONSTRAINT</span> <span class="selector-tag">fk_departId</span> <span class="selector-tag">FOREIGN</span> <span class="selector-tag">KEY</span> ( <span class="selector-tag">departId</span> ) <span class="selector-tag">REFERENCES</span> <span class="selector-tag">department</span> (<span class="selector-tag">id</span>)</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">alter</span> 表示修改</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">table</span> 表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">employ</span> <span class="selector-tag">employ</span>表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">add</span> 添加</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">CONSTRAINT</span> 约束</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">fk_departId</span> 约束的名称</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">FOREIGN</span> <span class="selector-tag">KEY</span> 约束的类型为外键</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">departId</span> <span class="selector-tag">employ</span>表格的<span class="selector-tag">departId</span>字段</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">REFERENCES</span> 引用</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">department</span> <span class="selector-tag">department</span>表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">id</span> <span class="selector-tag">department</span>表格的<span class="selector-tag">id</span>字段</span><br></pre></td></tr></table></figure>
+<h2 id="13、多表联查–内连接查询"><a href="#13、多表联查–内连接查询" class="headerlink" title="13、多表联查–内连接查询"></a>13、多表联查–内连接查询</h2><h3 id="查询雇员的信息并且要显示当前雇员的部门名称"><a href="#查询雇员的信息并且要显示当前雇员的部门名称" class="headerlink" title="查询雇员的信息并且要显示当前雇员的部门名称"></a>查询雇员的信息并且要显示当前雇员的部门名称</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">select</span></span><br><span class="line">	<span class="selector-tag">e</span>.*,</span><br><span class="line">	<span class="selector-tag">d</span><span class="selector-class">.name</span></span><br><span class="line"><span class="selector-tag">from</span></span><br><span class="line">	<span class="selector-tag">employ</span> <span class="selector-tag">e</span> ,</span><br><span class="line">	<span class="selector-tag">department</span> <span class="selector-tag">d</span></span><br><span class="line"><span class="selector-tag">where</span></span><br><span class="line">	e.departId = d.id</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

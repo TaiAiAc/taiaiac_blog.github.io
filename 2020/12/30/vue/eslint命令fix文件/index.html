@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="eslint命令fix文件"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">eslint命令fix文件</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="eslint-命令-fix-文件"><a href="#eslint-命令-fix-文件" class="headerlink" title="eslint 命令 fix 文件"></a>eslint 命令 fix 文件</h1><h1 id="安装了-eslint-包"><a href="#安装了-eslint-包" class="headerlink" title="安装了 eslint 包"></a>安装了 eslint 包</h1><h1 id="package-json-中-script-中直接配置命令"><a href="#package-json-中-script-中直接配置命令" class="headerlink" title="package.json 中 script 中直接配置命令"></a>package.json 中 script 中直接配置命令</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">   <span class="string">&quot;serve&quot;</span>: <span class="string">&quot;vue-cli-service serve&quot;</span>,</span><br><span class="line">   <span class="string">&quot;build&quot;</span>: <span class="string">&quot;vue-cli-service build&quot;</span>,</span><br><span class="line">   <span class="string">&quot;lint&quot;</span>: <span class="string">&quot;vue-cli-service lint&quot;</span>,</span><br><span class="line">   <span class="string">&quot;eslint-fix&quot;</span>: <span class="string">&quot;eslint src/**/*.*  --fix&quot;</span>,</span><br><span class="line">   <span class="string">&quot;build:qa&quot;</span>: <span class="string">&quot;vue-cli-service build&quot;</span>,</span><br><span class="line">   <span class="string">&quot;build:prd&quot;</span>: <span class="string">&quot;vue-cli-service build&quot;</span></span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/14002348-a9a321b7e6d0ebfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/446/format/webp" alt="img"></p>
+<p>image.png</p>
+<p>就不用手动改了啊！！效率大大提升</p>
+<h1 id="eslintrc-js-文件配置"><a href="#eslintrc-js-文件配置" class="headerlink" title=".eslintrc.js 文件配置"></a>.eslintrc.js 文件配置</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span>.<span class="keyword">exports</span> = &#123;</span><br><span class="line">    root: <span class="keyword">true</span>, <span class="comment">// 指定跟路径</span></span><br><span class="line">    parserOptions: &#123;</span><br><span class="line">        parser: <span class="string">&#x27;babel-eslint&#x27;</span> <span class="comment">// 解析器</span></span><br><span class="line">    &#125;,</span><br><span class="line">    env: &#123;</span><br><span class="line">        node: <span class="keyword">true</span>,</span><br><span class="line">        browser: <span class="keyword">true</span> <span class="comment">// 浏览器启用</span></span><br><span class="line">    &#125;,</span><br><span class="line">    extends: [</span><br><span class="line">        <span class="comment">// https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention</span></span><br><span class="line">        <span class="comment">// consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.</span></span><br><span class="line">        <span class="string">&#x27;plugin:vue/essential&#x27;</span>, <span class="comment">// vue基本规则</span></span><br><span class="line">        <span class="comment">// https://github.com/standard/standard/blob/master/docs/RULES-en.md</span></span><br><span class="line">        <span class="string">&#x27;@vue/standard&#x27;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// required to lint *.vue files</span></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="string">&#x27;vue&#x27;</span> <span class="comment">// 支持vue文件</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">// add your custom rules here</span></span><br><span class="line">    rules: &#123;</span><br><span class="line">        indent: [<span class="string">&#x27;error&#x27;</span>, <span class="number">2</span>], <span class="comment">// 缩进宽度4个空格</span></span><br><span class="line">        <span class="string">&#x27;comma-dangle&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许行末逗号</span></span><br><span class="line">        <span class="string">&#x27;no-constant-condition&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许常量作为表达式条件</span></span><br><span class="line">        <span class="string">&#x27;no-delete-var&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许使用delete</span></span><br><span class="line">        <span class="string">&#x27;no-extend-native&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许扩展原生对象</span></span><br><span class="line">        <span class="string">&#x27;no-floating-decimal&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">//  允许省去小数点前的0</span></span><br><span class="line">        <span class="string">&#x27;no-multi-str&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许多行字符串</span></span><br><span class="line">        semi: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 允许使用分号</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// allow async-await</span></span><br><span class="line">        <span class="string">&#x27;generator-star-spacing&#x27;</span>: <span class="string">&#x27;off&#x27;</span>, <span class="comment">// 关闭</span></span><br><span class="line">        <span class="comment">// 最大长度 120</span></span><br><span class="line">        <span class="string">&#x27;max-len&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;warn&#x27;</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                code: <span class="number">180</span>,</span><br><span class="line">                ignoreComments: <span class="keyword">true</span>,</span><br><span class="line">                ignoreStrings: <span class="keyword">true</span>,</span><br><span class="line">                ignoreTemplateLiterals: <span class="keyword">true</span>,</span><br><span class="line">                ignoreUrls: <span class="keyword">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="comment">// 最大行数 500</span></span><br><span class="line">        <span class="string">&#x27;max-lines&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;warn&#x27;</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                max: <span class="number">1000</span>,</span><br><span class="line">                skipBlankLines: <span class="keyword">true</span>,</span><br><span class="line">                skipComments: <span class="keyword">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="comment">// 要求使用 let 或 const 而不是 var</span></span><br><span class="line">        <span class="string">&#x27;no-var&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;error&#x27;</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="comment">// allow debugger during development</span></span><br><span class="line">        <span class="string">&#x27;no-debugger&#x27;</span>: process.env.NODE_ENV === <span class="string">&#x27;production&#x27;</span> ? <span class="string">&#x27;error&#x27;</span> : <span class="string">&#x27;off&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/14002348-ef830f97a38f5d50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/589/format/webp" alt="img"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

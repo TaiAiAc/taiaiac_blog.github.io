@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="安装方式"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">安装方式</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/sass/">sass</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/sass/">#sass</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h2><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20200916152936058.png" alt="image-20200916152936058"></p>
+<h2 id="VScode-设置里粘贴代码"><a href="#VScode-设置里粘贴代码" class="headerlink" title="VScode 设置里粘贴代码"></a>VScode 设置里粘贴代码</h2><ul>
+<li><h4 id="输入相对路径"><a href="#输入相对路径" class="headerlink" title="输入相对路径"></a>输入相对路径</h4></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&quot;easysass.formats&quot;: [</span><br><span class="line">       &#123;</span><br><span class="line">         <span class="attr">&quot;format&quot;</span>: <span class="string">&quot;expanded&quot;</span>, <span class="comment">//compressed 表示压缩</span></span><br><span class="line">         <span class="attr">&quot;extension&quot;</span>: <span class="string">&quot;.css&quot;</span></span><br><span class="line">       &#125;</span><br><span class="line">     ],</span><br><span class="line">     &quot;easysass.targetDir&quot;: &quot;./移动端/css/&quot; // 自定义css输出文件路径</span><br></pre></td></tr></table></figure>
+<h2 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h2><ul>
+<li><h4 id="开头"><a href="#开头" class="headerlink" title="$开头"></a>$开头</h4><ul>
+<li><p>```scss<br>$theme-color: #ddd;<br>$w-100: 100px;</p>
+<p>#app {<br>  height: $w-100;<br>  width: $w-100;<br>  background: $theme-color;<br>  &amp;:hover {</p>
+<pre><code>background: blue;</code></pre>
+<p>  }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## mixin</span><br><span class="line"></span><br><span class="line">- ### 定义 Mixin</span><br><span class="line"></span><br><span class="line">  - ###### 通过[&#96;@mixin&#96;加名称的方式](http:&#x2F;&#x2F;sass-lang.com&#x2F;documentation&#x2F;file.SASS_REFERENCE.html#mixins)就可以定义一个 Mixins 模块，在模块内你可以添加任何你想重复使用的样式.</span><br><span class="line"></span><br><span class="line">- #### 使用&#96;@mixin&#96;指令</span><br><span class="line"></span><br><span class="line">  - 你可以通过&#96;@include&#96;来调用具有相同名称的 mixin 模块。</span><br><span class="line"></span><br><span class="line">  - &#96;&#96;&#96;scss</span><br><span class="line">    @mixin bordered &#123;</span><br><span class="line">      border: 1px solid red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #app &#123;</span><br><span class="line">      height: $w-100;</span><br><span class="line">      width: $w-100;</span><br><span class="line">      background: $theme-color;</span><br><span class="line">      &amp;:hover &#123;</span><br><span class="line">        background: blue;</span><br><span class="line">      &#125;</span><br><span class="line">      @include bordered;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="window"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">window</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/Javascript/">#Javascript</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="Window-–-代表浏览器中一个打开的窗口："><a href="#Window-–-代表浏览器中一个打开的窗口：" class="headerlink" title="Window – 代表浏览器中一个打开的窗口："></a><strong>Window – 代表浏览器中一个打开的窗口：</strong></h1><p><strong>对象属性</strong><br>　　 window //窗口自身<br>　　 window.self //引用本窗户 window=window.self<br>　　 window.name //为窗口命名<br>　　 window.defaultStatus //设定窗户状态栏信息<br>　　 window.location //URL 地址，配备布置这个属性可以打开新的页面</p>
+<p><strong>对象方法</strong><br>　　 window.alert(“text”) //提示信息会话框<br>　　 window.confirm(“text”) //确认会话框<br>　　 window.prompt(“text”) //要求键盘输入会话框<br>　　 window.setIntervel(“action”,time) //每一隔指定的时间(毫秒)就执行一次操作<br>　　 window.clearInterval() //清除时间配备布置作用就是终止轮回<br>　　 window.setTimeout(action,time) //隔了指定的时间(毫秒)执行一次操作<br>　　 window.open() //打开新的窗口<br>　　 window.close() //关闭窗口</p>
+<p><strong>成员对象</strong><br>　　 window.event<br>　　 window.document //见 document 对象详解<br>　　 window.history<br>　　 window.screen<br>　　 window.navigator<br>　　 window.external<br>　　————————————————– ——————-<br>　　 window.history 对象<br>　　 window.history.length //浏览过的页面数<br>　　 history.back() //后退<br>　　 history.forward() //前进<br>　　 history.go(i) //前进或后退到历史记录的第 i 个页面<br>　　//i&gt;0 进步,i&lt;0 后退<br>　 ————————————————- ——————-<br>　　 window.screen 对象<br>　 window.screen.width //屏幕宽度<br>　　 window.screen.height //屏幕高度<br>　　 window.screen.colorDepth //屏幕色深<br>　　 window.screen.availWidth //可用宽度<br>　　 window.screen.availHeight //可用高度(除去任务栏的高度)<br>　　————————————————– ——————-<br>　　 window.external 对象<br>　　 window.external.AddFavorite(“地址”,”标题” ) //把网站新增到保藏夹<br>　　————————————————– ——————-<br>　　 window.navigator 对象<br>　　 window.navigator.appCodeName //浏览器代码名<br>　　 window.navigator.appName //浏览器应用程序名<br>　　 window.navigator.appMinorVersion //浏览器补丁版本<br>　　 window.navigator.cpuClass //cpu 类型 x86<br>　　 window.navigator.platform //操作体系类型 win32<br>　　 window.navigator.plugins<br>　　 window.navigator.opsProfile<br>　　 window.navigator.userProfile<br>　　 window.navigator.systemLanguage //客户体系语言 zh-cn 简体中文<br>　　 window.navigator.userLanguage //用户语言,同上<br>　　 window.navigator.appVersion //浏览器版本<br>　　 window.navigator.userAgent<br>　　 window.navigator.onLine //用户否在线<br>　　 window.navigator.cookieEnabled //浏览器是否撑持 cookie<br>　　 window.navigator.mimeTypes</p>
+<p><strong>document 对象 – 代表整个**HTML** 文档,可用来访问页面中的所有元素：</strong></p>
+<p><strong>对象属性</strong></p>
+<blockquote>
+<p>document.title //设置文档标题等价于 HTML 的<title>标签<br>document.bgColor //设置页面背景色<br>document.fgColor //设置前景色(文本颜色)<br>document.linkColor //未点击过的链接颜色<br>document.alinkColor //激活链接(焦点在此链接上)的颜色<br>document.vlinkColor //已点击过的链接颜色<br>document.URL //设置 URL 属性从而在同一窗口打开另一网页<br>document.fileCreatedDate //文件建立日期，只读属性<br>document.fileModifiedDate //文件修改日期，只读属性<br>document.fileSize //文件大小，只读属性<br>document.cookie //设置和读出 cookie<br>document.charset //设置字符集 简体中文:gb2312</p>
+</blockquote>
+<h2 id="常用对象方法"><a href="#常用对象方法" class="headerlink" title="常用对象方法"></a>常用对象方法</h2><blockquote>
+<p>document.write() //动态向页面写入内容<br>document.createElement(Tag) //创建一个 html 标签对象<br>document.getElementById(ID) //获得指定 ID 值的对象<br>document.getElementsByName(Name) //获得指定 Name 值的对象<br>document.body.appendChild(oTag)</p>
+</blockquote>
+<h2 id="body-主体子对象"><a href="#body-主体子对象" class="headerlink" title="body-主体子对象"></a>body-主体子对象</h2><blockquote>
+<p>document.body //指定文档主体的开始和结束等价于<body></body><br>document.body.bgColor //设置或获取对象后面的背景颜色<br>document.body.link //未点击过的链接颜色<br>document.body.alink //激活链接(焦点在此链接上)的颜色<br>document.body.vlink //已点击过的链接颜色<br>document.body.text //文本色<br>document.body.innerText //设置<body>…</body>之间的文本<br>document.body.innerHTML //设置<body>…</body>之间的 HTML 代码<br>document.body.topMargin //页面上边距<br>document.body.leftMargin //页面左边距<br>document.body.rightMargin //页面右边距<br>document.body.bottomMargin //页面下边距<br>document.body.background //背景图片<br>document.body.appendChild(oTag) //动态生成一个 HTML 对象</p>
+</blockquote>
+<h2 id="常用对象事件"><a href="#常用对象事件" class="headerlink" title="常用对象事件"></a>常用对象事件</h2><blockquote>
+<p>document.body.οnclick=”func()” //鼠标指针单击对象是触发<br>document.body.οnmοuseοver=”func()” //鼠标指针移到对象时触发<br>document.body.οnmοuseοut=”func()” //鼠标指针移出对象时触发</p>
+</blockquote>
+<h2 id="location-位置子对象"><a href="#location-位置子对象" class="headerlink" title="location-位置子对象"></a>location-位置子对象</h2><blockquote>
+<p>document.location.hash // #号后的部分<br>document.location.host // 域名+端口号<br>document.location.hostname // 域名<br>document.location.href // 完整 URL<br>document.location.pathname // 目录部分<br>document.location.port // 端口号<br>document.location.protocol // 网络协议(http:)<br>document.location.search // ?号后的部分</p>
+</blockquote>
+<h2 id="常用对象事件-1"><a href="#常用对象事件-1" class="headerlink" title="常用对象事件"></a>常用对象事件</h2><blockquote>
+<p>documeny.location.reload() //刷新网页<br>document.location.reload(URL) //打开新的网页<br>document.location.assign(URL) //打开新的网页<br>document.location.replace(URL) //打开新的网页<br>========================================================================<br>selection-选区子对象<br>document.selection<br>========================================================================<br>images 集合(页面中的图象):<br>-—————————<br>a)通过集合引用<br>document.images //对应页面上的<img>标签<br>document.images.length //对应页面上<img>标签的个数<br>document.images[0] //第 1 个<img>标签<br>document.images[i] //第 i-1 个<img>标签<br>-—————————<br>b)通过 nane 属性直接引用<br><img name="oImage"><br>document.images.oImage //document.images.name 属性<br>-—————————<br>c)引用图片的 src 属性<br>document.images.oImage.src //document.images.name 属性.src</p>
+</blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="vue-cli（脚手架使用）"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="taiaiac 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>taiaiac 的个人博客</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">vue-cli（脚手架使用）</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">10:09:37</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h2 id="Vue2"><a href="#Vue2" class="headerlink" title="Vue2"></a>Vue2</h2><p>都说 Vue2 简单上手容易，的确，看了官方文档确实觉得上手很快，除了<strong>ES6</strong>语法和<strong>webpack</strong>的配置让你感到陌生，重要的是思路的变换，以前用 jq 随便拿全局变量和修改 dom 的锤子不能用了，vue 只用关心数据本身，不用再频繁繁琐的操作 dom，注册事件、监听事件、取消事件。。。。（确实很烦）。vue 的官方文档还是不错的，由浅到深，如果不使用构建工具确实用的很爽，但是这在实际项目应用中是不可能的，当用<strong>vue-cli</strong>构建一个工程的时候，发现官方文档还是不够用，需要熟练掌握 es6，而 vue 的全家桶(vue-cli,vue-router,vue-resource,vuex)还是都要上的。</p>
+<blockquote>
+<p>vue.js 有著名的全家桶系列，包含了 vue-router，vuex， vue-resource，再加上构建工具 vue-cli，就是一个完整的 vue 项目的核心构成。</p>
+</blockquote>
+<p><strong>vue-cli</strong>这个构建工具大大降 低了 webpack 的使用难度，支持热更新，有<strong>webpack-dev-server</strong>的支持，相当于启动了一个请求服务器，给你搭建了一个测试环境，只关注开发就 OK。</p>
+<h4 id="1-安装-vue-cli"><a href="#1-安装-vue-cli" class="headerlink" title="1.安装 vue-cli"></a>1.安装 vue-cli</h4><p><strong>①</strong> 使用 npm（需要安装 node 环境）<strong>全局安装 webpack</strong>，打开命令行工具输入：<code>npm install webpack -g</code>或者（<code>npm install -g webpack</code>），安装完成之后输入 <code>webpack -v</code>，如下图，如果出现相应的版本号，则说明安装成功。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-739f0863e454f1e3.png" alt="img"></p>
+<p><strong>②</strong> <strong>全局安装 vue-cli</strong>，在 cmd 中输入命令:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">install</span> <span class="selector-tag">--global</span> <span class="selector-tag">vue-cli</span></span><br></pre></td></tr></table></figure>
+<p>（我已经安装过，为了更直观我在电脑上重新演示下）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-12cb0bef236c50fa.png" alt="img"></p>
+<p>安装成功：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-ac2a13a62505d1ae.png" alt="img"></p>
+<p>安装完成之后输入 vue -V（注意这里是大写的“V”），如下图，如果出现相应的版本号，则说明安装成功。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-d8e864620a0b5aef.png" alt="img"></p>
+<p>打开 C:\Users\Andminster\AppData\Roaming\npm 目录下可以看到：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-9d5e131d9681c0d6.png" alt="img"></p>
+<p>打开 node_modules 也可以看到：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-6e55eb6b7d70ac91.png" alt="img"></p>
+<h4 id="2-用-vue-cli-来构建项目"><a href="#2-用-vue-cli-来构建项目" class="headerlink" title="2.用 vue-cli 来构建项目"></a>2.用 vue-cli 来构建项目</h4><p><strong>①</strong> 我首先在 D 盘新建一个文件夹（dxl_vue）作为项目存放地，然后使用命令行 cd 进入到项目目录输入：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">vue</span> <span class="selector-tag">init</span> <span class="selector-tag">webpack</span> <span class="selector-tag">baoge</span></span><br></pre></td></tr></table></figure>
+<p>baoge 是自定义的项目名称，命令执行之后，会在当前目录生成一个以该名称命名的项目文件夹。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-22cf1a5dc4cda33d.png" alt="img"></p>
+<p>输入命令后，会跳出几个选项让你回答：</p>
+<ul>
+<li>Project name (baoge)： —–项目名称，直接回车，按照括号中默认名字（注意这里的名字不能有大写字母，如果有会报错 Sorry, name can no longer contain capital letters），阮一峰老师博客<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.ruanyifeng.com/blog/2017/02/filename-should-be-lowercase.html">为什么文件名要小写</a> ，可以参考一下。</li>
+<li>Project description (A Vue.js project)： —-项目描述，也可直接点击回车，使用默认名字</li>
+<li>Author ()： —-作者，输入 dongxili<br>接下来会让用户选择：</li>
+<li>Runtime + Compiler: recommended for most users 运行加编译，既然已经说了推荐，就选它了<br>Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specificHTML) are ONLY allowed in .vue files - render functions are required elsewhere 仅运行时，已经有推荐了就选择第一个了</li>
+<li>Install vue-router? (Y/n) 是否安装 vue-router，这是官方的路由，大多数情况下都使用，这里就输入“y”后回车即可。</li>
+<li>Use ESLint to lint your code? (Y/n) 是否使用 ESLint 管理代码，ESLint 是个代码风格管理工具，是用来统一代码风格的，一般项目中都会使用。<br>接下来也是选择题 Pick an ESLint preset (Use arrow keys) 选择一个 ESLint 预设，编写 vue 项目时的代码风格，直接 y 回车</li>
+<li>Setup unit tests with Karma + Mocha? (Y/n) 是否安装单元测试，我选择安装 y 回车</li>
+<li>Setup e2e tests with Nightwatch(Y/n)? 是否安装 e2e 测试 ，我选择安装 y 回车</li>
+</ul>
+<p>回答完毕后上图就开始构建项目了。</p>
+<p><strong>②</strong> 配置完成后，可以看到目录下多出了一个项目文件夹 baoge，然后 cd 进入这个文件夹：<br><strong>安装依赖</strong>：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">install</span></span><br></pre></td></tr></table></figure>
+<p>( 如果安装速度太慢。可以安装淘宝镜像，打开命令行工具，输入：<br> <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code><br>  然后使用<code>cnpm</code>来安装 )</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-a5701c92e10ce959.png" alt="img"></p>
+<p>npm install ：安装所有的模块，如果是安装具体的哪个个模块，在 install 后面输入模块的名字即可。而只输入 install 就会按照项目的根目录下的 package.json 文件中依赖的模块安装（这个文件里面是不允许有任何注释的），每个使用 npm 管理的项目都有这个文件，是 npm 操作的入口文件。因为是初始项目，还没有任何模块，所以我用 npm install 安装所有的模块。安装完成后，目录中会多出来一个 node_modules 文件夹，这里放的就是所有依赖的模块。</p>
+<p>然后现在，baoge 文件夹里的目录是这样的：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-84cb6c247eba4438.png" alt="img"></p>
+<p>解释下每个文件夹代表的意思(仔细看一下这张图）：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-01a038fa573b22c8.png" alt="img"></p>
+<p>image.png</p>
+<h4 id="3-启动项目"><a href="#3-启动项目" class="headerlink" title="3.启动项目"></a>3.启动项目</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">run</span> <span class="selector-tag">dev</span></span><br></pre></td></tr></table></figure>
+<p>如果浏览器打开之后，没有加载出页面，有可能是本地的 8080 端口被占用，需要修改一下配置文件 config 里的 index.js</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-3a6a5874d3e8d445.png" alt="img"></p>
+<p>还有，如果本地调试项目时，建议将 build 里的<code>assetsPublicPath</code>的路径前缀修改为 ‘ ./ ‘（开始是 ‘ / ‘），因为打包之后，外部引入 js 和 css 文件时，如果路径以 ‘ / ‘ 开头，在本地是无法找到对应文件的（服务器上没问题）。所以<strong>如果需要在本地打开打包后的文件</strong>，就得修改文件路径。<br>我的端口没有被占用，直接成功（服务启动成功后浏览器会默认打开一个“欢迎页面”）：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-77b13bb61a67b83f.png" alt="img"></p>
+<p><strong>注意：在进行 vue 页面调试时，一定要去谷歌商店下载一个 vue-tool 扩展程序。</strong></p>
+<h4 id="4-vue-cli-的-webpack-配置分析"><a href="#4-vue-cli-的-webpack-配置分析" class="headerlink" title="4.vue-cli 的 webpack 配置分析"></a>4.vue-cli 的 webpack 配置分析</h4><ul>
+<li><p>从</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">package</span><span class="selector-class">.json</span></span><br></pre></td></tr></table></figure>
+<p>可以看到开发和生产环境的入口。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10868449-255932a94e033291.png" alt="img"></p>
+</li>
+<li><p>可以看到 dev 中的设置，<strong>build/webpack.dev.conf.js</strong>，该文件是开发环境中 webpack 的配置入口。</p>
+</li>
+<li><p>在 webpack.dev.conf.js 中出现<strong>webpack.base.conf.js</strong>，这个文件是开发环境和生产环境，甚至测试环境，这些环境的公共 webpack 配置。可以说，这个文件相当重要。</p>
+</li>
+<li><p>还有<strong>config/index.js 、build/utils.js 、build/build.js</strong>等，具体请看这篇介绍：<br><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://segmentfault.com/a/1190000008644830">https://segmentfault.com/a/1190000008644830</a></p>
+</li>
+</ul>
+<h4 id="5-打包上线"><a href="#5-打包上线" class="headerlink" title="5.打包上线"></a>5.打包上线</h4><p>注意，自己的项目文件都需要放到 src 文件夹下。<br>在项目开发完成之后，可以输入 <code>npm run build</code> 来进行打包工作。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">run</span> <span class="selector-tag">build</span></span><br></pre></td></tr></table></figure>
+<p>另：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1<span class="selector-class">.npm</span> 开启了<span class="selector-tag">npm</span> <span class="selector-tag">run</span> <span class="selector-tag">dev</span>以后怎么退出或关闭？</span><br><span class="line"><span class="selector-tag">ctrl</span>+<span class="selector-tag">c</span></span><br><span class="line">2<span class="selector-class">.--save-dev</span></span><br><span class="line">自动把模块和版本号添加到模块配置文件<span class="selector-tag">package</span><span class="selector-class">.json</span>中的依赖里<span class="selector-tag">devdependencies</span>部分</span><br><span class="line">3. <span class="selector-tag">--save-dev</span> 与 <span class="selector-tag">--save</span> 的区别</span><br><span class="line"><span class="selector-tag">--save</span>     安装包信息将加入到<span class="selector-tag">dependencies</span>（生产阶段的依赖）</span><br><span class="line"><span class="selector-tag">--save-dev</span> 安装包信息将加入到<span class="selector-tag">devDependencies</span>（开发阶段的依赖），所以开发阶段一般使用它</span><br></pre></td></tr></table></figure>
+<p>打包完成后，会生成 dist 文件夹，如果已经修改了文件路径，可以直接打开本地文件查看。<br>项目上线时，只需要将 dist 文件夹放到服务器就行了。</p>
+<h4 id="6、解决打包时没有双引号"><a href="#6、解决打包时没有双引号" class="headerlink" title="6、解决打包时没有双引号"></a>6、解决打包时没有双引号</h4><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201027171539016.png" alt="image-20201027171539016"></p>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201027171618487.png" alt="image-20201027171618487"></p>
+<h4 id="7、解决打包时路径前没有点的"><a href="#7、解决打包时路径前没有点的" class="headerlink" title="7、解决打包时路径前没有点的"></a>7、解决打包时路径前没有点的</h4><p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201027171648800.png" alt="image-20201027171648800"></p>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201027171723752.png" alt="image-20201027171723752"></p>
+<h2 id="vue-3-0"><a href="#vue-3-0" class="headerlink" title="vue 3.0:"></a><strong>vue 3.0:</strong></h2><h3 id="1-安装-vue3-新建一个文件夹，进入该文件夹下，执行-vue-create-项目名称-如下图："><a href="#1-安装-vue3-新建一个文件夹，进入该文件夹下，执行-vue-create-项目名称-如下图：" class="headerlink" title="1.安装 vue3:新建一个文件夹，进入该文件夹下，执行 vue create ( 项目名称) , 如下图："></a><strong>1.安装 vue3:新建一个文件夹，进入该文件夹下，执行 vue create ( 项目名称) , 如下图：</strong></h3><p><strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028092615185-1589435642.png" alt="img"></strong></p>
+<h3 id="2、vuecli3-为项目名称，进入下一步，"><a href="#2、vuecli3-为项目名称，进入下一步，" class="headerlink" title="2、vuecli3 为项目名称，进入下一步，"></a>2、vuecli3 为项目名称，进入下一步，</h3><p><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028093428320-507310938.png" alt="img"></p>
+<h3 id="3、上面提示：请选择一个配置。下面有-3-个选项，第一个-“myset-”-是-我自己手动选择的配置，你们第一个安装你没有这个选项，如果选择了第-3-个通过手动选择后，下次再安装时会出现在这里，第二个-“default”是默认的，第-3-个是-手动选择。我们先选择第-3-个，进入下一步，"><a href="#3、上面提示：请选择一个配置。下面有-3-个选项，第一个-“myset-”-是-我自己手动选择的配置，你们第一个安装你没有这个选项，如果选择了第-3-个通过手动选择后，下次再安装时会出现在这里，第二个-“default”是默认的，第-3-个是-手动选择。我们先选择第-3-个，进入下一步，" class="headerlink" title="3、上面提示：请选择一个配置。下面有 3 个选项，第一个 “myset ” 是 我自己手动选择的配置，你们第一个安装你没有这个选项，如果选择了第 3 个通过手动选择后，下次再安装时会出现在这里，第二个 “default”是默认的，第 3 个是 手动选择。我们先选择第 3 个，进入下一步，"></a>3、上面提示：请选择一个配置。下面有 3 个选项，第一个 “myset ” 是 我自己手动选择的配置，你们第一个安装你没有这个选项，如果选择了第 3 个通过手动选择后，下次再安装时会出现在这里，第二个 “default”是默认的，第 3 个是 手动选择。我们先选择第 3 个，进入下一步，</h3><p>​ <img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028212018916-994587669.png" alt="img"></p>
+<h3 id="4、这里要我们选择一个配置，按住上下键进行调转，空格键进行选中或者取消，"><a href="#4、这里要我们选择一个配置，按住上下键进行调转，空格键进行选中或者取消，" class="headerlink" title="4、这里要我们选择一个配置，按住上下键进行调转，空格键进行选中或者取消，"></a>4、这里要我们选择一个配置，按住上下键进行调转，空格键进行选中或者取消，</h3><p>​ <strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028212721957-1641988505.png" alt="img"></strong></p>
+<h3 id="5、这一步询问的是-把项目的配置文件放在独立的配置文件中还是放在-package-json-文件中，这里我们选择第一个，方便我们以后的修改，进行下一步"><a href="#5、这一步询问的是-把项目的配置文件放在独立的配置文件中还是放在-package-json-文件中，这里我们选择第一个，方便我们以后的修改，进行下一步" class="headerlink" title="5、这一步询问的是 把项目的配置文件放在独立的配置文件中还是放在 package.json 文件中，这里我们选择第一个，方便我们以后的修改，进行下一步"></a><strong>5、这一步询问的是 把项目的配置文件放在独立的配置文件中还是放在 package.json 文件中，这里我们选择第一个，方便我们以后的修改，进行下一步</strong></h3><p><strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028213120522-662115457.png" alt="img"></strong></p>
+<h3 id="6、这里询问的是我们手动配置要不要进行保存，以便下次使用，也就是安装第一步的时候的选择，输入-y"><a href="#6、这里询问的是我们手动配置要不要进行保存，以便下次使用，也就是安装第一步的时候的选择，输入-y" class="headerlink" title="6、这里询问的是我们手动配置要不要进行保存，以便下次使用，也就是安装第一步的时候的选择，输入 y,"></a>6、这里询问的是我们手动配置要不要进行保存，以便下次使用，也就是安装第一步的时候的选择，输入 y,</h3><p><strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028213637897-1462510890.png" alt="img"></strong></p>
+<p>这里要输入的是要保存的命字，进行一下步安装，</p>
+<p><strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028214618286-1860541299.png" alt="img"></strong></p>
+<p><strong>安装完成。</strong></p>
+<p><strong>启动项目：</strong></p>
+<p><strong><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028215057979-264657779.png" alt="img"> <img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028220020248-1865468608.png" alt="img"></strong></p>
+<p>这是 vue3 的项目结构，显然和 vue2 的结构不一样,没有了 config 文件夹而且还多了一个.git 文件，方便我们项目管理，其中 public 相当于 vue2 中的 static 静态文件夹，相同文件我就不说了，我只说一下不同文件。</p>
+<p>我们先看一下 package.json 文件，</p>
+<p><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028220304989-911894080.png" alt="img"></p>
+<p>开发依赖少了很多，因为 vue3.0 讲究的是 0 配置，因为不显示的这些文件不需要我们去改，我们通过 npm 安装的依赖会存在哪里呢？</p>
+<p><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028222147423-2073306937.png" alt="img"></p>
+<p>这里我安装了 2 个依赖，很显然是放在 package.json 文件下的，方便我们去管理自己的依赖。那默认的那些依赖存在哪里呢？</p>
+<p>。其实是通过 “@vue/cli-service”: “^4.0.0”,去管理我们的依赖的，在 “node_modules” =&gt; “@vue” =&gt; cli-service =&gt; package.json，这里面就是隐藏的依赖。</p>
+<p>vue2 中的 config 文件夹隐藏到了“node_modules” =&gt; “@vue” =&gt; cli-service =&gt; webpack.config.js 中，而在 webpack.config.js 中有这一行代码：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1219358/201910/1219358-20191028225647803-1676832087.png" alt="img"></p>
+<p>所以再找到 Service.js 文件,这里面才是我们要的配置文件。</p>
+<p><img src="C:\Users\52862\AppData\Roaming\Typora\typora-user-images\image-20201030154855806.png" alt="image-20201030154855806"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
