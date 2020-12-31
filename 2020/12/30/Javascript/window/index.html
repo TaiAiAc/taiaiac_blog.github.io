@@ -1,204 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Z.A.M.">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="window"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-    <meta name="author" content="Z.A.M.">
+  <!-- Site Title -->
+  <title>Z. A. M. 的个人博客</title>
 
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
 
-
-
-
-<title>window | Z. A. M. 的个人博客</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
 
 
-
-    
-    
-        
-    
-
+  <!-- Google Analytics -->
+  
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
 
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
+  <body>
+    <!-- Page Header -->
 
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">window</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  文档
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://gitee.com/aidemin">
+                  
+                  码云
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-        <div class="main">
-            <div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Z.A.M.</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">17:13:39</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
 
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
+<a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
 
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
+<a class="tag" href="/taiaiac.gitee.io/tags/Javascript/">#Javascript</a>
 
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
 
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">window</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
-
+          </div>
+        
+        <!-- Post Main Content -->
         <div class="post-content">
-            <h1 id="Window-–-代表浏览器中一个打开的窗口："><a href="#Window-–-代表浏览器中一个打开的窗口：" class="headerlink" title="Window – 代表浏览器中一个打开的窗口："></a><strong>Window – 代表浏览器中一个打开的窗口：</strong></h1><p><strong>对象属性</strong><br>　　 window //窗口自身<br>　　 window.self //引用本窗户 window=window.self<br>　　 window.name //为窗口命名<br>　　 window.defaultStatus //设定窗户状态栏信息<br>　　 window.location //URL 地址，配备布置这个属性可以打开新的页面</p>
+          <h1 id="Window-–-代表浏览器中一个打开的窗口："><a href="#Window-–-代表浏览器中一个打开的窗口：" class="headerlink" title="Window – 代表浏览器中一个打开的窗口："></a><strong>Window – 代表浏览器中一个打开的窗口：</strong></h1><p><strong>对象属性</strong><br>　　 window //窗口自身<br>　　 window.self //引用本窗户 window=window.self<br>　　 window.name //为窗口命名<br>　　 window.defaultStatus //设定窗户状态栏信息<br>　　 window.location //URL 地址，配备布置这个属性可以打开新的页面</p>
 <p><strong>对象方法</strong><br>　　 window.alert(“text”) //提示信息会话框<br>　　 window.confirm(“text”) //确认会话框<br>　　 window.prompt(“text”) //要求键盘输入会话框<br>　　 window.setIntervel(“action”,time) //每一隔指定的时间(毫秒)就执行一次操作<br>　　 window.clearInterval() //清除时间配备布置作用就是终止轮回<br>　　 window.setTimeout(action,time) //隔了指定的时间(毫秒)执行一次操作<br>　　 window.open() //打开新的窗口<br>　　 window.close() //关闭窗口</p>
 <p><strong>成员对象</strong><br>　　 window.event<br>　　 window.document //见 document 对象详解<br>　　 window.history<br>　　 window.screen<br>　　 window.navigator<br>　　 window.external<br>　　————————————————– ——————-<br>　　 window.history 对象<br>　　 window.history.length //浏览过的页面数<br>　　 history.back() //后退<br>　　 history.forward() //前进<br>　　 history.go(i) //前进或后退到历史记录的第 i 个页面<br>　　//i&gt;0 进步,i&lt;0 后退<br>　 ————————————————- ——————-<br>　　 window.screen 对象<br>　 window.screen.width //屏幕宽度<br>　　 window.screen.height //屏幕高度<br>　　 window.screen.colorDepth //屏幕色深<br>　　 window.screen.availWidth //可用宽度<br>　　 window.screen.availHeight //可用高度(除去任务栏的高度)<br>　　————————————————– ——————-<br>　　 window.external 对象<br>　　 window.external.AddFavorite(“地址”,”标题” ) //把网站新增到保藏夹<br>　　————————————————– ——————-<br>　　 window.navigator 对象<br>　　 window.navigator.appCodeName //浏览器代码名<br>　　 window.navigator.appName //浏览器应用程序名<br>　　 window.navigator.appMinorVersion //浏览器补丁版本<br>　　 window.navigator.cpuClass //cpu 类型 x86<br>　　 window.navigator.platform //操作体系类型 win32<br>　　 window.navigator.plugins<br>　　 window.navigator.opsProfile<br>　　 window.navigator.userProfile<br>　　 window.navigator.systemLanguage //客户体系语言 zh-cn 简体中文<br>　　 window.navigator.userLanguage //用户语言,同上<br>　　 window.navigator.appVersion //浏览器版本<br>　　 window.navigator.userAgent<br>　　 window.navigator.onLine //用户否在线<br>　　 window.navigator.cookieEnabled //浏览器是否撑持 cookie<br>　　 window.navigator.mimeTypes</p>
 <p><strong>document 对象 – 代表整个**HTML** 文档,可用来访问页面中的所有元素：</strong></p>
@@ -223,73 +141,43 @@
 </blockquote>
 
         </div>
-
-        
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Z.A.M.</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/window/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/window/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/Javascript/"># Javascript</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Javascript/scroll%E7%9B%91%E5%90%AC%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/">scroll监听加载页面</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/">上下左右下拉列表</a>
-            
-        </section>
-
-
-    </article>
-</div>
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+      </div>
     </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
-    </div>
-</body>
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
 </html>
+

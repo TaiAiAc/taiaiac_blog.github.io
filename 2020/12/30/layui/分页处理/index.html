@@ -1,210 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Z.A.M.">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="分页处理"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-    <meta name="author" content="Z.A.M.">
+  <!-- Site Title -->
+  <title>Z. A. M. 的个人博客</title>
 
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
 
-
-
-
-<title>分页处理 | Z. A. M. 的个人博客</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
 
 
-
-    
-    
-        
-    
-
+  <!-- Google Analytics -->
+  
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">分页处理</p>
+          <p class="subtitle"></p>
         </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  文档
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://gitee.com/aidemin">
+                  
+                  码云
+                  
+                </a>
+              </li>
+            
+          </ul>
         </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-        <div class="main">
-            <div class="container">
-    
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">分页处理</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/layui/">layui</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
-
-        <div class="post-content">
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 页面加载请求数据</span></span><br><span class="line">  <span class="comment">// async await 取出数据</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getAjax</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取出的数据res  使用promis保存数据</span></span><br><span class="line">    <span class="keyword">let</span> res = <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">        <span class="comment">//模拟请求的远程数据</span></span><br><span class="line">        url: <span class="string">&#x27;../JSON/case.json&#x27;</span>,</span><br><span class="line">        type: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">        data: &#123;&#125;,</span><br><span class="line">        <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">          resolve(res)</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 分页组件</span></span><br><span class="line">    layui.use([<span class="string">&#x27;laypage&#x27;</span>, <span class="string">&#x27;layer&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> laypage = layui.laypage,</span><br><span class="line">        layer = layui.layer</span><br><span class="line">      <span class="comment">//自定义首页、尾页、上一页、下一页文本</span></span><br><span class="line">      laypage.render(&#123;</span><br><span class="line">        elem: <span class="string">&#x27;demo&#x27;</span>, <span class="comment">//id</span></span><br><span class="line">        count: res.length, <span class="comment">//数据总数</span></span><br><span class="line">        limit: <span class="number">12</span>, <span class="comment">//每页显示的条数</span></span><br><span class="line">        groups: <span class="number">5</span>, <span class="comment">//连续出现的页码个数</span></span><br><span class="line">        theme: <span class="string">&#x27;#c00000&#x27;</span>, <span class="comment">//背景</span></span><br><span class="line">        first: <span class="string">&#x27;首页&#x27;</span>,</span><br><span class="line">        last: <span class="string">&#x27;尾页&#x27;</span>,</span><br><span class="line">        prev: <span class="string">&#x27;&lt;em&gt;←&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        next: <span class="string">&#x27;&lt;em&gt;→&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 描述</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>obj 当前的对象</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>first 分页的第一页</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        jump: <span class="function"><span class="keyword">function</span> (<span class="params">obj, first</span>) </span>&#123;</span><br><span class="line">          <span class="comment">//当前页pageNum</span></span><br><span class="line">          <span class="keyword">let</span> pageNum = obj.curr</span><br><span class="line">          <span class="comment">// 首个下标start</span></span><br><span class="line">          <span class="keyword">let</span> start = (pageNum - <span class="number">1</span>) * <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="comment">// 末尾下标end</span></span><br><span class="line">          <span class="keyword">let</span> end = start + <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="keyword">if</span> (end &gt;= <span class="built_in">this</span>.count) &#123;</span><br><span class="line">            end = <span class="built_in">this</span>.count</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 不是第一页的时候清空页面元素</span></span><br><span class="line">          <span class="keyword">if</span> (!first) &#123;</span><br><span class="line">            $(<span class="string">&#x27;.case-item-append&#x27;</span>).empty()</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">//获得数组指定区段的元素，进行页面拼接</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt; end; i++) &#123;</span><br><span class="line">            setItem(res[i])</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  getAjax()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setItem</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> layuiCol = $(<span class="string">`&lt;div class=&quot;layui-col-md4 case-item&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-border&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-LT&quot;&gt;禁止转载&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-bg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-head&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-text&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;h4&gt;<span class="subst">$&#123;obj.title&#125;</span>&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;设计师：&lt;i&gt;<span class="subst">$&#123;obj.name&#125;</span>&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;面积：&lt;i&gt;<span class="subst">$&#123;obj.acreage&#125;</span>.00㎡&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;p&gt;工程地址：&lt;i&gt;<span class="subst">$&#123;obj.site&#125;</span>&lt;/i&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;`</span>)</span><br><span class="line"></span><br><span class="line">  $(<span class="string">&#x27;.case-item-append&#x27;</span>).append(layuiCol)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-bg:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.bg,</span><br><span class="line">  &#125;)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-head:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.head,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        </div>
-
-        
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Z.A.M.</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/layui/%E5%88%86%E9%A1%B5%E5%A4%84%E7%90%86/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/layui/%E5%88%86%E9%A1%B5%E5%A4%84%E7%90%86/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/layui/"># layui</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/">选择器</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/layui/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/">页面布局</a>
-            
-        </section>
-
-
-    </article>
-</div>
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+      </div>
     </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Z.A.M.</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">17:13:39</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/taiaiac.gitee.io/categories/layui/">layui</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/taiaiac.gitee.io/tags/layui/">#layui</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 页面加载请求数据</span></span><br><span class="line">  <span class="comment">// async await 取出数据</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getAjax</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取出的数据res  使用promis保存数据</span></span><br><span class="line">    <span class="keyword">let</span> res = <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">        <span class="comment">//模拟请求的远程数据</span></span><br><span class="line">        url: <span class="string">&#x27;../JSON/case.json&#x27;</span>,</span><br><span class="line">        type: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">        data: &#123;&#125;,</span><br><span class="line">        <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">          resolve(res)</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 分页组件</span></span><br><span class="line">    layui.use([<span class="string">&#x27;laypage&#x27;</span>, <span class="string">&#x27;layer&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> laypage = layui.laypage,</span><br><span class="line">        layer = layui.layer</span><br><span class="line">      <span class="comment">//自定义首页、尾页、上一页、下一页文本</span></span><br><span class="line">      laypage.render(&#123;</span><br><span class="line">        elem: <span class="string">&#x27;demo&#x27;</span>, <span class="comment">//id</span></span><br><span class="line">        count: res.length, <span class="comment">//数据总数</span></span><br><span class="line">        limit: <span class="number">12</span>, <span class="comment">//每页显示的条数</span></span><br><span class="line">        groups: <span class="number">5</span>, <span class="comment">//连续出现的页码个数</span></span><br><span class="line">        theme: <span class="string">&#x27;#c00000&#x27;</span>, <span class="comment">//背景</span></span><br><span class="line">        first: <span class="string">&#x27;首页&#x27;</span>,</span><br><span class="line">        last: <span class="string">&#x27;尾页&#x27;</span>,</span><br><span class="line">        prev: <span class="string">&#x27;&lt;em&gt;←&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        next: <span class="string">&#x27;&lt;em&gt;→&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 描述</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>obj 当前的对象</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>first 分页的第一页</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        jump: <span class="function"><span class="keyword">function</span> (<span class="params">obj, first</span>) </span>&#123;</span><br><span class="line">          <span class="comment">//当前页pageNum</span></span><br><span class="line">          <span class="keyword">let</span> pageNum = obj.curr</span><br><span class="line">          <span class="comment">// 首个下标start</span></span><br><span class="line">          <span class="keyword">let</span> start = (pageNum - <span class="number">1</span>) * <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="comment">// 末尾下标end</span></span><br><span class="line">          <span class="keyword">let</span> end = start + <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="keyword">if</span> (end &gt;= <span class="built_in">this</span>.count) &#123;</span><br><span class="line">            end = <span class="built_in">this</span>.count</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 不是第一页的时候清空页面元素</span></span><br><span class="line">          <span class="keyword">if</span> (!first) &#123;</span><br><span class="line">            $(<span class="string">&#x27;.case-item-append&#x27;</span>).empty()</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">//获得数组指定区段的元素，进行页面拼接</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt; end; i++) &#123;</span><br><span class="line">            setItem(res[i])</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  getAjax()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setItem</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> layuiCol = $(<span class="string">`&lt;div class=&quot;layui-col-md4 case-item&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-border&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-LT&quot;&gt;禁止转载&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-bg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-head&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-text&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;h4&gt;<span class="subst">$&#123;obj.title&#125;</span>&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;设计师：&lt;i&gt;<span class="subst">$&#123;obj.name&#125;</span>&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;面积：&lt;i&gt;<span class="subst">$&#123;obj.acreage&#125;</span>.00㎡&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;p&gt;工程地址：&lt;i&gt;<span class="subst">$&#123;obj.site&#125;</span>&lt;/i&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;`</span>)</span><br><span class="line"></span><br><span class="line">  $(<span class="string">&#x27;.case-item-append&#x27;</span>).append(layuiCol)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-bg:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.bg,</span><br><span class="line">  &#125;)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-head:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.head,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
-    </div>
-</body>
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
 </html>
+

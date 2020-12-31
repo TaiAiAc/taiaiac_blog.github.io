@@ -1,204 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Z.A.M.">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="MySQL"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-    <meta name="author" content="Z.A.M.">
+  <!-- Site Title -->
+  <title>Z. A. M. 的个人博客</title>
 
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
 
-
-
-
-<title>MySQL | Z. A. M. 的个人博客</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
 
 
-
-    
-    
-        
-    
-
+  <!-- Google Analytics -->
+  
 
 <meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
 
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
+  <body>
+    <!-- Page Header -->
 
+
+<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">MySQL</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/">
+                  
+                  文档
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/taiaiac.gitee.io/archives">
+                  
+                  分类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://gitee.com/aidemin">
+                  
+                  码云
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
-</script>
-        <div class="main">
-            <div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Z.A.M.</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2020-12-30</span>
+            <span class="time">17:13:39</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
 
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
+<a href="/taiaiac.gitee.io/categories/MySQl/">MySQl</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
 
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
+<a class="tag" href="/taiaiac.gitee.io/tags/MySQl/">#MySQl</a>
 
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
 
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">MySQL</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/MySQl/">MySQl</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
-
+          </div>
+        
+        <!-- Post Main Content -->
         <div class="post-content">
-            <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--</span> 这是<span class="selector-tag">sql</span>的注释</span><br><span class="line"># <span class="selector-tag">sql</span>的注释</span><br><span class="line"><span class="comment">/*sql的注释*/</span></span><br></pre></td></tr></table></figure>
+          <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">--</span> 这是<span class="selector-tag">sql</span>的注释</span><br><span class="line"># <span class="selector-tag">sql</span>的注释</span><br><span class="line"><span class="comment">/*sql的注释*/</span></span><br></pre></td></tr></table></figure>
 <h2 id="1、创建表格-person"><a href="#1、创建表格-person" class="headerlink" title="1、创建表格 person"></a>1、创建表格 person</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">CREATE</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">person</span> (</span><br><span class="line">	`id` BIGINT ( 10 ) PRIMARY KEY auto_increment COMMENT &#x27;用户的id&#x27;,</span><br><span class="line">	`name` VARCHAR ( 50 ) NOT NULL UNIQUE COMMENT &#x27;用户名&#x27;,</span><br><span class="line">	`age` BIGINT ( 3 ) COMMENT &#x27;年龄&#x27;,</span><br><span class="line">	`gender` CHAR ( 1 ) NOT NULL DEFAULT &#x27;男&#x27; COMMENT &#x27;用户性别&#x27;,</span><br><span class="line">	`birthday` datetime NOT NULL DEFAULT now() COMMENT &#x27;生日&#x27;,</span><br><span class="line">	`photo` VARCHAR ( 150 ) COMMENT &#x27;头像地址&#x27;,</span><br><span class="line">	`phone` VARCHAR ( 11 ) NOT NULL UNIQUE COMMENT &#x27;电话&#x27;,</span><br><span class="line">	`address` VARCHAR ( 100 ) COMMENT &#x27;地址&#x27;,</span><br><span class="line">	`email` VARCHAR ( 150 ) NOT NULL UNIQUE COMMENT &#x27;邮箱&#x27;,</span><br><span class="line">	`identityNo` VARCHAR ( 18 ) NOT NULL UNIQUE COMMENT &#x27;身份证号码&#x27;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <h2 id="2、删除表格"><a href="#2、删除表格" class="headerlink" title="2、删除表格"></a>2、删除表格</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">drop</span> <span class="selector-tag">table</span> <span class="selector-tag">person</span>;</span><br></pre></td></tr></table></figure>
 <h2 id="3、查看表结构"><a href="#3、查看表结构" class="headerlink" title="3、查看表结构"></a>3、查看表结构</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">DESC</span> <span class="selector-tag">person</span>;</span><br></pre></td></tr></table></figure>
@@ -219,73 +137,43 @@
 <h3 id="设置主键语法"><a href="#设置主键语法" class="headerlink" title="设置主键语法"></a>设置主键语法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ALTER</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">employ</span> <span class="selector-tag">ADD</span> <span class="selector-tag">CONSTRAINT</span> <span class="selector-tag">pk_employ_id</span> <span class="selector-tag">primary</span> <span class="selector-tag">KEY</span> ( <span class="selector-tag">id</span> )</span><br><span class="line"><span class="selector-tag">--</span> 设置外键的语法</span><br><span class="line"><span class="selector-tag">ALTER</span> <span class="selector-tag">TABLE</span> <span class="selector-tag">employ</span> <span class="selector-tag">ADD</span> <span class="selector-tag">CONSTRAINT</span> <span class="selector-tag">fk_departId</span> <span class="selector-tag">FOREIGN</span> <span class="selector-tag">KEY</span> ( <span class="selector-tag">departId</span> ) <span class="selector-tag">REFERENCES</span> <span class="selector-tag">department</span> (<span class="selector-tag">id</span>)</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">alter</span> 表示修改</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">table</span> 表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">employ</span> <span class="selector-tag">employ</span>表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">add</span> 添加</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">CONSTRAINT</span> 约束</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">fk_departId</span> 约束的名称</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">FOREIGN</span> <span class="selector-tag">KEY</span> 约束的类型为外键</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">departId</span> <span class="selector-tag">employ</span>表格的<span class="selector-tag">departId</span>字段</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">REFERENCES</span> 引用</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">department</span> <span class="selector-tag">department</span>表格</span><br><span class="line"><span class="selector-tag">--</span> <span class="selector-tag">id</span> <span class="selector-tag">department</span>表格的<span class="selector-tag">id</span>字段</span><br></pre></td></tr></table></figure>
 <h2 id="13、多表联查–内连接查询"><a href="#13、多表联查–内连接查询" class="headerlink" title="13、多表联查–内连接查询"></a>13、多表联查–内连接查询</h2><h3 id="查询雇员的信息并且要显示当前雇员的部门名称"><a href="#查询雇员的信息并且要显示当前雇员的部门名称" class="headerlink" title="查询雇员的信息并且要显示当前雇员的部门名称"></a>查询雇员的信息并且要显示当前雇员的部门名称</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">select</span></span><br><span class="line">	<span class="selector-tag">e</span>.*,</span><br><span class="line">	<span class="selector-tag">d</span><span class="selector-class">.name</span></span><br><span class="line"><span class="selector-tag">from</span></span><br><span class="line">	<span class="selector-tag">employ</span> <span class="selector-tag">e</span> ,</span><br><span class="line">	<span class="selector-tag">department</span> <span class="selector-tag">d</span></span><br><span class="line"><span class="selector-tag">where</span></span><br><span class="line">	e.departId = d.id</span><br></pre></td></tr></table></figure>
         </div>
-
-        
-            <section class="post-copyright">
-                
-                    <p class="copyright-item">
-                        <span>Author:</span>
-                        <span>Z.A.M.</span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>Permalink:</span>
-                        <span><a href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/mysql-day02/">https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/mysql-day02/</a></span>
-                    </p>
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
-
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/MySQl/"># MySQl</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/">url模块</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Mysql学习笔记</a>
-            
-        </section>
-
-
-    </article>
-</div>
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+      </div>
     </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
-    </div>
-</body>
+
+    <!-- After Footer Scripts -->
+
+<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
 </html>
+
