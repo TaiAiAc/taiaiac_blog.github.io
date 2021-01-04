@@ -1,381 +1,200 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>点击特效 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      点击特效 | Z. A. M. 的博客
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
-
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的博客</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</header>
-
-    <div id="article-banner">
-  <h2>点击特效</h2>
-  <p class="post-date">2020-12-30</p>
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
-</div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">/* 鼠标点击文字特效 */</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> f_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> c_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">&quot;body&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> font = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;斗地主&quot;</span>, <span class="string">&quot;吃火锅&quot;</span>, <span class="string">&quot;打豆豆&quot;</span>, <span class="string">&quot;饮酒&quot;</span>, <span class="string">&quot;吃肉&quot;</span>, <span class="string">&quot;狼人杀&quot;</span>, <span class="string">&quot;耍流氓&quot;</span>, <span class="string">&quot;耍无赖&quot;</span>, <span class="string">&quot;身体健康&quot;</span>, <span class="string">&quot;阖家幸福&quot;</span>, <span class="string">&quot;生猴子&quot;</span>, <span class="string">&quot;蒸羊羔儿&quot;</span>, <span class="string">&quot;蒸熊掌&quot;</span>, <span class="string">&quot;蒸鹿尾儿&quot;</span>, <span class="string">&quot;烧花鸭&quot;</span>, <span class="string">&quot;烧雏鸡&quot;</span>, <span class="string">&quot;烧子鹅&quot;</span>, <span class="string">&quot;炉猪&quot;</span>, <span class="string">&quot;炉鸭&quot;</span>, <span class="string">&quot;酱鸡&quot;</span>, <span class="string">&quot;腊肉&quot;</span>, <span class="string">&quot;松花&quot;</span>, <span class="string">&quot;小肚儿&quot;</span>, <span class="string">&quot;晾肉&quot;</span>, <span class="string">&quot;香肠儿&quot;</span>, <span class="string">&quot;什锦苏盘儿&quot;</span>, <span class="string">&quot;熏鸡白肚儿&quot;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> color = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&#x27;#ff0000&#x27;</span>, <span class="string">&#x27;#eb4310&#x27;</span>, <span class="string">&#x27;#f6941d&#x27;</span>, <span class="string">&#x27;#fbb417&#x27;</span>, <span class="string">&#x27;#ffff00&#x27;</span>, <span class="string">&#x27;#cdd541&#x27;</span>, <span class="string">&#x27;#99cc33&#x27;</span>, <span class="string">&#x27;#3f9337&#x27;</span>, <span class="string">&#x27;#219167&#x27;</span>, <span class="string">&#x27;#239676&#x27;</span>, <span class="string">&#x27;#24998d&#x27;</span>, <span class="string">&#x27;#1f9baa&#x27;</span>, <span class="string">&#x27;#0080ff&#x27;</span>, <span class="string">&#x27;#3366cc&#x27;</span>, <span class="string">&#x27;#333399&#x27;</span>, <span class="string">&#x27;#003366&#x27;</span>, <span class="string">&#x27;#800080&#x27;</span>, <span class="string">&#x27;#a1488e&#x27;</span>, <span class="string">&#x27;#c71585&#x27;</span>, <span class="string">&#x27;#bd2158&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> $i = $(<span class="string">&quot;&lt;span /&gt;&quot;</span>).text(font[f_idx]);</span></span><br><span class="line">            f_idx = (f_idx + 1) % font.length;</span><br><span class="line">            c_idx = (c_idx + 1) % color.length;</span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> x = e.pageX,</span></span><br><span class="line">                y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line"><span class="javascript">                <span class="string">&quot;z-index&quot;</span>: <span class="number">99999999999999999999999999999999999999999999999999999999999999999999999999</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;top&quot;</span>: y - <span class="number">20</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;left&quot;</span>: x,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;position&quot;</span>: <span class="string">&quot;absolute&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;font-weight&quot;</span>: <span class="string">&quot;bold&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;color&quot;</span>: color[c_idx]</span></span><br><span class="line">            &#125;);</span><br><span class="line"><span class="javascript">            $(<span class="string">&quot;body&quot;</span>).append($i);</span></span><br><span class="line">            $i.animate(&#123;</span><br><span class="line"><span class="javascript">                    <span class="string">&quot;top&quot;</span>: y - <span class="number">180</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;opacity&quot;</span>: <span class="number">0</span></span></span><br><span class="line">                &#125;,</span><br><span class="line">                1500,</span><br><span class="line"><span class="javascript">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line">                    $i.remove();</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></section>
-    <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      </div>
-    
-    <!-- Tags END -->
-    <!-- NAV START -->
-    
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">
-        <span class="nav-arrow">← </span>
-        
-          正则
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">
-        
-          模仿百度分页
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
-  </div>
-
-    <!-- NAV END -->
-    <!-- 打赏 START -->
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
         </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-    <!-- 打赏 END -->
-    <!-- 二维码 START -->
-    
-      <div class="qrcode">
-        <canvas id="share-qrcode"></canvas>
-        <p class="notice">扫描二维码，分享此文章</p>
-      </div>
-    
-    <!-- 二维码 END -->
-    
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    
-  </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
-    
-      <ol class="nav">none</ol>
-    
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
-</main>
+    </nav>
 
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
 <script>
-  (function () {
-    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/点击特效/';
-    var banner = ''
-    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
-
-    // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-  })();
-</script>
-
-
-  <script>
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-  </script>
-
-
-
-  <script>
-    var gitmentConfig = "";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "点击特效",
-        owner: "",
-        repo: "",
-        oauth: {
-          client_id: "",
-          client_secret: ""
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
         }
-      })
-      gitment.render(document.getElementById('comments'))
     }
-  </script>
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">点击特效</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="comment">/* 鼠标点击文字特效 */</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> f_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> c_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">&quot;body&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> font = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;斗地主&quot;</span>, <span class="string">&quot;吃火锅&quot;</span>, <span class="string">&quot;打豆豆&quot;</span>, <span class="string">&quot;饮酒&quot;</span>, <span class="string">&quot;吃肉&quot;</span>, <span class="string">&quot;狼人杀&quot;</span>, <span class="string">&quot;耍流氓&quot;</span>, <span class="string">&quot;耍无赖&quot;</span>, <span class="string">&quot;身体健康&quot;</span>, <span class="string">&quot;阖家幸福&quot;</span>, <span class="string">&quot;生猴子&quot;</span>, <span class="string">&quot;蒸羊羔儿&quot;</span>, <span class="string">&quot;蒸熊掌&quot;</span>, <span class="string">&quot;蒸鹿尾儿&quot;</span>, <span class="string">&quot;烧花鸭&quot;</span>, <span class="string">&quot;烧雏鸡&quot;</span>, <span class="string">&quot;烧子鹅&quot;</span>, <span class="string">&quot;炉猪&quot;</span>, <span class="string">&quot;炉鸭&quot;</span>, <span class="string">&quot;酱鸡&quot;</span>, <span class="string">&quot;腊肉&quot;</span>, <span class="string">&quot;松花&quot;</span>, <span class="string">&quot;小肚儿&quot;</span>, <span class="string">&quot;晾肉&quot;</span>, <span class="string">&quot;香肠儿&quot;</span>, <span class="string">&quot;什锦苏盘儿&quot;</span>, <span class="string">&quot;熏鸡白肚儿&quot;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> color = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&#x27;#ff0000&#x27;</span>, <span class="string">&#x27;#eb4310&#x27;</span>, <span class="string">&#x27;#f6941d&#x27;</span>, <span class="string">&#x27;#fbb417&#x27;</span>, <span class="string">&#x27;#ffff00&#x27;</span>, <span class="string">&#x27;#cdd541&#x27;</span>, <span class="string">&#x27;#99cc33&#x27;</span>, <span class="string">&#x27;#3f9337&#x27;</span>, <span class="string">&#x27;#219167&#x27;</span>, <span class="string">&#x27;#239676&#x27;</span>, <span class="string">&#x27;#24998d&#x27;</span>, <span class="string">&#x27;#1f9baa&#x27;</span>, <span class="string">&#x27;#0080ff&#x27;</span>, <span class="string">&#x27;#3366cc&#x27;</span>, <span class="string">&#x27;#333399&#x27;</span>, <span class="string">&#x27;#003366&#x27;</span>, <span class="string">&#x27;#800080&#x27;</span>, <span class="string">&#x27;#a1488e&#x27;</span>, <span class="string">&#x27;#c71585&#x27;</span>, <span class="string">&#x27;#bd2158&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> $i = $(<span class="string">&quot;&lt;span /&gt;&quot;</span>).text(font[f_idx]);</span></span><br><span class="line">            f_idx = (f_idx + 1) % font.length;</span><br><span class="line">            c_idx = (c_idx + 1) % color.length;</span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> x = e.pageX,</span></span><br><span class="line">                y = e.pageY;</span><br><span class="line">            $i.css(&#123;</span><br><span class="line"><span class="javascript">                <span class="string">&quot;z-index&quot;</span>: <span class="number">99999999999999999999999999999999999999999999999999999999999999999999999999</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;top&quot;</span>: y - <span class="number">20</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;left&quot;</span>: x,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;position&quot;</span>: <span class="string">&quot;absolute&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;font-weight&quot;</span>: <span class="string">&quot;bold&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;color&quot;</span>: color[c_idx]</span></span><br><span class="line">            &#125;);</span><br><span class="line"><span class="javascript">            $(<span class="string">&quot;body&quot;</span>).append($i);</span></span><br><span class="line">            $i.animate(&#123;</span><br><span class="line"><span class="javascript">                    <span class="string">&quot;top&quot;</span>: y - <span class="number">180</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;opacity&quot;</span>: <span class="number">0</span></span></span><br><span class="line">                &#125;,</span><br><span class="line">                1500,</span><br><span class="line"><span class="javascript">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line">                    $i.remove();</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/Javascript/"># Javascript</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">模仿百度分页</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">正则</a>
+            
+        </section>
 
 
-
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+    </article>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  </body>
+    </div>
+</body>
 </html>

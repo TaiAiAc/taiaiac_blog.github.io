@@ -1,993 +1,127 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Z. A. M. 的个人博客 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      Z. A. M. 的个人博客 | Z. A. M. 的博客
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的博客</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-    <div id="article-banner">
-  <h2>Tags</h2>
-  <p class="post-date">标签检索</p>
-</div>
-<main class="app-body">
-  <div id="tag-cloud">
-    
-      <a class="tag0" data-name="tag-Git">Git</a>
-    
-      <a class="tag2" data-name="tag-ES6">ES6</a>
-    
-      <a class="tag1" data-name="tag-Javascript">Javascript</a>
-    
-      <a class="tag1" data-name="tag-MySQl">MySQl</a>
-    
-      <a class="tag1" data-name="tag-Ajax">Ajax</a>
-    
-      <a class="tag1" data-name="tag-NodeJS">NodeJS</a>
-    
-      <a class="tag2" data-name="tag-echarts">echarts</a>
-    
-      <a class="tag1" data-name="tag-axios">axios</a>
-    
-      <a class="tag2" data-name="tag-hexo">hexo</a>
-    
-      <a class="tag1" data-name="tag-element-ui">element-ui</a>
-    
-      <a class="tag2" data-name="tag-HTML、CSS">HTML、CSS</a>
-    
-      <a class="tag1" data-name="tag-layui">layui</a>
-    
-      <a class="tag3" data-name="tag-jQuery">jQuery</a>
-    
-      <a class="tag3" data-name="tag-sass">sass</a>
-    
-      <a class="tag2" data-name="tag-sublime">sublime</a>
-    
-      <a class="tag2" data-name="tag-vscode">vscode</a>
-    
-      <a class="tag2" data-name="tag-vue-element-admin">vue-element-admin</a>
-    
-      <a class="tag0" data-name="tag-经验">经验</a>
-    
-      <a class="tag3" data-name="tag-微信小程序">微信小程序</a>
-    
-      <a class="tag2" data-name="tag-vue">vue</a>
-    
-      <a class="tag0" data-name="tag-移动端">移动端</a>
-    
-      <a class="tag1" data-name="tag-swiper">swiper</a>
-    
-  </div>
-  
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Git">Git</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Git/Git学习/">Git学习</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Git/Git手动提交/">Git手动提交</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Git/命令行/">Git命令行</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-ES6">ES6</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ES6/ES6/">Ecmascript 6介绍</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ES6/EcmaScript 6/">Ecmascript 6</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ES6/import/">import</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Javascript">Javascript</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/Promise/">Promise</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/scroll监听加载页面/">scroll监听加载页面</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/js事件/">事件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/上下左右下拉列表/">上下左右下拉列表</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/window/">window</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/倒计时/">倒计时</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/回到顶部/">回到顶部</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/定时器/">定时器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/日期格式化/">日期格式化</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/模仿百度分页/">模仿百度分页</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/点击特效/">点击特效</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/正则/">正则</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/百叶窗/">百叶窗</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/节点选择器/">节点选择器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/获取视口宽高/">获取视口宽高</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/请求数据拼接/">请求数据拼接</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-MySQl">MySQl</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/">MySQL</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql学习笔记/">Mysql学习笔记</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/表格/">表格</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/查询数据总结/">查询数据总结</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-Ajax">Ajax</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/JS中使用 Ajax 来进行请求的几种方式/">JS中使用 Ajax 来进行请求的几种方式</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/">Axios Ajax获取远程数据</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/">jQuery Ajax获取远程数据</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/原生js/">原生js Ajax获取远程数据</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-NodeJS">NodeJS</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/url模块/">url模块</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/指令操作/">指令操作</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/file模块/">file模块</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/NodeJS/">Node JS入门</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/nodeJS学习/">NodeJS学习</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-echarts">echarts</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/echarts/基础属性和引入/">echarts基础属性和引入</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-axios">axios</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/axios/介绍/">axios介绍</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/axios/请求案例/">axios请求案例</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-hexo">hexo</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/31/hexo/hexo使用/">hexo基本使用</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-element-ui">element-ui</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/element-ui/快速上手/">element-ui快速上手</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-HTML、CSS">HTML、CSS</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/video标签/">video标签</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/文本溢出省略/">文本溢出省略</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/滚动条设置/">滚动条设置</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/斜切/">斜切</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/炫光按钮/">炫光按钮</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/边框流光/">边框流光</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/荧光边框/">荧光边框</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/html、css/遮罩层/">遮罩层</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-layui">layui</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/layui/分页处理/">分页处理</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/layui/页面布局/">页面布局</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-jQuery">jQuery</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/jQuery/scroll滑动定位/">scroll滑动定位</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/jQuery/选择器/">选择器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/jQuery/侧边slide/">侧边slide</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-sass">sass</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/sass/安装方式/">安装方式</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/sass/混入/">混入</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-sublime">sublime</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/sublime/插件/">插件</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-vscode">vscode</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vscode/插件/">插件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vscode/设置/">设置</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-vue-element-admin">vue-element-admin</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue-element-admin/note1/">笔记</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-经验">经验</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/Vue.config/">Vue.config</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/分页器/">分页器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/eslint配置/">eslint配置</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/去除html标签的纯文本/">去除html标签的纯文本</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/文件上传/">文件上传</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/导出/">导出</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/大前端/前端开发规范/">前端开发规范</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-微信小程序">微信小程序</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/微信小程序/基础/">基础</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/微信小程序/事件/">事件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/微信小程序/子父组件传值/">子父组件传值</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/微信小程序/接口文档/">接口文档</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-vue">vue</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/PM2的使用/">PM2使用</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/eslint命令fix文件/">eslint命令fix文件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/map遍历方式/">map遍历方式</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/prettierrc/">prettierrc配置</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/npm相关/">npm相关</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue-cli（vue脚手架）/">vue-cli（脚手架使用）</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vuex/">VUEX</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue中.sync修饰符/">.sync修饰符</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue中使用定时器/">定时器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue中的修饰符/">事件修饰符</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue富文本编辑器/">富文本编辑器</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue文件路径问题/">文件路径问题</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue的各种引入/">vue的各种引入</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/发布部署/">发布部署</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/指令/">指令</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue项目目录介绍/">项目目录介绍</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/日期处理/">日期处理</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/父子组件传值/">父子组件传值</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/生命周期/">生命周期</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/解决服务器端跨域/">解决服务端跨域</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/ESLint 使用简介/">ESlint使用简介</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/vue-router/">vue-router</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-移动端">移动端</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/flex/">flex弹性盒模型</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/grid/">grid网格布局</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/touch对象详情/">touch对象详情</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/zepto+touch插件/">zepto+touch插件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/事件模型/">事件模型</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/商品排序/">商品排序</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/百分比布局原理/">百分比布局原理</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/插件/">插件</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/移动端/">移动端适配方案</a>
-          </li>
-        </ul>
-        
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/移动端/移动端事件封装/">移动端事件封装</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-    <div class="tag-list">
-      <h3 class="tag-name" id="tag-swiper">swiper</h3>
-      
-        <ul class="tag-preview">
-          <li>
-            <a href="/taiaiac.gitee.io/2020/12/30/swiper/基本用法/">基本用法</a>
-          </li>
-        </ul>
-        
-    </div>
-    
-</main>
-
 <script>
-  (function () {
-    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/tags/index.html'
-    $('#article-banner').geopattern(url)
-    $('.header').removeClass('fixed-header')
-
-    var tag = location.hash.replace('#', '')
-    if (tag) {
-      var tagId = "#tag-" + tag;
-      $("html, body").animate({
-        scrollTop: $(tagId).offset().top 
-      }, 400)
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
     }
-  })();
 </script>
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+        <div class="main">
+            <div class="container">
+    <article class="post-wrap page">
+        
+        <h2 class="post-title">Z. A. M. 的个人博客</h2>
+        
+        <section class="post-content">
+            
+        </section>
+    </article>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  </body>
+    </div>
+</body>
 </html>
