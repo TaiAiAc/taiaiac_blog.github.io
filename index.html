@@ -1,162 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="Z.A.M.">
-
-
-
-
-
-<title>Z. A. M. 的学习笔记</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Z.A.M.&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
+  
+  <title>
     
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+      Z. A. M. 的学习笔记
     
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-
-
-    <!-- scripts list from _config.yml -->
+  
     
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
     
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+<script src="/taiaiac.gitee.io/js/qrious.js"></script>
+
+  
+  
     
+<script src="/taiaiac.gitee.io/js/gitment.js"></script>
 
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
-    }
-</script>
-        <div class="main">
-            
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/taiaiac.gitee.io/"><img src="/taiaiac.gitee.io/image/header.jpg"></a>
-        </div>
-        <div class="nickname">Z. A. M.</div>
-        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> The theme comes from <a target="_blank" rel="noopener" href="https://github.com/Siricee">https://github.com/Siricee</a>. <br> By Liu Zijian.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Link" href="/about">
-                        
-                        
-                            <i class="iconfont icon-link"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
-</div>
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
 
 
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/taiaiac.gitee.io/">
+      <div class="logo"></div>
+      <span>Z. A. M. 的学习笔记</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2021/01/04/Node.js/node-nvm%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">node/nvm的安装使用</a>
+      </h2>
+      <p class="article-date">January 4, 2021</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#NodeJS" >
+    <span class="tag-code">NodeJS</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          nvm的下载，安装与使用1，nvm作用：进行nodejs版本控制
+2，nvm下载地址：
+https://github.com/coreybutler/nvm-windows/releases
+
+3，nvm安装
+nvm-noinstall.zip： 这个是绿色免安装版本，但是使用之前需要配置
+ ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2021/01/04/Node.js/node-nvm%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2021/01/04/hexo/'hexo%E7%BE%8E%E5%8C%96'/">hexo美化</a>
+      </h2>
+      <p class="article-date">January 4, 2021</p>
+      
+      <div class="article-summary">
+        
+          添加卡通人物（看板娘）下载项目1npm install --save hexo-helper-live2d
+下载模型1npm install packagename
+设置参数打开站点目录下的 _config.yml 文件，添加如下代码：
+1234567891011live2d:    ena ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2021/01/04/hexo/'hexo%E7%BE%8E%E5%8C%96'/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/">hexo基本使用</a>
+      </h2>
+      <p class="article-date">December 31, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#hexo" >
+    <span class="tag-code">hexo</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1.Hexo 介绍Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+官网地址：https://hexo.io/zh-cn/
+安装环境
+node.js
+Git
+
+安装 Hexo全局安装 H
+1np ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/">Git学习</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Git" >
+    <span class="tag-code">Git</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Git
+维基百科 - Git
+
+学习资源介绍
+Git 教程 - 廖雪峰
+Pro Git
+git - 简明指南
+猴子都能懂的 GIT 入门
+
+Git 简介
+是什么
+Git 是一种版本控制系统，是一个命令，是一种工具
+gitlib 是用于实现 git 功能的开发库
+github 是一个基于 gi ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/ES6/ES6/">Ecmascript 6介绍</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#ES6" >
+    <span class="tag-code">ES6</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          箭头函数箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。
+
+12345678910(param1, param2, …, paramN) =&gt; ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/ES6/ES6/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/ES6/EcmaScript%206/">Ecmascript 6</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#ES6" >
+    <span class="tag-code">ES6</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Ecmascript 6
+ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。
+Ecmascript 是 JavaScript 语言的标注规范
+JavaScript 是 Ecmascript 规范的具体实现
+具体 ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/ES6/EcmaScript%206/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/ES6/import/">import</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#ES6" >
+    <span class="tag-code">ES6</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          HTML 部分1234&lt;script src=&quot;./demo.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt;&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/ES6/import/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/">Git手动提交</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Git" >
+    <span class="tag-code">Git</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          如何用命令将本地项目上传到 git1、（先进入项目文件夹）通过命令 git init 把这个目录变成 git 可以管理的仓库git init
+2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件git add .
+3 ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/">Git命令行</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Git" >
+    <span class="tag-code">Git</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Git 全局设置:12git config --global user.name &quot;爱民艾米&quot;git config --global user.email &quot;528627554@qq.com&quot;
+初始化1git init
+添加文件1git add REA ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/Promise/">Promise</a>
+      </h2>
+      <p class="article-date">December 30, 2020</p>
+      
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
+    <span class="tag-code">Javascript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1、promise 是处理异步执行结果的一种方案2、promise 是一个对象，是一个容器，用于保存异步执行的结果3、promise 有两种状态，1）正在获得异步执行的结果（pendding）2）已经获得异步执行的结果（正确的结果，异常的结果）3）promise 使用 resolve 函数保 ...
+        
+      </div>
+      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/Promise/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a class="unvisible" href="/taiaiac.gitee.io/"><span class="page-arrow">←</span> Prev</a>
+  
+  
+    <a href="/taiaiac.gitee.io/page/2/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-    </div>
-<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/taiaiac.gitee.io/js/script.js"></script>
+
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
