@@ -1,122 +1,156 @@
 <!DOCTYPE html>
 <html>
-  <!-- Html Head Tag-->
   <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Z.A.M.">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="vue-router"/>
-  <meta property="og:description" content="" />
-  <meta property="og:site_name" content="Z. A. M. 的个人博客"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://gitee.com/aidemin/taiaiac.gitee.io.git"/>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Z.A.M.&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
+  
+  <title>
+    
+      vue-router | Z. A. M. 的博客
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/taiaiac.gitee.io/js/qrious.js"></script>
+
   
   
-    <link rel="icon" href="/favicon.ico">
+    
+<script src="/taiaiac.gitee.io/js/gitment.js"></script>
+
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
   
 
-  <!-- Site Title -->
-  <title>Z. A. M. 的个人博客</title>
 
-  <!-- Bootstrap CSS -->
   
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/bootstrap.min.css">
-
-  <!-- Custom CSS -->
-  
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.light.css">
-
-
-  <!-- Google Analytics -->
-  
-
 <meta name="generator" content="Hexo 5.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
 
   <body>
-    <!-- Page Header -->
-
-
-<header class="site-header header-background" style="background-image: url(/taiaiac.gitee.io//img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">vue-router</p>
-          <p class="subtitle"></p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/taiaiac.gitee.io/">
+      <div class="logo"></div>
+      <span>Z. A. M. 的博客</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
             
-              <li>
-                <a href="/taiaiac.gitee.io/">
-                  
-                  主页
-                  
-                </a>
-              </li>
+              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
             
-              <li>
-                <a href="/taiaiac.gitee.io/archives">
-                  
-                  归档
-                  
-                </a>
-              </li>
+          </li>
+        
+          <li class="menu-item">
             
-              <li>
-                <a href="https://gitee.com/aidemin">
-                  
-                  码云
-                  
-                </a>
-              </li>
+              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
             
-          </ul>
-        </div>
-      </div>
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
     </div>
   </div>
 </header>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">By Z.A.M.</span>
-          
-          <!-- Date -->
-          <span class="date-time info">On
-            <span class="date">2020-12-30</span>
-            <span class="time">09:38:40</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">Under 
-
-<a href="/taiaiac.gitee.io/categories/vue/">vue</a>
-</span>
-          
-        </div>
-        <!-- Tags -->
-        
-          <div class="post-tags text-muted">
-            Tags: 
-
-<a class="tag" href="/taiaiac.gitee.io/tags/vue/">#vue</a>
-
-
-          </div>
-        
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>要学习 vue-router 就要先知道这里的路由是什么？为什么我们不能像原来一样直接用<a></a>标签编写链接哪？vue-router 如何使用？常见路由操作有哪些？等等这些问题，就是本篇要探讨的主要问题。</p>
+    <div id="article-banner">
+  <h2>vue-router</h2>
+  <p class="post-date">2020-12-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>要学习 vue-router 就要先知道这里的路由是什么？为什么我们不能像原来一样直接用<a></a>标签编写链接哪？vue-router 如何使用？常见路由操作有哪些？等等这些问题，就是本篇要探讨的主要问题。</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/3174701-0ea528f387ba9366.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/989/format/webp" alt="img"></p>
 <h2 id="二、vue-router-是什么"><a href="#二、vue-router-是什么" class="headerlink" title="二、vue-router 是什么"></a>二、vue-router 是什么</h2><p>这里的路由并不是指我们平时所说的硬件路由器，<strong>这里的路由就是 SPA（单页应用）的路径管理器</strong>。再通俗的说，vue-router 就是 WebApp 的链接路径管理系统。<br>vue-router 是 Vue.js 官方的路由插件，它和 vue.js 是深度集成的，适合用于构建单页面应用。vue 的单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来。传统的页面应用，是用一些超链接来实现页面切换和跳转的。在 vue-router 单页面应用中，则是路径之间的切换，也就是组件的切换。<strong>路由模块的本质 就是建立起 url 和页面之间的映射关系</strong>。</p>
 <p>至于我们为啥不能用 a 标签，这是因为用 Vue 做的都是单页应用（<strong>当你的项目准备打包时，运行<code>npm run build</code>时，就会生成 dist 文件夹，这里面只有静态资源和一个 indexer 页面</strong>），所以你写的<a></a>标签是不起作用的，你必须使用 vue-router 来进行管理。</p>
@@ -271,45 +305,232 @@
 <p>我们最后屡一下顺序：</p>
 <p><strong>当点击切换路由时：beforeRouterLeave–&gt;beforeEach–&gt;beforeEnter–&gt;beforeRouteEnter–&gt;beforeResolve–&gt;afterEach–&gt;beforeCreate–&gt;created–&gt;beforeMount–&gt;mounted–&gt;beforeRouteEnter 的 next 的回调</strong></p>
 <p><strong>当路由更新时：beforeRouteUpdate</strong></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">记住参数或查询的改变并不会触发进入/离开的导航守卫。你可以通过观察 $route 对象来应对这些变化，或使用 beforeRouteUpdate 的组件内守卫。</span><br><span class="line"></span><br><span class="line">全局前置守卫</span><br><span class="line">你可以使用 <span class="selector-tag">router</span><span class="selector-class">.beforeEach</span> 注册一个全局前置守卫：</span><br><span class="line"></span><br><span class="line">const router = new VueRouter(&#123; ... &#125;)</span><br><span class="line"></span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line">当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 <span class="selector-tag">resolve</span> 完之前一直处于 等待中。</span><br><span class="line"></span><br><span class="line">每个守卫方法接收三个参数：</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">to</span>: <span class="selector-tag">Route</span>: 即将要进入的目标 路由对象</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">from</span>: <span class="selector-tag">Route</span>: 当前导航正要离开的路由</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>: <span class="selector-tag">Function</span>: 一定要调用该方法来 <span class="selector-tag">resolve</span> 这个钩子。执行效果依赖 <span class="selector-tag">next</span> 方法的调用参数。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 <span class="selector-tag">confirmed</span> (确认的)。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(<span class="selector-tag">false</span>): 中断当前的导航。如果浏览器的 <span class="selector-tag">URL</span> 改变了 (可能是用户手动或者浏览器后退按钮)，那么 <span class="selector-tag">URL</span> 地址会重置到 <span class="selector-tag">from</span> 路由对应的地址。</span><br><span class="line"></span><br><span class="line">next(&#x27;/&#x27;) 或者 next(&#123; path: &#x27;/&#x27; &#125;): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。你可以向 next 传递任意位置对象，且允许设置诸如 replace: true、name: &#x27;home&#x27; 之类的选项以及任何用在 router-link 的 to prop 或 router.push 中的选项。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(<span class="selector-tag">error</span>): (2.4.0+) 如果传入 <span class="selector-tag">next</span> 的参数是一个 <span class="selector-tag">Error</span> 实例，则导航会被终止且该错误会被传递给 <span class="selector-tag">router</span><span class="selector-class">.onError</span>() 注册过的回调。</span><br><span class="line"></span><br><span class="line">确保要调用 <span class="selector-tag">next</span> 方法，否则钩子就不会被 <span class="selector-tag">resolved</span>。</span><br><span class="line"></span><br><span class="line">#全局解析守卫</span><br><span class="line">2.5.0 新增</span><br><span class="line"></span><br><span class="line">在 2.5.0+ 你可以用 <span class="selector-tag">router</span><span class="selector-class">.beforeResolve</span> 注册一个全局守卫。这和 <span class="selector-tag">router</span><span class="selector-class">.beforeEach</span> 类似，区别是在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用。</span><br><span class="line"></span><br><span class="line">#全局后置钩子</span><br><span class="line">你也可以注册全局后置钩子，然而和守卫不同的是，这些钩子不会接受 <span class="selector-tag">next</span> 函数也不会改变导航本身：</span><br><span class="line"></span><br><span class="line">router.afterEach((to, from) =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line">#路由独享的守卫</span><br><span class="line">你可以在路由配置上直接定义 <span class="selector-tag">beforeEnter</span> 守卫：</span><br><span class="line"></span><br><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attribute">path</span>: <span class="string">&#x27;/foo&#x27;</span>,</span><br><span class="line">      component: Foo,</span><br><span class="line">      beforeEnter: (to, from, next) =&gt; &#123;</span><br><span class="line">        // ...</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">这些守卫与全局前置守卫的方法参数是一样的。</span><br><span class="line"></span><br><span class="line">#组件内的守卫</span><br><span class="line">最后，你可以在路由组件内直接定义以下路由导航守卫：</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span></span><br><span class="line"><span class="selector-tag">beforeRouteUpdate</span> (2.2 新增)</span><br><span class="line"><span class="selector-tag">beforeRouteLeave</span></span><br><span class="line">const Foo = &#123;</span><br><span class="line">  <span class="selector-tag">template</span>: `...`,</span><br><span class="line">  <span class="selector-tag">beforeRouteEnter</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 在渲染该组件的对应路由被 confirm 前调用</span><br><span class="line">    // 不！能！获取组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">    // 因为当守卫执行前，组件实例还没被创建</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="selector-tag">beforeRouteUpdate</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 在当前路由改变，但是该组件被复用时调用</span><br><span class="line">    // 举例来说，对于一个带有动态参数的路径 /<span class="selector-tag">foo</span>/<span class="selector-pseudo">:id</span>，在 /<span class="selector-tag">foo</span>/1 和 /<span class="selector-tag">foo</span>/2 之间跳转的时候，</span><br><span class="line">    // 由于会渲染同样的 <span class="selector-tag">Foo</span> 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span><br><span class="line">    // 可以访问组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="selector-tag">beforeRouteLeave</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 导航离开该组件的对应路由时调用</span><br><span class="line">    // 可以访问组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span> 守卫 不能 访问 <span class="selector-tag">this</span>，因为守卫在导航确认前被调用,因此即将登场的新组件还没被创建。</span><br><span class="line"></span><br><span class="line">不过，你可以通过传一个回调给 <span class="selector-tag">next</span>来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  next(vm =&gt; &#123;</span><br><span class="line">    // 通过 `<span class="selector-tag">vm</span>` 访问组件实例</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">注意 <span class="selector-tag">beforeRouteEnter</span> 是支持给 <span class="selector-tag">next</span> 传递回调的唯一守卫。对于 <span class="selector-tag">beforeRouteUpdate</span> 和 <span class="selector-tag">beforeRouteLeave</span> 来说，<span class="selector-tag">this</span> 已经可用了，所以不支持传递回调，因为没有必要了。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteUpdate</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  // just use `this`</span><br><span class="line">  this.name = to.params.name</span><br><span class="line">  <span class="selector-tag">next</span>()</span><br><span class="line">&#125;</span><br><span class="line">这个离开守卫通常用来禁止用户在还未保存修改前突然离开。该导航可以通过 <span class="selector-tag">next</span>(<span class="selector-tag">false</span>) 来取消。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteLeave</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  const answer = window.confirm(&#x27;Do you really want to leave? you have unsaved changes!&#x27;)</span><br><span class="line">  <span class="selector-tag">if</span> (<span class="selector-tag">answer</span>) &#123;</span><br><span class="line">    next()</span><br><span class="line">  &#125; <span class="selector-tag">else</span> &#123;</span><br><span class="line">    next(false)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">#完整的导航解析流程</span><br><span class="line">导航被触发。</span><br><span class="line">在失活的组件里调用离开守卫。</span><br><span class="line">调用全局的 <span class="selector-tag">beforeEach</span> 守卫。</span><br><span class="line">在重用的组件里调用 <span class="selector-tag">beforeRouteUpdate</span> 守卫 (2.2+)。</span><br><span class="line">在路由配置里调用 <span class="selector-tag">beforeEnter</span>。</span><br><span class="line">解析异步路由组件。</span><br><span class="line">在被激活的组件里调用 <span class="selector-tag">beforeRouteEnter</span>。</span><br><span class="line">调用全局的 <span class="selector-tag">beforeResolve</span> 守卫 (2.5+)。</span><br><span class="line">导航被确认。</span><br><span class="line">调用全局的 <span class="selector-tag">afterEach</span> 钩子。</span><br><span class="line">触发 <span class="selector-tag">DOM</span> 更新。</span><br><span class="line">用创建好的实例调用 <span class="selector-tag">beforeRouteEnter</span> 守卫中传给 <span class="selector-tag">next</span> 的回调函数。</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">记住参数或查询的改变并不会触发进入/离开的导航守卫。你可以通过观察 $route 对象来应对这些变化，或使用 beforeRouteUpdate 的组件内守卫。</span><br><span class="line"></span><br><span class="line">全局前置守卫</span><br><span class="line">你可以使用 <span class="selector-tag">router</span><span class="selector-class">.beforeEach</span> 注册一个全局前置守卫：</span><br><span class="line"></span><br><span class="line">const router = new VueRouter(&#123; ... &#125;)</span><br><span class="line"></span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line">当一个导航触发时，全局前置守卫按照创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 <span class="selector-tag">resolve</span> 完之前一直处于 等待中。</span><br><span class="line"></span><br><span class="line">每个守卫方法接收三个参数：</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">to</span>: <span class="selector-tag">Route</span>: 即将要进入的目标 路由对象</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">from</span>: <span class="selector-tag">Route</span>: 当前导航正要离开的路由</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>: <span class="selector-tag">Function</span>: 一定要调用该方法来 <span class="selector-tag">resolve</span> 这个钩子。执行效果依赖 <span class="selector-tag">next</span> 方法的调用参数。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 <span class="selector-tag">confirmed</span> (确认的)。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(<span class="selector-tag">false</span>): 中断当前的导航。如果浏览器的 <span class="selector-tag">URL</span> 改变了 (可能是用户手动或者浏览器后退按钮)，那么 <span class="selector-tag">URL</span> 地址会重置到 <span class="selector-tag">from</span> 路由对应的地址。</span><br><span class="line"></span><br><span class="line">next(&#x27;/&#x27;) 或者 next(&#123; path: &#x27;/&#x27; &#125;): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。你可以向 next 传递任意位置对象，且允许设置诸如 replace: true、name: &#x27;home&#x27; 之类的选项以及任何用在 router-link 的 to prop 或 router.push 中的选项。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">next</span>(<span class="selector-tag">error</span>): (2.4.0+) 如果传入 <span class="selector-tag">next</span> 的参数是一个 <span class="selector-tag">Error</span> 实例，则导航会被终止且该错误会被传递给 <span class="selector-tag">router</span><span class="selector-class">.onError</span>() 注册过的回调。</span><br><span class="line"></span><br><span class="line">确保要调用 <span class="selector-tag">next</span> 方法，否则钩子就不会被 <span class="selector-tag">resolved</span>。</span><br><span class="line"></span><br><span class="line">#全局解析守卫</span><br><span class="line">2.5.0 新增</span><br><span class="line"></span><br><span class="line">在 2.5.0+ 你可以用 <span class="selector-tag">router</span><span class="selector-class">.beforeResolve</span> 注册一个全局守卫。这和 <span class="selector-tag">router</span><span class="selector-class">.beforeEach</span> 类似，区别是在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用。</span><br><span class="line"></span><br><span class="line">#全局后置钩子</span><br><span class="line">你也可以注册全局后置钩子，然而和守卫不同的是，这些钩子不会接受 <span class="selector-tag">next</span> 函数也不会改变导航本身：</span><br><span class="line"></span><br><span class="line">router.afterEach((to, from) =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line">#路由独享的守卫</span><br><span class="line">你可以在路由配置上直接定义 <span class="selector-tag">beforeEnter</span> 守卫：</span><br><span class="line"></span><br><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attribute">path</span>: <span class="string">&#x27;/foo&#x27;</span>,</span><br><span class="line">      component: Foo,</span><br><span class="line">      beforeEnter: (to, from, next) =&gt; &#123;</span><br><span class="line">        // ...</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">这些守卫与全局前置守卫的方法参数是一样的。</span><br><span class="line"></span><br><span class="line">#组件内的守卫</span><br><span class="line">最后，你可以在路由组件内直接定义以下路由导航守卫：</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span></span><br><span class="line"><span class="selector-tag">beforeRouteUpdate</span> (2.2 新增)</span><br><span class="line"><span class="selector-tag">beforeRouteLeave</span></span><br><span class="line">const Foo = &#123;</span><br><span class="line">  <span class="selector-tag">template</span>: `...`,</span><br><span class="line">  <span class="selector-tag">beforeRouteEnter</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 在渲染该组件的对应路由被 confirm 前调用</span><br><span class="line">    // 不！能！获取组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">    // 因为当守卫执行前，组件实例还没被创建</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="selector-tag">beforeRouteUpdate</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 在当前路由改变，但是该组件被复用时调用</span><br><span class="line">    // 举例来说，对于一个带有动态参数的路径 /<span class="selector-tag">foo</span>/<span class="selector-pseudo">:id</span>，在 /<span class="selector-tag">foo</span>/1 和 /<span class="selector-tag">foo</span>/2 之间跳转的时候，</span><br><span class="line">    // 由于会渲染同样的 <span class="selector-tag">Foo</span> 组件，因此组件实例会被复用。而这个钩子就会在这个情况下被调用。</span><br><span class="line">    // 可以访问组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="selector-tag">beforeRouteLeave</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">    // 导航离开该组件的对应路由时调用</span><br><span class="line">    // 可以访问组件实例 `<span class="selector-tag">this</span>`</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span> 守卫 不能 访问 <span class="selector-tag">this</span>，因为守卫在导航确认前被调用,因此即将登场的新组件还没被创建。</span><br><span class="line"></span><br><span class="line">不过，你可以通过传一个回调给 <span class="selector-tag">next</span>来访问组件实例。在导航被确认的时候执行回调，并且把组件实例作为回调方法的参数。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteEnter</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  next(vm =&gt; &#123;</span><br><span class="line">    // 通过 `<span class="selector-tag">vm</span>` 访问组件实例</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">注意 <span class="selector-tag">beforeRouteEnter</span> 是支持给 <span class="selector-tag">next</span> 传递回调的唯一守卫。对于 <span class="selector-tag">beforeRouteUpdate</span> 和 <span class="selector-tag">beforeRouteLeave</span> 来说，<span class="selector-tag">this</span> 已经可用了，所以不支持传递回调，因为没有必要了。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteUpdate</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  // just use `this`</span><br><span class="line">  this.name = to.params.name</span><br><span class="line">  <span class="selector-tag">next</span>()</span><br><span class="line">&#125;</span><br><span class="line">这个离开守卫通常用来禁止用户在还未保存修改前突然离开。该导航可以通过 <span class="selector-tag">next</span>(<span class="selector-tag">false</span>) 来取消。</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">beforeRouteLeave</span> (<span class="selector-tag">to</span>, <span class="selector-tag">from</span>, <span class="selector-tag">next</span>) &#123;</span><br><span class="line">  const answer = window.confirm(&#x27;Do you really want to leave? you have unsaved changes!&#x27;)</span><br><span class="line">  <span class="selector-tag">if</span> (<span class="selector-tag">answer</span>) &#123;</span><br><span class="line">    next()</span><br><span class="line">  &#125; <span class="selector-tag">else</span> &#123;</span><br><span class="line">    next(false)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">#完整的导航解析流程</span><br><span class="line">导航被触发。</span><br><span class="line">在失活的组件里调用离开守卫。</span><br><span class="line">调用全局的 <span class="selector-tag">beforeEach</span> 守卫。</span><br><span class="line">在重用的组件里调用 <span class="selector-tag">beforeRouteUpdate</span> 守卫 (2.2+)。</span><br><span class="line">在路由配置里调用 <span class="selector-tag">beforeEnter</span>。</span><br><span class="line">解析异步路由组件。</span><br><span class="line">在被激活的组件里调用 <span class="selector-tag">beforeRouteEnter</span>。</span><br><span class="line">调用全局的 <span class="selector-tag">beforeResolve</span> 守卫 (2.5+)。</span><br><span class="line">导航被确认。</span><br><span class="line">调用全局的 <span class="selector-tag">afterEach</span> 钩子。</span><br><span class="line">触发 <span class="selector-tag">DOM</span> 更新。</span><br><span class="line">用创建好的实例调用 <span class="selector-tag">beforeRouteEnter</span> 守卫中传给 <span class="selector-tag">next</span> 的回调函数。</span><br></pre></td></tr></table></figure></section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#vue" >
+    <span class="tag-code">vue</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/taiaiac.gitee.io/2020/12/30/Node.js/NodeJS/">
+        <span class="nav-arrow">← </span>
+        
+          Node JS入门
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/taiaiac.gitee.io/2020/12/30/vue/ESLint%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/">
+        
+          ESlint使用简介
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
         </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
       </div>
-    </div>
-  </div>
-</article>
-
-
-
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
       </div>
-    </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E8%A8%80"><span class="toc-nav-text">一、前言</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81vue-router-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-text">二、vue-router 是什么</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81vue-router-%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-nav-text">三、vue-router 实现原理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81Hash-%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-nav-text">1、Hash 模式：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81History-%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-nav-text">2、History 模式：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%9D%97%E6%9D%A5%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-nav-text">3、使用路由模块来实现页面跳转的方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81vue-router-%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-nav-text">四、vue-router 使用方式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81-vue-router-%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="toc-nav-text">五、 vue-router 参数传递</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E7%94%A8-name-%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-nav-text">1.用 name 传递参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E9%80%9A%E8%BF%87-lt-router-link-gt-%E6%A0%87%E7%AD%BE%E4%B8%AD%E7%9A%84-to-%E4%BC%A0%E5%8F%82"><span class="toc-nav-text">2 通过&lt;router-link&gt; 标签中的 to 传参</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E5%88%A9%E7%94%A8-url-%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E2%80%94-%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E9%87%8C%E4%BB%A5%E5%86%92%E5%8F%B7%E7%9A%84%E5%BD%A2%E5%BC%8F%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E3%80%82"><span class="toc-nav-text">3 利用 url 传递参数—-在配置文件里以冒号的形式设置参数。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-%E4%BD%BF%E7%94%A8-path-%E6%9D%A5%E5%8C%B9%E9%85%8D%E8%B7%AF%E7%94%B1%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%9A%E8%BF%87-query-%E6%9D%A5%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-nav-text">4. 使用 path 来匹配路由，然后通过 query 来传递参数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AD%E3%80%81vue-router-%E9%85%8D%E7%BD%AE%E5%AD%90%E8%B7%AF%E7%94%B1-%E4%BA%8C%E7%BA%A7%E8%B7%AF%E7%94%B1"><span class="toc-nav-text">六、vue-router 配置子路由(二级路由)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%83%E3%80%81%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%A4%9A%E8%B7%AF%E7%94%B1%E5%8C%BA%E5%9F%9F%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">七、单页面多路由区域操作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%AB-route-%E5%92%8C-router-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-nav-text">八.$route 和 $router 的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B9%9D%E3%80%81-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE-404-%E9%A1%B5%E9%9D%A2"><span class="toc-nav-text">九、 如何设置 404 页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8D%81%E3%80%81%E8%B7%AF%E7%94%B1%E5%AE%88%E5%8D%AB"><span class="toc-nav-text">十、路由守卫</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-nav-text">1.导航守卫是什么</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB%E5%85%A8%E8%A7%A3%E6%9E%90"><span class="toc-nav-text">2.导航守卫全解析</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB%E5%9B%9E%E8%B0%83%E5%8F%82%E6%95%B0"><span class="toc-nav-text">3.导航守卫回调参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-%E6%80%BB%E7%BB%93"><span class="toc-nav-text">4.总结</span></a></li></ol></li></ol>
+    
   </div>
-</footer>
-
-
-    <!-- After Footer Scripts -->
-
-<script src="/taiaiac.gitee.io/js/highlight.pack.js"></script>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
+  (function () {
+    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/vue-router/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "vue-router",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
       hljs.highlightBlock(block);
     });
-  });
+  })
 </script>
+<!-- Baidu Tongji -->
+
+
+<script src="/taiaiac.gitee.io/js/script.js"></script>
 
   </body>
 </html>
-
