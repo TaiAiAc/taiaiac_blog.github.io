@@ -1,204 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="Z.A.M.">
-
-
-
-
-
-<title>基本用法 | Z. A. M. 的学习笔记</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Z.A.M.&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
+  
+  <title>
     
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+      基本用法 | Z. A. M. 的学习笔记
     
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-
-
-    <!-- scripts list from _config.yml -->
+  
     
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
     
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+<script src="/taiaiac.gitee.io/js/qrious.js"></script>
+
+  
+  
     
+<script src="/taiaiac.gitee.io/js/gitment.js"></script>
 
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
-    }
-</script>
-        <div class="main">
-            <div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
 </div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">基本用法</h1>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/taiaiac.gitee.io/">
+      <div class="logo"></div>
+      <span>Z. A. M. 的学习笔记</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
             
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/swiper/">swiper</a>
-                            
-                        </span>
-                    
-                </div>
+              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
             
-        </header>
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
 
-        <div class="post-content">
-            <h2 id="Swiper-常用于移动端网站的内容触摸滑动"><a href="#Swiper-常用于移动端网站的内容触摸滑动" class="headerlink" title="Swiper 常用于移动端网站的内容触摸滑动"></a>Swiper 常用于移动端网站的内容触摸滑动</h2><ul>
+    <div id="article-banner">
+  <h2>基本用法</h2>
+  <p class="post-date">2020-12-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="Swiper-常用于移动端网站的内容触摸滑动"><a href="#Swiper-常用于移动端网站的内容触摸滑动" class="headerlink" title="Swiper 常用于移动端网站的内容触摸滑动"></a>Swiper 常用于移动端网站的内容触摸滑动</h2><ul>
 <li><strong>Swiper</strong>是纯 javascript 打造的滑动特效插件，面向手机、平板电脑等移动终端。</li>
 <li><strong>Swiper</strong>能实现触屏焦点图、触屏 Tab 切换、触屏多图切换等常用效果。</li>
 <li><strong>Swiper</strong>开源、免费、稳定、使用简单、功能强大，是架构移动终端网站的重要选择！</li>
@@ -721,65 +673,232 @@
 <p>5.2.1</p>
 </li>
 </ul>
-<h2 id="使用方法示例-21"><a href="#使用方法示例-21" class="headerlink" title="使用方法示例"></a>使用方法示例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">&quot;javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">&#x27;.swiper-container&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">    updateOnWindowResize: <span class="literal">true</span>,</span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用方法示例-21"><a href="#使用方法示例-21" class="headerlink" title="使用方法示例"></a>使用方法示例</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">&quot;javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">&#x27;.swiper-container&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">    updateOnWindowResize: <span class="literal">true</span>,</span></span><br><span class="line">  &#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#swiper" >
+    <span class="tag-code">swiper</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">
+        <span class="nav-arrow">← </span>
+        
+          前端开发规范
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/taiaiac.gitee.io/2020/12/30/Node.js/file%E6%A8%A1%E5%9D%97/">
+        
+          file模块
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
         </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Swiper-%E5%B8%B8%E7%94%A8%E4%BA%8E%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%BD%91%E7%AB%99%E7%9A%84%E5%86%85%E5%AE%B9%E8%A7%A6%E6%91%B8%E6%BB%91%E5%8A%A8"><span class="toc-nav-text">Swiper 常用于移动端网站的内容触摸滑动</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95"><span class="toc-nav-text">简单用法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#effect"><span class="toc-nav-text">effect</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8"><span class="toc-nav-text">组件列表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#new-Swiper-swiperContainer-parameters"><span class="toc-nav-text">new Swiper(swiperContainer, parameters)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#initialSlide"><span class="toc-nav-text">initialSlide</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#initialSlide-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">initialSlide 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-1"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#direction"><span class="toc-nav-text">direction</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#direction-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">direction 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-2"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#speed"><span class="toc-nav-text">speed</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#speed-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">speed 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-3"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#grabCursor"><span class="toc-nav-text">grabCursor</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#grabCursor-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">grabCursor 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-4"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#parallax"><span class="toc-nav-text">parallax</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#parallax-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">parallax 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-5"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#setWrapperSize"><span class="toc-nav-text">setWrapperSize</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#setWrapperSize-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">setWrapperSize 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-6"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#virtualTranslate"><span class="toc-nav-text">virtualTranslate</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#virtualTranslate-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">virtualTranslate 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-7"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#a11y"><span class="toc-nav-text">a11y</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#a11y-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">a11y 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-1"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-8"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#width"><span class="toc-nav-text">width</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#width-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">width 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-2"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-9"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#height"><span class="toc-nav-text">height</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#height-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">height 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-3"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-10"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#roundLengths"><span class="toc-nav-text">roundLengths</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#roundLengths-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">roundLengths 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-11"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#breakpoints"><span class="toc-nav-text">breakpoints</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#breakpoints-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">breakpoints 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-4"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-12"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#autoHeight"><span class="toc-nav-text">autoHeight</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#autoHeight-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">autoHeight 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-5"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-13"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#uniqueNavElements"><span class="toc-nav-text">uniqueNavElements</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#uniqueNavElements-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">uniqueNavElements 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-6"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-14"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#nested"><span class="toc-nav-text">nested</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#nested-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">nested 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-7"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-15"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#runCallbacksOnInit"><span class="toc-nav-text">runCallbacksOnInit</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#runCallbacksOnInit-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">runCallbacksOnInit 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-8"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-16"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#init"><span class="toc-nav-text">init</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#init-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">init 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-17"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#preloadImages"><span class="toc-nav-text">preloadImages</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#preloadImages-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">preloadImages 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-18"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#updateOnImagesReady"><span class="toc-nav-text">updateOnImagesReady</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#updateOnImagesReady-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">updateOnImagesReady 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-19"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#cssMode"><span class="toc-nav-text">cssMode</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AF%E4%B8%8D%E6%94%AF%E6%8C%81%E7%9A%84%E5%8A%9F%E8%83%BD%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-nav-text">以下是不支持的功能列表：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cssMode-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">cssMode 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%88%E6%9E%9C%E6%BC%94%E7%A4%BA-9"><span class="toc-nav-text">效果演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-20"><span class="toc-nav-text">使用方法示例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#updateOnWindowResize"><span class="toc-nav-text">updateOnWindowResize</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#updateOnWindowResize-%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">updateOnWindowResize 信息</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%A4%BA%E4%BE%8B-21"><span class="toc-nav-text">使用方法示例</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
+<script>
+  (function () {
+    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/swiper/基本用法/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/swiper/"># swiper</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Node.js/file%E6%A8%A1%E5%9D%97/">file模块</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/">前端开发规范</a>
-            
-        </section>
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
 
 
-    </article>
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "基本用法",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-    </div>
-</body>
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/taiaiac.gitee.io/js/script.js"></script>
+
+  </body>
 </html>

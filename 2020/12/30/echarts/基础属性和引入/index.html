@@ -1,204 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <meta name="author" content="Z.A.M.">
-
-
-
-
-
-<title>echarts基础属性和引入 | Z. A. M. 的学习笔记</title>
-
-
-
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
-
-
-
-
-    <!-- stylesheets list from _config.yml -->
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Z.A.M.&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
+  
+  <title>
     
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+      echarts基础属性和引入 | Z. A. M. 的学习笔记
     
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-
-
-    <!-- scripts list from _config.yml -->
+  
     
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
     
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+<script src="/taiaiac.gitee.io/js/qrious.js"></script>
+
+  
+  
     
+<script src="/taiaiac.gitee.io/js/gitment.js"></script>
 
-
-
-    
-    
-        
-    
-
-
-<meta name="generator" content="Hexo 5.3.0"></head>
-<body>
-    <div class="wrapper">
-        <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
         }
-    }
-</script>
-        <div class="main">
-            <div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
 </div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
-
-    
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">echarts基础属性和引入</h1>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/taiaiac.gitee.io/">
+      <div class="logo"></div>
+      <span>Z. A. M. 的学习笔记</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
             
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
-
-                    
-                        <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/echarts/">echarts</a>
-                            
-                        </span>
-                    
-                </div>
+              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
             
-        </header>
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
 
-        <div class="post-content">
-            <p><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-line">line</a>（折线图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-bar">bar</a>（柱状图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-pie">pie</a>（饼图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-scatter">scatter</a>（散点图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-graph">graph</a>（关系图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-tree">tree</a>（树图）、…</p>
+    <div id="article-banner">
+  <h2>echarts基础属性和引入</h2>
+  <p class="post-date">2020-12-30</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-line">line</a>（折线图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-bar">bar</a>（柱状图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-pie">pie</a>（饼图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-scatter">scatter</a>（散点图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-graph">graph</a>（关系图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-tree">tree</a>（树图）、…</p>
 <h2 id="局部引入"><a href="#局部引入" class="headerlink" title="局部引入"></a>局部引入</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 ECharts 主模块</span></span><br><span class="line"><span class="keyword">const</span> echarts = <span class="built_in">require</span>(<span class="string">&#x27;echarts/dist/echarts&#x27;</span>)</span><br><span class="line"><span class="comment">// 或者import</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br></pre></td></tr></table></figure>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--  	为 ECharts 准备一个具备大小（宽高）的 DOM		 --&gt;</span><br><span class="line">&lt;div ref=<span class="string">&quot;main&quot;</span> id=<span class="string">&quot;gongling-chart&quot;</span> style=<span class="string">&quot;width: 600px;height:400px;&quot;</span>/&gt;</span><br><span class="line"><span class="comment">// 基于准备好的dom，初始化echarts实例</span></span><br><span class="line"><span class="keyword">const</span> myChart = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">&#x27;id&#x27;</span>))</span><br><span class="line"><span class="comment">//或者通过ref</span></span><br><span class="line"><span class="keyword">const</span> myChart = echarts.init(<span class="built_in">this</span>.$refs.main)</span><br></pre></td></tr></table></figure>
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">myChart</span><span class="selector-class">.setOption</span>(&#123;</span><br><span class="line">    <span class="attribute">series</span>: [],</span><br><span class="line">    title: &#123;&#125;,</span><br><span class="line">    <span class="selector-tag">legend</span>: &#123;&#125;,</span><br><span class="line">    <span class="selector-tag">grid</span>: &#123;&#125;,</span><br><span class="line">    <span class="selector-tag">xAxis</span>: &#123;&#125;,</span><br><span class="line">    <span class="selector-tag">yAxis</span>: &#123;&#125;,</span><br><span class="line">    <span class="selector-tag">tooltip</span>: &#123;&#125;</span><br><span class="line">    // 配置项。。。</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -231,65 +183,232 @@
 <p>直角坐标系 grid 中的 y 轴，一般情况下单个 grid 组件最多只能放左右两个 y 轴，多于两个 y 轴需要通过配置 <a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#yAxis.offset">offset</a> 属性防止同个位置多个 Y 轴的重叠。</p>
 <h3 id="tooltip-提示框"><a href="#tooltip-提示框" class="headerlink" title="tooltip 提示框"></a>tooltip 提示框</h3><p>提示框组件。</p>
 <p>提示框组件的通用介绍：<br>提示框组件可以设置在多种地方：<br>可以设置在全局，即 tooltip<br>可以设置在坐标系中，即 grid.tooltip、polar.tooltip、single.tooltip<br>可以设置在系列中，即 series.tooltip<br>可以设置在系列的每个数据项中，即 series.data.tooltip</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">tooltip: &#123;</span><br><span class="line">    show = <span class="literal">true</span>, <span class="comment">//是否显示提示框组件，包括提示框浮层和 axisPointer</span></span><br><span class="line">    trigger = <span class="string">&#x27;item&#x27;</span>, <span class="comment">//触发类型</span></span><br><span class="line">    <span class="comment">// &#x27;item&#x27;数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用</span></span><br><span class="line">    <span class="comment">// &#x27;axis&#x27;坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用</span></span><br><span class="line">    <span class="comment">// &#x27;none&#x27;什么都不触发</span></span><br><span class="line">    axisPointer: &#123;</span><br><span class="line">        <span class="comment">// 坐标轴指示器配置项</span></span><br><span class="line">        type: <span class="string">&#x27;line&#x27;</span>, <span class="comment">//直线指示器</span></span><br><span class="line">        <span class="comment">// &#x27;shadow&#x27; 阴影指示器&#x27;none&#x27; 无指示器&#x27;cross&#x27; 十字准星指示器。其实是种简写，表示启用两个正交的轴的 axisPointer。</span></span><br><span class="line">        axis = <span class="string">&#x27;auto&#x27;</span>, <span class="comment">//指示器的坐标轴</span></span><br><span class="line">        showContent = <span class="literal">true</span>, <span class="comment">//是否显示提示框浮层，默认显示。只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为false</span></span><br><span class="line">        alwaysShowContent: <span class="literal">true</span>, <span class="comment">//是否永远显示提示框内容，默认情况下在移出可触发提示框区域后 一定时间 后隐藏，设置为 true 可以保证一直显示提示框内容</span></span><br><span class="line">        triggerOn = <span class="string">&#x27;mousemove|click&#x27;</span>, <span class="comment">//提示框触发的条件</span></span><br><span class="line">        <span class="comment">// &#x27;mousemove&#x27;鼠标移动时触发,&#x27;click&#x27;鼠标点击时触发,&#x27;mousemove|click&#x27;同时鼠标移动和点击时触发,&#x27;none&#x27;不在 &#x27;mousemove&#x27; 或 &#x27;click&#x27; 时触发，用户可以通过 action.tooltip.showTip 和 action.tooltip.hideTip 来手动触发和隐藏。也可以通过 axisPointer.handle 来触发或隐藏</span></span><br><span class="line">        showDelay: <span class="number">100</span>, <span class="comment">//浮层显示的延迟，单位为 ms，默认没有延迟，也不建议设置</span></span><br><span class="line">        hideDelay = <span class="number">100</span>, <span class="comment">//浮层隐藏的延迟</span></span><br><span class="line">        enterable: <span class="literal">false</span>, <span class="comment">//鼠标是否可进入提示框浮层中</span></span><br><span class="line">        confine: <span class="literal">true</span>, <span class="comment">//是否将 tooltip 框限制在图表的区域内</span></span><br><span class="line">        transitionDuration = <span class="number">0.4</span>, <span class="comment">//提示框浮层的移动动画过渡时间，单位是 s，设置为 0 的时候会紧跟着鼠标移动。</span></span><br><span class="line">        position: [<span class="number">10</span>, <span class="number">10</span>], <span class="comment">// 绝对位置，相对于容器左侧 10px, 上侧 10 px</span></span><br><span class="line">        position: [<span class="string">&#x27;50%&#x27;</span>, <span class="string">&#x27;50%&#x27;</span>], <span class="comment">// 相对位置，放置在容器正中间</span></span><br><span class="line">        <span class="comment">// &#x27;inside&#x27;鼠标所在图形的内部中心位置， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;top&#x27;鼠标所在图形上侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;left&#x27;鼠标所在图形左侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;right&#x27;鼠标所在图形右侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;bottom&#x27;鼠标所在图形底侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        formatter: <span class="string">&#x27;&#123;b0&#125;: &#123;c0&#125;&lt;br /&gt;&#123;b1&#125;: &#123;c1&#125;&#x27;</span>, <span class="comment">//字符串模板</span></span><br><span class="line">        ... <span class="comment">//css样式设置</span></span><br><span class="line">        extraCssText: <span class="string">&#x27;box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);&#x27;</span>, <span class="comment">//额外附加到浮层的 css 样式</span></span><br><span class="line">        label: &#123; show, precision, formatter, margin, color, fontStyle, fontWeight, fontFamily, fontSize, lineHeight, width, height, textBorderColor, textBorderWidth, textShadowColor, textShadowBlur, textShadowOffsetX, textShadowOffsetY, padding, backgroundColor, borderColor, borderWidth, shadowBlur, shadowColor, shadowOffsetX, shadowOffsetY &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">tooltip: &#123;</span><br><span class="line">    show = <span class="literal">true</span>, <span class="comment">//是否显示提示框组件，包括提示框浮层和 axisPointer</span></span><br><span class="line">    trigger = <span class="string">&#x27;item&#x27;</span>, <span class="comment">//触发类型</span></span><br><span class="line">    <span class="comment">// &#x27;item&#x27;数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用</span></span><br><span class="line">    <span class="comment">// &#x27;axis&#x27;坐标轴触发，主要在柱状图，折线图等会使用类目轴的图表中使用</span></span><br><span class="line">    <span class="comment">// &#x27;none&#x27;什么都不触发</span></span><br><span class="line">    axisPointer: &#123;</span><br><span class="line">        <span class="comment">// 坐标轴指示器配置项</span></span><br><span class="line">        type: <span class="string">&#x27;line&#x27;</span>, <span class="comment">//直线指示器</span></span><br><span class="line">        <span class="comment">// &#x27;shadow&#x27; 阴影指示器&#x27;none&#x27; 无指示器&#x27;cross&#x27; 十字准星指示器。其实是种简写，表示启用两个正交的轴的 axisPointer。</span></span><br><span class="line">        axis = <span class="string">&#x27;auto&#x27;</span>, <span class="comment">//指示器的坐标轴</span></span><br><span class="line">        showContent = <span class="literal">true</span>, <span class="comment">//是否显示提示框浮层，默认显示。只需tooltip触发事件或显示axisPointer而不需要显示内容时可配置该项为false</span></span><br><span class="line">        alwaysShowContent: <span class="literal">true</span>, <span class="comment">//是否永远显示提示框内容，默认情况下在移出可触发提示框区域后 一定时间 后隐藏，设置为 true 可以保证一直显示提示框内容</span></span><br><span class="line">        triggerOn = <span class="string">&#x27;mousemove|click&#x27;</span>, <span class="comment">//提示框触发的条件</span></span><br><span class="line">        <span class="comment">// &#x27;mousemove&#x27;鼠标移动时触发,&#x27;click&#x27;鼠标点击时触发,&#x27;mousemove|click&#x27;同时鼠标移动和点击时触发,&#x27;none&#x27;不在 &#x27;mousemove&#x27; 或 &#x27;click&#x27; 时触发，用户可以通过 action.tooltip.showTip 和 action.tooltip.hideTip 来手动触发和隐藏。也可以通过 axisPointer.handle 来触发或隐藏</span></span><br><span class="line">        showDelay: <span class="number">100</span>, <span class="comment">//浮层显示的延迟，单位为 ms，默认没有延迟，也不建议设置</span></span><br><span class="line">        hideDelay = <span class="number">100</span>, <span class="comment">//浮层隐藏的延迟</span></span><br><span class="line">        enterable: <span class="literal">false</span>, <span class="comment">//鼠标是否可进入提示框浮层中</span></span><br><span class="line">        confine: <span class="literal">true</span>, <span class="comment">//是否将 tooltip 框限制在图表的区域内</span></span><br><span class="line">        transitionDuration = <span class="number">0.4</span>, <span class="comment">//提示框浮层的移动动画过渡时间，单位是 s，设置为 0 的时候会紧跟着鼠标移动。</span></span><br><span class="line">        position: [<span class="number">10</span>, <span class="number">10</span>], <span class="comment">// 绝对位置，相对于容器左侧 10px, 上侧 10 px</span></span><br><span class="line">        position: [<span class="string">&#x27;50%&#x27;</span>, <span class="string">&#x27;50%&#x27;</span>], <span class="comment">// 相对位置，放置在容器正中间</span></span><br><span class="line">        <span class="comment">// &#x27;inside&#x27;鼠标所在图形的内部中心位置， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;top&#x27;鼠标所在图形上侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;left&#x27;鼠标所在图形左侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;right&#x27;鼠标所在图形右侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        <span class="comment">// &#x27;bottom&#x27;鼠标所在图形底侧， 只在 trigger 为 &#x27;item&#x27;</span></span><br><span class="line">        <span class="comment">// 的时候有效。</span></span><br><span class="line">        formatter: <span class="string">&#x27;&#123;b0&#125;: &#123;c0&#125;&lt;br /&gt;&#123;b1&#125;: &#123;c1&#125;&#x27;</span>, <span class="comment">//字符串模板</span></span><br><span class="line">        ... <span class="comment">//css样式设置</span></span><br><span class="line">        extraCssText: <span class="string">&#x27;box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);&#x27;</span>, <span class="comment">//额外附加到浮层的 css 样式</span></span><br><span class="line">        label: &#123; show, precision, formatter, margin, color, fontStyle, fontWeight, fontFamily, fontSize, lineHeight, width, height, textBorderColor, textBorderWidth, textShadowColor, textShadowBlur, textShadowOffsetX, textShadowOffsetY, padding, backgroundColor, borderColor, borderWidth, shadowBlur, shadowColor, shadowOffsetX, shadowOffsetY &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#echarts" >
+    <span class="tag-code">echarts</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/">
+        <span class="nav-arrow">← </span>
+        
+          jQuery Ajax获取远程数据
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/taiaiac.gitee.io/2020/12/30/Node.js/%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/">
+        
+          指令操作
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
         </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B1%80%E9%83%A8%E5%BC%95%E5%85%A5"><span class="toc-nav-text">局部引入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-nav-text">初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-nav-text">配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-nav-text">配置项</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#title-%E6%A0%87%E9%A2%98"><span class="toc-nav-text">title 标题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#series-%E7%B3%BB%E5%88%97%E5%88%97%E8%A1%A8"><span class="toc-nav-text">series 系列列表</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#legend-%E5%9B%BE%E4%BE%8B"><span class="toc-nav-text">legend 图例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#xAxis-%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB-x-%E8%BD%B4"><span class="toc-nav-text">xAxis 直角坐标系 x 轴</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#yAxis-%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB-y-%E8%BD%B4"><span class="toc-nav-text">yAxis 直角坐标系 y 轴</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#tooltip-%E6%8F%90%E7%A4%BA%E6%A1%86"><span class="toc-nav-text">tooltip 提示框</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
 
-        
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
+<script>
+  (function () {
+    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/echarts/基础属性和引入/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
 
-            </section>
-        
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/echarts/"># echarts</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Node.js/%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/">指令操作</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/">jQuery Ajax获取远程数据</a>
-            
-        </section>
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
 
 
-    </article>
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "echarts基础属性和引入",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
 </div>
-
-        </div>
-        <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-    </div>
-</body>
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+
+<script src="/taiaiac.gitee.io/js/script.js"></script>
+
+  </body>
 </html>
