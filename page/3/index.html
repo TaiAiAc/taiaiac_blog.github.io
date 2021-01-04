@@ -1,429 +1,162 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      Z. A. M. 的学习笔记
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的学习笔记</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-    <main class="app-body">
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/">MySQL</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#MySQl" >
-    <span class="tag-code">MySQl</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          注释123-- 这是sql的注释# sql的注释/*sql的注释*/
-1、创建表格 person123456789101112CREATE TABLE person (	`id` BIGINT ( 10 ) PRIMARY KEY auto_increment COMMENT &#x27;用 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/">节点选择器</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          5 种获得元素的方式
-1、通过 id 获得的元素，可以直接使用，不要获得元素
-```javascriptlet id = document.getElementById(‘id’)12345- #### 2、通过类名获得元素集合 &#96;HTMLCollection&#96;不是数组，不能 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">获取视口宽高</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          window 对象和 document 对象
-window 对象表示浏览器打开的窗口，window 可省略，常见的 window 属性有 innerWidth，parseInt，parseFloat
-document 对象属于 window 对象，表示一个 DOM 树
-
-视口宽高123456 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/">请求数据拼接</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1234567891011121314151617181920212223242526272829&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;  &lt;head&gt;    &lt;meta charset=&quot;UTF ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Mysql学习笔记</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#MySQl" >
-    <span class="tag-code">MySQl</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          MySQL安装过程
-1、卸载服务12341）使用控制面板进行卸载程序2）卸载结束看一下安装目录中是否还有文件，清空目录3）查看window中是否还有服务，删除服务名称，使用管理权限启动终端，执行 sc delete MySQL80
-2、准备安装文件12341）mysql-installer- ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E8%A1%A8%E6%A0%BC/">表格</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#MySQl" >
-    <span class="tag-code">MySQl</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1234567891011121314151617181920212223242526272829303132333435363738391.启动服务C:\Users\root&gt;mysql -u root -p2.查看创建的数据库mysql&gt; show databases;2.创 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/MySQl/%E8%A1%A8%E6%A0%BC/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E6%80%BB%E7%BB%93/">查询数据总结</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#MySQl" >
-    <span class="tag-code">MySQl</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1、服务端
-1、创建项目
-```cssexpress –view==ejs projectname
-1234- ## 2、安装依赖  - &#96;&#96;&#96;css    cd projectname
-```csscnpm i mysql -S
-12- &#96;&#96;&#96 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/MySQl/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E6%80%BB%E7%BB%93/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">JS中使用 Ajax 来进行请求的几种方式</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Ajax" >
-    <span class="tag-code">Ajax</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          1.什么是 AJAX术语 AJAX 表示 异步的 JavaScript 和 XML。
-AJAX 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。
-有多种方法可以发出网络请求并从服务器获取数据。 我 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/">url模块</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#NodeJS" >
-    <span class="tag-code">NodeJS</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          
-12345const url = require(&#x27;url&#x27;)// 解析请求路径url.parse(request.url, true)// 取出路径url.parse(request.url, true).pathname
-1234567891011121314151 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/">Axios Ajax获取远程数据</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Ajax" >
-    <span class="tag-code">Ajax</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          Ajax 获取数据123456789101112131415161718192021222324252627282930313233343536373839/** * 描述 请求数据 * @date 2020-09-21 * @returns &#123;any&#125; */functi ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/ajax/axios/">Read more</a>
-    </article>
-  
-
-  
-    <div class="guide-pager">
-  
-    <a href="/taiaiac.gitee.io/page/2/"><span class="page-arrow">← </span>Prev</a>
-  
-  
-    <a href="/taiaiac.gitee.io/page/4/">Next<span class="page-arrow"> →</span></a>
-  
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            
+    <div class="container">
+    <div class="intro">
+        <div class="avatar">
+            <a href="/taiaiac.gitee.io/"><img src="/taiaiac.gitee.io/image/header.jpg"></a>
+        </div>
+        <div class="nickname">Z. A. M.</div>
+        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> The theme comes from <a target="_blank" rel="noopener" href="https://github.com/Siricee">https://github.com/Siricee</a>. <br> By Liu Zijian.</p>
 </div>
-  
-</main>
-
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+        <div class="links">
+            
+                
+                    <a class="link-item" title="Blog" href="/archives">
+                        
+                        
+                            <i class="iconfont icon-blog"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Category" href="/category">
+                        
+                        
+                            <i class="iconfont icon-category"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Tags" href="/tag">
+                        
+                        
+                            <i class="iconfont icon-tags"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Link" href="/about">
+                        
+                        
+                            <i class="iconfont icon-link"></i>
+                        
+                    </a>
+                
+            
+        </div>
+    </div>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  </body>
+    </div>
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

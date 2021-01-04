@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>node/nvm的安装使用 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">node/nvm的安装使用</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 4, 2021&nbsp;&nbsp;15:30:08</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="nvm的下载，安装与使用"><a href="#nvm的下载，安装与使用" class="headerlink" title="nvm的下载，安装与使用"></a>nvm的下载，安装与使用</h1><h2 id="1，nvm作用："><a href="#1，nvm作用：" class="headerlink" title="1，nvm作用："></a>1，nvm作用：</h2><p>进行nodejs版本控制</p>
+<h2 id="2，nvm下载地址："><a href="#2，nvm下载地址：" class="headerlink" title="2，nvm下载地址："></a>2，nvm下载地址：</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></li>
+</ul>
+<h2 id="3，nvm安装"><a href="#3，nvm安装" class="headerlink" title="3，nvm安装"></a>3，nvm安装</h2><ul>
+<li>nvm-noinstall.zip： 这个是绿色免安装版本，但是使用之前需要配置</li>
+<li>nvm-setup.zip：这是一个安装包，下载之后点击安装，无需配置就可以使用，方便。</li>
+<li>Source code(zip)：zip压缩的源码</li>
+<li>Sourc code(tar.gz)：tar.gz的源码，一般用于Linux系统</li>
+</ul>
+<p>安装步骤属于傻瓜式操作，一直next就行了，在此不做截图演示</p>
+<h2 id="4，配置路径和下载源"><a href="#4，配置路径和下载源" class="headerlink" title="4，配置路径和下载源"></a>4，配置路径和下载源</h2><p>在nvm安装路径下setting.txt文件中配置如下信息：<br>设置nvm路径(相当于setting.txt中的root:)：<br>设置nodejs路径(相当于setting.txt中的path:)：<br>nvm node_mirror <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a><br><img src="https://img-blog.csdnimg.cn/20190521094141670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NDAxNjQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="5，测试nvm"><a href="#5，测试nvm" class="headerlink" title="5，测试nvm"></a>5，测试nvm</h2><p>在电脑命令行输入nvm出现如下信息代表安装成功<br><img src="https://img-blog.csdnimg.cn/20190521094202813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NDAxNjQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="6，常用命令"><a href="#6，常用命令" class="headerlink" title="6，常用命令"></a>6，常用命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nvm list</td>
+<td>查看已经安装的版本</td>
+</tr>
+<tr>
+<td>nvm list installed</td>
+<td>查看已经安装的版本</td>
+</tr>
+<tr>
+<td>nvm list available</td>
+<td>查看网络可以安装的版本</td>
+</tr>
+<tr>
+<td>nvm arch</td>
+<td>查看当前系统的位数和当前nodejs的位数</td>
+</tr>
+<tr>
+<td>nvm install [arch]</td>
+<td>安装指定版本的node 并且可以指定平台 version 版本号 arch 平台</td>
+</tr>
+<tr>
+<td>nvm on</td>
+<td>打开nodejs版本控制</td>
+</tr>
+<tr>
+<td>nvm off</td>
+<td>关闭nodejs版本控制</td>
+</tr>
+<tr>
+<td>nvm proxy [url]</td>
+<td>查看和设置代理</td>
+</tr>
+<tr>
+<td>nvm node_mirror [url]</td>
+<td>设置或者查看setting.txt中的node_mirror，如果不设置的默认是 <a target="_blank" rel="noopener" href="https://nodejs.org/dist/">https://nodejs.org/dist/</a></td>
+</tr>
+<tr>
+<td>nvm npm_mirror [url]</td>
+<td>设置或者查看setting.txt中的npm_mirror,如果不设置的话默认的是：<a target="_blank" rel="noopener" href="https://github.com/npm/npm/archive/">https://github.com/npm/npm/archive/</a>.</td>
+</tr>
+<tr>
+<td>nvm uninstall</td>
+<td>卸载指定的版本</td>
+</tr>
+<tr>
+<td>nvm use [version] [arch]</td>
+<td>切换指定的node版本和位数</td>
+</tr>
+<tr>
+<td>nvm root [path]</td>
+<td>设置和查看root路径</td>
+</tr>
+<tr>
+<td>nvm version</td>
+<td>查看当前的版本</td>
+</tr>
+</tbody></table>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/04/hexo/'hexo%E7%BE%8E%E5%8C%96'/">hexo美化</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>

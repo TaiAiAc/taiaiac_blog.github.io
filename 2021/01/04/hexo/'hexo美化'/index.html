@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>hexo美化 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">hexo美化</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 4, 2021&nbsp;&nbsp;14:53:06</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="添加卡通人物（看板娘）"><a href="#添加卡通人物（看板娘）" class="headerlink" title="添加卡通人物（看板娘）"></a>添加卡通人物（看板娘）</h2><h4 id="下载项目"><a href="#下载项目" class="headerlink" title="下载项目"></a>下载项目</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<h4 id="下载模型"><a href="#下载模型" class="headerlink" title="下载模型"></a>下载模型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install packagename</span><br></pre></td></tr></table></figure>
+<h4 id="设置参数"><a href="#设置参数" class="headerlink" title="设置参数"></a>设置参数</h4><p>打开站点目录下的 _config.yml 文件，添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">    enable: true</span><br><span class="line">    scriptFrom: local</span><br><span class="line">    model: </span><br><span class="line">        use: live2d-widget-model-haruto #模型选择</span><br><span class="line">    display: </span><br><span class="line">        position: right  #模型位置</span><br><span class="line">        width: 150       #模型宽度</span><br><span class="line">        height: 300      #模型高度</span><br><span class="line">    mobile: </span><br><span class="line">        show: false      #是否在手机端显示</span><br></pre></td></tr></table></figure>
+<h2 id="模型预览"><a href="#模型预览" class="headerlink" title="模型预览"></a>模型预览</h2><p>以下模型均是在<code>width: 150</code> 、<code>height: 300</code>下截得</p>
+<h3 id="live2d-widget-model-chitose"><a href="#live2d-widget-model-chitose" class="headerlink" title="live2d-widget-model-chitose"></a>live2d-widget-model-chitose</h3><p><img src="https://img-blog.csdnimg.cn/20190213143712193.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-chitose"></p>
+<h3 id="live2d-widget-model-epsilon2-1"><a href="#live2d-widget-model-epsilon2-1" class="headerlink" title="live2d-widget-model-epsilon2_1"></a>live2d-widget-model-epsilon2_1</h3><p><img src="https://img-blog.csdnimg.cn/20190213143804975.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-epsilon2_1"></p>
+<h3 id="live2d-widget-model-gf"><a href="#live2d-widget-model-gf" class="headerlink" title="live2d-widget-model-gf"></a>live2d-widget-model-gf</h3><p><img src="https://img-blog.csdnimg.cn/20190213143827126.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-gf"></p>
+<h3 id="live2d-widget-model-haru-01"><a href="#live2d-widget-model-haru-01" class="headerlink" title="live2d-widget-model-haru_01"></a>live2d-widget-model-haru_01</h3><p><img src="https://img-blog.csdnimg.cn/20190213143840834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-haru_01"></p>
+<h3 id="live2d-widget-model-haru-02"><a href="#live2d-widget-model-haru-02" class="headerlink" title="live2d-widget-model-haru_02"></a>live2d-widget-model-haru_02</h3><p><img src="https://img-blog.csdnimg.cn/20190213143852738.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-haru_02"></p>
+<h3 id="live2d-widget-model-haruto"><a href="#live2d-widget-model-haruto" class="headerlink" title="live2d-widget-model-haruto"></a>live2d-widget-model-haruto</h3><p><img src="https://img-blog.csdnimg.cn/2019021314390429.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-haruto"></p>
+<h3 id="live2d-widget-model-hibiki"><a href="#live2d-widget-model-hibiki" class="headerlink" title="live2d-widget-model-hibiki"></a>live2d-widget-model-hibiki</h3><p><img src="https://img-blog.csdnimg.cn/2019021314391665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-hibiki"></p>
+<h3 id="live2d-widget-model-hijiki"><a href="#live2d-widget-model-hijiki" class="headerlink" title="live2d-widget-model-hijiki"></a>live2d-widget-model-hijiki</h3><p><img src="https://img-blog.csdnimg.cn/20190213143926652.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-hijiki"></p>
+<h3 id="live2d-widget-model-izumi"><a href="#live2d-widget-model-izumi" class="headerlink" title="live2d-widget-model-izumi"></a>live2d-widget-model-izumi</h3><p><img src="https://img-blog.csdnimg.cn/20190213143935681.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-izumi"></p>
+<h3 id="live2d-widget-model-koharu"><a href="#live2d-widget-model-koharu" class="headerlink" title="live2d-widget-model-koharu"></a>live2d-widget-model-koharu</h3><p><img src="https://img-blog.csdnimg.cn/20190213143946729.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-koharu"></p>
+<h3 id="live2d-widget-model-miku"><a href="#live2d-widget-model-miku" class="headerlink" title="live2d-widget-model-miku"></a>live2d-widget-model-miku</h3><p><img src="https://img-blog.csdnimg.cn/20190213143956339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-miku"></p>
+<h3 id="live2d-widget-model-nico"><a href="#live2d-widget-model-nico" class="headerlink" title="live2d-widget-model-nico"></a>live2d-widget-model-nico</h3><p><img src="https://img-blog.csdnimg.cn/20190213144006466.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-nico"></p>
+<h3 id="live2d-widget-model-nietzsche"><a href="#live2d-widget-model-nietzsche" class="headerlink" title="live2d-widget-model-nietzsche"></a>live2d-widget-model-nietzsche</h3><p><img src="https://img-blog.csdnimg.cn/20190213144016561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-nietzsche"></p>
+<h3 id="live2d-widget-model-ni-j"><a href="#live2d-widget-model-ni-j" class="headerlink" title="live2d-widget-model-ni-j"></a>live2d-widget-model-ni-j</h3><p><img src="https://img-blog.csdnimg.cn/20190213144024314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-ni-j"></p>
+<h3 id="live2d-widget-model-nipsilon"><a href="#live2d-widget-model-nipsilon" class="headerlink" title="live2d-widget-model-nipsilon"></a>live2d-widget-model-nipsilon</h3><p><img src="https://img-blog.csdnimg.cn/2019021314403570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-nipsilon"></p>
+<h3 id="live2d-widget-model-nito"><a href="#live2d-widget-model-nito" class="headerlink" title="live2d-widget-model-nito"></a>live2d-widget-model-nito</h3><p><img src="https://img-blog.csdnimg.cn/20190213144043660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-nito"></p>
+<h3 id="live2d-widget-model-shizuku"><a href="#live2d-widget-model-shizuku" class="headerlink" title="live2d-widget-model-shizuku"></a>live2d-widget-model-shizuku</h3><p><img src="https://img-blog.csdnimg.cn/20190213144051578.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-shizuku"></p>
+<h3 id="live2d-widget-model-tororo"><a href="#live2d-widget-model-tororo" class="headerlink" title="live2d-widget-model-tororo"></a>live2d-widget-model-tororo</h3><p><img src="https://img-blog.csdnimg.cn/20190213144100147.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-tororo"></p>
+<h3 id="live2d-widget-model-tsumiki"><a href="#live2d-widget-model-tsumiki" class="headerlink" title="live2d-widget-model-tsumiki"></a>live2d-widget-model-tsumiki</h3><p><img src="https://img-blog.csdnimg.cn/20190213144108445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-tsumiki"></p>
+<h3 id="live2d-widget-model-unitychan"><a href="#live2d-widget-model-unitychan" class="headerlink" title="live2d-widget-model-unitychan"></a>live2d-widget-model-unitychan</h3><p><img src="https://img-blog.csdnimg.cn/20190213144116297.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-unitychan"></p>
+<h3 id="live2d-widget-model-wanko"><a href="#live2d-widget-model-wanko" class="headerlink" title="live2d-widget-model-wanko"></a>live2d-widget-model-wanko</h3><p><img src="https://img-blog.csdnimg.cn/20190213144124813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-wanko"></p>
+<h3 id="live2d-widget-model-z16"><a href="#live2d-widget-model-z16" class="headerlink" title="live2d-widget-model-z16"></a>live2d-widget-model-z16</h3><p><img src="https://img-blog.csdnimg.cn/20190213144132454.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdfMTIzX3p5,size_16,color_FFFFFF,t_70" alt="live2d-widget-model-z16"></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/04/Node.js/node-nvm%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">node/nvm的安装使用</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/">hexo基本使用</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>

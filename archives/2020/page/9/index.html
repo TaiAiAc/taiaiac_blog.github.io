@@ -1,737 +1,217 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Archives: 2020 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      Z. A. M. 的学习笔记
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的学习笔记</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">归档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2020
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/" class="archive-title">hexo基本使用</a>
-        <p class="archive-date">12-31</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/nodeJS%E5%AD%A6%E4%B9%A0/" class="archive-title">NodeJS学习</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/NodeJS/" class="archive-title">Node JS入门</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue-router/" class="archive-title">vue-router</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/ESLint%20%E4%BD%BF%E7%94%A8%E7%AE%80%E4%BB%8B/" class="archive-title">ESlint使用简介</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/" class="archive-title">接口文档</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" class="archive-title">前端开发规范</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/swiper/%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/" class="archive-title">基本用法</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/file%E6%A8%A1%E5%9D%97/" class="archive-title">file模块</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E4%BA%8B%E4%BB%B6%E5%B0%81%E8%A3%85/" class="archive-title">移动端事件封装</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="archive-title">移动端适配方案</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E6%8F%92%E4%BB%B6/" class="archive-title">插件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E7%99%BE%E5%88%86%E6%AF%94%E5%B8%83%E5%B1%80%E5%8E%9F%E7%90%86/" class="archive-title">百分比布局原理</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E5%95%86%E5%93%81%E6%8E%92%E5%BA%8F/" class="archive-title">商品排序</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/" class="archive-title">事件模型</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/zepto+touch%E6%8F%92%E4%BB%B6/" class="archive-title">zepto+touch插件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/touch%E5%AF%B9%E8%B1%A1%E8%AF%A6%E6%83%85/" class="archive-title">touch对象详情</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/grid/" class="archive-title">grid网格布局</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%B7%A8%E5%9F%9F/" class="archive-title">解决服务端跨域</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/flex/" class="archive-title">flex弹性盒模型</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="archive-title">生命周期</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/" class="archive-title">父子组件传值</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/" class="archive-title">日期处理</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D/" class="archive-title">项目目录介绍</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E6%8C%87%E4%BB%A4/" class="archive-title">指令</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/%E5%8F%91%E5%B8%83%E9%83%A8%E7%BD%B2/" class="archive-title">发布部署</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E7%9A%84%E5%90%84%E7%A7%8D%E5%BC%95%E5%85%A5/" class="archive-title">vue的各种引入</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/" class="archive-title">文件路径问题</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/" class="archive-title">富文本编辑器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E4%B8%AD%E7%9A%84%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="archive-title">事件修饰符</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%AE%9A%E6%97%B6%E5%99%A8/" class="archive-title">定时器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue%E4%B8%AD.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="archive-title">.sync修饰符</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vuex/" class="archive-title">VUEX</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/vue-cli%EF%BC%88vue%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%89/" class="archive-title">vue-cli（脚手架使用）</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/npm%E7%9B%B8%E5%85%B3/" class="archive-title">npm相关</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/prettierrc/" class="archive-title">prettierrc配置</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/map%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/" class="archive-title">map遍历方式</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/eslint%E5%91%BD%E4%BB%A4fix%E6%96%87%E4%BB%B6/" class="archive-title">eslint命令fix文件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue/PM2%E7%9A%84%E4%BD%BF%E7%94%A8/" class="archive-title">PM2使用</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%AD%90%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/" class="archive-title">子父组件传值</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%8B%E4%BB%B6/" class="archive-title">事件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80/" class="archive-title">基础</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%AF%BC%E5%87%BA/" class="archive-title">导出</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="archive-title">文件上传</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%8E%BB%E9%99%A4html%E6%A0%87%E7%AD%BE%E7%9A%84%E7%BA%AF%E6%96%87%E6%9C%AC/" class="archive-title">去除html标签的纯文本</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/eslint%E9%85%8D%E7%BD%AE/" class="archive-title">eslint配置</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%88%86%E9%A1%B5%E5%99%A8/" class="archive-title">分页器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/Vue.config/" class="archive-title">Vue.config</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vue-element-admin/note1/" class="archive-title">笔记</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vscode/%E8%AE%BE%E7%BD%AE/" class="archive-title">设置</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/vscode/%E6%8F%92%E4%BB%B6/" class="archive-title">插件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/sublime/%E6%8F%92%E4%BB%B6/" class="archive-title">插件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/sass/%E6%B7%B7%E5%85%A5/" class="archive-title">混入</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/sass/%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F/" class="archive-title">安装方式</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/jQuery/%E4%BE%A7%E8%BE%B9slide/" class="archive-title">侧边slide</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/jQuery/%E9%80%89%E6%8B%A9%E5%99%A8/" class="archive-title">选择器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/jQuery/scroll%E6%BB%91%E5%8A%A8%E5%AE%9A%E4%BD%8D/" class="archive-title">scroll滑动定位</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/layui/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/" class="archive-title">页面布局</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/layui/%E5%88%86%E9%A1%B5%E5%A4%84%E7%90%86/" class="archive-title">分页处理</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E9%81%AE%E7%BD%A9%E5%B1%82/" class="archive-title">遮罩层</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E8%8D%A7%E5%85%89%E8%BE%B9%E6%A1%86/" class="archive-title">荧光边框</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E8%BE%B9%E6%A1%86%E6%B5%81%E5%85%89/" class="archive-title">边框流光</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E7%82%AB%E5%85%89%E6%8C%89%E9%92%AE/" class="archive-title">炫光按钮</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E6%96%9C%E5%88%87/" class="archive-title">斜切</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E8%AE%BE%E7%BD%AE/" class="archive-title">滚动条设置</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E7%9C%81%E7%95%A5/" class="archive-title">文本溢出省略</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/video%E6%A0%87%E7%AD%BE/" class="archive-title">video标签</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/element-ui/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="archive-title">element-ui快速上手</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/axios/%E8%AF%B7%E6%B1%82%E6%A1%88%E4%BE%8B/" class="archive-title">axios请求案例</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/axios/%E4%BB%8B%E7%BB%8D/" class="archive-title">axios介绍</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/%E5%8E%9F%E7%94%9Fjs/" class="archive-title">原生js Ajax获取远程数据</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/" class="archive-title">jQuery Ajax获取远程数据</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/echarts/%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7%E5%92%8C%E5%BC%95%E5%85%A5/" class="archive-title">echarts基础属性和引入</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/%E6%8C%87%E4%BB%A4%E6%93%8D%E4%BD%9C/" class="archive-title">指令操作</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/" class="archive-title">Axios Ajax获取远程数据</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/" class="archive-title">url模块</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="archive-title">JS中使用 Ajax 来进行请求的几种方式</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E6%80%BB%E7%BB%93/" class="archive-title">查询数据总结</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E8%A1%A8%E6%A0%BC/" class="archive-title">表格</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-title">Mysql学习笔记</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/" class="archive-title">请求数据拼接</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/" class="archive-title">获取视口宽高</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/" class="archive-title">节点选择器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/" class="archive-title">MySQL</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%99%BE%E5%8F%B6%E7%AA%97/" class="archive-title">百叶窗</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/" class="archive-title">正则</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/" class="archive-title">点击特效</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/" class="archive-title">模仿百度分页</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/" class="archive-title">日期格式化</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/" class="archive-title">定时器</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/" class="archive-title">回到顶部</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%80%92%E8%AE%A1%E6%97%B6/" class="archive-title">倒计时</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/window/" class="archive-title">window</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/" class="archive-title">上下左右下拉列表</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/js%E4%BA%8B%E4%BB%B6/" class="archive-title">事件</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/scroll%E7%9B%91%E5%90%AC%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/" class="archive-title">scroll监听加载页面</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/Promise/" class="archive-title">Promise</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="archive-title">Git命令行</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/" class="archive-title">Git手动提交</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ES6/import/" class="archive-title">import</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ES6/EcmaScript%206/" class="archive-title">Ecmascript 6</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/ES6/ES6/" class="archive-title">Ecmascript 6介绍</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/" class="archive-title">Git学习</a>
-        <p class="archive-date">12-30</p>
-      </div>
-    
-  </div>
-</section>
-  
-</main>
-
 <script>
-  (function () {
-    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/archives/2020/page/9/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
 </script>
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+        <div class="main">
+            <div class="post-wrap archive">
+    
+    
+        
+
+        
+            <h3>2020</h3>
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E4%BB%8B%E7%BB%8D/">项目目录介绍</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/vue/%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86/">日期处理</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/vue/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/">父子组件传值</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/vue/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">生命周期</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/flex/">flex弹性盒模型</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/vue/%E8%A7%A3%E5%86%B3%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%B7%A8%E5%9F%9F/">解决服务端跨域</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/grid/">grid网格布局</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/touch%E5%AF%B9%E8%B1%A1%E8%AF%A6%E6%83%85/">touch对象详情</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/zepto+touch%E6%8F%92%E4%BB%B6/">zepto+touch插件</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+        
+
+        
+
+        <article class="archive-item">
+            <a class="archive-item-link" href="/taiaiac.gitee.io/2020/12/30/%E7%A7%BB%E5%8A%A8%E7%AB%AF/%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/">事件模型</a>
+            <span class="archive-item-date">December 30, 2020</span>
+        </article>
+    
+    
+    <nav class="pagination">
+        <a class="page-number" href="/taiaiac.gitee.io/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/archives/2020/page/7/">7</a><a class="page-number" href="/taiaiac.gitee.io/archives/2020/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/taiaiac.gitee.io/archives/2020/page/10/">10</a><a class="page-number" href="/taiaiac.gitee.io/archives/2020/page/11/">11</a>
+    </nav>
+
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  </body>
+    </div>
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":145,"height":315},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
