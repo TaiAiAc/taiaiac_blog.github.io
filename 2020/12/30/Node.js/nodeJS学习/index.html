@@ -1,156 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>NodeJS学习 | Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      NodeJS学习 | Z. A. M. 的学习笔记
+    <link rel="stylesheet" href="/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文档</a>
+                
+                    <a class="menu-item" href="/category">归档</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的学习笔记</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文档</a>
+                
+                    <a class="menu-item" href="/category">归档</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-    <div id="article-banner">
-  <h2>NodeJS学习</h2>
-  <p class="post-date">2020-12-30</p>
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
 </div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><h1 id="Node-js-安装配置"><a href="#Node-js-安装配置" class="headerlink" title="Node.js 安装配置"></a>Node.js 安装配置</h1><p>本文将向大家介绍在 Windows 和 Linux 上安装 Node.js 的方法。</p>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">NodeJS学习</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/NodeJS/">NodeJS</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Node-js-安装配置"><a href="#Node-js-安装配置" class="headerlink" title="Node.js 安装配置"></a>Node.js 安装配置</h1><p>本文将向大家介绍在 Windows 和 Linux 上安装 Node.js 的方法。</p>
 <p>本安装教程以 Node.js v12.15.0 LTS(长期支持版本)版本为例。</p>
 <p>Node.js 安装包及源码下载地址为：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">点击这里</a>。</p>
 <p><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Node.js 安装包及源码下载"></p>
@@ -3086,225 +3134,63 @@
 <p>运行结果完全一样。</p>
 <p>很显然，异步函数是一种非常良好的编程风格，在多次使用异步操作的时候非常实用。</p>
 <p>但是请勿在低于 7.6.0 版本的 node.js 上使用异步函数。</p>
-</section>
-    <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#NodeJS" >
-    <span class="tag-code">NodeJS</span>
-  </a>
 
-      </div>
-    
-    <!-- Tags END -->
-    <!-- NAV START -->
-    
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-    
-      <a class="nav-right" href="/taiaiac.gitee.io/2020/12/30/Node.js/NodeJS/">
-        
-          Node JS入门
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
-  </div>
-
-    <!-- NAV END -->
-    <!-- 打赏 START -->
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
         </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-    <!-- 打赏 END -->
-    <!-- 二维码 START -->
-    
-      <div class="qrcode">
-        <canvas id="share-qrcode"></canvas>
-        <p class="notice">扫描二维码，分享此文章</p>
-      </div>
-    
-    <!-- 二维码 END -->
-    
-      <!-- Gitment START -->
-      <div id="comments"></div>
-      <!-- Gitment END -->
-    
-  </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
-    
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="toc-nav-text">Node.js 安装配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Windows-%E4%B8%8A%E5%AE%89%E8%A3%85-Node-js"><span class="toc-nav-text">Windows 上安装 Node.js</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1%E3%80%81Windows-%E5%AE%89%E8%A3%85%E5%8C%85-msi"><span class="toc-nav-text">1、Windows 安装包(.msi)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2%E3%80%81Windows-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6-exe-%E5%AE%89%E8%A3%85"><span class="toc-nav-text">2、Windows 二进制文件 (.exe)安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95"><span class="toc-nav-text">版本测试</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Linux-%E4%B8%8A%E5%AE%89%E8%A3%85-Node-js"><span class="toc-nav-text">Linux 上安装 Node.js</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8%E5%B7%B2%E7%BC%96%E8%AF%91%E5%A5%BD%E7%9A%84%E5%8C%85"><span class="toc-nav-text">直接使用已编译好的包</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Ubuntu-%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85-Node-js"><span class="toc-nav-text">Ubuntu 源码安装 Node.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Ubuntu-apt-get%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85"><span class="toc-nav-text">Ubuntu apt-get命令安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#CentOS-%E4%B8%8B%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85-Node-js"><span class="toc-nav-text">CentOS 下源码安装 Node.js</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mac-OS-%E4%B8%8A%E5%AE%89%E8%A3%85"><span class="toc-nav-text">Mac OS 上安装</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8"><span class="toc-nav-text">Node.js 创建第一个应用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-Node-js-%E5%BA%94%E7%94%A8"><span class="toc-nav-text">创建 Node.js 应用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%B8%80%E3%80%81%E5%BC%95%E5%85%A5-required-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">步骤一、引入 required 模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%AD%A5%E9%AA%A4%E4%BA%8C%E3%80%81%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-nav-text">步骤二、创建服务器</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-NPM%E7%9A%84%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D"><span class="toc-nav-text">Node.js NPM的使用介绍</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-npm-%E5%91%BD%E4%BB%A4%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">使用 npm 命令安装模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-nav-text">全局安装与本地安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85"><span class="toc-nav-text">本地安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85"><span class="toc-nav-text">全局安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%AE%89%E8%A3%85%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">查看安装信息</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-package-json"><span class="toc-nav-text">使用 package.json</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Package-json-%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E"><span class="toc-nav-text">Package.json 属性说明</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8D%B8%E8%BD%BD%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">卸载模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">更新模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%90%9C%E7%B4%A2%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">搜索模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">创建模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-nav-text">版本号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NPM-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-nav-text">NPM 常用命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D-NPM-%E9%95%9C%E5%83%8F"><span class="toc-nav-text">使用淘宝 NPM 镜像</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-REPL%E4%BA%A4%E4%BA%92%E5%BC%8F%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-nav-text">Node.js REPL交互式解释器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BF%90%E7%AE%97"><span class="toc-nav-text">简单的表达式运算</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F"><span class="toc-nav-text">使用变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%A4%9A%E8%A1%8C%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-nav-text">多行表达式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E5%88%92%E7%BA%BF-%E5%8F%98%E9%87%8F"><span class="toc-nav-text">下划线(_)变量</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#REPL-%E5%91%BD%E4%BB%A4"><span class="toc-nav-text">REPL 命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%81%9C%E6%AD%A2-REPL"><span class="toc-nav-text">停止 REPL</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-nav-text">Node.js 回调函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%98%BB%E5%A1%9E%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B"><span class="toc-nav-text">阻塞代码实例</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%9E%E9%98%BB%E5%A1%9E%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B"><span class="toc-nav-text">非阻塞代码实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6"><span class="toc-nav-text">Node.js 事件循环机制</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-nav-text">事件驱动程序</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84%EF%BC%9F"><span class="toc-nav-text">Node 应用程序是如何工作的？</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-EventEmitter%E7%B1%BB"><span class="toc-nav-text">Node.js EventEmitter类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#EventEmitter-%E7%B1%BB"><span class="toc-nav-text">EventEmitter 类</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="toc-nav-text">类方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6"><span class="toc-nav-text">事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#error-%E4%BA%8B%E4%BB%B6"><span class="toc-nav-text">error 事件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BB%A7%E6%89%BF-EventEmitter"><span class="toc-nav-text">继承 EventEmitter</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-Buffer-%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-nav-text">Node.js Buffer(缓冲区)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Buffer-%E4%B8%8E%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="toc-nav-text">Buffer 与字符编码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-Buffer-%E7%B1%BB"><span class="toc-nav-text">创建 Buffer 类</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%85%A5%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-nav-text">写入缓冲区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%8E%E7%BC%93%E5%86%B2%E5%8C%BA%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">从缓冲区读取数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-1"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-1"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-3"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B0%86-Buffer-%E8%BD%AC%E6%8D%A2%E4%B8%BA-JSON-%E5%AF%B9%E8%B1%A1"><span class="toc-nav-text">将 Buffer 转换为 JSON 对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-2"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-2"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-4"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E5%90%88%E5%B9%B6"><span class="toc-nav-text">缓冲区合并</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-3"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-2"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-3"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-5"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E6%AF%94%E8%BE%83"><span class="toc-nav-text">缓冲区比较</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-4"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-3"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-4"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-6"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%8B%B7%E8%B4%9D%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-nav-text">拷贝缓冲区</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-5"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-4"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-5"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-7"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E8%A3%81%E5%89%AA"><span class="toc-nav-text">缓冲区裁剪</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-5"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-6"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-8"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%BC%93%E5%86%B2%E5%8C%BA%E9%95%BF%E5%BA%A6"><span class="toc-nav-text">缓冲区长度</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-6"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC-7"><span class="toc-nav-text">返回值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-9"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C"><span class="toc-nav-text">方法参考手册</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-Stream-%E6%B5%81"><span class="toc-nav-text">Node.js Stream(流)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%8E%E6%B5%81%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">从流中读取数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%85%A5%E6%B5%81"><span class="toc-nav-text">写入流</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AE%A1%E9%81%93%E6%B5%81"><span class="toc-nav-text">管道流</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%93%BE%E5%BC%8F%E6%B5%81"><span class="toc-nav-text">链式流</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js%E7%9A%84%E6%A8%A1%E5%9D%97%E7%B3%BB%E7%BB%9F"><span class="toc-nav-text">Node.js的模块系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9D%97-1"><span class="toc-nav-text">创建模块</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9A%84%E6%A8%A1%E5%9D%97%E6%94%BE%E5%9C%A8%E5%93%AA%E9%87%8C"><span class="toc-nav-text">服务端的模块放在哪里</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E6%A8%A1%E5%9D%97%E7%BC%93%E5%AD%98%E4%B8%AD%E5%8A%A0%E8%BD%BD"><span class="toc-nav-text">从文件模块缓存中加载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E%E5%8E%9F%E7%94%9F%E6%A8%A1%E5%9D%97%E5%8A%A0%E8%BD%BD"><span class="toc-nav-text">从原生模块加载</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BB%8E%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD"><span class="toc-nav-text">从文件加载</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-nav-text">Node.js 函数的使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="toc-nav-text">匿名函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%87%BD%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A9HTTP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B7%A5%E4%BD%9C%E7%9A%84"><span class="toc-nav-text">函数传递是如何让HTTP服务器工作的</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E8%B7%AF%E7%94%B1"><span class="toc-nav-text">Node.js 路由</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1"><span class="toc-nav-text">Node.js 全局对象</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-nav-text">全局对象与全局变量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#filename"><span class="toc-nav-text">__filename</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-10"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#dirname"><span class="toc-nav-text">__dirname</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-11"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#setTimeout-cb-ms"><span class="toc-nav-text">setTimeout(cb, ms)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-12"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#clearTimeout-t"><span class="toc-nav-text">clearTimeout(t)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-13"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#setInterval-cb-ms"><span class="toc-nav-text">setInterval(cb, ms)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-14"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#console"><span class="toc-nav-text">console</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#console-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">console 方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-15"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#process"><span class="toc-nav-text">process</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-16"><span class="toc-nav-text">实例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%80%80%E5%87%BA%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-nav-text">退出状态码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Process-%E5%B1%9E%E6%80%A7"><span class="toc-nav-text">Process 属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-17"><span class="toc-nav-text">实例</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C-1"><span class="toc-nav-text">方法参考手册</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-18"><span class="toc-nav-text">实例</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-nav-text">Node.js 常用工具</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-callbackify"><span class="toc-nav-text">util.callbackify</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-19"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-inherits"><span class="toc-nav-text">util.inherits</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-inspect"><span class="toc-nav-text">util.inspect</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-isArray-object"><span class="toc-nav-text">util.isArray(object)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-isRegExp-object"><span class="toc-nav-text">util.isRegExp(object)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#util-isDate-object"><span class="toc-nav-text">util.isDate(object)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-nav-text">Node.js 文件系统</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%BC%82%E6%AD%A5%E5%92%8C%E5%90%8C%E6%AD%A5"><span class="toc-nav-text">异步和同步</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-20"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="toc-nav-text">打开文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-7"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-6"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-21"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="toc-nav-text">获取文件信息</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-8"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-7"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-22"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6"><span class="toc-nav-text">写入文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-9"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-8"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-23"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-nav-text">读取文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-10"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-9"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-24"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="toc-nav-text">关闭文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-11"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-10"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-25"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%88%AA%E5%8F%96%E6%96%87%E4%BB%B6"><span class="toc-nav-text">截取文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-12"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-11"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-26"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-nav-text">删除文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-13"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-12"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-27"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95"><span class="toc-nav-text">创建目录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-14"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-13"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-28"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%BB%E5%8F%96%E7%9B%AE%E5%BD%95"><span class="toc-nav-text">读取目录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-15"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-14"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-29"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E7%9B%AE%E5%BD%95"><span class="toc-nav-text">删除目录</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%AD%E6%B3%95-16"><span class="toc-nav-text">语法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-15"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-30"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E6%A8%A1%E5%9D%97%E6%96%B9%E6%B3%95%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C"><span class="toc-nav-text">文件模块方法参考手册</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-GET-POST%E8%AF%B7%E6%B1%82"><span class="toc-nav-text">Node.js GET&#x2F;POST请求</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96GET%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9"><span class="toc-nav-text">获取GET请求内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-31"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96-URL-%E7%9A%84%E5%8F%82%E6%95%B0"><span class="toc-nav-text">获取 URL 的参数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96-POST-%E8%AF%B7%E6%B1%82%E5%86%85%E5%AE%B9"><span class="toc-nav-text">获取 POST 请求内容</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E"><span class="toc-nav-text">基本语法结构说明</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA"><span class="toc-nav-text">实例演示</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%B7%A5%E5%85%B7%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">Node.js 工具模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%80%E3%80%81Node-js-OS-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">一、Node.js OS 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-1"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-nav-text">属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-32"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8C%E3%80%81Node-js-Path-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">二、Node.js Path 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-2"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7-1"><span class="toc-nav-text">属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-33"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%89%E3%80%81Node-js-Net-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">三、Node.js Net 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-3"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#net-Server"><span class="toc-nav-text">net.Server</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6-1"><span class="toc-nav-text">事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#net-Socket"><span class="toc-nav-text">net.Socket</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6-2"><span class="toc-nav-text">事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7-2"><span class="toc-nav-text">属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-4"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-34"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9B%9B%E3%80%81Node-js-DNS-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">四、Node.js DNS 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-5"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#rrtypes"><span class="toc-nav-text">rrtypes</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%94%99%E8%AF%AF%E7%A0%81"><span class="toc-nav-text">错误码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-35"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%94%E3%80%81Node-js-Domain-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">五、Node.js Domain 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95-6"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7-3"><span class="toc-nav-text">属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-36"><span class="toc-nav-text">实例</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-Web-%E6%A8%A1%E5%9D%97"><span class="toc-nav-text">Node.js Web 模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Web-%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%9F"><span class="toc-nav-text">什么是 Web 服务器？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Web-%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84"><span class="toc-nav-text">Web 应用架构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-Node-%E5%88%9B%E5%BB%BA-Web-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-nav-text">使用 Node 创建 Web 服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-Node-%E5%88%9B%E5%BB%BA-Web-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-nav-text">使用 Node 创建 Web 客户端</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-Express-%E6%A1%86%E6%9E%B6"><span class="toc-nav-text">Node.js Express 框架</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Express-%E7%AE%80%E4%BB%8B"><span class="toc-nav-text">Express 简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85-Express"><span class="toc-nav-text">安装 Express</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-Express-%E6%A1%86%E6%9E%B6%E5%AE%9E%E4%BE%8B"><span class="toc-nav-text">第一个 Express 框架实例</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94"><span class="toc-nav-text">请求和响应</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-nav-text">路由</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6"><span class="toc-nav-text">静态文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#GET-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">GET 方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#POST-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">POST 方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-nav-text">文件上传</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Cookie-%E7%AE%A1%E7%90%86"><span class="toc-nav-text">Cookie 管理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-RESTful-API"><span class="toc-nav-text">Node.js RESTful API</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-REST%EF%BC%9F"><span class="toc-nav-text">什么是 REST？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTTP-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">HTTP 方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#RESTful-Web-Services"><span class="toc-nav-text">RESTful Web Services</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA-RESTful"><span class="toc-nav-text">创建 RESTful</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-nav-text">获取用户列表：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7"><span class="toc-nav-text">添加用户</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%98%BE%E7%A4%BA%E7%94%A8%E6%88%B7%E8%AF%A6%E6%83%85"><span class="toc-nav-text">显示用户详情</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7"><span class="toc-nav-text">删除用户</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E5%A4%9A%E8%BF%9B%E7%A8%8B"><span class="toc-nav-text">Node.js 多进程</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#exec-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">exec() 方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-16"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-37"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#spawn-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">spawn() 方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-17"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-38"><span class="toc-nav-text">实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#fork-%E6%96%B9%E6%B3%95"><span class="toc-nav-text">fork() 方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E6%95%B0-18"><span class="toc-nav-text">参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AE%9E%E4%BE%8B-39"><span class="toc-nav-text">实例</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E8%BF%9E%E6%8E%A5-MySQL"><span class="toc-nav-text">Node.js 连接 MySQL</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8"><span class="toc-nav-text">安装驱动</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-text">连接数据库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E%EF%BC%9A"><span class="toc-nav-text">数据库连接参数说明：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C-CURD"><span class="toc-nav-text">数据库操作( CURD )</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">查询数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">更新数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-nav-text">删除数据</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Node-js-%E8%BF%9E%E6%8E%A5-MongoDB"><span class="toc-nav-text">Node.js 连接 MongoDB</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8-1"><span class="toc-nav-text">安装驱动</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-nav-text">创建数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%88%9B%E5%BB%BA%E9%9B%86%E5%90%88"><span class="toc-nav-text">创建集合</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C-CURD-1"><span class="toc-nav-text">数据库操作( CURD )</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE-1"><span class="toc-nav-text">插入数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE-1"><span class="toc-nav-text">查询数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE-1"><span class="toc-nav-text">更新数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE-1"><span class="toc-nav-text">删除数据</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-nav-text">排序</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%9F%A5%E8%AF%A2%E5%88%86%E9%A1%B5"><span class="toc-nav-text">查询分页</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">连接操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%88%A0%E9%99%A4%E9%9B%86%E5%90%88"><span class="toc-nav-text">删除集合</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8-Promise"><span class="toc-nav-text">使用 Promise</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Promise-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">Promise 数据操作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E7%94%A8%E5%BC%82%E6%AD%A5%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%90%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-nav-text">用异步函数实现相同的数据操作</span></a></li></ol></li></ol></li></ol>
-    
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
-</main>
 
-<script>
-  (function () {
-    var url = 'https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Node.js/nodeJS学习/';
-    var banner = ''
-    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
 
-    // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-  })();
-</script>
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/NodeJS/"># NodeJS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/12/30/Node.js/NodeJS/">Node JS入门</a>
+            
+            
+        </section>
 
 
-  <script>
-    var qr = new QRious({
-      element: document.getElementById('share-qrcode'),
-      value: document.location.href
-    });
-  </script>
-
-
-
-  <script>
-    var gitmentConfig = "";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "NodeJS学习",
-        owner: "",
-        repo: "",
-        oauth: {
-          client_id: "",
-          client_secret: ""
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
-  </script>
-
-
-
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+    </article>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

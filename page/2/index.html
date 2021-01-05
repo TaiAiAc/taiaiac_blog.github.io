@@ -1,431 +1,162 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Z.A.M.&#39;s blog">
-  <meta name="keyword" content="hexo-theme, vuejs">
-  
-    <link rel="shortcut icon" href="/taiaiac.gitee.io/css/images/logo.png">
-  
-  <title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Z. A. M. 的学习笔记</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-      Z. A. M. 的学习笔记
+    <link rel="stylesheet" href="/css/style.css">
     
-  </title>
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
-  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
 
-  
+
+
+    <!-- scripts list from _config.yml -->
     
-<link rel="stylesheet" href="/taiaiac.gitee.io/css/plugins/gitment.css">
-
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
-  
+    <script src="/js/script.js"></script>
     
-<script src="/taiaiac.gitee.io/js/qrious.js"></script>
-
-  
-  
+    <script src="/js/tocbot.min.js"></script>
     
-<script src="/taiaiac.gitee.io/js/gitment.js"></script>
-
-  
-  
-  
-    <!-- MathJax support START -->
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <!-- MathJax support END -->
-  
 
 
-  
+
+    
+    
+        
+    
+
+
 <meta name="generator" content="Hexo 5.3.0"></head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文档</a>
+                
+                    <a class="menu-item" href="/category">归档</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <header class="header fixed-header">
-  <div class="header-container">
-    <a class="home-link" href="/taiaiac.gitee.io/">
-      <div class="logo"></div>
-      <span>Z. A. M. 的学习笔记</span>
-    </a>
-    <ul class="right-list">
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/" class="item-link">主页</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/tags/" class="item-link">标签</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/archives/" class="item-link">归档</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/taiaiac.gitee.io/about/" class="item-link">关于</a>
-          
-        </li>
-      
-    </ul>
-    <div class="menu">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </div>
-    <div class="menu-mask">
-      <ul class="menu-list">
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/" class="menu-link">主页</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/tags/" class="menu-link">标签</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/archives/" class="menu-link">归档</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
-              <a href="/taiaiac.gitee.io/about/" class="menu-link">关于</a>
-            
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文档</a>
+                
+                    <a class="menu-item" href="/category">归档</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
 </header>
-
-    <main class="app-body">
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          123456789101112131415161718192021222324252627282930313233343536//实现5天的倒计时//月份会自动加一，（year,month,day,hrs）(年，月，日，小时)let date = new Date(2020, 9, 1, 8 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%80%92%E8%AE%A1%E6%97%B6/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">回到顶部</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          123&lt;div id=&quot;app&quot;&gt;  &lt;button id=&quot;toTop&quot;&gt;goTop&lt;/button&gt;&lt;/div&gt;
-123456789101112131415161718192021222324#app ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/window/">window</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          Window – 代表浏览器中一个打开的窗口：对象属性　　 window //窗口自身　　 window.self //引用本窗户 window=window.self　　 window.name //为窗口命名　　 window.defaultStatus //设定窗户状态栏信息　　 wi ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/window/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/">定时器</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          定时器有以下两个方法：
-setInterval() ：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。
-setTimeout() ：在指定的毫秒数后调用函数或计算表达式。
-
-setInterval()
-setI ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/">日期格式化</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          12345678910111213&lt;script&gt;  //日期格式化函数  dateFormat() &#123;      let now = new Date()      let yyyy = now.getFullYear()      let MM = (now.get ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">模仿百度分页</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">正则</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          (一)限定符1、?:它前面的字符需要出现 0 次或 1 次
-
-例如：used?可以匹配到use和used
-
-2、*:它会匹配 0 个或多个字符
-
-例如：ab*c可以匹配到ac,abc,abbbbbbc
-
-3、+:它会匹配一次及以上的字符
-
-例如：ab+c可以匹配abc,abbbc,而不会匹配 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/">点击特效</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849&lt;/br&gt;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&qu ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">获取视口宽高</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          window 对象和 document 对象
-window 对象表示浏览器打开的窗口，window 可省略，常见的 window 属性有 innerWidth，parseInt，parseFloat
-document 对象属于 window 对象，表示一个 DOM 树
-
-视口宽高123456 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%99%BE%E5%8F%B6%E7%AA%97/">百叶窗</a>
-      </h2>
-      <p class="article-date">December 30, 2020</p>
-      
-        
-  <a href="/taiaiac.gitee.io/taiaiac.gitee.io/tags#Javascript" >
-    <span class="tag-code">Javascript</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777 ...
-        
-      </div>
-      <a class="more" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%99%BE%E5%8F%B6%E7%AA%97/">Read more</a>
-    </article>
-  
-
-  
-    <div class="guide-pager">
-  
-    <a href="/taiaiac.gitee.io/"><span class="page-arrow">← </span>Prev</a>
-  
-  
-    <a href="/taiaiac.gitee.io/page/3/">Next<span class="page-arrow"> →</span></a>
-  
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            
+    <div class="container">
+    <div class="intro">
+        <div class="avatar">
+            <a href="/"><img src="/image/header.jpg"></a>
+        </div>
+        <div class="nickname">Z. A. M.</div>
+        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> The theme comes from <a target="_blank" rel="noopener" href="https://github.com/Siricee">https://github.com/Siricee</a>. <br> By Liu Zijian.</p>
 </div>
-  
-</main>
-
-
-    <div class="scroll-top">
-  <span class="arrow-icon"></span>
+        <div class="links">
+            
+                
+                    <a class="link-item" title="Blog" href="/archives">
+                        
+                        
+                            <i class="iconfont icon-blog"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Category" href="/category">
+                        
+                        
+                            <i class="iconfont icon-category"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Tags" href="/tag">
+                        
+                        
+                            <i class="iconfont icon-tags"></i>
+                        
+                    </a>
+                
+                    <a class="link-item" title="Link" href="/about">
+                        
+                        
+                            <i class="iconfont icon-link"></i>
+                        
+                    </a>
+                
+            
+        </div>
+    </div>
 </div>
-    <footer class="app-footer">
-  <p class="copyright">
-    &copy; 2021 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a target="_blank" rel="noopener" href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
 </footer>
 
-<script>
-  function async(u, c) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-</script>
-<script>
-  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-    FastClick.attach(document.body);
-  })
-</script>
-
-<script>
-  var hasLine = 'true';
-  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
-    $('figure pre').each(function(i, block) {
-      var figure = $(this).parents('figure');
-      if (hasLine === 'false') {
-        figure.find('.gutter').hide();
-      }
-      var lang = figure.attr('class').split(' ')[1] || 'code';
-      var codeHtml = $(this).html();
-      var codeTag = document.createElement('code');
-      codeTag.className = lang;
-      codeTag.innerHTML = codeHtml;
-      $(this).attr('class', '').empty().html(codeTag);
-      figure.attr('data-lang', lang.toUpperCase());
-      hljs.highlightBlock(block);
-    });
-  })
-</script>
-<!-- Baidu Tongji -->
-
-
-<script src="/taiaiac.gitee.io/js/script.js"></script>
-
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+    </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
