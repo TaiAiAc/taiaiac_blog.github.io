@@ -205,7 +205,7 @@
 <li>Git</li>
 </ul>
 <h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>全局安装 H</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">install</span> <span class="selector-tag">-g</span> <span class="selector-tag">hexo-cli</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-指令"><a href="#2-指令" class="headerlink" title="2.指令"></a>2.指令</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &#x27;项目名&#x27;</span><br></pre></td></tr></table></figure>
 <p>新建一个网站。如果没有设置 <code>项目名</code> ，Hexo 默认在目前的文件夹建立网站。</p>
 <h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &#x27;文章名&#x27;</span><br></pre></td></tr></table></figure>
@@ -252,14 +252,14 @@
 <p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">clean</span></span><br></pre></td></tr></table></figure>
 <h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p>Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --watch</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">generate</span> <span class="selector-tag">--watch</span></span><br></pre></td></tr></table></figure>
 <h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><p>您可执行下列的其中一个命令，让 Hexo 在生成完毕后自动部署网站，两个命令的作用是相同的。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate --deploy</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">generate</span> <span class="selector-tag">--deploy</span></span><br><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">deploy</span> <span class="selector-tag">--generate</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>简写</p>
 <p>上面两个命令可以简写为<br>$ hexo g -d<br>$ hexo d -g</p>
 </blockquote>
-<h2 id="3-gitee部署"><a href="#3-gitee部署" class="headerlink" title="3.gitee部署"></a>3.gitee部署</h2><h3 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件_config.yml"></a>配置文件_config.yml</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># _<span class="selector-tag">config</span><span class="selector-class">.yml</span></span><br><span class="line"><span class="selector-tag">url</span>: 远程地址</span><br><span class="line"><span class="selector-tag">root</span>:/仓库名</span><br><span class="line"># _<span class="selector-tag">config</span><span class="selector-class">.yml</span> 拖到最后找到<span class="selector-tag">deploy</span>选项</span><br><span class="line"><span class="selector-tag">type</span>: <span class="selector-tag">git</span></span><br><span class="line"><span class="selector-tag">repo</span>: <span class="selector-tag">https</span>://你的账号:你的密码@你的仓库地址</span><br></pre></td></tr></table></figure>
+<h2 id="3-gitee部署"><a href="#3-gitee部署" class="headerlink" title="3.gitee部署"></a>3.gitee部署</h2><h3 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件_config.yml"></a>配置文件_config.yml</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">远程地址</span></span><br><span class="line"><span class="string">root:/仓库名</span></span><br><span class="line"><span class="comment"># _config.yml 拖到最后找到deploy选项</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">https://你的账号:你的密码@你的仓库地址</span></span><br></pre></td></tr></table></figure>
 <h3 id="自动发布搭建的静态博客"><a href="#自动发布搭建的静态博客" class="headerlink" title="自动发布搭建的静态博客"></a>自动发布搭建的静态博客</h3><p>下载自动发布插件</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">install</span> <span class="selector-tag">hexo-deployer-git</span> <span class="selector-tag">--save</span></span><br></pre></td></tr></table></figure>
 <h4 id="命令行发布"><a href="#命令行发布" class="headerlink" title="命令行发布"></a>命令行发布</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">deploy</span></span><br></pre></td></tr></table></figure>
@@ -311,7 +311,7 @@
                 <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/04/hexo/'hexo%E7%BE%8E%E5%8C%96'/">hexo美化</a>
             
             
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/ES6/ES6/">Ecmascript 6介绍</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/Javascript/js%E4%BA%8B%E4%BB%B6/">事件</a>
             
         </section>
 
