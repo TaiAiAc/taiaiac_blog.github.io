@@ -12,7 +12,7 @@
 
 
 
-<title>滚动条设置 | Z. A. M.’s Blog</title>
+<title>package中的参数 | Z. A. M.’s Blog</title>
 
 
 
@@ -172,7 +172,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">滚动条设置</h1>
+            <h1 class="post-title">package中的参数</h1>
             
                 <div class="post-meta">
                     
@@ -181,14 +181,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        Date: <a href="#">January 7, 2021&nbsp;&nbsp;15:34:16</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/taiaiac.gitee.io/categories/HTML%E3%80%81CSS/">HTML、CSS</a>
+                                <a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
                             
                         </span>
                     
@@ -197,16 +197,19 @@
         </header>
 
         <div class="post-content">
-            <h1 id="webkit-scrollbar-滚动条的设置"><a href="#webkit-scrollbar-滚动条的设置" class="headerlink" title="::-webkit-scrollbar 滚动条的设置"></a>::-webkit-scrollbar 滚动条的设置</h1><ul>
-<li>::-webkit-scrollbar 滚动条整体部分</li>
-<li>::-webkit-scrollbar-thumb 滚动条里面的小方块，能上下左右移动（取决于是垂直滚动条还是水平滚动条）</li>
-<li>::-webkit-scrollbar-track 滚动条的轨道（里面装有 thumb）</li>
-<li>::-webkit-scrollbar-button 滚动条轨道两端的按钮，允许通过点击微调小方块的位置</li>
-<li>::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）</li>
-<li>::-webkit-scrollbar-corner 边角，及两个滚动条的交汇处</li>
-<li>::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件</li>
+            <h1 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;edu&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;app.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev&quot;</span>: <span class="string">&quot;node main.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;babel src -d dist&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;prestart&quot;</span>: <span class="string">&quot;npm run build&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;node dist/app.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span>: [],</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;ISC&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;bootstrap&quot;</span>: <span class="string">&quot;^3.3.7&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;echarts&quot;</span>: <span class="string">&quot;^3.4.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;ejs&quot;</span>: <span class="string">&quot;^2.5.5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;express&quot;</span>: <span class="string">&quot;^4.14.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;font-awesome&quot;</span>: <span class="string">&quot;^4.7.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;jquery&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;nprogress&quot;</span>: <span class="string">&quot;^0.2.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;babel-cli&quot;</span>: <span class="string">&quot;^6.22.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-preset-es2015&quot;</span>: <span class="string">&quot;^6.22.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-register&quot;</span>: <span class="string">&quot;^6.22.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>“scripts”</code>运行指定</p>
+<ul>
+<li>“test”：测试指定</li>
+<li>“dev”：开发环境运行指令</li>
+<li>“build”：执行编译转码等操作，俗称打包</li>
+<li>“prestart”：指令“start”之前的操作指令，在<code>npm start</code>之前执行</li>
+<li>“start”：生产环境的运行指令，即运行编译后的代码</li>
+<li>“poststart”：指令“start”之后的操作指令，在<code>npm start</code>之后执行</li>
 </ul>
-<h5 id="自定义滚动条简单版："><a href="#自定义滚动条简单版：" class="headerlink" title="自定义滚动条简单版："></a>自定义滚动条简单版：</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*定义滚动条的轨道，内阴影及圆角*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span><span class="selector-pseudo">::-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*定义滑块，内阴影及圆角*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="comment">/*width: 10px;*/</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">-webkit-box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#555</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&quot;dependencies&quot;</code>：生产环境依赖</p>
+<p><code>&quot;devDependencies&quot;</code>：开发环境依赖</p>
+
         </div>
 
         
@@ -234,7 +237,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/taiaiac.gitee.io/tags/HTML%E3%80%81CSS/"># HTML、CSS</a>
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
                     
                         
                 </span>
@@ -247,10 +250,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E6%96%9C%E5%88%87/">斜切</a>
             
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E8%8D%A7%E5%85%89%E8%BE%B9%E6%A1%86/">荧光边框</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/07/ES6/24%E4%B8%AA%E8%A7%A3%E5%86%B3%E5%AE%9E%E9%99%85%E9%97%AE%E9%A2%98%E7%9A%84ES6%E4%BB%A3%E7%A0%81%E6%AE%B5/">24个解决实际问题的ES6代码段</a>
             
         </section>
 
