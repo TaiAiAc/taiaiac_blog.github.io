@@ -201,7 +201,7 @@
 <li>Sourc code(tar.gz)：tar.gz的源码，一般用于Linux系统</li>
 </ul>
 <p>安装步骤属于傻瓜式操作，一直next就行了，在此不做截图演示</p>
-<h2 id="4，配置路径和下载源"><a href="#4，配置路径和下载源" class="headerlink" title="4，配置路径和下载源"></a>4，配置路径和下载源</h2><p>在nvm安装路径下setting.txt文件中配置如下信息：<br>设置nvm路径(相当于setting.txt中的root:)：<br>设置nodejs路径(相当于setting.txt中的path:)：<br>nvm node_mirror <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror <a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a><br><img src="https://img-blog.csdnimg.cn/20190521094141670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NDAxNjQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="4，配置路径和下载源"><a href="#4，配置路径和下载源" class="headerlink" title="4，配置路径和下载源"></a>4，配置路径和下载源</h2><p>在nvm安装路径下setting.txt文件中配置如下信息：<br>设置nvm路径(相当于setting.txt中的root:)：<br>设置nodejs路径(相当于setting.txt中的path:)：<br>nvm node_mirror ：<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/node/">https://npm.taobao.org/mirrors/node/</a><br>nvm npm_mirror ：<a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/npm/">https://npm.taobao.org/mirrors/npm/</a><br><img src="https://img-blog.csdnimg.cn/20190521094141670.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NDAxNjQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="5，测试nvm"><a href="#5，测试nvm" class="headerlink" title="5，测试nvm"></a>5，测试nvm</h2><p>在电脑命令行输入nvm出现如下信息代表安装成功<br><img src="https://img-blog.csdnimg.cn/20190521094202813.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0NDAxNjQz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><table>
 <thead>
@@ -267,6 +267,15 @@
 <td>查看当前的版本</td>
 </tr>
 </tbody></table>
+<h2 id="nvm的常用命令"><a href="#nvm的常用命令" class="headerlink" title="nvm的常用命令"></a>nvm的常用命令</h2><ol>
+<li><code>nvm install node</code>：安装最新版的<code>node.js</code>。nvm i == nvm install。</li>
+<li><code>nvm install [version]</code>：安装指定版本的<code>node.js</code> 。</li>
+<li><code>nvm use [version]</code>：使用某个版本的<code>node</code>。</li>
+<li><code>nvm list</code>：列出当前安装了哪些版本的<code>node</code>。</li>
+<li><code>nvm uninstall [version]</code>：卸载指定版本的<code>node</code>。</li>
+<li><code>nvm node_mirror [url]</code>：设置<code>nvm</code>的镜像。</li>
+<li><code>nvm npm_mirror [url]</code>：设置<code>npm</code>的镜像</li>
+</ol>
 <h2 id="我的路径配置"><a href="#我的路径配置" class="headerlink" title="我的路径配置"></a>我的路径配置</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">C</span>:\<span class="selector-tag">Users</span>\52862\<span class="selector-tag">AppData</span>\<span class="selector-tag">Roaming</span>\<span class="selector-tag">nvm</span></span><br></pre></td></tr></table></figure>
 
         </div>
