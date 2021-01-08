@@ -12,7 +12,7 @@
 
 
 
-<title>文件路径问题 | Z. A. M.’s Blog</title>
+<title>重装node的踩坑 | Z. A. M.’s Blog</title>
 
 
 
@@ -172,7 +172,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">文件路径问题</h1>
+            <h1 class="post-title">重装node的踩坑</h1>
             
                 <div class="post-meta">
                     
@@ -181,14 +181,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        Date: <a href="#">January 8, 2021&nbsp;&nbsp;18:10:23</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+                                <a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
                             
                         </span>
                     
@@ -197,17 +197,15 @@
         </header>
 
         <div class="post-content">
-            <h1 id="vue-cli3-项目模板怎么使用-public-目录下的静态文件"><a href="#vue-cli3-项目模板怎么使用-public-目录下的静态文件" class="headerlink" title="vue@cli3 项目模板怎么使用 public 目录下的静态文件"></a>vue@cli3 项目模板怎么使用 public 目录下的静态文件</h1><p><a target="_blank" rel="noopener" href="https://www.suibianlu.com/c/jishu/webqianduan/">WEB 前端</a> 2020-07-07 15</p>
-<p>作为图片最好放在 static 目录下，但是 vue@cli3 没有 static，网上都说放在 public 目录下，行，那就放吧，可问题是图片放了怎么使用</p>
-<p><strong>第一次尝试</strong></p>
-<p>肯定用绝对路径这就不说了，用相对路径，webpack 会解析成 base64，可是绝对路径怎么输都不对，咋回事</p>
-<p><img src="https://dx1.maozhew.com/jishu/p/2020/07/2020070711324642.png" alt="img"></p>
-<p>后面看网上说把前面路径下的 public 路径去掉，好，开发环境没问题了，可打包报错怎么办，就这个我研究了好久。</p>
-<p><strong>解决问题</strong></p>
-<p>网上一大堆牛头不对马嘴的，我也是无语了<br>最后的最后，终于官网找到了完美的解决方案</p>
-<p><img src="https://dx1.maozhew.com/jishu/p/2020/07/2020070711324943.png" alt="img"></p>
-<p>如此设置，完美解决问题，如果你留心观察过，你会发现，index.html 文件的 ico 图标就已经这么使用了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;er&quot;&gt;</span><br><span class="line">    &lt;el-scrollbar style&#x3D;&quot;height:100%&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;ds&quot;&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;sdde&quot; :src&#x3D;&quot;&#96;$&#123;publicPath&#125;imges&#x2F;but_play.png&#96;&quot; \ &#x2F;&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;el-scrollbar&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      publicPath: process.env.BASE_URL,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  components: &#123;&#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+            <h2 id="1、安装nvm后npm不能用"><a href="#1、安装nvm后npm不能用" class="headerlink" title="1、安装nvm后npm不能用"></a>1、安装nvm后npm不能用</h2><p>安装nvm就要卸载清理现有的node，运行npm发现不能用，首先清理电脑上所有关于node的痕迹，重新安装配置，nvm有时候会装不上npm的包，所以要多尝试安装不同版本，反复安装测试。</p>
+<h2 id="2、环境变量设置"><a href="#2、环境变量设置" class="headerlink" title="2、环境变量设置"></a>2、环境变量设置</h2><p>检查npm安装完毕并且命令行生效后，会发现以前下载的全局的包，命令行依旧不生效，原因就是npm的文件位置发生变动，需要修改到现有npm目录下。</p>
+<h3 id="查看npm设置"><a href="#查看npm设置" class="headerlink" title="查看npm设置"></a>查看npm设置</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">config</span> <span class="selector-tag">list</span></span><br></pre></td></tr></table></figure>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">; <span class="selector-tag">cli</span> <span class="selector-tag">configs</span></span><br><span class="line">metrics-registry = &quot;https://registry.npmjs.org/&quot;</span><br><span class="line">scope = &quot;&quot;</span><br><span class="line">user-agent = &quot;npm/6.13.4 node/v12.14.0 win32 x64&quot;</span><br><span class="line"></span><br><span class="line">; <span class="selector-tag">userconfig</span> <span class="selector-tag">C</span>:\<span class="selector-tag">Users</span>\52862\<span class="selector-class">.npmrc</span></span><br><span class="line">cache = &quot;C:\\Users\\52862\\AppData\\Roaming\\nvm\\v12.14.0\\node_cache&quot;</span><br><span class="line">prefix = &quot;C:\\Users\\52862\\AppData\\Roaming\\nvm\\v12.14.0\\node_cache&quot;</span><br><span class="line"></span><br><span class="line">; node bin location = C:\Program Files\nodejs\node.exe</span><br><span class="line">; cwd = C:\Users\52862</span><br><span class="line">; HOME = C:\Users\52862</span><br><span class="line">; &quot;<span class="selector-tag">npm</span> <span class="selector-tag">config</span> <span class="selector-tag">ls</span> <span class="selector-tag">-l</span>&quot; <span class="selector-tag">to</span> <span class="selector-tag">show</span> <span class="selector-tag">all</span> <span class="selector-tag">defaults</span>.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>找到cache，prefix配置项，前往正在使用的node版本目录下创建对应的两个文件夹</p>
+<h4 id="cache对应node-cache"><a href="#cache对应node-cache" class="headerlink" title="cache对应node_cache"></a>cache对应<code>node_cache</code></h4><h4 id="prefix对应node-global"><a href="#prefix对应node-global" class="headerlink" title="prefix对应node_global"></a>prefix对应<code>node_global</code></h4><h3 id="命令行修改配置项"><a href="#命令行修改配置项" class="headerlink" title="命令行修改配置项"></a>命令行修改配置项</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">config</span> <span class="selector-tag">set</span> <span class="selector-tag">cache</span> &quot;对应目录&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">npm</span> <span class="selector-tag">config</span> <span class="selector-tag">set</span> <span class="selector-tag">profix</span> &quot;对应目录&quot;</span><br></pre></td></tr></table></figure>
+<p>修改完成后全局安装所需的全局安装包vue脚手架等等。。。</p>
+
         </div>
 
         
@@ -235,7 +233,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/taiaiac.gitee.io/tags/vue/"># vue</a>
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
                     
                         
                 </span>
@@ -248,10 +246,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E4%B8%AD%E7%9A%84%E4%BF%AE%E9%A5%B0%E7%AC%A6/">事件修饰符</a>
             
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E7%9A%84%E5%90%84%E7%A7%8D%E5%BC%95%E5%85%A5/">vue的各种引入</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/08/ES6/exprot%E4%BD%BF%E7%94%A8/">exprot使用</a>
             
         </section>
 
