@@ -215,6 +215,9 @@
 
 
 <h3 id="exprot-default"><a href="#exprot-default" class="headerlink" title="exprot default"></a>exprot default</h3><p>默认接口，通过 export default 加载导出的成员必须通过 import 变量名 from ‘模块标识’ 进行加载</p>
+<p>通过 export default 暴露的接口成员不能定义的同时直接暴露</p>
+<p>最好先定义，再暴露</p>
+<p>export default 可以直接暴露字面量 ，例如 {} ，123</p>
 <p>一个文件中只有一个默认接口！</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> D = <span class="number">4</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> D</span><br></pre></td></tr></table></figure>
 <h3 id="import-xx-from-‘module’-1"><a href="#import-xx-from-‘module’-1" class="headerlink" title="import  xx  from   ‘module’"></a>import  xx  from   ‘module’</h3><p>配合exprot default 使用</p>
