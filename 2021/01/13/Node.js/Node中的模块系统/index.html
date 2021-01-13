@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Node中的模块系统 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Node中的模块系统</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 13, 2021&nbsp;&nbsp;10:21:09</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Node-中的模块系统"><a href="#Node-中的模块系统" class="headerlink" title="Node 中的模块系统"></a>Node 中的模块系统</h1><p>使用 Node 编写应用程序主要就是在使用：</p>
+<ul>
+<li>EcmaScript 语言<ul>
+<li>没有 Bom 和 Dom</li>
+</ul>
+</li>
+<li>核心模块<ul>
+<li>文件操作的 fs</li>
+<li>http 服务操作的 http</li>
+<li>url 路径操作模块</li>
+<li>path 路径处理模块</li>
+<li>os 操作系统信息</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>art-template</li>
+<li>必须通过 npm 来下载才可以使用</li>
+</ul>
+</li>
+<li>自己写的模块<ul>
+<li>自己创建的文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="什么是模块化"><a href="#什么是模块化" class="headerlink" title="什么是模块化"></a>什么是模块化</h2><ul>
+<li>文件作用域(模块是独立的，在不同的文件使用必须要重新引用)【在 node 中没有全局作用域，它是文件模块作用域】</li>
+<li>通信规则<ul>
+<li>加载 require</li>
+<li>导出 exports</li>
+</ul>
+</li>
+</ul>
+<h2 id="CommomJS-模块规范"><a href="#CommomJS-模块规范" class="headerlink" title="CommomJS 模块规范"></a>CommomJS 模块规范</h2><p>在 Node 中的 JavaScript 还有一个重要的概念，模块系统。</p>
+<ul>
+<li><p>模块作用域</p>
+</li>
+<li><p>使用 require 方法来加载模块</p>
+</li>
+<li><p>使用 exports 接口对象来导出模板中的成员</p>
+<h3 id="加载require"><a href="#加载require" class="headerlink" title="加载require"></a>加载<code>require</code></h3><p>语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> 自定义变量名 = <span class="built_in">require</span>(<span class="string">&#x27;模块&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>作用：</p>
+<ul>
+<li>执行被加载模块中的代码</li>
+<li>得到被加载模块中的<code>exports</code>导出接口对象</li>
+</ul>
+<h3 id="导出exports"><a href="#导出exports" class="headerlink" title="导出exports"></a>导出<code>exports</code></h3><ul>
+<li><p>Node 中是模块作用域，默认文件中所有的成员只在当前模块有效</p>
+</li>
+<li><p>对于希望可以被其他模块访问到的成员，我们需要把这些公开的成员都挂载到<code>exports</code>接口对象中就可以了</p>
+<p>导出多个成员（必须在对象中）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exports</span>.a = <span class="number">123</span></span><br><span class="line"><span class="built_in">exports</span>.b = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;bbb&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exports</span>.c = &#123;</span><br><span class="line">  foo: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">exports</span>.d = <span class="string">&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>导出单个成员（拿到的就是函数，字符串）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>以下情况会覆盖：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="comment">//后者会覆盖前者</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以通过以下方法来导出多个成员：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    foo = <span class="string">&#x27;hello&#x27;</span>,</span><br><span class="line">    add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="模块原理"><a href="#模块原理" class="headerlink" title="模块原理"></a>模块原理</h2></li>
+</ul>
+</li>
+</ul>
+<p>exports 和<code>module.exports</code>的一个引用：</p>
+<p>module.exports 是 require 后 return module.exports 里的内容</p>
+<p>module.exports 始终指向文件导出内存</p>
+<p>给 exports 赋值会断开和 module.exports 之间的引用<br>同理，给 module.exports 重新赋值也会断开</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">exports</span> === <span class="built_in">module</span>.exports);	<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exports</span>.foo = <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="built_in">module</span>.exports.foo = <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line">当给<span class="built_in">exports</span>重新赋值后，<span class="built_in">exports</span>！= <span class="built_in">module</span>.exports.</span><br><span class="line">最终<span class="keyword">return</span>的是<span class="built_in">module</span>.exports,无论<span class="built_in">exports</span>中的成员是什么都没用。</span><br><span class="line">真正去使用的时候：</span><br><span class="line">导出多个成员：<span class="built_in">exports</span>.xxx = xxx</span><br><span class="line">导出多个成员也可以：<span class="built_in">module</span>.exports = &#123;&#125;</span><br><span class="line">导出单个成员：<span class="built_in">module</span>.exports = xxx</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引用服务</span></span><br><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">// 引用模板</span></span><br><span class="line"><span class="keyword">var</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art-template&#x27;</span>);</span><br><span class="line"><span class="comment">// 创建服务</span></span><br><span class="line"><span class="keyword">var</span> server = http.createServer();</span><br><span class="line"><span class="comment">// 公共路径</span></span><br><span class="line"><span class="keyword">var</span> wwwDir = <span class="string">&#x27;D:/app/www&#x27;</span>;</span><br><span class="line">server.on(<span class="string">&#x27;request&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> url = req.url;</span><br><span class="line">    <span class="comment">// 读取文件</span></span><br><span class="line">    fs.readFile(<span class="string">&#x27;./template-apche.html&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">            <span class="keyword">return</span> res.end(<span class="string">&#x27;404 Not Found&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        fs.readdir(wwwDir, <span class="function"><span class="keyword">function</span> (<span class="params">err, files</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (err) &#123;</span><br><span class="line">                <span class="keyword">return</span> res.end(<span class="string">&#x27;Can not find www Dir.&#x27;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 使用模板引擎解析替换data中的模板字符串</span></span><br><span class="line">            <span class="comment">// 去xmpTempleteList.html中编写模板语法</span></span><br><span class="line">            <span class="keyword">var</span> htmlStr = template.render(data.toString(), &#123;</span><br><span class="line">                title: <span class="string">&#x27;D:/app/www/ 的索引&#x27;</span>,</span><br><span class="line">                files:files</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="comment">// 发送响应数据</span></span><br><span class="line">            res.end(htmlStr);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;running....&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="number">1.</span>jQuery中的each 和 原生JavaScript方法forEach的区别：</span><br><span class="line">	提供源头：</span><br><span class="line">    	原生js是es5提供的（不兼容IE8）,</span><br><span class="line">        jQuery的each是jQuery第三方库提供的（如果要使用需要用<span class="number">2</span>以下的版本也就是<span class="number">1.</span>版本）,它的each方法主要用来遍历jQuery实例对象（伪数组）,同时也可以做低版本forEach的替代品,jQuery的实例对象不能使用forEach方法，如果想要使用必须转为数组（[].slice.call(jQuery实例对象)）才能使用</span><br><span class="line"><span class="number">2.</span>模块中导出多个成员和导出单个成员</span><br><span class="line"><span class="number">3.301</span>和<span class="number">302</span>的区别：</span><br><span class="line">	<span class="number">301</span>永久重定向,浏览器会记住</span><br><span class="line">    <span class="number">302</span>临时重定向</span><br><span class="line"><span class="number">4.</span><span class="built_in">exports</span>和<span class="built_in">module</span>.exports的区别:</span><br><span class="line">	每个模块中都有一个<span class="built_in">module</span>对象</span><br><span class="line">    <span class="built_in">module</span>对象中有一个<span class="built_in">exports</span>对象</span><br><span class="line">    我们可以把需要导出的成员都挂载到<span class="built_in">module</span>.exports接口对象中</span><br><span class="line">	也就是<span class="string">`module.exports.xxx = xxx`</span>的方式</span><br><span class="line">    但是每次写太多了就很麻烦，所以Node为了简化代码，就在每一个模块中都提供了一个成员叫<span class="string">`exports`</span></span><br><span class="line">    <span class="string">`exports === module.exports`</span>结果为<span class="literal">true</span>,所以完全可以<span class="string">`exports.xxx = xxx`</span></span><br><span class="line">    当一个模块需要导出单个成员的时候必须使用<span class="string">`module.exports = xxx`</span>的方式，=,使用<span class="string">`exports = xxx`</span>不管用,因为每个模块最终<span class="keyword">return</span>的是<span class="built_in">module</span>.exports,而<span class="built_in">exports</span>只是<span class="built_in">module</span>.exports的一个引用,所以<span class="string">`exports`</span>即使重新赋值,也不会影响<span class="string">`module.exports`</span>。</span><br><span class="line">    有一种赋值方式比较特殊：<span class="string">`exports = module.exports`</span>这个用来新建立引用关系的。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="require-的加载规则"><a href="#require-的加载规则" class="headerlink" title="require 的加载规则"></a>require 的加载规则</h1><ul>
+<li>核心模块<ul>
+<li>模块名</li>
+</ul>
+</li>
+<li>第三方模块<ul>
+<li>模块名</li>
+</ul>
+</li>
+<li>用户自己写的<ul>
+<li>路径</li>
+</ul>
+</li>
+</ul>
+<h2 id="require-的加载规则-1"><a href="#require-的加载规则-1" class="headerlink" title="require 的加载规则"></a>require 的加载规则</h2><ul>
+<li><p>优先从缓存加载</p>
+</li>
+<li><p>判断模块标识符</p>
+<ul>
+<li><p>核心模块</p>
+</li>
+<li><p>自己写的模块（路径形式的模块）</p>
+</li>
+<li><p>第三方模块（node_modules）</p>
+<ul>
+<li><p>第三方模块的标识就是第三方模块的名称（不可能有第三方模块和核心模块的名字一致）</p>
+</li>
+<li><p>npm</p>
+<ul>
+<li>开发人员可以把写好的框架库发布到 npm 上</li>
+<li>使用者通过 npm 命令来下载</li>
+</ul>
+</li>
+<li><p>使用方式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 名称 = <span class="built_in">require</span>(<span class="string">&#x27;npm install【下载包】 的包名&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>node_modules/express/package.json main</li>
+<li>如果 package.json 或者 main 不成立，则查找被选择项：index.js</li>
+<li>如果以上条件都不满足，则继续进入上一级目录中的 node_modules 按照上面的规则依次查找，直到当前文件所属此盘根目录都找不到最后报错</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果非路径形式的标识</span></span><br><span class="line"><span class="comment">// 路径形式的标识：</span></span><br><span class="line"><span class="comment">// ./  当前目录 不可省略</span></span><br><span class="line"><span class="comment">// ../  上一级目录  不可省略</span></span><br><span class="line"><span class="comment">//  /xxx也就是D:/xxx</span></span><br><span class="line"><span class="comment">// 带有绝对路径几乎不用（D:/a/foo.js）</span></span><br><span class="line"><span class="comment">// 首位表示的是当前文件模块所属磁盘根目录</span></span><br><span class="line"><span class="comment">// require(&#x27;./a&#x27;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 核心模块</span></span><br><span class="line"><span class="comment">// 核心模块本质也是文件，核心模块文件已经被编译到了二进制文件中了，我们只需要按照名字来加载就可以了</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 第三方模块</span></span><br><span class="line"><span class="comment">// 凡是第三方模块都必须通过npm下载（npm i node_modules），使用的时候就可以通过require(&#x27;包名&#x27;)来加载才可以使用</span></span><br><span class="line"><span class="comment">// 第三方包的名字不可能和核心模块的名字是一样的</span></span><br><span class="line"><span class="comment">// 既不是核心模块，也不是路径形式的模块</span></span><br><span class="line"><span class="comment">//      先找到当前文所述目录的node_modules</span></span><br><span class="line"><span class="comment">//      然后找node_modules/art-template目录</span></span><br><span class="line"><span class="comment">//      node_modules/art-template/package.json</span></span><br><span class="line"><span class="comment">//      node_modules/art-template/package.json中的main属性</span></span><br><span class="line"><span class="comment">//      main属性记录了art-template的入口模块</span></span><br><span class="line"><span class="comment">//      然后加载使用这个第三方包</span></span><br><span class="line"><span class="comment">//      实际上最终加载的还是文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//      如果package.json不存在或者mian指定的入口模块不存在</span></span><br><span class="line"><span class="comment">//      则node会自动找该目录下的index.js</span></span><br><span class="line"><span class="comment">//      也就是说index.js是一个备选项，如果main没有指定，则加载index.js文件</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 如果条件都不满足则会进入上一级目录进行查找</span></span><br><span class="line"><span class="comment">// 注意：一个项目只有一个node_modules，放在项目根目录中，子目录可以直接调用根目录的文件</span></span><br><span class="line"><span class="keyword">var</span> template = <span class="built_in">require</span>(<span class="string">&#x27;art-template&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="模块标识中的-和文件操作路径中的"><a href="#模块标识中的-和文件操作路径中的" class="headerlink" title="模块标识中的 / 和文件操作路径中的 /"></a>模块标识中的 <code>/</code> 和文件操作路径中的 <code>/</code></h2><p>文件操作路径：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 咱们所使用的所有文件操作的API都是异步的</span></span><br><span class="line"><span class="comment">// 就像ajax请求一样</span></span><br><span class="line"><span class="comment">// 读取文件</span></span><br><span class="line"><span class="comment">// 文件操作中 ./ 相当于当前模块所处磁盘根目录</span></span><br><span class="line"><span class="comment">// ./index.txt    相对于当前目录</span></span><br><span class="line"><span class="comment">// /index.txt    相对于当前目录</span></span><br><span class="line"><span class="comment">// /index.txt   绝对路径,当前文件模块所处根目录</span></span><br><span class="line"><span class="comment">// d:express/index.txt   绝对路径</span></span><br><span class="line">fs.readFile(<span class="string">&#x27;./index.txt&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">console</span>.log(<span class="string">&#x27;读取失败&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data.toString())</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>模块操作路径：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在模块加载中，相对路径中的./不能省略</span></span><br><span class="line"><span class="comment">// 这里省略了.也是磁盘根目录</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">&#x27;./index&#x27;</span>)(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/13/Node.js/npm/">npm</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/13/Node.js/Node%20%E4%BB%8B%E7%BB%8D/">介绍</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>

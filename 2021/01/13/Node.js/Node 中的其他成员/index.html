@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Node 中的其他成员 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Node 中的其他成员</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 13, 2021&nbsp;&nbsp;10:24:51</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Node-中的其他成员（dirname，filename）"><a href="#Node-中的其他成员（dirname，filename）" class="headerlink" title="Node 中的其他成员（dirname，filename）"></a>Node 中的其他成员（dirname，filename）</h1><p>在每个模块中，除了<code>require</code>,<code>exports</code>等模块相关的 API 之外，还有两个特殊的成员：</p>
+<ul>
+<li><code>__dirname</code>，是一个成员，可以用来<strong>动态</strong>获取当前文件模块所属目录的绝对路径</li>
+<li><code>__filename</code>，可以用来<strong>动态</strong>获取当前文件的绝对路径（包含文件名）</li>
+<li><code>__dirname</code>和<code>filename</code>是不受执行 node 命令所属路径影响的</li>
+</ul>
+<p>在文件操作中，使用相对路径是不可靠的，因为 node 中文件操作的路径被设计为相对于执行 node 命令所处的路径。</p>
+<p>所以为了解决这个问题，只需要把相对路径变为绝对路径（绝对路径不受任何影响）就可以了。</p>
+<p>就可以使用<code>__dirname</code>或者<code>__filename</code>来帮助我们解决这个问题</p>
+<p>在拼接路径的过程中，为了避免手动拼接带来的一些低级错误，推荐使用<code>path.join()</code>来辅助拼接</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log(__dirname + &#x27;a.txt&#x27;);</span></span><br><span class="line"><span class="comment">// path.join方法会将文件操作中的相对路径都统一的转为动态的绝对路径</span></span><br><span class="line">fs.readFile(path.join(__dirname + <span class="string">&#x27;/a.txt&#x27;</span>), <span class="string">&#x27;utf8&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="keyword">throw</span> err</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>补充：模块中的路径标识和这里的路径没关系，不受影响（就是相对于文件模块）</p>
+</blockquote>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p><strong>模块中的路径标识和文件操作中的相对路径标识不一致</strong></p>
+<p><strong>模块中的路径标识就是相对于当前文件模块，不受 node 命令所处路径影响</strong></p>
+</blockquote>
+<h2 id="path路径操作模块"><a href="#path路径操作模块" class="headerlink" title="path路径操作模块"></a>path路径操作模块</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="https://nodejs.org/docs/latest-v13.x/api/path.html">https://nodejs.org/docs/latest-v13.x/api/path.html</a></p>
+</blockquote>
+<ul>
+<li>path.basename：获取路径的文件名，默认包含扩展名</li>
+<li>path.dirname：获取路径中的目录部分</li>
+<li>path.extname：获取一个路径中的扩展名部分</li>
+<li>path.parse：把路径转换为对象<ul>
+<li>root：根路径</li>
+<li>dir：目录</li>
+<li>base：包含后缀名的文件名</li>
+<li>ext：后缀名</li>
+<li>name：不包含后缀名的文件名</li>
+</ul>
+</li>
+<li>path.join：拼接路径</li>
+<li>path.isAbsolute：判断一个路径是否为绝对路径</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/13/Node.js/Express%EF%BC%88%E5%BF%AB%E9%80%9F%E7%9A%84%EF%BC%89/">Express(快速的)</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/13/Node.js/npm/">npm</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>

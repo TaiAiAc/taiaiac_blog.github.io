@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>Express中间件 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">Express中间件</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">January 13, 2021&nbsp;&nbsp;10:34:21</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/NodeJS/">NodeJS</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Express-中间件"><a href="#Express-中间件" class="headerlink" title="Express 中间件"></a>Express 中间件</h1><h2 id="1-中间件的概念"><a href="#1-中间件的概念" class="headerlink" title="1.中间件的概念"></a>1.中间件的概念</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/guide/using-middleware.html">http://expressjs.com/en/guide/using-middleware.html</a></p>
+</blockquote>
+<p>中间件：把很复杂的事情分割成单个，然后依次有条理的执行。就是一个中间处理环节，有输入，有输出。</p>
+<p>说的通俗易懂点儿，中间件就是一个（从请求到响应调用的方法）方法。</p>
+<p>把数据从请求到响应分步骤来处理，每一个步骤都是一个中间处理环节。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cookie = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/cookie&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> query = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/query&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> postBody = <span class="built_in">require</span>(<span class="string">&#x27;./expressPtoject/post-body&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> server = http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">// 解析请求地址中的get参数</span></span><br><span class="line">	<span class="comment">// var obj = url.parse(req.url,true);</span></span><br><span class="line">	<span class="comment">// req.query = obj.query;</span></span><br><span class="line">	query(req,res);	<span class="comment">//中间件</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 解析请求地址中的post参数</span></span><br><span class="line">	req.body = &#123;</span><br><span class="line">		foo:<span class="string">&#x27;bar&#x27;</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(req.url === <span class="string">&#x27;xxx&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">// 处理请求</span></span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;3000 runing...&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>同一个请求对象所经过的中间件都是同一个请求对象和响应对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"><span class="comment">// 中间件：处理请求的，本质就是个函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在 Express 中，对中间件有几种分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当请求进来，会从第一个中间件开始进行匹配</span></span><br><span class="line"><span class="comment">//    如果匹配，则进来</span></span><br><span class="line"><span class="comment">//       如果请求进入中间件之后，没有调用 next 则代码会停在当前中间件</span></span><br><span class="line"><span class="comment">//       如果调用了 next 则继续向后找到第一个匹配的中间件</span></span><br><span class="line"><span class="comment">//    如果不匹配，则继续判断匹配下一个中间件</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 不关心请求路径和请求方法的中间件</span></span><br><span class="line"><span class="comment">// 也就是说任何请求都会进入这个中间件</span></span><br><span class="line"><span class="comment">// 中间件本身是一个方法，该方法接收三个参数：</span></span><br><span class="line"><span class="comment">//    Request 请求对象</span></span><br><span class="line"><span class="comment">//    Response 响应对象</span></span><br><span class="line"><span class="comment">//    next     下一个中间件</span></span><br><span class="line"><span class="comment">// 当一个请求进入一个中间件之后，如果不调用 next 则会停留在当前中间件</span></span><br><span class="line"><span class="comment">// 所以 next 是一个方法，用来调用下一个中间件的</span></span><br><span class="line"><span class="comment">// 调用 next 方法也是要匹配的（不是调用紧挨着的那个）</span></span><br><span class="line">app.get(<span class="string">&#x27;/abc&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 同一个请求的req和res是一样的，</span></span><br><span class="line">  <span class="comment">// 可以前面存储下面调用</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/abc&#x27;</span>)</span><br><span class="line">  <span class="comment">// req.foo = &#x27;bar&#x27;;</span></span><br><span class="line">  req.body = &#123;</span><br><span class="line">    name: <span class="string">&#x27;xiaoxiao&#x27;</span>,</span><br><span class="line">    age: <span class="number">18</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br><span class="line">app.get(<span class="string">&#x27;/abc&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// console.log(req.foo);</span></span><br><span class="line">  <span class="built_in">console</span>.log(req.body)</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/abc&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;app is running at port 3000.&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="2-中间件的分类："><a href="#2-中间件的分类：" class="headerlink" title="2.中间件的分类："></a>2.中间件的分类：</h2><h3 id="应用程序级别的中间件"><a href="#应用程序级别的中间件" class="headerlink" title="应用程序级别的中间件"></a>应用程序级别的中间件</h3><p>万能匹配（不关心任何请求路径和请求方法的中间件）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>, <span class="built_in">Date</span>.now())</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>关心请求路径和请求方法的中间件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Time&#x27;</span>, <span class="built_in">Date</span>.now())</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="路由级别的中间件严格匹配请求路径和请求方法的中间件"><a href="#路由级别的中间件严格匹配请求路径和请求方法的中间件" class="headerlink" title="路由级别的中间件严格匹配请求路径和请求方法的中间件"></a>路由级别的中间件严格匹配请求路径和请求方法的中间件</h3><p>get:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;get&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>post：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.post(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;post&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>put:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.put(<span class="string">&#x27;/user&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;put&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>delete:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">app.delete(<span class="string">&#x27;/delete&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">&#x27;delete&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>)</span><br><span class="line"><span class="keyword">var</span> app = express()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中间件：处理请求，本质就是个函数</span></span><br><span class="line"><span class="comment">// 在express中，对中间件有几种分类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1 不关心任何请求路径和请求方法的中间件</span></span><br><span class="line"><span class="comment">// 也就是说任何请求都会进入这个中间件</span></span><br><span class="line"><span class="comment">// 中间件本身是一个方法，该方法接收三个参数</span></span><br><span class="line"><span class="comment">// Request 请求对象</span></span><br><span class="line"><span class="comment">// Response 响应对象</span></span><br><span class="line"><span class="comment">// next 下一个中间件</span></span><br><span class="line"><span class="comment">// // 全局匹配中间件</span></span><br><span class="line"><span class="comment">// app.use(function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(&#x27;1&#x27;);</span></span><br><span class="line"><span class="comment">// 	// 当一个请求进入中间件后</span></span><br><span class="line"><span class="comment">// 	// 如果需要请求另外一个方法则需要使用next（）方法</span></span><br><span class="line"><span class="comment">// 	next();</span></span><br><span class="line"><span class="comment">// 	// next是一个方法，用来调用下一个中间件</span></span><br><span class="line"><span class="comment">//  // 注意：next（）方法调用下一个方法的时候，也会匹配（不是调用紧挨着的哪一个）</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"><span class="comment">// app.use(function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(&#x27;2&#x27;);</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// // 2 关心请求路径的中间件</span></span><br><span class="line"><span class="comment">// // 以/xxx开头的中间件</span></span><br><span class="line"><span class="comment">// app.use(&#x27;/a&#x27;,function(req, res, next) &#123;</span></span><br><span class="line"><span class="comment">// 	console.log(req.url);</span></span><br><span class="line"><span class="comment">// &#125;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3 严格匹配请求方法和请求路径的中间件</span></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">app.post(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;/a&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;app is running at port 3000.&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="3-错误处理中间件"><a href="#3-错误处理中间件" class="headerlink" title="3.错误处理中间件"></a>3.错误处理中间件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">err, req, res, next</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.error(err, stack)</span><br><span class="line">  res.status(<span class="number">500</span>).send(<span class="string">&#x27;Something broke&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>配置使用 404 中间件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 要写在最底部，最后匹配</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.render(<span class="string">&#x27;404.html&#x27;</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>配置全局错误处理中间件:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/a&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">	fs.readFile(<span class="string">&#x27;.a/bc&#x27;</span>, <span class="function"><span class="title">funtion</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> (err) &#123;</span><br><span class="line">        	<span class="comment">// 当调用next()传参后，则直接进入到全局错误处理中间件方法中</span></span><br><span class="line">        	<span class="comment">// 当发生全局错误的时候，我们可以调用next传递错误对象</span></span><br><span class="line">        	<span class="comment">// 然后被全局错误处理中间件匹配到并进行处理</span></span><br><span class="line">        	<span class="comment">// 带有参数的next函数会直接跳过去找到四个参数的中间件</span></span><br><span class="line">			next(err);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//全局错误处理中间件</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span>(<span class="params">err,req,res,next</span>)</span>&#123;</span><br><span class="line">    res.status(<span class="number">500</span>).json(&#123;</span><br><span class="line">        err_code:<span class="number">500</span>,</span><br><span class="line">        message:err.message</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="4-解析处理表单-POST-请求体中间件"><a href="#4-解析处理表单-POST-请求体中间件" class="headerlink" title="4.解析处理表单 POST 请求体中间件"></a>4.解析处理表单 POST 请求体中间件</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="function">(<span class="params">req, res, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 由于表单 POST 请求可能会携带大量的数据，所以在进行请求提价的时候会分为多次提交</span></span><br><span class="line">  <span class="comment">// 具体分为多少次进行提交不一定，取决于数据量的大小</span></span><br><span class="line">  <span class="comment">// 在 Node 中，对于处理这种不确定的数据，使用事件的形式处理</span></span><br><span class="line">  <span class="comment">// 这里可以通过监听 req 对象的 data 事件，然后通过对应的回调处理函数中的参数 chunk 拿到每一次接收到的数据</span></span><br><span class="line">  <span class="comment">//        data 事件触发多少次，不一定</span></span><br><span class="line">  <span class="comment">// 当数据接收完毕之后，会自动触发 req 对象的 end 事件，然后就可以在 end 事件中使用接收到的表单 POST 请求体</span></span><br><span class="line">  <span class="keyword">let</span> data = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  req.on(<span class="string">&#x27;data&#x27;</span>, <span class="function"><span class="params">chunk</span> =&gt;</span> &#123;</span><br><span class="line">    data += chunk</span><br><span class="line">  &#125;)</span><br><span class="line">  req.on(<span class="string">&#x27;end&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 手动给 req 对象挂载一个 body 属性，值就是当前表单 POST 请求体对象</span></span><br><span class="line">    <span class="comment">// 在后续的处理中间件中，就可以直接使用 req.body 了</span></span><br><span class="line">    <span class="comment">// 因为在同一个请求中，流通的都是同一个 req 和 res 对象</span></span><br><span class="line">    req.body = queryString.parse(data)</span><br><span class="line">    next()</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 挂载路由容器（路由容器中组织了网站功能处理路由中间件）</span></span><br><span class="line">app.use(router)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-内置中间件"><a href="#5-内置中间件" class="headerlink" title="5.内置中间件"></a>5.内置中间件</h2><ul>
+<li>express.static(提供静态文件)<ul>
+<li><a target="_blank" rel="noopener" href="http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express">http://expressjs.com/en/starter/static-files.html#serving-static-files-in-express</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-第三方中间件"><a href="#6-第三方中间件" class="headerlink" title="6.第三方中间件"></a>6.第三方中间件</h2><blockquote>
+<p>参考文档：<a target="_blank" rel="noopener" href="http://expressjs.com/en/resources/middleware.html">http://expressjs.com/en/resources/middleware.html</a></p>
+</blockquote>
+<ul>
+<li>body-parser</li>
+<li>compression</li>
+<li>cookie-parser</li>
+<li>mogran</li>
+<li>response-time</li>
+<li>server-static</li>
+<li>session</li>
+</ul>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/NodeJS/"># NodeJS</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/13/Node.js/MongoDB/">MongoDB</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/13/Node.js/%E5%B0%81%E8%A3%85%E5%BC%82%E6%AD%A5API/">封装异步API</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
