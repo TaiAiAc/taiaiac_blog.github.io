@@ -12,7 +12,7 @@
 
 
 
-<title>Promise | Z. A. M.’s Blog</title>
+<title>Z. A. M.’s Blog</title>
 
 
 
@@ -106,11 +106,73 @@
       <div class="main"><div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">Promise</h1>
+            <h1 class="post-title"></h1>
             
                 <div class="post-meta">
                     
@@ -119,26 +181,51 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">December 30, 2020&nbsp;&nbsp;14:56:03</a>
+                        Date: <a href="#">January 13, 2021&nbsp;&nbsp;13:51:49</a>
                         </span>
                     
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/Javascript/">Javascript</a>
-                            
-                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            <p>1、promise 是处理异步执行结果的一种方案<br>2、promise 是一个对象，是一个容器，用于保存异步执行的结果<br>3、promise 有两种状态，<br>1）正在获得异步执行的结果（pendding）<br>2）已经获得异步执行的结果（正确的结果，异常的结果）<br>3）promise 使用 resolve 函数保存正确的结果<br>4）promise 使用 reject 函数保存错误或异常的结果<br>4、可以使用 promise 自带的函数获得异步执行的结果</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">promise</span></span><br><span class="line">.then(function(res)&#123;log(res是正确的结果)&#125;)</span><br><span class="line">.catch(function(e)&#123;log(e是异常的结果)&#125;)</span><br></pre></td></tr></table></figure>
-<p>5、可以使用 async 和 await 处理 promise 的结果</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">async</span> <span class="selector-tag">function</span> <span class="selector-tag">get</span>()&#123;</span><br><span class="line">    try&#123;</span><br><span class="line">        let res = await return promise()</span><br><span class="line">        //<span class="selector-tag">res</span>是<span class="selector-tag">promise</span>对象保存的异步正确的结果</span><br><span class="line">    &#125;catch(e)&#123;return e&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h4 id="项目整体文件说明"><a href="#项目整体文件说明" class="headerlink" title="项目整体文件说明"></a>项目整体文件说明</h4><ul>
+<li><code>config</code> 配置文件目录<ul>
+<li><code>default.json</code> 默认配置文件（其中包含数据库配置，jwt配置）</li>
+</ul>
+</li>
+<li><code>dao</code> 数据访问层，存放对数据库的增删改查操作<ul>
+<li><code>DAO.js</code> 提供的公共访问数据库的方法</li>
+</ul>
+</li>
+<li><code>models</code> 存放具体数据库 ORM 模型文件</li>
+<li><code>modules</code> 当前项目模块<ul>
+<li><code>authorization.js</code> API权限验证模块</li>
+<li><code>database.js</code> 数据库模块（数据库加载基于 nodejs-orm2 库加载）</li>
+<li><code>passport.js</code> 基于 passport 模块的登录搭建</li>
+<li><code>resextra.js</code> API 统一返回结果接口</li>
+</ul>
+</li>
+<li><code>node_modules</code> 项目依赖的第三方模块</li>
+<li><code>routes</code> 统一路由<ul>
+<li><code>api</code> 提供 api 接口</li>
+<li><code>mapp</code> 提供移动APP界面</li>
+<li><code>mweb</code> 提供移动web站点</li>
+</ul>
+</li>
+<li><code>services</code> 服务层，业务逻辑代码在这一层编写，通过不同的接口获取的数据转换成统一的前端所需要的数据</li>
+<li><code>app.js</code> 主项目入口文件</li>
+<li><code>package.json</code> 项目配置文件</li>
+</ul>
+<h4 id="项目环境"><a href="#项目环境" class="headerlink" title="项目环境"></a>项目环境</h4><h5 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h5><p>​        Node.js + MySQL</p>
+<h5 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h5><p>​        数据库文件在：db -&gt; mysdb.sql</p>
+<p>​        创建数据库mydb，可通过新建查询执行mysdb.sql下的SQL语句建立数据库，数据库表</p>
+<p>​        数据库连接名：root    密码： 123456</p>
+<p>​            可在test -&gt; configs -&gt; config.js 修改</p>
+<h5 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h5><p>​        安装依赖： npm install</p>
+<p>​        启动项目 ：node app.js</p>
+
         </div>
 
         
@@ -165,10 +252,6 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
-                    
-                        <a href="/taiaiac.gitee.io/tags/Javascript/"># Javascript</a>
-                    
-                        
                 </span>
             </div>
             <div>
@@ -179,10 +262,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/">hexo基本使用</a>
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/13/Node.js/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%8F%92%E4%BB%B6/">文件上传插件</a>
             
             
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/ES6/EcmaScript%206/">Ecmascript 6</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/13/Node.js/node%E4%B8%AD%E4%BD%BF%E7%94%A8MySQL/">node中使用MySQL</a>
             
         </section>
 
