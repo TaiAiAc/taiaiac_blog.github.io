@@ -188,7 +188,7 @@
                         <span class="post-category">
                     Category:
                             
-                                <a href="/taiaiac.gitee.io/categories/vue/">vue</a>
+                                <a href="/taiaiac.gitee.io/categories/vuex/">vuex</a>
                             
                         </span>
                     
@@ -299,7 +299,7 @@
 <li>action — mapActions</li>
 </ul>
 <h3 id="使用前引入"><a href="#使用前引入" class="headerlink" title="使用前引入"></a>使用前引入</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//import &#123; 辅助函数 &#125; from &#x27;vuex&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="1、mapState"><a href="#1、mapState" class="headerlink" title="1、mapState"></a>1、mapState</h3><p>​ 快速获取到 state 中的参数,当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性。</p>
+<h3 id="1、mapState"><a href="#1、mapState" class="headerlink" title="1、mapState"></a>1、mapState</h3><p> 快速获取到 state 中的参数,当一个组件需要获取多个状态时候，将这些状态都声明为计算属性会有些重复和冗余。为了解决这个问题，我们可以使用 mapState 辅助函数帮助我们生成计算属性。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在单独构建的版本中辅助函数为 Vuex.mapState</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">&#x27;vuex&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  computed: mapState(&#123;</span><br><span class="line">    <span class="comment">// 箭头函数可使代码更简练</span></span><br><span class="line">    count: <span class="function"><span class="params">state</span> =&gt;</span> state.count,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 传字符串参数 &#x27;count&#x27; 等同于 `state =&gt; state.count`</span></span><br><span class="line">    countAlias: <span class="string">&#x27;count&#x27;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 为了能够使用 `this` 获取局部状态，必须使用常规函数</span></span><br><span class="line">    countPlusLocalState (state) &#123;</span><br><span class="line">      <span class="keyword">return</span> state.count + <span class="built_in">this</span>.localCount</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
 <p>当映射的计算属性的名称与 state 的子节点名称相同时，我们也可以给 mapState 传一个字符串数组。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">computed: mapState([</span><br><span class="line">  <span class="comment">// 映射 this.count 为 store.state.count</span></span><br><span class="line">  <span class="string">&#x27;count&#x27;</span>,</span><br><span class="line">])</span><br></pre></td></tr></table></figure>
@@ -347,7 +347,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/taiaiac.gitee.io/tags/vue/"># vue</a>
+                        <a href="/taiaiac.gitee.io/tags/vuex/"># vuex</a>
                     
                         
                 </span>
@@ -360,10 +360,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/vue/map%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/">map遍历方式</a>
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/vue/prettierrc/">prettierrc配置</a>
             
             
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E4%B8%AD.sync%E4%BF%AE%E9%A5%B0%E7%AC%A6/">.sync修饰符</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/vue/vue-cli%EF%BC%88vue%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%89/">vue-cli（脚手架使用）</a>
             
         </section>
 
