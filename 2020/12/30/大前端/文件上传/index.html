@@ -106,6 +106,68 @@
       <div class="main"><div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -145,15 +207,19 @@
 <p>name：上传的文件字段名</p>
 <p>limit：控制文件上传的数量</p>
 <p>drag：是否启用拖拽上传</p>
-<p>1、获取 token</p>
-<p>‘js-cookie’是组件</p>
+<h3 id="1、获取-token"><a href="#1、获取-token" class="headerlink" title="1、获取 token"></a>1、获取 token</h3><p>‘js-cookie’是组件</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cookies <span class="keyword">from</span> <span class="string">&#x27;js-cookie&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> TokenKey = <span class="string">&#x27;accessToken&#x27;</span></span><br><span class="line"><span class="comment">//获取</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getToken</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Cookies.get(TokenKey)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//写入</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">setToken</span>(<span class="params">token</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Cookies.set(TokenKey, token)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">removeToken</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Cookies.remove(TokenKey)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2、写入 token 到 headers 属性中</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">headersToken: &#123;</span><br><span class="line">	accessToken: getToken()</span><br><span class="line">&#125;,</span><br><span class="line">    <span class="comment">//上传文件的列表</span></span><br><span class="line">fileList: []</span><br></pre></td></tr></table></figure>
-<p>3、上传成功的钩子函数</p>
-<p>上传成功后获取到 res.data.saveName 文件名，</p>
+<h3 id="2、写入-token-到-headers-属性中"><a href="#2、写入-token-到-headers-属性中" class="headerlink" title="2、写入 token 到 headers 属性中"></a>2、写入 token 到 headers 属性中</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">headersToken: &#123;</span><br><span class="line">	accessToken: getToken()</span><br><span class="line">&#125;,</span><br><span class="line">    <span class="comment">//上传文件的列表</span></span><br><span class="line">fileList: []</span><br></pre></td></tr></table></figure>
+<h3 id="3、上传成功的钩子函数"><a href="#3、上传成功的钩子函数" class="headerlink" title="3、上传成功的钩子函数"></a>3、上传成功的钩子函数</h3><p>上传成功后获取到 res.data.saveName 文件名，</p>
 <p>前面添加目标地址拼接</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">handleChange</span>(<span class="params">res, file, fileList</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">      <span class="keyword">if</span> (res.code === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="built_in">this</span>.addOption.file_name = <span class="string">&#x27;http://106.14.7.156:18620/uploads/&#x27;</span> + res.data.saveName</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4、后端上传文件-前端直接提交-组件的封装"><a href="#4、后端上传文件-前端直接提交-组件的封装" class="headerlink" title="4、后端上传文件,前端直接提交,组件的封装"></a>4、后端上传文件,前端直接提交,组件的封装</h3><h4 id="传值"><a href="#传值" class="headerlink" title="传值"></a>传值</h4><ul>
+<li>action:文件接口</li>
+<li>text:按钮显示文字</li>
+</ul>
+<h4 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h4><p>name属性字段为传参字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 模板 --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;upload&quot;&gt;</span><br><span class="line">    &lt;el-upload</span><br><span class="line">      :action&#x3D;&quot;action&quot;</span><br><span class="line">      :on-success&#x3D;&quot;handleChange&quot;</span><br><span class="line">      :on-error&#x3D;&quot;handleChange&quot;</span><br><span class="line">      :headers&#x3D;&quot;headersToken&quot;</span><br><span class="line">      name&#x3D;&quot;file&quot;</span><br><span class="line">      :limit&#x3D;&quot;1&quot;</span><br><span class="line">      :show-file-list&#x3D;&quot;false&quot;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;el-button size&#x3D;&quot;small&quot; type&#x3D;&quot;primary&quot;&gt;&#123;&#123; text &#125;&#125;&lt;&#x2F;el-button&gt;</span><br><span class="line">    &lt;&#x2F;el-upload&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import Cookies from &quot;js-cookie&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      headersToken: &#123;</span><br><span class="line">        accessToken: Cookies.get(&quot;accessToken&quot;)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  props: [&quot;text&quot;, &quot;action&quot;],</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleChange(res, file, fileList) &#123;</span><br><span class="line">      &#x2F;&#x2F; console.log(res, &quot;res&quot;);</span><br><span class="line">      if (res.code &#x3D;&#x3D; 1) &#123;</span><br><span class="line">        this.$message(res.msg);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
         </div>
 
         
