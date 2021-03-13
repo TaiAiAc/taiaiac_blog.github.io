@@ -12,7 +12,7 @@
 
 
 
-<title>gitee搭建博客踩坑总结 | Z. A. M.’s Blog</title>
+<title>微信小程序中封装request | Z. A. M.’s Blog</title>
 
 
 
@@ -172,7 +172,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">gitee搭建博客踩坑总结</h1>
+            <h1 class="post-title">微信小程序中封装request</h1>
             
                 <div class="post-meta">
                     
@@ -181,14 +181,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 5, 2021&nbsp;&nbsp;9:56:28</a>
+                        Date: <a href="#">March 13, 2021&nbsp;&nbsp;14:38:38</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/taiaiac.gitee.io/categories/hexo/">hexo</a>
+                                <a href="/taiaiac.gitee.io/categories/axios/">axios</a>
                             
                         </span>
                     
@@ -197,28 +197,22 @@
         </header>
 
         <div class="post-content">
-            <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>经过了一周的折腾终于把自己喜欢的主题在gitee上搭好了，由于踩的坑比较多还是准备记录一下。</p>
-<p>说下hexo，hexo是基于node的一个博客框架，主要功能就是读取md语法和解析文件目录，文件分类，等等。。。</p>
-<p>关于如何搭建跟着官网流程十分钟就能搭出一个默认主题的blog了，这里主要记录我就算跟着教程走还是出现的疑难杂症。</p>
-<h2 id="远程部署gitee的问题"><a href="#远程部署gitee的问题" class="headerlink" title="远程部署gitee的问题"></a>远程部署gitee的问题</h2><h4 id="配置文件-config-yml"><a href="#配置文件-config-yml" class="headerlink" title="配置文件_config.yml"></a>配置文件_config.yml</h4><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.yml</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">远程地址</span></span><br><span class="line"><span class="string">root:/仓库名</span></span><br><span class="line"><span class="comment"># _config.yml 拖到最后找到deploy选项</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">repo:</span> <span class="string">https://你的账号:你的密码@你的仓库地址</span></span><br></pre></td></tr></table></figure>
-<h4 id="自动发布搭建的静态博客"><a href="#自动发布搭建的静态博客" class="headerlink" title="自动发布搭建的静态博客"></a>自动发布搭建的静态博客</h4><p>下载自动发布插件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>网上的教程也仅至与此了，因为每次提交部署测试都很耗费时间，这个 url 和 root 的配置着实费时间，下面更细致的介绍一下让我们更准确的填写个人配置。</p>
-<ol>
-<li><p>打开gitee</p>
-</li>
-<li><p>创建仓库 </p>
-</li>
-<li><p>进入仓库复制地址填写到url选项后也就是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: 远程地址</span><br></pre></td></tr></table></figure></li>
-<li><p>复制仓库名填入root，前面加<code>/</code></p>
-</li>
-</ol>
-<p>ok，这样地址可以保证是准确的，后续出现问题可以排除远程地址和根目录的缘故了</p>
-<h2 id="增加和修改后页面不刷新"><a href="#增加和修改后页面不刷新" class="headerlink" title="增加和修改后页面不刷新"></a>增加和修改后页面不刷新</h2><p>使用<code>hexo clean</code> 清除缓存和删除<code>db.json</code>文件和清除浏览器缓存，原因是有缓存，没及时更新</p>
-<h2 id="资源丢失类的报错"><a href="#资源丢失类的报错" class="headerlink" title="资源丢失类的报错"></a>资源丢失类的报错</h2><p>本地服务器启动时没有报错，远程部署后出现资源丢失或者变量未定义之类的报错，很大可能是因为nodejs版本问题，版本过高或者过低，建议百度适合主题的nodejs版本（我用的是v12.14.0）</p>
-<h2 id="使用主题出现的疑难杂症"><a href="#使用主题出现的疑难杂症" class="headerlink" title="使用主题出现的疑难杂症"></a>使用主题出现的疑难杂症</h2><p>每个主题中都会有config.yml的配置文件，总配置文件中有大部分的个性化设置，建议把英文注释都翻译一下，设置基本就清晰了，还有的主题可能不支持中文，会出现乱码</p>
-<h2 id="2d模型小人"><a href="#2d模型小人" class="headerlink" title="2d模型小人"></a>2d模型小人</h2><p>百度搜索hexo-helper-live2d，简单傻瓜式操作，几步完成</p>
+            <blockquote>
+<h2 id="全局request文件"><a href="#全局request文件" class="headerlink" title="全局request文件"></a>全局request文件</h2></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> URL = <span class="string">&#x27;https://v1.hitokoto.cn/&#x27;</span></span><br><span class="line"><span class="keyword">const</span> header = header || &#123;</span><br><span class="line">  <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;accessToken&#x27;</span>: getApp().globalData.token</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">method, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      url: URL,</span><br><span class="line">      header: header,</span><br><span class="line">      data: data,</span><br><span class="line">      method: method,</span><br><span class="line">      <span class="comment">// 状态码处理</span></span><br><span class="line">      success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">        <span class="keyword">switch</span> (res) &#123;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">&#x27;状态码&#x27;</span>:</span><br><span class="line">            resolve(res)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          <span class="keyword">default</span>:</span><br><span class="line">            resolve(res)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      fail: <span class="function"><span class="params">err</span> =&gt;</span> reject(err)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  get:<span class="function">(<span class="params">param</span>) =&gt;</span>  request(<span class="string">&#x27;get&#x27;</span>, param),</span><br><span class="line">  post:<span class="function">(<span class="params">data</span>) =&gt;</span>  request(<span class="string">&#x27;post&#x27;</span>, data)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="存放token"><a href="#存放token" class="headerlink" title="存放token"></a>存放token</h4><p>app.js</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">App(&#123;</span><br><span class="line">  globalData:&#123;</span><br><span class="line">    token:<span class="string">&#x27;&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h4 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h4><p>其他文件</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> token = getApp().globalData.token</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用request请求</p>
+<p>其他文件</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request <span class="keyword">from</span> <span class="string">&#x27;../utils/request.js&#x27;</span></span><br><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    text:<span class="string">&#x27;&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">onClick</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> &#123;data&#125; = <span class="keyword">await</span> request.get()</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      text:data.hitokoto</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -247,7 +241,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/taiaiac.gitee.io/tags/hexo/"># hexo</a>
+                        <a href="/taiaiac.gitee.io/tags/axios/"># axios</a>
                     
                         
                 </span>
@@ -260,10 +254,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/01/07/ES6/24%E4%B8%AA%E8%A7%A3%E5%86%B3%E5%AE%9E%E9%99%85%E9%97%AE%E9%A2%98%E7%9A%84ES6%E4%BB%A3%E7%A0%81%E6%AE%B5/">24个解决实际问题的ES6代码段</a>
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/03/13/axios/uniapp%E4%B8%AD%E5%B0%81%E8%A3%85request/">uniapp中封装request</a>
             
             
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/01/04/Node.js/node-nvm%E7%9A%84%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">node/nvm的安装使用</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/03/13/axios/vue%E4%B8%AD%E5%B0%81%E8%A3%85request/">vue中封装request</a>
             
         </section>
 
