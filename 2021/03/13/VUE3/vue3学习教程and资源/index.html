@@ -106,6 +106,68 @@
       <div class="main"><div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
@@ -135,7 +197,32 @@
         </header>
 
         <div class="post-content">
-            
+            <blockquote>
+<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p>vue3</p>
+<p><a target="_blank" rel="noopener" href="https://vue3js.cn/docs/zh/">https://vue3js.cn/docs/zh/</a></p>
+<p>Vue Router</p>
+<p><a target="_blank" rel="noopener" href="https://router.vuejs.org/zh/">https://router.vuejs.org/zh/</a></p>
+<p>vuex</p>
+<p><a target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/">https://vuex.vuejs.org/zh/</a></p>
+<p>vuepress</p>
+<p><a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/zh/guide/">https://vuepress.vuejs.org/zh/guide/</a></p>
+<p>vite</p>
+<p><a target="_blank" rel="noopener" href="https://vitejs.dev/">https://vitejs.dev/</a></p>
+<p>ui框架</p>
+<p><a target="_blank" rel="noopener" href="https://element-plus.gitee.io/#/zh-CN/guide/design">https://element-plus.gitee.io/#/zh-CN/guide/design</a></p>
+</blockquote>
+<blockquote>
+<h3 id="文档笔记"><a href="#文档笔记" class="headerlink" title="文档笔记"></a>文档笔记</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6866373381424414734/">https://juejin.cn/post/6866373381424414734/</a></p>
+</blockquote>
+<blockquote>
+<h3 id="视频讲解"><a href="#视频讲解" class="headerlink" title="视频讲解"></a>视频讲解</h3><p>vue3</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wh411X7Xp">https://www.bilibili.com/video/BV1Wh411X7Xp</a></p>
+<p>vite</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1vX4y1K7bQ">https://www.bilibili.com/video/BV1vX4y1K7bQ</a></p>
+<p>vite插件开发指南</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jb4y1R7UV">https://www.bilibili.com/video/BV1jb4y1R7UV</a></p>
+</blockquote>
+
         </div>
 
         
