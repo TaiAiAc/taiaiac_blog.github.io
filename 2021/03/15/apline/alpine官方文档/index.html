@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>alpine官方文档 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">alpine官方文档</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">March 15, 2021&nbsp;&nbsp;16:46:59</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/Alpine-js/">Alpine.js</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="Alpine-js"><a href="#Alpine-js" class="headerlink" title="Alpine.js"></a>Alpine.js</h1><p><img src="https://img.shields.io/bundlephobia/minzip/alpinejs" alt="npm bundle size"><br><img src="https://img.shields.io/npm/v/alpinejs" alt="npm version"><br><a target="_blank" rel="noopener" href="https://alpinejs.codewithhugo.com/chat/"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true" alt="Chat"></a></p>
+<p>Alpine.js 通过很低的成本提供了于 Vue 或 React 这类大型框架相近的响应式和声明式特性。</p>
+<p>你可以继续操作 DOM，并在需要的时候使用 Alpine.js。</p>
+<p>可以理解为 JavaScript 版本的 <a target="_blank" rel="noopener" href="https://tailwindcss.com/">Tailwind</a>。</p>
+<blockquote>
+<p>备注：Alpine.js 的语法几乎完全借用自 <a target="_blank" rel="noopener" href="https://vuejs.org/">Vue</a> （并用 <a target="_blank" rel="noopener" href="https://angularjs.org/">Angular</a> 的语法做了些扩展）。在此由衷感谢他们对 Web 世界的贡献。</p>
+</blockquote>
+<h2 id="安装-Install"><a href="#安装-Install" class="headerlink" title="安装 Install"></a>安装 Install</h2><p><strong>使用 CDN：</strong> 把以下脚本加入到你的 <code>&lt;head&gt;</code> 尾部.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>就是这样，Alpine.js 会自行初始化。</p>
+<p>生产环境中，建议在链接中锁定特定版本号，以此避免新版本中的变更造成问题。<br>例如，锁定版本为 <code>2.8.1</code> (最新版本):</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用 npm：</strong> 从 npm 安装依赖包。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i alpinejs</span><br></pre></td></tr></table></figure>
+<p>并在你的脚本中引入它。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;alpinejs&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><strong>需要 IE11 支持的场景</strong> 改用这段脚本。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">nomodule</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这一写法使用了 <a target="_blank" rel="noopener" href="https://philipwalton.com/articles/deploying-es2015-code-in-production-today/">module/nomodule 模式（英文）</a> ，这样的写法可以让现代浏览器自动加载模块版本依赖，而在 IE11 或其他早期浏览器中自动加载专属兼容版本。</p>
+<h2 id="使用-Use"><a href="#使用-Use" class="headerlink" title="使用 Use"></a>使用 Use</h2><p><em>下拉菜单（Dropdown）/模态弹窗（Modal）</em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; open: false &#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;open = true&quot;</span>&gt;</span>Open Dropdown<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    &lt;ul</span><br><span class="line">        x-show=&quot;open&quot;</span><br><span class="line">        @click.away=&quot;open = false&quot;</span><br><span class="line">    &gt;</span><br><span class="line">        Dropdown Body</span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>标签页 Tabs</em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; tab: &#x27;foo&#x27; &#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;active&#x27;: tab === &#x27;foo&#x27; &#125;&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;tab = &#x27;foo&#x27;&quot;</span>&gt;</span>Foo<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">:class</span>=<span class="string">&quot;&#123; &#x27;active&#x27;: tab === &#x27;bar&#x27; &#125;&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;tab = &#x27;bar&#x27;&quot;</span>&gt;</span>Bar<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show</span>=<span class="string">&quot;tab === &#x27;foo&#x27;&quot;</span>&gt;</span>Tab Foo<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show</span>=<span class="string">&quot;tab === &#x27;bar&#x27;&quot;</span>&gt;</span>Tab Bar<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这样的写法也可以用在其他地方：<br><em>鼠标悬停时从服务器预加载下拉菜单中的 HTML 内容。</em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; open: false &#125;&quot;</span>&gt;</span></span><br><span class="line">    &lt;button</span><br><span class="line">        @mouseenter.once=&quot;</span><br><span class="line">            fetch(&#x27;/dropdown-partial.html&#x27;)</span><br><span class="line">                .then(response =&gt; response.text())</span><br><span class="line">                .then(html =&gt; &#123; $refs.dropdown.innerHTML = html &#125;)</span><br><span class="line">        &quot;</span><br><span class="line">        @click=&quot;open = true&quot;</span><br><span class="line">    &gt;Show Dropdown<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-ref</span>=<span class="string">&quot;dropdown&quot;</span> <span class="attr">x-show</span>=<span class="string">&quot;open&quot;</span> @<span class="attr">click.away</span>=<span class="string">&quot;open = false&quot;</span>&gt;</span></span><br><span class="line">        Loading Spinner...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="学习-Learn"><a href="#学习-Learn" class="headerlink" title="学习 Learn"></a>学习 Learn</h2><p>当前共有 14 个指令可用，如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#x-data"><code>x-data</code></a></td>
+<td>定义一个新的组件作用域。</td>
+</tr>
+<tr>
+<td><a href="#x-init"><code>x-init</code></a></td>
+<td>组件初始化时运行其中的表达式。</td>
+</tr>
+<tr>
+<td><a href="#x-show"><code>x-show</code></a></td>
+<td>根据表达式结果（true 或 false）控制元素的 <code>display: none;</code>（译者注：控制模块显示/隐藏）</td>
+</tr>
+<tr>
+<td><a href="#x-bind"><code>x-bind</code></a></td>
+<td>将当前属性的值设定为指令中表达式的结果。</td>
+</tr>
+<tr>
+<td><a href="#x-on"><code>x-on</code></a></td>
+<td>向元素上挂载事件监听器。当事件触发时执行其中的表达式。</td>
+</tr>
+<tr>
+<td><a href="#x-model"><code>x-model</code></a></td>
+<td>向当前元素新增「双向数据绑定」。保持输入元素与组件数据同步。</td>
+</tr>
+<tr>
+<td><a href="#x-text"><code>x-text</code></a></td>
+<td>和 <code>x-bind</code> 类似，但更新的是元素的 <code>innerText</code>。</td>
+</tr>
+<tr>
+<td><a href="#x-html"><code>x-html</code></a></td>
+<td>和 <code>x-bind</code> 类似，但更新的是元素的 <code>innerHTML</code>。</td>
+</tr>
+<tr>
+<td><a href="#x-ref"><code>x-ref</code></a></td>
+<td>在组件外获取原始 DOM 元素的简便方法。</td>
+</tr>
+<tr>
+<td><a href="#x-if"><code>x-if</code></a></td>
+<td>值为 false 时将从 DOM 中完全移除元素。需要在 <code>&lt;template&gt;</code> 标签中使用。</td>
+</tr>
+<tr>
+<td><a href="#x-for"><code>x-for</code></a></td>
+<td>为数组中的每一项创建一个新的 DOM 节点。需要在 <code>&lt;template&gt;</code> 标签中使用。</td>
+</tr>
+<tr>
+<td><a href="#x-transition"><code>x-transition</code></a></td>
+<td>用于在过渡（CSS Translation）的各个阶段中为元素添加 class 的指令。</td>
+</tr>
+<tr>
+<td><a href="#x-spread"><code>x-spread</code></a></td>
+<td>为了更好的复用，可以绑定一个带有 Alpine 指令（作为 key）的对象到元素上。</td>
+</tr>
+<tr>
+<td><a href="#x-cloak"><code>x-cloak</code></a></td>
+<td>这一属性会在 Alpine 初始化完成后被移除，可以用来隐藏未初始化的 DOM。</td>
+</tr>
+</tbody></table>
+<p>以及 6 个魔法属性：</p>
+<table>
+<thead>
+<tr>
+<th>魔法属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#el"><code>$el</code></a></td>
+<td>获取根元素的 DOM 节点。</td>
+</tr>
+<tr>
+<td><a href="#refs"><code>$refs</code></a></td>
+<td>获取组件中标记有 <code>x-ref</code> 的 DOM 元素。</td>
+</tr>
+<tr>
+<td><a href="#event"><code>$event</code></a></td>
+<td>在事件监听器中获取浏览器原生的「Event」对象。</td>
+</tr>
+<tr>
+<td><a href="#dispatch"><code>$dispatch</code></a></td>
+<td>创建一个「CustomEvent」并使用其内部的 <code>.dispatchEvent()</code> 方法进行分发。</td>
+</tr>
+<tr>
+<td><a href="#nexttick"><code>$nextTick</code></a></td>
+<td>在 Alpine 做出响应式 DOM 更新后，执行一个给出的表达式。</td>
+</tr>
+<tr>
+<td><a href="#watch"><code>$watch</code></a></td>
+<td>当监听的组件属性发生变化时，触发给定的回调函数。</td>
+</tr>
+</tbody></table>
+<h2 id="赞助商-Sponsors"><a href="#赞助商-Sponsors" class="headerlink" title="赞助商 Sponsors"></a>赞助商 Sponsors</h2><img width="33%" src="https://refactoringui.nyc3.cdn.digitaloceanspaces.com/tailwind-logo.svg" alt="Tailwind CSS">
+
+<p><strong>想让你的 Logo 也出现在这? <a target="_blank" rel="noopener" href="https://twitter.com/calebporzio">到 Twitter 发送 DM</a></strong></p>
+<h2 id="社区相关项目-Community-Projects"><a href="#社区相关项目-Community-Projects" class="headerlink" title="社区相关项目 Community Projects"></a>社区相关项目 Community Projects</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://alpinejs.codewithhugo.com/newsletter/">AlpineJS 周报（英文）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ryangjchandler/spruce">Spruce （状态管理框架/英文）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/SimoTod/alpine-turbolinks-adapter">Turbolinks Adapter（英文）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/KevinBatdorf/alpine-magic-helpers">Alpine Magic Helpers（英文）</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ryangjchandler/awesome-alpine">Awesome Alpine（英文）</a></li>
+</ul>
+<h3 id="指令-Directives"><a href="#指令-Directives" class="headerlink" title="指令 Directives"></a>指令 Directives</h3><hr>
+<h3 id="x-data"><a href="#x-data" class="headerlink" title="x-data"></a><code>x-data</code></h3><p><strong>例如：</strong> <code>&lt;div x-data=&quot;&#123; foo: &#39;bar&#39; &#125;&quot;&gt;...&lt;/div&gt;</code></p>
+<p><strong>结构：</strong> <code>&lt;div x-data=&quot;[可迭代对象]&quot;&gt;...&lt;/div&gt;</code></p>
+<p><code>x-data</code> 将定义一个新的组件作用域。它将通知框架初始化带有传入数据的一个新组件。</p>
+<p>类似 Vue 组件中的 data 属性。</p>
+<p><strong>抽离组件逻辑</strong></p>
+<p>你可以把数据（以及行为）通过一个可复用的函数抽离出来：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;dropdown()&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">x-on:click</span>=<span class="string">&quot;open&quot;</span>&gt;</span>Open<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show</span>=<span class="string">&quot;isOpen()&quot;</span> <span class="attr">x-on:click.away</span>=<span class="string">&quot;close&quot;</span>&gt;</span></span><br><span class="line">        // Dropdown</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">dropdown</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">            show: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="title">open</span>(<span class="params"></span>)</span> &#123; <span class="built_in">this</span>.show = <span class="literal">true</span> &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="title">close</span>(<span class="params"></span>)</span> &#123; <span class="built_in">this</span>.show = <span class="literal">false</span> &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="title">isOpen</span>(<span class="params"></span>)</span> &#123; <span class="keyword">return</span> <span class="built_in">this</span>.show === <span class="literal">true</span> &#125;,</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>各位 Bundler 使用者</strong>，注意 Alpine.js 操作的函数都在全局作用域（<code>window</code>），你需要把 <code>x-data</code> 使用的函数声明到 <code>window</code> 上，例如 <code>window.dropdown = function () &#123;&#125;</code> (因为在 Webpack, Rollup, Parcel 等工具中，<code>function</code> 默认会被挂载模块作用域，而非 <code>window</code>).</p>
+</blockquote>
+<p>你也可以通过对象解构语法，把多个数据对象混合起来：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123;...dropdown(), ...tabs()&#125;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="x-init"><a href="#x-init" class="headerlink" title="x-init"></a><code>x-init</code></h3><p><strong>例如：</strong> <code>&lt;div x-data=&quot;&#123; foo: &#39;bar&#39; &#125;&quot; x-init=&quot;foo = &#39;baz&#39;&quot;&gt;&lt;/div&gt;</code></p>
+<p><strong>结构：</strong> <code>&lt;div x-data=&quot;...&quot; x-init=&quot;[表达式]&quot;&gt;&lt;/div&gt;</code></p>
+<p><code>x-init</code> 将在组件初始化时运行给定的表达式。</p>
+<p>如果你希望代码在 Alpine 对 DOM 进行初始化更新后再调用（类似 VueJS 中的 <code>mounted()</code> 钩子），你可以传入一个回调函数，它将在 DOM 操作完成后被调用，例如：</p>
+<p><code>x-init=&quot;() =&gt; &#123; // we have access to the post-dom-initialization state here // &#125;&quot;</code></p>
+<hr>
+<h3 id="x-show"><a href="#x-show" class="headerlink" title="x-show"></a><code>x-show</code></h3><p><strong>例如:</strong> <code>&lt;div x-show=&quot;open&quot;&gt;&lt;/div&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;div x-show=&quot;[表达式]&quot;&gt;&lt;/div&gt;</code></p>
+<p><code>x-show</code> 将根据表达式结果（true 或 false）控制元素的 <code>display: none;</code>（译者注：控制模块显示/隐藏）</p>
+<p><strong>x-show.transition</strong></p>
+<p><code>x-show.transition</code> 是一个可以让你在使用 <code>x-show</code> 操作 CSS 过渡（Transition）时更爽的简便 API。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show.transition</span>=<span class="string">&quot;open&quot;</span>&gt;</span></span><br><span class="line">    这段内容会在过渡中滑入/滑出。</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x-show.transition</code></td>
+<td>同时滑入/滑出并缩放（默认值：opacity, scale: 0.95, timing-function: cubic-bezier(0.4, 0.0, 0.2, 1), duration-in: 150ms, duration-out: 75ms）</td>
+</tr>
+<tr>
+<td><code>x-show.transition.in</code></td>
+<td>仅滑入</td>
+</tr>
+<tr>
+<td><code>x-show.transition.out</code></td>
+<td>仅滑出</td>
+</tr>
+<tr>
+<td><code>x-show.transition.opacity</code></td>
+<td>仅使用淡入淡出</td>
+</tr>
+<tr>
+<td><code>x-show.transition.scale</code></td>
+<td>仅使用缩放</td>
+</tr>
+<tr>
+<td><code>x-show.transition.scale.75</code></td>
+<td>自定义 CSS 缩放转换为 <code>transform: scale(.75)</code>.</td>
+</tr>
+<tr>
+<td><code>x-show.transition.duration.200ms</code></td>
+<td>设定 “in” 的的过渡时间为 200ms。出动作（”out”）将是它的一半 (100ms).</td>
+</tr>
+<tr>
+<td><code>x-show.transition.origin.top.right</code></td>
+<td>自定义 CSS 转换起始位置为 <code>transform-origin: top right</code>.</td>
+</tr>
+<tr>
+<td><code>x-show.transition.in.duration.200ms.out.duration.50ms</code></td>
+<td>为 “in” 和 “out” 设定不同的过渡时间。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>备注： 所有的过渡修饰符都可组合使用。也就是说可以这么用（虽然真这么用过于粗暴23333）: <code>x-show.transition.in.duration.100ms.origin.top.right.opacity.scale.85.out.duration.200ms.origin.bottom.left.opacity.scale.95</code></p>
+</blockquote>
+<blockquote>
+<p>备注： <code>x-show</code> 将等待子元素完成 out。如果你希望跳过这一行为，可以添加 <code>.immediate</code> 修饰符：</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show.immediate</span>=<span class="string">&quot;open&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-show.transition</span>=<span class="string">&quot;open&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="x-bind"><a href="#x-bind" class="headerlink" title="x-bind"></a><code>x-bind</code></h3><blockquote>
+<p>备注：可以用 “:” 简写语法替代，例如： <code>:type=&quot;...&quot;</code>.</p>
+</blockquote>
+<p><strong>例如:</strong> <code>&lt;input x-bind:type=&quot;inputType&quot;&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;input x-bind:[HTML属性]=&quot;[表达式]&quot;&gt;</code></p>
+<p><code>x-bind</code> 将当前属性的值设定为指令中表达式的结果。 这一表达式可以访问组件数据对象中的所有 key，并在每次数据更新时重算结果。</p>
+<blockquote>
+<p>备注： 属性数据绑定只会在依赖的值更新时被重算。框架足够智能，可以观测数据变化并检测绑定是否关心这些变化。</p>
+</blockquote>
+<p><strong><code>x-bind</code> 到 class 属性</strong></p>
+<p><code>x-bind</code> 在完成到 <code>class</code> 属性的绑定时，行为略有不同。</p>
+<p>对于 class，你可以传入一个对象，key 为 class 名，值为布尔量，用来表示对应 class 是否应该生效。</p>
+<p>例如：<br><code>&lt;div x-bind:class=&quot;&#123; &#39;hidden&#39;: foo &#125;&quot;&gt;&lt;/div&gt;</code></p>
+<p>在这一例子中，”hidden” 这一 class 将只会在 foo 数据属性为 <code>true</code> 时有效。</p>
+<p><strong><code>x-bind</code> 到布尔值属性</strong></p>
+<p><code>x-bind</code> 支持布尔值属性，与其他 value 属性一样，使用变量或者其他结果为 <code>true</code> 或 <code>false</code> 的表达式作为其条件。</p>
+<p>例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 给定值: --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">x-bind:disabled</span>=<span class="string">&quot;myVar&quot;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 当 myVar == true: --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 当 myVar == false: --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>Click me<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这将在 <code>myVar</code> 为 true 或 false 时分别新增或删除 <code>disabled</code> 属性。</p>
+<p><a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/indices.html#attributes-3:boolean-attribute">HTML specification 文档（英文）</a>中列出的布尔值属性都被支持，例如： <code>disabled</code>, <code>readonly</code>, <code>required</code>, <code>checked</code>, <code>hidden</code>, <code>selected</code>, <code>open</code> 等等。</p>
+<blockquote>
+<p>备注：如果你需要一个 false 状态来展示你的属性，如：<code>aria-*</code>，要用对绑定值使用链式的 <code>.toString()</code>。例如： <code>:aria-expanded=&quot;isOpen.toString()&quot;</code> 将在 <code>isOpen</code> 为 <code>true</code> 或 <code>false</code> 时都能保持属性存在。</p>
+</blockquote>
+<p><strong><code>.camel</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;svg x-bind:view-box.camel=&quot;viewBox&quot;&gt;</code></p>
+<p><code>camel</code> 修饰符用来绑定等效驼峰写法的属性名。如上面的例子，<code>viewBox</code> 的值将被绑定到 <code>viewBox</code> 属性，他被表示为 <code>view-box</code>。</p>
+<hr>
+<h3 id="x-on"><a href="#x-on" class="headerlink" title="x-on"></a><code>x-on</code></h3><blockquote>
+<p>备注：你可以直接使用简化的 “@” 语法，例如：<code>@click=&quot;...&quot;</code>。</p>
+</blockquote>
+<p><strong>例如:</strong> <code>&lt;button x-on:click=&quot;foo = &#39;bar&#39;&quot;&gt;&lt;/button&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;button x-on:[事件]=&quot;[表达式]&quot;&gt;&lt;/button&gt;</code></p>
+<p><code>x-on</code> 挂载一个事件监听器到声明的元素昂，当事件触发后，传入的表达式将被执行。你可以在指令所在元素可用的任何事件上使用 <code>x-on</code>，完整的事件列表，可以参考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Events">MDN 上的事件参考文档</a>。</p>
+<p>如果表达式中的进行了任何数据变动，其他绑定到这些数据的元素属性将被更新。</p>
+<blockquote>
+<p>备注：你也可以直接使用 JavaScript 函数名。</p>
+</blockquote>
+<p><strong>例如:</strong> <code>&lt;button x-on:click=&quot;myFunction&quot;&gt;&lt;/button&gt;</code></p>
+<p>这等效于：<code>&lt;button x-on:click=&quot;myFunction($event)&quot;&gt;&lt;/button&gt;</code></p>
+<p><strong><code>keydown</code> 修饰符</strong></p>
+<p><strong>例如:</strong> <code>&lt;input type=&quot;text&quot; x-on:keydown.escape=&quot;open = false&quot;&gt;</code></p>
+<p>你可以通过向 <code>x-on:keydown</code> 指令增加 keydown 修饰符来指定特定需要监听的按钮。注意修饰符是 <code>Event.key</code> 值的短横线隔开写法（kebab-cased）版本。</p>
+<p>例如：<code>enter</code>, <code>escape</code>, <code>arrow-up</code>, <code>arrow-down</code></p>
+<blockquote>
+<p>备注：你也可以这样监听混合的系统修饰符： <code>x-on:keydown.cmd.enter=&quot;foo&quot;</code></p>
+</blockquote>
+<p><strong><code>.away</code> 修饰符</strong></p>
+<p><strong>例如:</strong> <code>&lt;div x-on:click.away=&quot;showModal = false&quot;&gt;&lt;/div&gt;</code></p>
+<p>当 <code>.away</code> 修饰符存在时，事件处理器将在源头不是他们自己或他们的子元素时被触发。</p>
+<p>这对下拉菜单或模态框中处理用户点击其外部的位置关闭的交互动作非常有用。</p>
+<p><strong><code>.prevent</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;input type=&quot;checkbox&quot; x-on:click.prevent&gt;</code></p>
+<p>增加 <code>.prevent</code> 到事件监听器上，将会调用触发事件的 <code>preventDefault</code> 方法。在上面的例子中，这意味着这个 checkbox 在用户点击时不会真的被选中。</p>
+<p><strong><code>.stop</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;div x-on:click=&quot;foo = &#39;bar&#39;&quot;&gt;&lt;button x-on:click.stop&gt;&lt;/button&gt;&lt;/div&gt;</code></p>
+<p>增加 <code>.stop</code> 到事件监听器上，将会调用触发事件的 <code>stopPropagation</code> 方法。在上面的例子中，这意味着点击事件不会从这个按钮冒泡到其他 div 上。换句话说，用户点击按钮时 <code>foo</code> 并不会被置为 <code>bar</code>。</p>
+<p><strong><code>.self</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;div x-on:click.self=&quot;foo = &#39;bar&#39;&quot;&gt;&lt;button&gt;&lt;/button&gt;&lt;/div&gt;</code></p>
+<p>增加 <code>.self</code> 到事件监听器上，将会使得处理器只在 <code>$event.target</code> 为元素自己的时候被调用。在上面的例子中，这意味着按钮的点击事件会冒泡的上层的 <code>&lt;div&gt;</code> 时，将 <strong>不会</strong> 调用处理器函数。</p>
+<p><strong><code>.window</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;div x-on:resize.window=&quot;isOpen = window.outerWidth &gt; 768 ? false : open&quot;&gt;&lt;/div&gt;</code></p>
+<p>增加 <code>.window</code> 到事件监听器上，将会安装监听器到全局的 window 对象而不是实际声明的 DOM 节点。当你需要在 window 上的属性变化（如 resize 事件）时修改自己组件的状态，这会非常有用。在例子中，当窗口宽度扩大到 768 像素以上时我们就会关闭模态框/下拉菜单，否则保持已有状态。</p>
+<blockquote>
+<p>备注：你也可以使用 <code>.document</code> 修饰符来挂载监听器到<code>document</code> 而不是 <code>window</code></p>
+</blockquote>
+<p><strong><code>.once</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;button x-on:mouseenter.once=&quot;fetchSomething()&quot;&gt;&lt;/button&gt;</code></p>
+<p>增加 <code>.once</code> 修饰符到事件监听器上，将会确保监听器只被调用一次。这对于那些你只想调一次的事件来说超有用，比如请求 HTML 片段之类的。</p>
+<p><strong><code>.passive</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;button x-on:mousedown.passive=&quot;interactive = true&quot;&gt;&lt;/button&gt;</code></p>
+<p>增加 <code>.passive</code> 修饰符到事件监听器上，将会使监听器为 passive 状态，这意味着 <code>preventDefault()</code>不能工作。这可以帮助处理触摸设备上的滑动性能问题。</p>
+<p><strong><code>.debounce</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;input x-on:input.debounce=&quot;fetchSomething()&quot;&gt;</code></p>
+<p><code>debounce</code> 修饰符允许你对事件处理器进行「防抖」。换句话说，事件处理器将会在上次触发完成后等待一段时间才会再次触发。当处理器准备好后再处理上一个调用。</p>
+<p>默认的防抖「等待」时间是 250 毫秒。</p>
+<p>如果你打算自定义它，可以这样指定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input x-on:input.debounce.750&#x3D;&quot;fetchSomething()&quot;&gt;</span><br><span class="line">&lt;input x-on:input.debounce.750ms&#x3D;&quot;fetchSomething()&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p><strong><code>.camel</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;input x-on:event-name.camel=&quot;doSomething()&quot;&gt;</code></p>
+<p><code>camel</code> 修饰符用来挂载等效驼峰写法的事件监听器。如上面的例子，表达式将在 <code>eventName</code> 事件触发时被执行。</p>
+<hr>
+<h3 id="x-model"><a href="#x-model" class="headerlink" title="x-model"></a><code>x-model</code></h3><p><strong>例如:</strong> <code>&lt;input type=&quot;text&quot; x-model=&quot;foo&quot;&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;input type=&quot;text&quot; x-model=&quot;[data item]&quot;&gt;</code></p>
+<p><code>x-model</code> 新增「双向数据绑定」到一个元素上。换句话说，输入元素的 value 值将于组件中数据项的值维持同步。</p>
+<blockquote>
+<p>备注：<code>x-model</code> 可以智能地检测文字输入框(input)、多选框(checkbox)、单选框(radio button)、文本输入区(textarea)、下拉选择(select)、下拉多选(multi selects)。他的行为及使用场景和 <a target="_blank" rel="noopener" href="https://vuejs.org/v2/guide/forms.html">Vue</a> 别无二致。</p>
+</blockquote>
+<p><strong><code>.number</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;input x-model.number=&quot;age&quot;&gt;</code></p>
+<p><code>number</code> 修饰符将转换输入的值为数据为数字类型，如果不能被成功转换，将返回原始值。</p>
+<p><strong><code>.debounce</code> 修饰符</strong><br><strong>例如:</strong> <code>&lt;input x-model.debounce=&quot;search&quot;&gt;</code></p>
+<p><code>debounce</code> 修饰符允许你对值的更新进行「防抖」。换句话说，事件处理器将会在上次触发完成后等待一段时间才会再次触发。当处理器准备好后再处理上一个调用。</p>
+<p>默认的防抖「等待」时间是 250 毫秒。</p>
+<p>如果你打算自定义它，可以这样指定：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;input x-model.debounce.750&#x3D;&quot;search&quot;&gt;</span><br><span class="line">&lt;input x-model.debounce.750ms&#x3D;&quot;search&quot;&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="x-text"><a href="#x-text" class="headerlink" title="x-text"></a><code>x-text</code></h3><p><strong>例如:</strong> <code>&lt;span x-text=&quot;foo&quot;&gt;&lt;/span&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;span x-text=&quot;[表达式]&quot;</code></p>
+<p><code>x-text</code> 与 <code>x-bind</code> 十分相似，只不过当属性中的值更新时，他会更新元素的 <code>innerText</code>。</p>
+<hr>
+<h3 id="x-html"><a href="#x-html" class="headerlink" title="x-html"></a><code>x-html</code></h3><p><strong>例如:</strong> <code>&lt;span x-html=&quot;foo&quot;&gt;&lt;/span&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;span x-html=&quot;[表达式]&quot;</code></p>
+<p><code>x-html</code> 与 <code>x-bind</code> 十分相似，只不过当属性中的值更新时，他会更新元素的 <code>innerHTML</code>。</p>
+<blockquote>
+<p>:warning: <strong>只能用在可信内容上，绝不要直接展示用户的内容</strong> :warning:</p>
+<p>动态渲染第三方来源的 HTML 会非常容易造成 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">XSS 漏洞（英文）</a>。</p>
+</blockquote>
+<hr>
+<h3 id="x-ref"><a href="#x-ref" class="headerlink" title="x-ref"></a><code>x-ref</code></h3><p><strong>例如:</strong> <code>&lt;div x-ref=&quot;foo&quot;&gt;&lt;/div&gt;&lt;button x-on:click=&quot;$refs.foo.innerText = &#39;bar&#39;&quot;&gt;&lt;/button&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;div x-ref=&quot;[ref 名称]&quot;&gt;&lt;/div&gt;&lt;button x-on:click=&quot;$refs.[ref 名称].innerText = &#39;bar&#39;&quot;&gt;&lt;/button&gt;</code></p>
+<p><code>x-ref</code> 提供了一种在组件外获取原始 DOM 元素的简便方法。通过设置元素上的 <code>x-ref</code> 属性，你可在任何事件处理中通过内置对象（魔法属性） <code>$refs</code> 和标记的 refName 拿到 DOM。</p>
+<p>它可以帮助你在任何地方替代设置id再通过 <code>document.querySelector</code> 取值的做法。</p>
+<blockquote>
+<p>备注：如果你需要，也可以绑个动态值到 x-ref <code>&lt;span :x-ref=&quot;item.id&quot;&gt;&lt;/span&gt;</code>。</p>
+</blockquote>
+<hr>
+<h3 id="x-if"><a href="#x-if" class="headerlink" title="x-if"></a><code>x-if</code></h3><p><strong>例如:</strong> <code>&lt;template x-if=&quot;true&quot;&gt;&lt;div&gt;Some Element&lt;/div&gt;&lt;/template&gt;</code></p>
+<p><strong>结构:</strong> <code>&lt;template x-if=&quot;[表达式]&quot;&gt;&lt;div&gt;Some Element&lt;/div&gt;&lt;/template&gt;</code></p>
+<p>有的时候，<code>x-show</code> 可能会不太好用（它会在值为 false 时为元素增加 <code>display: none</code> 样式），<code>x-if</code> 可以真实的完整的把元素从 DOM 中删除。</p>
+<p>但要注意，<code>x-if</code> 只能在 <code>&lt;template&gt;&lt;/template&gt;</code> 标签中使用，因为 Alpine 没有使用虚拟 DOM。这一实现允许 Alpine 保持简洁，直接使用真实的 DOM 来完成动态部分（magic）。</p>
+<blockquote>
+<p>备注：<code>x-if</code> 要求在 <code>&lt;template&gt;&lt;/template&gt;</code> 标签中有单一的根元素。</p>
+</blockquote>
+<blockquote>
+<p>备注：当在 <code>svg</code> 标签中使用 <code>template</code> 的时候，你需要增加 <a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/issues/637#issuecomment-654856538">polyfill</a> 在初始化 Alpine 之前运行它。</p>
+</blockquote>
+<hr>
+<h3 id="x-for"><a href="#x-for" class="headerlink" title="x-for"></a><code>x-for</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;item in items&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;item&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>备注：<code>:key</code> 绑定时可选的，但是强烈推荐，使用它在列表渲染中是必要的。</p>
+</blockquote>
+<p><code>x-for</code> 可以用于为数组中的每一项创建一个新的 DOM 节点。这一特性与 Vue 中的 <code>v-for</code> 非常类似，他也需要在 <code>template</code> 标签上使用，不能是普通的 DOM 元素。</p>
+<p>如果需要使用当前迭代中的索引，可以这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;(item, index) in items&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;index&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 你可以在需要时直接使用索引值 index。 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;index&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>若果你需要在迭代中访问原始数组对象，可以这样写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;(item, index, collection) in items&quot;</span> <span class="attr">:key</span>=<span class="string">&quot;index&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 你可以在需要时直接使用数组原始值 collection。 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 当前项 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;item&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 和上一行效果一致 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;collection[index]&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 上一项 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;collection[index - 1]&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>备注：<code>x-for</code> 要求在 <code>&lt;template&gt;&lt;/template&gt;</code> 标签中有单一的根元素。</p>
+</blockquote>
+<blockquote>
+<p>备注：当在 <code>svg</code> 标签中使用 <code>template</code> 的时候，你需要增加 <a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/issues/637#issuecomment-654856538">polyfill</a> 在初始化 Alpine 之前运行它。</p>
+</blockquote>
+<h4 id="嵌套-x-for"><a href="#嵌套-x-for" class="headerlink" title="嵌套 x-for"></a>嵌套 <code>x-for</code></h4><p>可以嵌套使用 <code>x-for</code> 循环，但是你必须为每个循环外面都包裹一个元素，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;item in items&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;subItem in item.subItems&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">x-text</span>=<span class="string">&quot;subItem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="范围内迭代"><a href="#范围内迭代" class="headerlink" title="范围内迭代"></a>范围内迭代</h4><p>Alpine 支持 <code>i in n</code> 语法，当 n 是整数时，就可以完成在一个固定范围内迭代的目标了。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-for</span>=<span class="string">&quot;i in 10&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">x-text</span>=<span class="string">&quot;i&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="x-transition"><a href="#x-transition" class="headerlink" title="x-transition"></a><code>x-transition</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div</span><br><span class="line">    x-show=&quot;open&quot;</span><br><span class="line">    x-transition:enter=&quot;transition ease-out duration-300&quot;</span><br><span class="line">    x-transition:enter-start=&quot;opacity-0 transform scale-90&quot;</span><br><span class="line">    x-transition:enter-end=&quot;opacity-100 transform scale-100&quot;</span><br><span class="line">    x-transition:leave=&quot;transition ease-in duration-300&quot;</span><br><span class="line">    x-transition:leave-start=&quot;opacity-100 transform scale-100&quot;</span><br><span class="line">    x-transition:leave-end=&quot;opacity-0 transform scale-90&quot;</span><br><span class="line">&gt;...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">x-if</span>=<span class="string">&quot;open&quot;</span>&gt;</span></span><br><span class="line">    &lt;div</span><br><span class="line">        x-transition:enter=&quot;transition ease-out duration-300&quot;</span><br><span class="line">        x-transition:enter-start=&quot;opacity-0 transform scale-90&quot;</span><br><span class="line">        x-transition:enter-end=&quot;opacity-100 transform scale-100&quot;</span><br><span class="line">        x-transition:leave=&quot;transition ease-in duration-300&quot;</span><br><span class="line">        x-transition:leave-start=&quot;opacity-100 transform scale-100&quot;</span><br><span class="line">        x-transition:leave-end=&quot;opacity-0 transform scale-90&quot;</span><br><span class="line">    &gt;...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这个例子使用了 <a target="_blank" rel="noopener" href="https://tailwindcss.com/">Tailwind CSS</a> 中提供的 class。</p>
+</blockquote>
+<p>Alpine 提供了 6 个不同的过渡指令用来在元素过渡（Transition）的显示/隐藏状态下不同阶段生效不同的 class。这些指令都能和 <code>x-show</code> 还有 <code>x-if</code> 一起使用。</p>
+<p>这些行为与 VueJS 的过渡指令完全一致。只是用了更清晰的命名。</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:enter</code></td>
+<td>在整个 Enter 阶段都生效</td>
+</tr>
+<tr>
+<td><code>:enter-start</code></td>
+<td>在元素被插入前生效，在元素被插入的后1帧被删除</td>
+</tr>
+</tbody></table>
+<p>| <code>:enter-end</code> | 在元素被插入后1帧（<code>enter-start</code> 被移除的同时）生效，在过渡/动画结束后被删除 ｜<br>| <code>:leave</code> | 在整个 Leave 阶段都生效 |<br>| <code>:leave-start</code> | 在 Leave 过渡触发后立即生效，1帧即被删除 |<br>| <code>:leave-end</code> | 在 Leave 过渡触发后（<code>leave-start</code> 删除的同时）1 帧新增，并在过渡/动画结束时删除。｜</p>
+<hr>
+<h3 id="x-spread"><a href="#x-spread" class="headerlink" title="x-spread"></a><code>x-spread</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;dropdown()&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">x-spread</span>=<span class="string">&quot;trigger&quot;</span>&gt;</span>Open Dropdown<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">x-spread</span>=<span class="string">&quot;dialogue&quot;</span>&gt;</span>Dropdown Contents<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="function"><span class="keyword">function</span> <span class="title">dropdown</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">            open: <span class="literal">false</span>,</span></span><br><span class="line">            trigger: &#123;</span><br><span class="line"><span class="javascript">                [<span class="string">&#x27;@click&#x27;</span>]() &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.open = <span class="literal">true</span></span></span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;,</span><br><span class="line">            dialogue: &#123;</span><br><span class="line"><span class="javascript">                [<span class="string">&#x27;x-show&#x27;</span>]() &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">return</span> <span class="built_in">this</span>.open</span></span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                [<span class="string">&#x27;@click.away&#x27;</span>]() &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.open = <span class="literal">false</span></span></span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>x-spread</code> 允许你展开一个可以复用的对象，其中包括元素的 Alpine 绑定。</p>
+<p>这一对象的 key 是指令（当然也可以包括修饰符），value 是可被 Alpine 执行的回调。</p>
+<blockquote>
+<p>备注： x-spread 有以下两点需要注意</p>
+<ul>
+<li>当被展开的指令是 <code>x-for</code> 时，你需要在回调中返回一个表达式字符串，如：<code>[&#39;x-for&#39;]() &#123; return &#39;item in items&#39; &#125;</code>.</li>
+<li><code>x-data</code> 和 <code>x-init</code> 不能在「spread」对象中使用。</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="x-cloak"><a href="#x-cloak" class="headerlink" title="x-cloak"></a><code>x-cloak</code></h3><p><strong>例如:</strong> <code>&lt;div x-data=&quot;&#123;&#125;&quot; x-cloak&gt;&lt;/div&gt;</code></p>
+<p><code>x-cloak</code> 属性将在 Alpine 初始化后被移除。这对于隐藏未初始化完毕的 DOM 非常有效，一种典型的通过全局样式的工作方式如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-attr">[x-cloak]</span> &#123;</span></span><br><span class="line">        display: none !important;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="魔法属性-Magic-Properties"><a href="#魔法属性-Magic-Properties" class="headerlink" title="魔法属性 Magic Properties"></a>魔法属性 Magic Properties</h3><blockquote>
+<p>除 <code>$el</code> 外，魔法属性 <strong>在 <code>x-data</code> 中的无法使用</strong>，因为那时组件还没初始化。</p>
+</blockquote>
+<hr>
+<h3 id="el"><a href="#el" class="headerlink" title="$el"></a><code>$el</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$el.innerHTML = &#x27;foo&#x27;&quot;</span>&gt;</span>Replace me with &quot;foo&quot;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>$el</code> 是一个用来获取根组件 DOM 节点的魔法属性。</p>
+<h3 id="refs"><a href="#refs" class="headerlink" title="$refs"></a><code>$refs</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">x-ref</span>=<span class="string">&quot;foo&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">x-on:click</span>=<span class="string">&quot;$refs.foo.innerText = &#x27;bar&#x27;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>$refs</code> 是一个用来在组件中获取原生 DOM 元素的魔法属性。这可以帮助你在需要时手动拿到原始的 DOM 元素。</p>
+<hr>
+<h3 id="event"><a href="#event" class="headerlink" title="$event"></a><code>$event</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">x-on:input</span>=<span class="string">&quot;alert($event.target.value)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>$event</code> 是一个用来在事件监听器中接受浏览器原生「Event」对象的魔法属性。</p>
+<blockquote>
+<p>备注: $event 属性只在 DOM 表达式中有效。</p>
+</blockquote>
+<p>如果你需要在一个 JavaScript 函数中使用 $event，可以直接这么干：</p>
+<p><code>&lt;button x-on:click=&quot;myFunction($event)&quot;&gt;&lt;/button&gt;</code></p>
+<hr>
+<h3 id="dispatch"><a href="#dispatch" class="headerlink" title="$dispatch"></a><code>$dispatch</code></h3><p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">custom-event</span>=<span class="string">&quot;console.log($event.detail.foo)&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$dispatch(&#x27;custom-event&#x27;, &#123; foo: &#x27;bar&#x27; &#125;)&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 点击时，将触发 console.log --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>有关事件传播 (Event Propagation)</strong></p>
+<p>请注意，因为 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Event_bubbling">事件冒泡机制</a> 的存在，当你需要从相同层级节点上拦截已触发的事件时，需要增加 <a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine#x-on"><code>.window</code></a> 修饰符：</p>
+<p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> @<span class="attr">custom-event</span>=<span class="string">&quot;console.log($event.detail.foo)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$dispatch(&#x27;custom-event&#x27;, &#123; foo: &#x27;bar&#x27; &#125;)&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的例子是错误示范，不能正常工作，因为 <code>custom-event</code> 被触发时，他只会传播到共同的祖先，上级的 <code>div</code> 元素。</p>
+</blockquote>
+<p><strong>分发到组件</strong></p>
+<p>也可以刚才这一技巧在组件之间通信使用：</p>
+<p><strong>例如:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span> @<span class="attr">custom-event.window</span>=<span class="string">&quot;console.log($event.detail)&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">x-data</span> @<span class="attr">click</span>=<span class="string">&quot;$dispatch(&#x27;custom-event&#x27;, &#x27;Hello World!&#x27;)&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 当点击发生时，将会 console.log &quot;Hello World!&quot;. --&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>$dispatch</code> 是一个创建 <code>CustomEvent</code> 并使用其内部的 <code>.dispatchEvent()</code> 进行分发的快捷方式。有很多使用自定义事件在组件间传递数据的优秀用例。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events">参考这篇文档</a> 来获取更多关于浏览器中 <code>CustomEvent</code> 的信息。</p>
+<p>可以注意到，放在 <code>$dispatch(&#39;some-event&#39;, &#123; some: &#39;data&#39; &#125;)</code> 第二个参数的数据，在新事件上可通过「detail」属性来拿到：<code>$event.detail.some</code>。将自定义事件的数据附加到 .detail 属性是在浏览器中 <code>CustomEvent</code> 的标准实践。更多信息参阅 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail">这篇文档（英文）</a>。</p>
+<p>你也可以使用 <code>$dispatch()</code> 来触发 <code>x-model</code> 绑定的数据更新。例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; foo: &#x27;bar&#x27; &#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">x-model</span>=<span class="string">&quot;foo&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;$dispatch(&#x27;input&#x27;, &#x27;baz&#x27;)&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 按钮被点击后，`x-model` 将获得冒泡的 「input」事件，并更新 foo 为 「baz」。 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>备注：$dispatch 属性只在 DOM 表达式中有效。</p>
+</blockquote>
+<p>如果你需要在一个 JavaScript 函数中使用 $dispatch，可以直接这么干：</p>
+<p><code>&lt;button x-on:click=&quot;myFunction($dispatch)&quot;&gt;&lt;/button&gt;</code></p>
+<hr>
+<h3 id="nextTick"><a href="#nextTick" class="headerlink" title="$nextTick"></a><code>$nextTick</code></h3><p><strong>例如：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; fruit: &#x27;apple&#x27; &#125;&quot;</span>&gt;</span></span><br><span class="line">    &lt;button</span><br><span class="line">        x-on:click=&quot;</span><br><span class="line">            fruit = &#x27;pear&#x27;;</span><br><span class="line">            $nextTick(() =&gt; &#123; console.log($event.target.innerText) &#125;);</span><br><span class="line">        &quot;</span><br><span class="line">        x-text=&quot;fruit&quot;</span><br><span class="line">    &gt;<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>$nextTick</code> 是一个运行你在 Alpine 做出响应式 DOM 更新后，执行一个给定表达式的指令。这在你需要在完成数据更新后用 DOM 状态做交互时非常有用。</p>
+<hr>
+<h3 id="watch"><a href="#watch" class="headerlink" title="$watch"></a><code>$watch</code></h3><p><strong>例如：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">x-data</span>=<span class="string">&quot;&#123; open: false &#125;&quot;</span> <span class="attr">x-init</span>=<span class="string">&quot;$watch(&#x27;open&#x27;, value =&gt; console.log(value))&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;open = ! open&quot;</span>&gt;</span>Toggle Open<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>你可以通过 <code>$watch</code> 魔法方法「监听」一个组件属性。在上面的例子中，当按钮被点击且 open 被改变时，你提供的回调函数会被调用，<code>console.log</code> 新的 value。</p>
+<h2 id="安全相关-Security"><a href="#安全相关-Security" class="headerlink" title="安全相关 Security"></a>安全相关 Security</h2><p>如果你发现了安全漏洞，请发邮件到 <a href="">calebporzio@gmail.com</a>.</p>
+<p>Alpine 依赖对 <code>Function</code> 对象的自定义实现来运行指令。虽然比 <code>eval()</code> 安全一，但在某些环境下这一方法也不可用，例如 Google Chrome App 使用的限制性内容安全策略（Content Security Policy/CSP）.</p>
+<p>如果你在使用 Alpin 的网站上处理敏感数据，就需要设置 <a target="_blank" rel="noopener" href="https://csp.withgoogle.com/docs/strict-csp.html">CSP</a> 使之包括 <code>unsafe-eval</code>。正确设置安全的策略有助于保护用户的个人隐私数据。</p>
+<p>由于策略设置会适用于页面中所有脚本，务必要检查页面引入的其他外部依赖，避免它们引发 XSS 漏洞、通过 <code>eval()</code> 修改 DOM 注入恶意代码。</p>
+<h2 id="V3-路线图-Roadmap"><a href="#V3-路线图-Roadmap" class="headerlink" title="V3 路线图 Roadmap"></a>V3 路线图 Roadmap</h2><ul>
+<li>从<code>x-ref</code> 迁移到 <code>ref</code> 以与 Vue 保持一致？</li>
+<li>新增 <code>Alpine.directive()</code></li>
+<li>新增 <code>Alpine.component(&#39;foo&#39;, &#123;...&#125;)</code> (通过 <code>__init()</code> 魔法方法)</li>
+<li>分发 Alpine 的 “loaded”, “transition-start” 等多个事件 (<a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/pull/299">#299</a>) ？</li>
+<li>移除 <code>x-bind:class=&quot;&#123; &#39;foo&#39;: true &#125;&quot;</code> 中的使用对象（以及数组）的语法 (<a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/pull/236">#236</a> 并增加在 <code>style</code> 中使用对象的支持</li>
+<li>优化 <code>x-for</code> 的响应式效果 (<a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/pull/165">#165</a>)</li>
+<li>增加 “deep watching” 支持 (<a target="_blank" rel="noopener" href="https://github.com/alpinejs/alpine/pull/294">#294</a>)</li>
+<li>增加 <code>$el</code> 快捷方式</li>
+<li>修改 <code>@click.away</code> 为 <code>@click.outside</code>?</li>
+</ul>
+<h2 id="许可证-License"><a href="#许可证-License" class="headerlink" title="许可证 License"></a>许可证 License</h2><p>Copyright © 2019-2020 Caleb Porzio 与仓库所有贡献者 版权所有</p>
+<p>基于 MIT 许可证开源，查看 <a href="LICENSE.md">LICENSE.md</a> 获取详情。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/Alpine-js/"># Alpine.js</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/03/13/axios/uniapp%E4%B8%AD%E5%B0%81%E8%A3%85request/">uniapp中封装request</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
