@@ -12,7 +12,7 @@
 
 
 
-<title>element-ui筛选输入下拉框 | Z. A. M.’s Blog</title>
+<title>弹窗的组件封装 | Z. A. M.’s Blog</title>
 
 
 
@@ -172,7 +172,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">element-ui筛选输入下拉框</h1>
+            <h1 class="post-title">弹窗的组件封装</h1>
             
                 <div class="post-meta">
                     
@@ -181,7 +181,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">March 25, 2021&nbsp;&nbsp;17:10:06</a>
+                        Date: <a href="#">April 10, 2021&nbsp;&nbsp;11:11:40</a>
                         </span>
                     
                     
@@ -197,26 +197,16 @@
         </header>
 
         <div class="post-content">
-            <h1 id="带输入搜索的下拉多选框实现"><a href="#带输入搜索的下拉多选框实现" class="headerlink" title="带输入搜索的下拉多选框实现"></a>带输入搜索的下拉多选框实现</h1><blockquote>
-<p>思路</p>
+            <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><blockquote>
+<p>不可以直接修改父组件传过来的值</p>
+<p>控制弹窗显示使用子组件内部变量</p>
 </blockquote>
-<ul>
-<li>初始数据(state)</li>
-<li>过滤筛选(list)</li>
-<li>下拉展示(options)</li>
-</ul>
-<p>需要三个变量运转实现</p>
-<blockquote>
-<p>页面展示部分options</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">AuditSee</span> <span class="attr">:isSee.sync</span>=<span class="string">&quot;isSee&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;isSee&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span>&#123;</span></span><br><span class="line">        components: &#123;  AuditSee &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><blockquote>
+<p>弹窗嵌套会发生有一层蒙层</p>
+<p>添加:modal-append-to-body=”true”和append-to-body属性解决</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-select</span><br><span class="line">    v-model&#x3D;&quot;value&quot;</span><br><span class="line">    multiple</span><br><span class="line">    filterable</span><br><span class="line">    remote</span><br><span class="line">    reserve-keyword</span><br><span class="line">    placeholder&#x3D;&quot;请输入关键词&quot;</span><br><span class="line">    :remote-method&#x3D;&quot;remoteMethod&quot;</span><br><span class="line">    :loading&#x3D;&quot;loading&quot;&gt;</span><br><span class="line">    &lt;el-option</span><br><span class="line">      v-for&#x3D;&quot;item in options&quot;</span><br><span class="line">      :key&#x3D;&quot;item.code&quot;</span><br><span class="line">      :label&#x3D;&quot;item.name&quot;</span><br><span class="line">      :value&#x3D;&quot;item.code&quot;&gt;</span><br><span class="line">    &lt;&#x2F;el-option&gt;</span><br><span class="line">  &lt;&#x2F;el-select&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>将数据遍历至过滤数组中存放</p>
-<p>通过监听函数传入查询条件</p>
-<p>遍历返回符合条件的数组</p>
-<p>赋值</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">      return &#123;</span><br><span class="line">        options: [],</span><br><span class="line">        value: [],</span><br><span class="line">        list: [],</span><br><span class="line">        loading: false,</span><br><span class="line">        states: [&quot;Alabama&quot;, &quot;California&quot;, &quot;Montana&quot;,</span><br><span class="line">        &quot;Nebraska&quot;, &quot;Oregon&quot;, &quot;Pennsylvania&quot;,</span><br><span class="line">        &quot;Rhode Island&quot;,&quot;Tennessee&quot;&quot;Virginia&quot;,</span><br><span class="line">        &quot;Washington&quot;]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line">      this.list &#x3D; this.states.map(item &#x3D;&gt; &#123;</span><br><span class="line">        return &#123; code: item.code, name: item.name &#125;;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      remoteMethod(query) &#123;</span><br><span class="line">        if (query !&#x3D;&#x3D; &#39;&#39;) &#123;</span><br><span class="line">          this.loading &#x3D; true;</span><br><span class="line">          setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">            this.loading &#x3D; false;</span><br><span class="line">            this.options &#x3D; this.list.filter(item &#x3D;&gt; &#123;</span><br><span class="line">              return item.name.toLowerCase()</span><br><span class="line">                .indexOf(query.toLowerCase()) &gt; -1;</span><br><span class="line">            &#125;);</span><br><span class="line">          &#125;, 200);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          this.options &#x3D;  this.states;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 模板 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">    &lt;el-dialog</span><br><span class="line">      title=&quot;查看&quot;</span><br><span class="line">      :visible.sync=&quot;visible&quot;</span><br><span class="line">      @close=&quot;$emit(&#x27;update:isSee&#x27;, false)&quot;</span><br><span class="line">      @before-close=&quot;$emit(&#x27;update:isSee&#x27;, false)&quot;</span><br><span class="line">      :modal-append-to-body=&quot;true&quot;</span><br><span class="line">      append-to-body</span><br><span class="line">    &gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-dialog</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">&quot;&quot;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      visible: <span class="built_in">this</span>.isSee,</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    isSee: &#123;</span><br><span class="line"><span class="javascript">      type: <span class="built_in">Boolean</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -258,10 +248,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/04/10/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%BC%B9%E7%AA%97%E7%9A%84%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85/">弹窗的组件封装</a>
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/04/10/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%88%86%E9%A1%B5%E5%99%A8/">分页器</a>
             
             
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/03/24/nuxt/nuxt%E9%83%A8%E7%BD%B2/">nuxt部署</a>
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/03/25/%E5%A4%A7%E5%89%8D%E7%AB%AF/element-ui%E7%AD%9B%E9%80%89%E8%BE%93%E5%85%A5%E4%B8%8B%E6%8B%89%E6%A1%86/">element-ui筛选输入下拉框</a>
             
         </section>
 
