@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>JavaScript复杂判断的map方法 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">JavaScript复杂判断的map方法</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">April 13, 2021&nbsp;&nbsp;8:46:20</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/">大前端</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="JavaScript复杂判断的map方法"><a href="#JavaScript复杂判断的map方法" class="headerlink" title="JavaScript复杂判断的map方法"></a>JavaScript复杂判断的map方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="number">1</span>, [<span class="string">&#x27;processing&#x27;</span>,<span class="string">&#x27;IndexPage&#x27;</span>]],</span><br><span class="line">  [<span class="number">2</span>, [<span class="string">&#x27;fail&#x27;</span>,<span class="string">&#x27;FailPage&#x27;</span>]],</span><br><span class="line">  [<span class="number">3</span>, [<span class="string">&#x27;fail&#x27;</span>,<span class="string">&#x27;FailPage&#x27;</span>]],</span><br><span class="line">  [<span class="number">4</span>, [<span class="string">&#x27;success&#x27;</span>,<span class="string">&#x27;SuccessPage&#x27;</span>]],</span><br><span class="line">  [<span class="number">5</span>, [<span class="string">&#x27;cancel&#x27;</span>,<span class="string">&#x27;CancelPage&#x27;</span>]],</span><br><span class="line">  [<span class="string">&#x27;default&#x27;</span>, [<span class="string">&#x27;other&#x27;</span>,<span class="string">&#x27;Index&#x27;</span>]]</span><br><span class="line">])</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 按钮点击事件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>status 活动状态：1 开团进行中 2 开团失败 3 商品售罄 4 开团成功 5 系统取消</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = actions.get(status) || actions.get(<span class="string">&#x27;default&#x27;</span>)</span><br><span class="line">  sendLog(action[<span class="number">0</span>])</span><br><span class="line">  jumpTo(action[<span class="number">1</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>一个对象通常都有自己的原型，所以一个对象总有一个”prototype”键。</li>
+<li>一个对象的键只能是字符串或者Symbols，但一个Map的键可以是任意值。</li>
+<li>你可以通过size属性很容易地得到一个Map的键值对个数，而对象的键值对个数只能手动确认。</li>
+</ul>
+<p>按钮点击时候只需要判断status，现在还需要判断用户的身份：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="string">&#x27;guest_1&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;guest_2&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;guest_3&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;guest_4&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;guest_5&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;master_1&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;master_2&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;master_3&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;master_4&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;master_5&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [<span class="string">&#x27;default&#x27;</span>, <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 按钮点击事件</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>identity 身份标识：guest客态 master主态</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>status 活动状态：1 开团进行中 2 开团失败 3 开团成功 4 商品售罄 5 有库存未开团</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = actions.get(<span class="string">`<span class="subst">$&#123;identity&#125;</span>_<span class="subst">$&#123;status&#125;</span>`</span>) || actions.get(<span class="string">&#x27;default&#x27;</span>)</span><br><span class="line">  action.call(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述代码核心逻辑是：把两个条件拼接成字符串，并通过以条件拼接字符串作为键，以处理函数作为值的Map对象进行查找并执行，这种写法在多元条件判断时候尤其好用。</p>
+<p>当然上述代码如果用Object对象来实现也是类似的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line">  <span class="string">&#x27;guest_1&#x27;</span>:<span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;,</span><br><span class="line">  <span class="string">&#x27;guest_2&#x27;</span>:<span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;,</span><br><span class="line">  <span class="comment">//....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = actions[<span class="string">`<span class="subst">$&#123;identity&#125;</span>_<span class="subst">$&#123;status&#125;</span>`</span>] || actions[<span class="string">&#x27;default&#x27;</span>]</span><br><span class="line">  action.call(<span class="built_in">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果有些同学觉得把查询条件拼成字符串有点别扭，那还有一种方案，就是用Map对象，以Object对象作为key：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">1</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">2</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;],</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">])</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = [...actions].filter(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>(key.identity == identity &amp;&amp; key.status == status))</span><br><span class="line">  action.forEach(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>value.call(<span class="built_in">this</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里也看出来Map与Object的区别，Map可以用任何类型的数据作为key。</p>
+<p>我们现在再将难度升级一点点，假如guest情况下，status1-4的处理逻辑都一样怎么办，最差的情况是这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">1</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/* functionA */</span>&#125;],</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">2</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/* functionA */</span>&#125;],</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">3</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/* functionA */</span>&#125;],</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">4</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/* functionA */</span>&#125;],</span><br><span class="line">  [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">5</span>&#125;,<span class="function">()=&gt;</span>&#123;<span class="comment">/* functionB */</span>&#125;],</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+<p>好一点的写法是将处理逻辑函数进行缓存：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> functionA = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">const</span> functionB = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">    [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">1</span>&#125;,functionA],</span><br><span class="line">    [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">2</span>&#125;,functionA],</span><br><span class="line">    [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">3</span>&#125;,functionA],</span><br><span class="line">    [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">4</span>&#125;,functionA],</span><br><span class="line">    [&#123;<span class="attr">identity</span>:<span class="string">&#x27;guest&#x27;</span>,<span class="attr">status</span>:<span class="number">5</span>&#125;,functionB],</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = [...actions()].filter(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>(key.identity == identity &amp;&amp; key.status == status))</span><br><span class="line">  action.forEach(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>value.call(<span class="built_in">this</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样写已经能满足日常需求了，但认真一点讲，上面重写了4次functionA还是有点不爽，假如判断条件变得特别复杂，比如identity有3种状态，status有10种状态，那你需要定义30条处理逻辑，而往往这些逻辑里面很多都是相同的，这似乎也是笔者不想接受的，那可以这样实现:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> functionA = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">const</span> functionB = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">    [<span class="regexp">/^guest_[1-4]$/</span>,functionA],</span><br><span class="line">    [<span class="regexp">/^guest_5$/</span>,functionB],</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = [...actions()].filter(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>(key.test(<span class="string">`<span class="subst">$&#123;identity&#125;</span>_<span class="subst">$&#123;status&#125;</span>`</span>)))</span><br><span class="line">  action.forEach(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>value.call(<span class="built_in">this</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里Map的优势更加凸显，可以用正则类型作为key了，这样就有了无限可能，假如需求变成，凡是guest情况都要发送一个日志埋点，不同status情况也需要单独的逻辑处理，那我们可以这样写:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = <span class="function">()=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> functionA = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">const</span> functionB = <span class="function">()=&gt;</span>&#123;<span class="comment">/*do sth*/</span>&#125;</span><br><span class="line">  <span class="keyword">const</span> functionC = <span class="function">()=&gt;</span>&#123;<span class="comment">/*send log*/</span>&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">    [<span class="regexp">/^guest_[1-4]$/</span>,functionA],</span><br><span class="line">    [<span class="regexp">/^guest_5$/</span>,functionB],</span><br><span class="line">    [<span class="regexp">/^guest_.*$/</span>,functionC],</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">  ])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> onButtonClick = <span class="function">(<span class="params">identity,status</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> action = [...actions()].filter(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>(key.test(<span class="string">`<span class="subst">$&#123;identity&#125;</span>_<span class="subst">$&#123;status&#125;</span>`</span>)))</span><br><span class="line">  action.forEach(<span class="function">(<span class="params">[key,value]</span>)=&gt;</span>value.call(<span class="built_in">this</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也就是说利用数组循环的特性，符合正则条件的逻辑都会被执行，那就可以同时执行公共逻辑和单独逻辑，因为正则的存在，你可以打开想象力解锁更多的玩法，本文就不赘述了。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本文已经教你了8种逻辑判断写法，包括：</p>
+<ol>
+<li>if/else</li>
+<li>switch</li>
+<li>一元判断时：存到Object里</li>
+<li>一元判断时：存到Map里</li>
+<li>多元判断时：将condition拼接成字符串存到Object里</li>
+<li>多元判断时：将condition拼接成字符串存到Map里</li>
+<li>多元判断时：将condition存为Object存到Map里</li>
+<li>多元判断时：将condition写作正则存到Map里</li>
+</ol>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/"># 大前端</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/04/13/%E5%A4%A7%E5%89%8D%E7%AB%AF/vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E6%80%9D%E8%B7%AF/">vue后台管理权限思路</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/04/10/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E5%88%86%E9%A1%B5%E5%99%A8/">分页器</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
