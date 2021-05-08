@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+
+
+<title>前端VUE项目开发规范 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.3.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">前端VUE项目开发规范</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">五月 6, 2021&nbsp;&nbsp;14:56:03</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/">大前端</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <blockquote>
+<p>为了更好的阅读体验,下载专业md编辑器Typora</p>
+</blockquote>
+<h1 id="前端VUE项目开发规范"><a href="#前端VUE项目开发规范" class="headerlink" title="前端VUE项目开发规范"></a>前端VUE项目开发规范</h1><p>规范的目的是为了编写高质量的代码，让团队成员维护项目时少一点头疼点，大家在一起开发是快乐的。</p>
+<p>引自《阿里规约》的开头片段：</p>
+<p><em>—-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。</em></p>
+<h2 id="一-文件命名规范"><a href="#一-文件命名规范" class="headerlink" title="(一)文件命名规范"></a>(一)文件命名规范</h2><h3 id="1-1-项目命名"><a href="#1-1-项目命名" class="headerlink" title="1.1 项目命名"></a>1.1 项目命名</h3><p>采用首字母大写单词隔开</p>
+<p><code>My-Pro</code></p>
+<h3 id="1-2-JS、CSS、SCSS、HTML、PNG-文件命名"><a href="#1-2-JS、CSS、SCSS、HTML、PNG-文件命名" class="headerlink" title="1.2 JS、CSS、SCSS、HTML、PNG 文件命名"></a>1.2 JS、CSS、SCSS、HTML、PNG 文件命名</h3><p>全部采用小写方式， 以中划线分隔</p>
+<p>正例： <code>render-dom.js / signup.css / index.html / company-logo.png</code></p>
+<p>反例： <code>renderDom.js / UserManagement.html</code></p>
+<h3 id="1-3-目录命名"><a href="#1-3-目录命名" class="headerlink" title="1.3 目录命名"></a>1.3 目录命名</h3><blockquote>
+<p> 为了达到目录清晰,列出下面常用目录,以此规范命名.</p>
+<p> 以下仅列出需要配置的目录和文件</p>
+</blockquote>
+<ul>
+<li>一级目录<ul>
+<li><code>src</code>   项目主入口</li>
+<li><code>public</code>   静态资源存放文件,项目全局公共资源文件,图片|字体|icon等,一般存放项目logo,网页角标ico图片</li>
+<li><code>.env.development</code>   开发环境变量(一般只需要写开发环境的ip请求地址)</li>
+<li><code>.env.production</code>    生产环境变量(生产环境的ip请求地址)</li>
+<li><code>vue.config.js</code>    vue项目配置文件(一般无需特别配置,vue有一套现成的loader)</li>
+</ul>
+</li>
+<li>二级目录<code>src</code><ul>
+<li><code>api</code>     统一存放接口文件目录</li>
+<li><code>assets</code>    统一资源目录文件目录</li>
+<li><code>components</code>    全局公共组件目录</li>
+<li><code>icons</code>      icon图片,按需使用</li>
+<li><code>layout</code>    布局页面目录</li>
+<li><code>mixins</code>       全局公共混入的代码目录</li>
+<li><code>route</code>      路由配置目录</li>
+<li><code>store</code>     vuex配置目录</li>
+<li><code>styles</code>     全局css,less,sass,scss目录</li>
+<li><code>utils</code>       全局方法,工具目录</li>
+<li><code>plugins </code>    插件详细配置目录</li>
+<li><code>views </code>     视图目录</li>
+<li><code>App.vue</code>      项目入口</li>
+<li><code>main.js </code>       全局配置文件</li>
+</ul>
+</li>
+<li>区分目录功能,不要在main.js主要配置中写逻辑代码</li>
+</ul>
+<h3 id="1-4-特殊目录下文件命名"><a href="#1-4-特殊目录下文件命名" class="headerlink" title="1.4 特殊目录下文件命名"></a>1.4 特殊目录下文件命名</h3><ul>
+<li>api,view,router中文件,组件名必须统一,一一对应,方便维护<ul>
+<li><code>@/api/test.js</code></li>
+<li><code>@/views/test/test.vue</code></li>
+<li><code>@/route/modules/test.js</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├── api     				<span class="comment">#接口</span></span><br><span class="line">|	├── test.js				<span class="comment">#对应test.vue页面</span></span><br><span class="line">├── views					<span class="comment">#页面</span></span><br><span class="line">|	├── <span class="built_in">test</span>				<span class="comment">#单页面目录</span></span><br><span class="line">|		├── test.vue		<span class="comment">#test页面</span></span><br><span class="line">├── route					<span class="comment">#路由目录</span></span><br><span class="line">|	├── modules				<span class="comment">#模块目录</span></span><br><span class="line">|		└── test.js			<span class="comment">#test模块路由配置</span></span><br><span class="line">|	├── index.js			<span class="comment">#路由配置文件</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>路由中组件命名和页面命名统一(cv的事)</li>
+<li>一个view页面对应一个api(同名js文件)</li>
+<li>router中一个模块单分出一个文件导出(根据路由视图分解成模块化)</li>
+<li>plugins目录中对于外部插件的单独配置(element,等)</li>
+</ul>
+<h3 id="1-5组件命名"><a href="#1-5组件命名" class="headerlink" title="1.5组件命名"></a>1.5组件命名</h3><p>采用首字母大写单词隔开</p>
+<p><code>My-Component</code></p>
+<p>全局组件命名</p>
+<p>以<code>All</code>+组件名标记全局组件,做到一眼清</p>
+<p><code>All-组件名</code></p>
+<p>平时业务中会使用到很多弹窗组件,所以单独拿出来统一模块化,目录如下:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">├── <span class="built_in">test</span>     						<span class="comment">#view页面</span></span><br><span class="line">|	├── index.vue					<span class="comment">#主要页面</span></span><br><span class="line">|	├── components					<span class="comment">#组件目录</span></span><br><span class="line">|	├── mixins						<span class="comment">#复用逻辑</span></span><br><span class="line">|	├── dialog						<span class="comment">#根据弹窗功能区分行为</span></span><br><span class="line">|		├── Add-Dialog.vue			<span class="comment">#增</span></span><br><span class="line">|		├── See-Dialog.vue			<span class="comment">#查</span></span><br><span class="line">|		├── Update-Dialog.vue		<span class="comment">#改</span></span><br><span class="line">|		├── Xxx-Dialog.vue			<span class="comment">#其他弹窗内容</span></span><br><span class="line">|		└── 其他...</span><br></pre></td></tr></table></figure>
+<h3 id="1-6-组件文档"><a href="#1-6-组件文档" class="headerlink" title="1.6 组件文档"></a>1.6 组件文档</h3><p>能够全局复用的组件也不多,每个全局组件都需要有对应的文档,方便后续维护及优化</p>
+<h4 id="文档格式"><a href="#文档格式" class="headerlink" title="文档格式"></a>文档格式</h4><ul>
+<li>组件<ul>
+<li>组件代码</li>
+<li>参数说明</li>
+</ul>
+</li>
+<li>使用方法<ul>
+<li>逻辑部分使用mixins混入,不直接写入调用页面</li>
+<li>传参说明</li>
+</ul>
+</li>
+</ul>
+<h2 id="二-代码规范"><a href="#二-代码规范" class="headerlink" title="(二)代码规范"></a>(二)代码规范</h2><blockquote>
+<p> 模块化各类文件,拒绝一页到底的冗余和重复代码</p>
+</blockquote>
+<h3 id="1-1-语义化标签"><a href="#1-1-语义化标签" class="headerlink" title="1.1. 语义化标签"></a>1.1. 语义化标签</h3><p>HTML5 中新增很多语义化标签，所以优先使用语义化标签，避免一个页面都是 div 或者 p 标签</p>
+<p>正例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>反例</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-2-css规范"><a href="#1-2-css规范" class="headerlink" title="1.2. css规范"></a>1.2. css规范</h3><h4 id="1-按以下顺序组织"><a href="#1-按以下顺序组织" class="headerlink" title="1)按以下顺序组织"></a>1)按以下顺序组织</h4><p>1、@import;<br>2、变量声明;<br>3、样式声明;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;mixins/size.scss&quot;</span>;</span><br><span class="line"></span><br><span class="line">@default-text-color: #333;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.page</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">960px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-重复样式的抽离提取为公共样式"><a href="#2-重复样式的抽离提取为公共样式" class="headerlink" title="2)重复样式的抽离提取为公共样式"></a>2)重复样式的抽离提取为公共样式</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// scss变量</span></span><br><span class="line"><span class="keyword">@mixin</span> clearfix &#123;</span><br><span class="line">    &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 可传参的scss函数</span></span><br><span class="line"><span class="keyword">@mixin</span> color(<span class="variable">$color</span>) &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="variable">$color</span>;</span><br><span class="line">  &amp;<span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">$color</span>;</span><br><span class="line">    &amp;<span class="selector-pseudo">:before</span>,</span><br><span class="line">    &amp;<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">      <span class="attribute">background</span>: <span class="variable">$color</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.blue-btn</span> &#123;</span><br><span class="line">  <span class="keyword">@include</span> clearfix;</span><br><span class="line">  <span class="keyword">@include</span> color(<span class="number">#ccc</span>);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="3-关于主题样式抽离为css变量方便后续修改维护"><a href="#3-关于主题样式抽离为css变量方便后续修改维护" class="headerlink" title="3)关于主题样式抽离为css变量方便后续修改维护"></a>3)关于主题样式抽离为css变量方便后续修改维护</h4><p>如侧边栏,表格样式等</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// sidebar</span></span><br><span class="line"><span class="variable">$is-color</span>:red;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出的变量可在vue模板中直接使用</span></span><br><span class="line">:export &#123;</span><br><span class="line">  isColor: <span class="variable">$is-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 导出的变量为isColor</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-css文件的模块化"><a href="#4-css文件的模块化" class="headerlink" title="4) css文件的模块化"></a>4) css文件的模块化</h4><p>正常项目中肯定不止一个css样式文件,以styles目录下的index文件为出口,在<code>index.scss</code>中 <code>@import</code>导入其他css配置文件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── styles     						<span class="comment">#全局样式目录</span></span><br><span class="line">|	├── index.scss					<span class="comment">#导出的样式文件</span></span><br><span class="line">|	├── common.scss					<span class="comment">#样式重置</span></span><br><span class="line">|	├── mixins.scss					<span class="comment">#scss变量</span></span><br><span class="line">|	├── element-ui.scss				<span class="comment">#插件样式的自定义</span></span><br><span class="line">|	└── 其他...</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>styles/index.scss</p>
+</blockquote>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;./common.scss&#x27;</span>;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;./mixin.scss&#x27;</span>;</span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;./element-ui.scss&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>最后在main.js中引入index.scss即可</p>
+<h3 id="1-3-Javascript-规范"><a href="#1-3-Javascript-规范" class="headerlink" title="1.3. Javascript 规范"></a>1.3. <code>Javascript </code>规范</h3><h4 id="1-使用-2-个空格进行缩进"><a href="#1-使用-2-个空格进行缩进" class="headerlink" title="1) 使用 2 个空格进行缩进"></a>1) 使用 2 个空格进行缩进</h4><h4 id="2-统一使用单引号"><a href="#2-统一使用单引号" class="headerlink" title="2) 统一使用单引号"></a>2) 统一使用单引号</h4><p>api接口方法中需要字符串拼接接口时,使用es6模板字符串语法</p>
+<p>反例:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> request(&#123;</span><br><span class="line">    url: <span class="string">&#x27;/api/&#x27;</span>+<span class="string">&#x27;page=&#x27;</span> + page + <span class="string">&#x27;&amp;page_size=&#x27;</span> + page_size + <span class="string">&#x27;&amp;xx&#x27;</span> + xx</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>正例:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> request(&#123;</span><br><span class="line">    url: <span class="string">`/api/page=<span class="subst">$&#123;page&#125;</span>&amp;page_size=<span class="subst">$&#123;page_size&#125;</span>&amp;xx=<span class="subst">$&#123;xx&#125;</span>`</span></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="3-优先使用es6-es7中新增的语法糖和函数"><a href="#3-优先使用es6-es7中新增的语法糖和函数" class="headerlink" title="3) 优先使用es6,es7中新增的语法糖和函数"></a>3) 优先使用es6,es7中新增的语法糖和函数</h4><p>比如箭头函数、await/async ， 解构， let ，const , for…of  ,  …(展开运算符)  等等</p>
+<h4 id="4-三元运算符"><a href="#4-三元运算符" class="headerlink" title="4) 三元运算符"></a>4) 三元运算符</h4><ul>
+<li>不要写太长的三元运算符!!!</li>
+<li>简单明了的逻辑判断使用三元运算符</li>
+<li>复杂判断方法使用计算属性</li>
+<li>三元运算符不可超过三层.</li>
+<li>多层if判断使用switch,更清晰明了.</li>
+</ul>
+<h4 id="5-console-log使用完毕后立马注释或者删除"><a href="#5-console-log使用完毕后立马注释或者删除" class="headerlink" title="5) console.log使用完毕后立马注释或者删除."></a>5) console.log使用完毕后立马注释或者删除.</h4><h4 id="后续按需求统一"><a href="#后续按需求统一" class="headerlink" title="后续按需求统一"></a>后续按需求统一</h4><h3 id="1-4-api规范"><a href="#1-4-api规范" class="headerlink" title="1.4. api规范"></a>1.4. api规范</h3><h4 id="1-使用全局唯一的封装的request方法请求接口并封装对应的方法-不要另起炉灶-凸显个性"><a href="#1-使用全局唯一的封装的request方法请求接口并封装对应的方法-不要另起炉灶-凸显个性" class="headerlink" title="1)使用全局唯一的封装的request方法请求接口并封装对应的方法,不要另起炉灶,凸显个性!!!!"></a>1)使用全局唯一的封装的request方法请求接口并封装对应的方法,不要另起炉灶,凸显个性!!!!</h4><h4 id="2-接口方法示例"><a href="#2-接口方法示例" class="headerlink" title="2) 接口方法示例"></a>2) 接口方法示例</h4><p>反例:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">editList</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = <span class="keyword">await</span> axios(&#123;</span><br><span class="line">    method: <span class="string">&quot;put&quot;</span>,</span><br><span class="line">    url: URL + <span class="string">&quot;/curriculum/&quot;</span> + params.id,</span><br><span class="line">    data: params,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      accessToken: Cookies.get(<span class="string">&quot;accessToken&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>正例:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> test = <span class="function"><span class="params">data</span> =&gt;</span></span><br><span class="line">  request(&#123;</span><br><span class="line">    url: <span class="string">`/curriculum/id=<span class="subst">$&#123;data.id&#125;</span>&amp;`</span>,</span><br><span class="line">    method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line">    data</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="3-使用async-await"><a href="#3-使用async-await" class="headerlink" title="3)使用async / await"></a>3)使用async / await</h4><p>不要then来then去了!!</p>
+<p>报错处理方法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="title">xxx</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> res = <span class="keyword">await</span> api().catch(<span class="function"><span class="params">e</span>=&gt;</span>e)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-mixins规范"><a href="#1-5-mixins规范" class="headerlink" title="1.5. mixins规范"></a>1.5. mixins规范</h3><h4 id="1-变量命名"><a href="#1-变量命名" class="headerlink" title="1)变量命名"></a>1)变量命名</h4><p>因为是可以到处拿来即用的代码,为了避免冲突以及和其他代码块区分开来,变量命名为:</p>
+<p><code>&#39;Mixin&#39; +  &#39;变量名&#39;  </code></p>
+<p>全局通用逻辑不多,变量命名越详细越好</p>
+<h4 id="2-代码块需要注释用途"><a href="#2-代码块需要注释用途" class="headerlink" title="2)代码块需要注释用途"></a>2)代码块需要注释用途</h4><p>这种跨文件的复用文件都需要注释.</p>
+<h3 id="1-6-route规范"><a href="#1-6-route规范" class="headerlink" title="1.6. route规范"></a>1.6. route规范</h3><h4 id="1-区分以下三个模块"><a href="#1-区分以下三个模块" class="headerlink" title="1)区分以下三个模块"></a>1)区分以下三个模块</h4><ul>
+<li>路由配置模块<ul>
+<li><code>index.js</code></li>
+</ul>
+</li>
+<li>路由守卫模块<ul>
+<li><code>permission.js</code></li>
+</ul>
+</li>
+<li>具体路由模块<ul>
+<li><code>modules</code>目录</li>
+<li><code>具体模块.js</code>,一般为一个侧边栏导航部分</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-具体配置"><a href="#2-具体配置" class="headerlink" title="2) 具体配置"></a>2) 具体配置</h4><blockquote>
+<p><code>route/modules/test.js</code></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Layout <span class="keyword">from</span> <span class="string">&#x27;@/layout&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = &#123;</span><br><span class="line">  path: <span class="string">&#x27;/test&#x27;</span>,</span><br><span class="line">  component: Layout,</span><br><span class="line">  redirect: <span class="string">&#x27;/test/index&#x27;</span>,</span><br><span class="line">  name: <span class="string">&#x27;Test&#x27;</span>,</span><br><span class="line">  meta: &#123;</span><br><span class="line">    title: <span class="string">&#x27;演示&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  children: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">&#x27;index&#x27;</span>,</span><br><span class="line">      name: <span class="string">&#x27;TestIndex&#x27;</span>,</span><br><span class="line">      component: <span class="function">() =&gt;</span> <span class="keyword">import</span>(<span class="string">&#x27;@/views/test/index.vue&#x27;</span>),</span><br><span class="line">      meta: &#123; <span class="attr">title</span>: <span class="string">&#x27;test&#x27;</span> &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      ...</span><br><span class="line">      &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> test</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>route/index.js</code></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">&#x27;./modules/test.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> routes = &#123;</span><br><span class="line">    ...</span><br><span class="line">    test,</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>反例:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">route.js</span><br><span class="line">一页到底式的路由配置</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">几百行...</span><br></pre></td></tr></table></figure>
+<h3 id="1-7-vuex规范"><a href="#1-7-vuex规范" class="headerlink" title="1.7.  vuex规范"></a>1.7.  vuex规范</h3><h4 id="1-不要为了使用vuex而去用vuex"><a href="#1-不要为了使用vuex而去用vuex" class="headerlink" title="1)不要为了使用vuex而去用vuex!!!"></a>1)不要为了使用vuex而去用vuex!!!</h4><h4 id="2-列出以下几种场景"><a href="#2-列出以下几种场景" class="headerlink" title="2)列出以下几种场景"></a>2)列出以下几种场景</h4><ul>
+<li><p>跨页面传递状态</p>
+</li>
+<li><p>多个页面或者组件中操作同一的数据,使用vuex管理状态比较方便</p>
+</li>
+<li><p>记录用户操作,如,弹框确认后不再显示等</p>
+</li>
+</ul>
+<h3 id="公共组件作为单文档编写"><a href="#公共组件作为单文档编写" class="headerlink" title="公共组件作为单文档编写"></a>公共组件作为单文档编写</h3>
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/%E5%A4%A7%E5%89%8D%E7%AB%AF/"># 大前端</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/04/29/ES6/%E6%95%B0%E6%8D%AE%E8%BD%AC%E5%8C%96%E6%96%B9%E6%B3%95/">数据转化方法</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
