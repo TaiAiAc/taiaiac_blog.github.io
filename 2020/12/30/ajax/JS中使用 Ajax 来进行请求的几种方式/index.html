@@ -1,220 +1,278 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/taiaiac.gitee.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/taiaiac.gitee.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/taiaiac.gitee.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/taiaiac.gitee.io/images/logo.svg" color="#222">
 
-    <meta name="author" content="Z.A.M.">
-
-
-
-
-
-<title>JS中使用 Ajax 来进行请求的几种方式 | Z. A. M.’s Blog</title>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/main.css">
 
 
+<link rel="stylesheet" href="/taiaiac.gitee.io/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gitee.com","root":"/taiaiac.gitee.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
+  <meta name="description" content="1.什么是 AJAX术语 AJAX 表示 异步的 JavaScript 和 XML。 AJAX 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中使用 Ajax 来进行请求的几种方式">
+<meta property="og:url" content="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Z. A. M.’s Blog">
+<meta property="og:description" content="1.什么是 AJAX术语 AJAX 表示 异步的 JavaScript 和 XML。 AJAX 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-30T06:56:03.000Z">
+<meta property="article:modified_time" content="2020-12-31T01:15:22.564Z">
+<meta property="article:author" content="Z.A.M.">
+<meta property="article:tag" content="Ajax">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
+<link rel="canonical" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">
 
 
-  <meta name="generator" content="Hexo 5.3.0"></head>
-  <body>
-    <div class="wrapper">
-      <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
 </script>
-      <div class="main"><div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
+
+  <title>JS中使用 Ajax 来进行请求的几种方式 | Z. A. M.’s Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?926d1ac4f837ede8bead2fd3007162d6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/taiaiac.gitee.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Z. A. M.’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
+  </div>
 </div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
 
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
 
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
 
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
+    <a href="/taiaiac.gitee.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
-</script>
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/taiaiac.gitee.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/taiaiac.gitee.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/taiaiac.gitee.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
 
     
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">JS中使用 Ajax 来进行请求的几种方式</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">
 
-                    
-                        <span class="post-time">
-                        Date: <a href="#">十二月 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/Ajax/">Ajax</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
 
-        <div class="post-content">
-            <h2 id="1-什么是-AJAX"><a href="#1-什么是-AJAX" class="headerlink" title="1.什么是 AJAX"></a>1.什么是 AJAX</h2><p>术语 AJAX 表示 <strong>异步的 JavaScript 和 XML</strong>。</p>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JS中使用 Ajax 来进行请求的几种方式
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:15:22" itemprop="dateModified" datetime="2020-12-31T09:15:22+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="1-什么是-AJAX"><a href="#1-什么是-AJAX" class="headerlink" title="1.什么是 AJAX"></a>1.什么是 AJAX</h2><p>术语 AJAX 表示 <strong>异步的 JavaScript 和 XML</strong>。</p>
 <p><strong>AJAX</strong> 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。</p>
 <p>有多种方法可以发出网络请求并从服务器获取数据。 我们将一一介绍。</p>
 <h2 id="2-XMLHttpRequest"><a href="#2-XMLHttpRequest" class="headerlink" title="2.XMLHttpRequest"></a>2.XMLHttpRequest</h2><p><code>XMLHttpRequest</code>对象（简称<strong>XHR</strong>）在较早的时候用于从服务器异步检索数据。</p>
 <p>之所以使用<strong>XML</strong>，是因为它首先用于检索 XML 数据。现在，它也可以用来检索 JSON, HTML 或纯文本。</p>
 <h3 id="事例-2-1-GET"><a href="#事例-2-1-GET" class="headerlink" title="事例 2.1: GET"></a>事例 2.1: GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.responseText)</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Error Occurred:&#x27;</span>, err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.onload = success</span><br><span class="line">xhr.onerror = error</span><br><span class="line">xhr.open(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts/1&#x27;</span>)</span><br><span class="line">xhr.send()</span><br></pre></td></tr></table></figure>
+
 <p>我们看到，要发出一个简单的 GET 请求，需要两个侦听器来处理请求的成功和失败。我们还需要调用<code>open()</code>和<code>send()</code>方法。来自服务器的响应存储在<code>responseText</code>变量中，该变量使用<code>JSON.parse()</code>转换为 JavaScript 对象。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.responseText)</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Error Occurred :&#x27;</span>, err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.onload = success</span><br><span class="line">xhr.onerror = error</span><br><span class="line">xhr.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts&#x27;</span>)</span><br><span class="line">xhr.setRequestHeader(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json; charset=UTF-8&#x27;</span>)</span><br><span class="line">xhr.send(</span><br><span class="line">  <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">    title: <span class="string">&#x27;foo&#x27;</span>,</span><br><span class="line">    body: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">    userId: <span class="number">1</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">success</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(<span class="built_in">this</span>.responseText)</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">error</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Error Occurred :&#x27;</span>, err)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">xhr.onload = success</span><br><span class="line">xhr.onerror = error</span><br><span class="line">xhr.open(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;https://jsonplaceholder.typicode.com/posts&#x27;</span>)</span><br><span class="line">xhr.setRequestHeader(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/json; charset=UTF-8&#x27;</span>)</span><br><span class="line">xhr.send(</span><br><span class="line">  <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">    <span class="attr">title</span>: <span class="string">&#x27;foo&#x27;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;bar&#x27;</span>,</span><br><span class="line">    <span class="attr">userId</span>: <span class="number">1</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
 <p>我们看到 POST 请求类似于 GET 请求。 我们需要另外使用<code>setRequestHeader</code>设置请求标头“Content-Type” ，并使用 send 方法中的<code>JSON.stringify</code>将 JSON 正文作为字符串发送。</p>
 <h3 id="2-3-XMLHttpRequest-vs-Fetch"><a href="#2-3-XMLHttpRequest-vs-Fetch" class="headerlink" title="2.3 XMLHttpRequest vs Fetch"></a>2.3 XMLHttpRequest vs Fetch</h3><p>早期的开发人员，已经使用了好多年的 <code>XMLHttpRequest</code>来请求数据了。 现代的<code>fetch API</code>允许我们发出类似于<code>XMLHttpRequest（XHR）</code>的网络请求。 主要区别在于<code>fetch() </code>API 使用<strong>Promises</strong>，它使 API 更简单，更简洁，避免了回调地狱。</p>
 <h2 id="3-Fetch-API"><a href="#3-Fetch-API" class="headerlink" title="3. Fetch API"></a>3. Fetch API</h2><p>Fetch 是一个用于进行 AJAX 调用的原生 JavaScript API，它得到了大多数浏览器的支持，现在得到了广泛的应用。</p>
 <h3 id="3-1-API-用法"><a href="#3-1-API-用法" class="headerlink" title="3.1 API 用法"></a>3.1 API 用法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fetch(url, options)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// handle response data</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// handle errors</span></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
 <h4 id="API-参数"><a href="#API-参数" class="headerlink" title="API 参数"></a>API 参数</h4><p><code>fetch()</code> API 有两个参数</p>
 <ol>
 <li><p><strong>url</strong>是必填参数，它是您要获取的资源的路径。</p>
 </li>
 <li><pre><code class="js">options
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">是一个可选参数。不需要提供这个参数来发出简单的 GET 请求。</span><br><span class="line"></span><br><span class="line">- method: GET | POST | PUT | DELETE | PATCH</span><br><span class="line"></span><br><span class="line">- headers: 请求头，如</span><br><span class="line"></span><br><span class="line">  &#96;&#96;&#96;js</span><br><span class="line">  &#123; “Content-type”: “application&#x2F;json; charset&#x3D;UTF-8” &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">是一个可选参数。不需要提供这个参数来发出简单的 GET 请求。</span><br><span class="line"></span><br><span class="line">- method: GET | POST | PUT | DELETE | PATCH</span><br><span class="line"></span><br><span class="line">- headers: 请求头，如</span><br><span class="line"></span><br><span class="line">  ```js</span><br><span class="line">  &#123; “Content-type”: “application/json; charset=UTF-8” &#125;</span><br></pre></td></tr></table></figure>
+
   - mode: cors | no-cors | same-origin | navigate
   - cache: default | reload | no-cache
   - body: 一般用于 POST 请求
@@ -235,6 +293,7 @@
 <li>ok –布尔值，如果 HTTP 状态代码为 200-299，则为<code>true</code>。</li>
 </ul>
 <h3 id="3-3-示例：GET"><a href="#3-3-示例：GET" class="headerlink" title="3.3 示例：GET"></a>3.3 示例：GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getTodoItem = fetch(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(err));</span><br><span class="line"></span><br><span class="line">getTodoItem.then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response));</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line"> &#123; <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">&quot;delectus aut autem&quot;</span>, <span class="attr">completed</span>: <span class="literal">false</span> &#125;</span><br></pre></td></tr></table></figure>
+
 <p>在上面的代码中需要注意两件事:</p>
 <ol>
 <li><code>fetch</code> API 返回一个 promise 对象，我们可以将其分配给变量并稍后执行。</li>
@@ -242,10 +301,13 @@
 </ol>
 <h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><p>我们来看看当 HTTP <code>GET</code>请求抛出 500 错误时会发生什么：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>) <span class="comment">// this API throw 500 error</span></span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;Inside first then block&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> response.json();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">json</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">&quot;Inside second then block&quot;</span>, json))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line">Inside first then block</span><br><span class="line">➤ ⓧ Inside <span class="keyword">catch</span> block: <span class="built_in">SyntaxError</span>: Unexpected token I <span class="keyword">in</span> <span class="built_in">JSON</span> at position <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
 <p>我们看到，即使 API 抛出 500 错误，它仍然会首先进入<code>then()</code>块，在该块中它无法解析错误 JSON 并抛出<code>catch()</code>块捕获的错误。</p>
 <p>这意味着如果我们使用<code>fetch()</code>API，则需要像这样显式地处理此类错误：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>)</span><br><span class="line">  .then(handleErrors)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handleErrors</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!response.ok) &#123; <span class="comment">// throw error based on custom conditions on response</span></span><br><span class="line">      <span class="keyword">throw</span> <span class="built_in">Error</span>(response.statusText);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> response;</span><br><span class="line">&#125;</span><br><span class="line"> ➤ Inside <span class="keyword">catch</span> block: <span class="built_in">Error</span>: Internal Server <span class="built_in">Error</span> at handleErrors (Script snippet %<span class="number">239</span>:<span class="number">9</span>)</span><br></pre></td></tr></table></figure>
-<h3 id="3-3-示例：POST"><a href="#3-3-示例：POST" class="headerlink" title="3.3 示例：POST"></a>3.3 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">    method: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    body: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">      completed: <span class="literal">true</span>,</span><br><span class="line">      title: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      userId: <span class="number">1</span></span><br><span class="line">    &#125;),</span><br><span class="line">    headers: &#123;</span><br><span class="line">      <span class="string">&quot;Content-type&quot;</span>: <span class="string">&quot;application/json; charset=UTF-8&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">json</span> =&gt;</span> <span class="built_in">console</span>.log(json))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line">➤ &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-示例：POST"><a href="#3-3-示例：POST" class="headerlink" title="3.3 示例：POST"></a>3.3 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">fetch(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">    <span class="attr">body</span>: <span class="built_in">JSON</span>.stringify(&#123;</span><br><span class="line">      <span class="attr">completed</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      <span class="attr">userId</span>: <span class="number">1</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">headers</span>: &#123;</span><br><span class="line">      <span class="string">&quot;Content-type&quot;</span>: <span class="string">&quot;application/json; charset=UTF-8&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function"><span class="params">json</span> =&gt;</span> <span class="built_in">console</span>.log(json))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line">➤ &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <p>在上面的代码中需要注意两件事:-</p>
 <ol>
 <li><code>POST</code>请求类似于<code>GET</code>请求。 我们还需要在<code>fetch()</code> API 的第二个参数中发送<code>method</code>，<code>body</code> 和<code>headers</code> 属性。</li>
@@ -259,77 +321,236 @@
 <li>它将响应作为 JSON 对象返回，因此我们无需进行任何解析</li>
 </ul>
 <h3 id="4-1-示例：GET"><a href="#4-1-示例：GET" class="headerlink" title="4.1 示例：GET"></a>4.1 示例：GET</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在chrome控制台中引入脚本的方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">script.type = <span class="string">&#x27;text/javascript&#x27;</span>;</span><br><span class="line">script.src = <span class="string">&#x27;https://unpkg.com/axios/dist/axios.min.js&#x27;</span>;</span><br><span class="line"><span class="built_in">document</span>.head.appendChild(script);</span><br><span class="line">axios.get(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos/1&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(err));</span><br><span class="line">Response</span><br><span class="line"></span><br><span class="line">&#123; <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">&quot;delectus aut autem&quot;</span>, <span class="attr">completed</span>: <span class="literal">false</span> &#125;</span><br></pre></td></tr></table></figure>
+
 <p>我们可以看到，我们直接使用 response 获得响应数据。数据没有任何解析对象，不像<code>fetch()</code> API。</p>
 <h4 id="错误处理-1"><a href="#错误处理-1" class="headerlink" title="错误处理"></a>错误处理</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">&#x27;http://httpstat.us/500&#x27;</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(<span class="string">&quot;Inside catch block:&quot;</span>, err));</span><br><span class="line">Inside <span class="keyword">catch</span> block: <span class="built_in">Error</span>: Network <span class="built_in">Error</span></span><br></pre></td></tr></table></figure>
+
 <p>我们看到，500 错误也被<code>catch()</code>块捕获，不像<code>fetch()</code> API，我们必须显式处理它们。</p>
-<h3 id="4-2-示例：POST"><a href="#4-2-示例：POST" class="headerlink" title="4.2 示例：POST"></a>4.2 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">      completed: <span class="literal">true</span>,</span><br><span class="line">      title: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      userId: <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line"> &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-2-示例：POST"><a href="#4-2-示例：POST" class="headerlink" title="4.2 示例：POST"></a>4.2 示例：POST</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(<span class="string">&#x27;https://jsonplaceholder.typicode.com/todos&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">completed</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">title</span>: <span class="string">&#x27;new todo item&#x27;</span>,</span><br><span class="line">      <span class="attr">userId</span>: <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> <span class="built_in">console</span>.log(response.data))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br><span class="line"> &#123;<span class="attr">completed</span>: <span class="literal">true</span>, <span class="attr">title</span>: <span class="string">&quot;new todo item&quot;</span>, <span class="attr">userId</span>: <span class="number">1</span>, <span class="attr">id</span>: <span class="number">201</span>&#125;</span><br></pre></td></tr></table></figure>
+
 <p>我们看到 POST 方法非常简短，可以直接传递请求主体参数，这与<code>fetch()</code> API 不同。</p>
 
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/taiaiac.gitee.io/tags/Ajax/" rel="tag"># Ajax</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/" rel="prev" title="Axios Ajax获取远程数据">
+      <i class="fa fa-chevron-left"></i> Axios Ajax获取远程数据
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/" rel="next" title="url模块">
+      url模块 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF-AJAX"><span class="nav-number">1.</span> <span class="nav-text">1.什么是 AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-XMLHttpRequest"><span class="nav-number">2.</span> <span class="nav-text">2.XMLHttpRequest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BE%8B-2-1-GET"><span class="nav-number">2.1.</span> <span class="nav-text">事例 2.1: GET</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-XMLHttpRequest-vs-Fetch"><span class="nav-number">2.2.</span> <span class="nav-text">2.3 XMLHttpRequest vs Fetch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Fetch-API"><span class="nav-number">3.</span> <span class="nav-text">3. Fetch API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-API-%E7%94%A8%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 API 用法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#API-%E5%8F%82%E6%95%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">API 参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%A4%BA%E4%BE%8B%EF%BC%9AGET"><span class="nav-number">3.2.</span> <span class="nav-text">3.3 示例：GET</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="nav-number">3.2.1.</span> <span class="nav-text">错误处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%A4%BA%E4%BE%8B%EF%BC%9APOST"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 示例：POST</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Axios-API"><span class="nav-number">4.</span> <span class="nav-text">4.Axios API</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%A4%BA%E4%BE%8B%EF%BC%9AGET"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 示例：GET</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86-1"><span class="nav-number">4.1.1.</span> <span class="nav-text">错误处理</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E7%A4%BA%E4%BE%8B%EF%BC%9APOST"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 示例：POST</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Z.A.M."
+      src="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+  <p class="site-author-name" itemprop="name">Z.A.M.</p>
+  <div class="site-description" itemprop="description">所有不利,都是 能力不足 导致的. <br> By <东京喰种>.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/taiaiac.gitee.io/archives/">
+        
+          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/taiaiac.gitee.io/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/taiaiac.gitee.io/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
         
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
 
-            </section>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Z.A.M.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+<div>
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/01/2020 18:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",1000);
+</script>
         
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/Ajax/"># Ajax</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/">url模块</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/ajax/axios/">Axios Ajax获取远程数据</a>
-            
-        </section>
 
 
-    </article>
-</div>
-</div>
-      <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
 
-    </div>
-    <script
-      type="text/javascript"
-      color="96,98,102"
-      opacity="0.7"
-      zIndex="-2"
-      count="99"
-      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
-    ></script>
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/taiaiac.gitee.io/lib/anime.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/taiaiac.gitee.io/js/utils.js"></script>
+
+<script src="/taiaiac.gitee.io/js/motion.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/schemes/pisces.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/taiaiac.gitee.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

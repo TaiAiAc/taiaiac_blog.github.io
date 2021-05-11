@@ -1,240 +1,312 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/taiaiac.gitee.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/taiaiac.gitee.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/taiaiac.gitee.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/taiaiac.gitee.io/images/logo.svg" color="#222">
 
-    <meta name="author" content="Z.A.M.">
-
-
-
-
-
-<title>基础 | Z. A. M.’s Blog</title>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/main.css">
 
 
+<link rel="stylesheet" href="/taiaiac.gitee.io/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gitee.com","root":"/taiaiac.gitee.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
+  <meta name="description" content="基础text相当于以前 web 中的 span 标签 行内元素 不会换行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础">
+<meta property="og:url" content="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Z. A. M.’s Blog">
+<meta property="og:description" content="基础text相当于以前 web 中的 span 标签 行内元素 不会换行">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-30T06:56:03.000Z">
+<meta property="article:modified_time" content="2020-12-31T01:02:19.152Z">
+<meta property="article:author" content="Z.A.M.">
+<meta property="article:tag" content="微信小程序">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
-
-
-
-    
-    
-        
-    
+<link rel="canonical" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80/">
 
 
-  <meta name="generator" content="Hexo 5.3.0"></head>
-  <body>
-    <div class="wrapper">
-      <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
 </script>
-      <div class="main"><div class="container">
-    
-    
-        <div class="post-toc">
-    <div class="tocbot-list">
+
+  <title>基础 | Z. A. M.’s Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?926d1ac4f837ede8bead2fd3007162d6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/taiaiac.gitee.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Z. A. M.’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
+  </div>
 </div>
 
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
 
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
 
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
 
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
+    <a href="/taiaiac.gitee.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
-</script>
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/taiaiac.gitee.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/taiaiac.gitee.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/taiaiac.gitee.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
 
     
-    <article class="post-wrap">
-        <header class="post-header">
-            <h1 class="post-title">基础</h1>
-            
-                <div class="post-meta">
-                    
-                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
-                    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%9F%BA%E7%A1%80/">
 
-                    
-                        <span class="post-time">
-                        Date: <a href="#">十二月 30, 2020&nbsp;&nbsp;14:56:03</a>
-                        </span>
-                    
-                    
-                        <span class="post-category">
-                    Category:
-                            
-                                <a href="/taiaiac.gitee.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>
-                            
-                        </span>
-                    
-                </div>
-            
-        </header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
 
-        <div class="post-content">
-            <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="text"><a href="#text" class="headerlink" title="text"></a>text</h3><p>相当于以前 web 中的 span 标签 行内元素 不会换行</p>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:02:19" itemprop="dateModified" datetime="2020-12-31T09:02:19+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="text"><a href="#text" class="headerlink" title="text"></a>text</h3><p>相当于以前 web 中的 span 标签 行内元素 不会换行</p>
 <h3 id="view"><a href="#view" class="headerlink" title="view"></a>view</h3><p>相当于以前 web 中的 div 标签 块级元素 会换行</p>
 <h3 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h3><p>以前的复选框标签</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>1<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span>&gt;</span>2<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>2<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="模板字符串语法"><a href="#模板字符串语法" class="headerlink" title="模板字符串语法"></a>模板字符串语法</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 1 字符串 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span> &#123;&#123;msg&#125;&#125; <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 2 数字类型 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 3 bool类型  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span> 是否是伪娘: &#123;&#123;isGirl&#125;&#125; <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 4 object类型 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;person.age&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;person.height&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;person.weight&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;person.name&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 5 在标签的属性中使用 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">data-num</span>=<span class="string">&quot;&#123;&#123;num&#125;&#125;&quot;</span>&gt;</span> 自定义属性<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="运算-gt-表达式"><a href="#运算-gt-表达式" class="headerlink" title="运算 =&gt; 表达式"></a>运算 =&gt; 表达式</h3><p>​ 1 可以在花括号中 加入 表达式 – “语句”<br>​ 2 表达式<br>​ 指的是一些简单 运算 数字运算 字符串 拼接 逻辑运算。。<br>​ 1 数字的加减。。<br>​ 2 字符串拼接<br>​ 3 三元表达式<br>​ 3 语句<br>​ 1 复杂的代码段<br>​ 1 if else<br>​ 2 switch<br>​ 3 do while 。。。。<br>​ 4 for 。。。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;1+1&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;&#x27;1&#x27;+&#x27;1&#x27;&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123; 11%2===0 ? &#x27;偶数&#x27; : &#x27;奇数&#x27; &#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="列表循环"><a href="#列表循环" class="headerlink" title="列表循环"></a>列表循环</h3><p>​ 1 wx:for=”“ wx:for-item=”循环项的名称” wx:for-index=”循环项的索引”<br>​ 2 wx:key=”唯一的值” 用来提高列表渲染的性能<br>​ 1 wx:key 绑定一个普通的字符串的时候 那么这个字符串名称 肯定是 循环数组 中的 对象的 唯一属性<br>​ 2 wx:key =”*this” 就表示 你的数组 是一个普通的数组 *this 表示是 循环项<br>​ [1,2,3,44,5]<br>​ [“1”,”222”,”adfdf”]<br>​ 3 当出现 数组的嵌套循环的时候 尤其要注意 以下绑定的名称 不要重名<br>​ wx:for-item=”item” wx:for-index=”index”<br>​ 4 默认情况下 我们 不写<br>​ wx:for-item=”item” wx:for-index=”index”<br>​ 小程序也会把 循环项的名称 和 索引的名称 item 和 index<br>​ 只有一层循环的话 （wx:for-item=”item” wx:for-index=”index”） 可以省略</p>
 <h3 id="对象循环"><a href="#对象循环" class="headerlink" title="对象循环"></a>对象循环</h3><p>​ 1 wx:for=”“ wx:for-item=”对象的值” wx:for-index=”对象的属性”<br>​ 2 循环对象的时候 最好把 item 和 index 的名称都修改一下<br>​ wx:for-item=”value” wx:for-index=”key”</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;list&#125;&#125;&quot;</span> <span class="attr">wx:for-item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">wx:for-index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">wx:key</span>=<span class="string">&quot;id&quot;</span>&gt;</span></span><br><span class="line">    索引：&#123;&#123;index&#125;&#125; -- 值:&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span>对象循环<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;person&#125;&#125;&quot;</span> <span class="attr">wx:for-item</span>=<span class="string">&quot;value&quot;</span> <span class="attr">wx:for-index</span>=<span class="string">&quot;key&quot;</span> <span class="attr">wx:key</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">    属性:&#123;&#123;key&#125;&#125; -- 值:&#123;&#123;value&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="block"><a href="#block" class="headerlink" title="block"></a>block</h3><p>​ 1 占位符的标签<br>​ 2 写代码的时候 可以看到这标签存在<br>​ 3 页面渲染 小程序会把它移除掉</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  &lt;block</span><br><span class="line">    wx:for=&quot;&#123;&#123;list&#125;&#125;&quot;</span><br><span class="line">    wx:for-item=&quot;item&quot;</span><br><span class="line">    wx:for-index=&quot;index&quot;</span><br><span class="line">    wx:key=&quot;id&quot;</span><br><span class="line">    class=&quot;my_list&quot;</span><br><span class="line">  &gt;</span><br><span class="line">    索引：&#123;&#123;index&#125;&#125; -- 值:&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">block</span></span></span><br><span class="line"><span class="tag">    <span class="attr">wx:for</span>=<span class="string">&quot;&#123;&#123;list&#125;&#125;&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">wx:for-item</span>=<span class="string">&quot;item&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">wx:for-index</span>=<span class="string">&quot;index&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">wx:key</span>=<span class="string">&quot;id&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">class</span>=<span class="string">&quot;my_list&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span></span><br><span class="line">    索引：&#123;&#123;index&#125;&#125; -- 值:&#123;&#123;item.name&#125;&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">block</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><p>​ 1 wx:if=”Infinity“<br>​ 1 if , else , if else<br>​ wx:if<br>​ wx:elif<br>​ wx:else</p>
 <h3 id="hidden"><a href="#hidden" class="headerlink" title="hidden"></a>hidden</h3><p>​ 1 在标签上直接加入属性 hidden<br>​ 2 hidden=”true“</p>
 <h3 id="什么场景下用哪个"><a href="#什么场景下用哪个" class="headerlink" title="什么场景下用哪个"></a>什么场景下用哪个</h3><p>​ 1 当标签不是频繁的切换显示 优先使用 wx:if<br>​ 直接把标签从 页面结构给移除掉<br>​ 2 当标签频繁的切换显示的时候 优先使用 hidden<br>​ 通过添加样式的方式来切换显示<br>​ hidden 属性 不要和 样式 display 一起使用</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span>条件渲染<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">&quot;&#123;&#123;true&#125;&#125;&quot;</span>&gt;</span>显示<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">&quot;&#123;&#123;false&#125;&#125;&quot;</span>&gt;</span>隐藏<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">&quot;&#123;&#123;flase&#125;&#125;&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:elif</span>=<span class="string">&quot;&#123;&#123;flase&#125;&#125;&quot;</span>&gt;</span>2 <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:else</span>&gt;</span> 3 <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span>---------------<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>&gt;</span>hidden1<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span>=<span class="string">&quot;&#123;&#123;false&#125;&#125;&quot;</span>&gt;</span>hidden2<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span>-----000-------<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">wx:if</span>=<span class="string">&quot;&#123;&#123;false&#125;&#125;&quot;</span>&gt;</span>wx:if<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">hidden</span> <span class="attr">style</span>=<span class="string">&quot;display: flex;&quot;</span>&gt;</span>hidden<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>1 小程序中 不需要主动来引入样式文件<br>2 需要把页面中某些元素的单位 由 px 改成 rpx<br>1 设计稿 750x<br>750 px = 750 rpx<br>1 px = 1 rpx<br>2 把屏幕宽度 改成 375px<br>375 px = 750 rpx<br>1 px = 2rpx<br>1rpx = 0.5px<br>3 存在一个设计稿 宽度 414 或者 未知 page<br>1 设计稿 page 存在一个元素 宽度 100px<br>2 拿以上的需求 去实现 不同宽度的页面适配</p>
 <p>page px = 750 rpx<br>1 px = 750 rpx / page<br>100 px = 750 rpx * 100 / page<br>假设 page = 375px<br>4 利用 一个属性 calc 属性 css 和 wxss 都支持 一个属性<br>1 750 和 rpx 中间不要留空格<br>2 运算符的两边也不要留空格</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">1 引入的 代码 是通过 @import 来引入</span></span><br><span class="line"><span class="comment">2 路径 只能写相对路径</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;../../styles/common.wxss&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">view</span> &#123;</span><br><span class="line">  <span class="comment">/* width: 200rpx; */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">40</span>rpx;</span><br><span class="line">  <span class="attribute">background-color</span>: aqua;</span><br><span class="line">  <span class="comment">/* 以下代码写法是错误  */</span></span><br><span class="line">  <span class="comment">/*  width:750 rpx * 100 / 375 ;  */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">750</span>rpx * <span class="number">100</span> / <span class="number">375</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">1 引入的 代码 是通过 @import 来引入</span></span><br><span class="line"><span class="comment">2 路径 只能写相对路径</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;../../styles/common.wxss&#x27;</span>;</span><br><span class="line"></span><br><span class="line">view &#123;</span><br><span class="line">  <span class="comment">/* width: 200rpx; */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200</span>rpx;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">40</span>rpx;</span><br><span class="line">  <span class="attribute">background-color</span>: aqua;</span><br><span class="line">  <span class="comment">/* 以下代码写法是错误  */</span></span><br><span class="line">  <span class="comment">/*  width:750 rpx * 100 / 375 ;  */</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">750</span>rpx * <span class="number">100</span> / <span class="number">375</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="css-中外部文件的引入"><a href="#css-中外部文件的引入" class="headerlink" title="css 中外部文件的引入"></a>css 中外部文件的引入</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment">1 引入的 代码 是通过 @import 来引入</span></span><br><span class="line"><span class="comment">2 路径 只能写相对路径</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;../../styles/common.wxss&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
 <h3 id="使用-less"><a href="#使用-less" class="headerlink" title="使用 less"></a>使用 less</h3><p>less 文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1 定义less变量 */</span></span><br><span class="line">@color: yellow;</span><br><span class="line"><span class="selector-tag">text</span> &#123;</span><br><span class="line">  <span class="comment">/* 2 使用变量 */</span></span><br><span class="line">  <span class="attribute">color</span>: @color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">view</span> &#123;</span><br><span class="line">  .vie1 &#123;</span><br><span class="line">    <span class="selector-tag">text</span> &#123;</span><br><span class="line">      <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 导入 */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;../../styles/reset.less&#x27;</span>;</span><br><span class="line"><span class="selector-tag">view</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: @themeColor;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">  1 less中 支持 两种注释  多行  单行</span></span><br><span class="line"><span class="comment">  2 wxss 不能写 单行注释 因为 写了 和没写是一样！！！</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">/* font-size: 200px; */</span></span><br><span class="line">  // font-size: 400px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1 定义less变量 */</span></span><br><span class="line"><span class="keyword">@color</span>: yellow;</span><br><span class="line">text &#123;</span><br><span class="line">  <span class="comment">/* 2 使用变量 */</span></span><br><span class="line">  <span class="attribute">color</span>: @color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">view &#123;</span><br><span class="line">  <span class="selector-class">.vie1</span> &#123;</span><br><span class="line">    text &#123;</span><br><span class="line">      <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 导入 */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;../../styles/reset.less&#x27;</span>;</span><br><span class="line">view &#123;</span><br><span class="line">  <span class="attribute">color</span>: @themeColor;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">  1 less中 支持 两种注释  多行  单行</span></span><br><span class="line"><span class="comment">  2 wxss 不能写 单行注释 因为 写了 和没写是一样！！！</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">/* font-size: 200px; */</span></span><br><span class="line">  // <span class="attribute">font-size</span>: <span class="number">400px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>css 文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1 定义less变量 */</span></span><br><span class="line"><span class="selector-tag">text</span> &#123;</span><br><span class="line">  <span class="comment">/* 2 使用变量 */</span></span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">view</span> <span class="selector-class">.vie1</span> <span class="selector-tag">text</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 导入 */</span></span><br><span class="line"><span class="selector-tag">view</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">  1 less中 支持 两种注释  多行  单行</span></span><br><span class="line"><span class="comment">  2 wxss 不能写 单行注释 因为 写了 和没写是一样！！！</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">/* font-size: 200px; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 1 定义less变量 */</span></span><br><span class="line">text &#123;</span><br><span class="line">  <span class="comment">/* 2 使用变量 */</span></span><br><span class="line">  <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line">view <span class="selector-class">.vie1</span> text &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 导入 */</span></span><br><span class="line">view &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="comment">/* </span></span><br><span class="line"><span class="comment">  1 less中 支持 两种注释  多行  单行</span></span><br><span class="line"><span class="comment">  2 wxss 不能写 单行注释 因为 写了 和没写是一样！！！</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="comment">/* font-size: 200px; */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="长按文字复制-selectable"><a href="#长按文字复制-selectable" class="headerlink" title="长按文字复制 selectable"></a>长按文字复制 selectable</h3><p>对文本内容 进行 解码</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">selectable</span> <span class="attr">decode</span>&gt;</span> text <span class="symbol">&amp;nbsp;</span> 123 <span class="symbol">&amp;lt;</span> <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="image-图片标签"><a href="#image-图片标签" class="headerlink" title="image 图片标签"></a>image 图片标签</h3><p>1 src 指定要加载的图片的路径<br>图片存在默认的宽度和高度 320 _ 240 原图大小是 200 _ 100<br>2 mode 决定 图片内容 如何 和 图片标签 宽高 做适配<br>1 scaleToFill 默认值 不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素<br>2 aspectFit 保持宽高比 确保图片的长边 显示出来 页面轮播图 常用<br>3 aspectFill 保持纵横比缩放图片，只保证图片的 短 边能完全显示出来。 少用<br>4 widthFix 以前 web 的图片的 宽度指定了之后 高度 会自己按比例来调整 常用<br> 5 bottom。。 类似以前的 backgroud-position<br>3 小程序当中的图片 直接就支持 懒加载 lazy-load<br>1 lazy-load 会自己判断 当 图片 出现在 视口 上下 三屏的高度 之内的时候 自己开始加载图片</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;image</span><br><span class="line">  mode=&quot;bottom&quot;</span><br><span class="line">  lazy-load</span><br><span class="line">  src=&quot;https://tva2.sinaimg.cn/large/007DFXDhgy1g51jlzfb4lj305k02s0sp.jpg&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">  <span class="attr">mode</span>=<span class="string">&quot;bottom&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">lazy-load</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;https://tva2.sinaimg.cn/large/007DFXDhgy1g51jlzfb4lj305k02s0sp.jpg&quot;</span></span></span><br><span class="line"><span class="tag">/&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="轮播图-swiper"><a href="#轮播图-swiper" class="headerlink" title="轮播图 swiper"></a>轮播图 swiper</h3><p>1 轮播图外层容器 swiper<br>2 每一个轮播项 swiper-item<br>3 swiper 标签 存在默认样式<br>1 width 100%<br>2 height 150px image 存在默认宽度和高度 320 _ 240<br>3 swiper 高度 无法实现由内容撑开<br>4 先找出来 原图的宽度和高度 等比例 给 swiper 定 宽度和高度<br>原图的宽度和高度 1125 _ 352 px<br>swiper 宽度 / swiper 高度 = 原图的宽度 / 原图的高度<br>swiper 高度 = swiper 宽度 _ 原图的高度 / 原图的宽度<br>height: 100vw _ 352 / 1125<br>5 autoplay 自动轮播<br>6 interval 修改轮播时间<br>7 circular 衔接轮播<br>8 indicator-dots 显示 指示器 分页器 索引器<br>9 indicator-color 指示器的未选择的颜色<br>10 indicator-active-color 选中的时候的指示器的颜色</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;swiper</span><br><span class="line">  autoplay</span><br><span class="line">  interval=&quot;1000&quot;</span><br><span class="line">  circular</span><br><span class="line">  indicator-dots</span><br><span class="line">  indicator-color=&quot;#0094ff&quot;</span><br><span class="line">  indicator-active-color=&quot;#ff0094&quot;</span><br><span class="line">&gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    &lt;image</span><br><span class="line">      mode=&quot;widthFix&quot;</span><br><span class="line">      src=&quot;//gw.alicdn.com/imgextra/i1/44/O1CN013zKZP11CCByG5bAeF_!!44-0-lubanu.jpg&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    &lt;image</span><br><span class="line">      mode=&quot;widthFix&quot;</span><br><span class="line">      src=&quot;//aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    &lt;image</span><br><span class="line">      mode=&quot;widthFix&quot;</span><br><span class="line">      src=&quot;//gw.alicdn.com/imgextra/i2/37/O1CN01syHZxs1C8zCFJj97b_!!37-0-lubanu.jpg&quot;</span><br><span class="line">    /&gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">swiper</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="comment">/* height: calc(100vw * 352 /  1125); */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">31.28vw</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">image</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">swiper</span></span></span><br><span class="line"><span class="tag">  <span class="attr">autoplay</span></span></span><br><span class="line"><span class="tag">  <span class="attr">interval</span>=<span class="string">&quot;1000&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">circular</span></span></span><br><span class="line"><span class="tag">  <span class="attr">indicator-dots</span></span></span><br><span class="line"><span class="tag">  <span class="attr">indicator-color</span>=<span class="string">&quot;#0094ff&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">indicator-active-color</span>=<span class="string">&quot;#ff0094&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">      <span class="attr">mode</span>=<span class="string">&quot;widthFix&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;//gw.alicdn.com/imgextra/i1/44/O1CN013zKZP11CCByG5bAeF_!!44-0-lubanu.jpg&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">      <span class="attr">mode</span>=<span class="string">&quot;widthFix&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;//aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">swiper-item</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">image</span></span></span><br><span class="line"><span class="tag">      <span class="attr">mode</span>=<span class="string">&quot;widthFix&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">&quot;//gw.alicdn.com/imgextra/i2/37/O1CN01syHZxs1C8zCFJj97b_!!37-0-lubanu.jpg&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">swiper-item</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">swiper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">swiper &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="comment">/* height: calc(100vw * 352 /  1125); */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">31.28vw</span>;</span><br><span class="line">&#125;</span><br><span class="line">image &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="导航组件-navigator"><a href="#导航组件-navigator" class="headerlink" title="导航组件 navigator"></a>导航组件 navigator</h3><p>0 块级元素 默认会换行 可以直接加宽度和高度<br>1 url 要跳转的页面路径 绝对路径 相对路径<br>2 target 要跳转到当前的小程序 还是其他的小程序的页面<br>self 默认值 自己 小程序的页面<br>miniProgram 其他的小程序的页面<br>3 open-type 跳转的方式<br>1 navigate 默认值 保留当前页面，跳转到应用内的某个页面，但是不能跳到 tabbar 页面<br>2 redirect 关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabbar 页面。<br>3 switchTab 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面<br>4 reLaunch 关闭所有页面，打开到应用内的某个页面</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">&quot;/pages/demo10/demo10&quot;</span>&gt;</span> 轮播图页面 <span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">&quot;/pages/index/index&quot;</span>&gt;</span> 直接跳转到 tabbar页面 <span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">open-type</span>=<span class="string">&quot;redirect&quot;</span> <span class="attr">url</span>=<span class="string">&quot;/pages/demo10/demo10&quot;</span>&gt;</span></span><br><span class="line">  轮播图页面 redirect</span><br><span class="line"><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">open-type</span>=<span class="string">&quot;switchTab&quot;</span> <span class="attr">url</span>=<span class="string">&quot;/pages/index/index&quot;</span>&gt;</span></span><br><span class="line">  switchTab直接跳转到 tabbar页面</span><br><span class="line"><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">open-type</span>=<span class="string">&quot;reLaunch&quot;</span> <span class="attr">url</span>=<span class="string">&quot;/pages/index/index&quot;</span>&gt;</span></span><br><span class="line">  reLaunch 可以随便跳</span><br><span class="line"><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="rich-text-富文本标签"><a href="#rich-text-富文本标签" class="headerlink" title="rich-text 富文本标签"></a>rich-text 富文本标签</h3><p>nodes 属性来实现<br>1 接收标签字符串<br>2 接收对象数组</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rich-text</span> <span class="attr">nodes</span>=<span class="string">&quot;&#123;&#123;html&#125;&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">rich-text</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//pages</span></span><br><span class="line">data: &#123;</span><br><span class="line">  html: <span class="string">&#x27;标签字符串 &#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//pages</span></span><br><span class="line"><span class="attr">data</span>: &#123;</span><br><span class="line">  <span class="attr">html</span>: <span class="string">&#x27;标签字符串 &#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="button-标签"><a href="#button-标签" class="headerlink" title="button 标签"></a>button 标签</h3><p>1 外观的属性<br>1 size 控制按钮的大小<br>1 default 默认大小<br>2 mini 小尺寸<br>2 type 用来控制按钮的颜色<br>1 default 灰色<br>2 primary 绿色<br>3 warn 红色<br>3 plain 按钮是否镂空，背景色透明<br>4 loading 文字前显示正在等待图标</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">size</span>=<span class="string">&quot;mini&quot;</span>&gt;</span>mini 默认按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>primary 按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;warn&quot;</span>&gt;</span>warn 按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;warn&quot;</span> <span class="attr">plain</span>&gt;</span>plain 按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> <span class="attr">loading</span>&gt;</span>loading 按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <p>开发能力</p>
 <h4 id="open-type："><a href="#open-type：" class="headerlink" title="open-type："></a>open-type：</h4><h4 id="1-contact"><a href="#1-contact" class="headerlink" title="1 contact"></a>1 contact</h4><p>直接打开 客服对话功能 需要在微信小程序的后台配置 只能够通过真机调试来打开</p>
 <h4 id="2-share"><a href="#2-share" class="headerlink" title="2 share"></a>2 share</h4><p>转发当前的小程序 到微信朋友中 不能把小程序 分享到 朋友圈</p>
@@ -245,82 +317,245 @@
 <h4 id="6-openSetting"><a href="#6-openSetting" class="headerlink" title="6 openSetting"></a>6 openSetting</h4><p>打开小程序内置的 授权页面<br>1 授权页面中 只会出现 用户曾经点击过的 权限</p>
 <h4 id="7-feedback"><a href="#7-feedback" class="headerlink" title="7 feedback"></a>7 feedback</h4><p>打开 小程序内置的 意见反馈页面<br>1 只能够通过真机调试来打开</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;contact&quot;</span>&gt;</span>contact<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;share&quot;</span>&gt;</span>share<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;getPhoneNumber&quot;</span> <span class="attr">bindgetphonenumber</span>=<span class="string">&quot;getPhoneNumber&quot;</span>&gt;</span></span><br><span class="line">  getPhoneNumber</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;getUserInfo&quot;</span> <span class="attr">bindgetuserinfo</span>=<span class="string">&quot;getUserInfo&quot;</span>&gt;</span></span><br><span class="line">  getUserInfo</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;launchApp&quot;</span>&gt;</span>launchApp<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;openSetting&quot;</span>&gt;</span>openSetting<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">open-type</span>=<span class="string">&quot;feedback&quot;</span>&gt;</span>feedback<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  <span class="comment">// 获取用户的手机号码信息</span></span><br><span class="line">  <span class="function"><span class="title">getPhoneNumber</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 获取用户个人信息</span></span><br><span class="line">  <span class="function"><span class="title">getUserInfo</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="小程序中的字体图标"><a href="#小程序中的字体图标" class="headerlink" title="小程序中的字体图标"></a>小程序中的字体图标</h3><p>1 type 图标的类型<br>success|success_no_circle|info|warn|waiting|cancel|download|search|clear<br>2 size 大小<br>3 color 图标的颜色</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">icon</span> <span class="attr">type</span>=<span class="string">&quot;cancel&quot;</span> <span class="attr">size</span>=<span class="string">&quot;60&quot;</span> <span class="attr">color</span>=<span class="string">&quot;#0094ff&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">icon</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="radio-单选框"><a href="#radio-单选框" class="headerlink" title="radio 单选框"></a>radio 单选框</h3><p>1 radio 标签 必须要和 父元素 radio-group 来使用<br>2 value 选中的单选框的值<br>3 需要给 radio-group 绑定 change 事件<br>4 需要在页面中显示 选中的值</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">radio-group</span> <span class="attr">bindchange</span>=<span class="string">&quot;handleChange&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">radio</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span> <span class="attr">value</span>=<span class="string">&quot;male&quot;</span>&gt;</span>男<span class="tag">&lt;/<span class="name">radio</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">radio</span> <span class="attr">color</span>=<span class="string">&quot;red&quot;</span> <span class="attr">value</span>=<span class="string">&quot;female&quot;</span>&gt;</span>女<span class="tag">&lt;/<span class="name">radio</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">radio-group</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>您选中的是:&#123;&#123;gender&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    gender: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">handleChange</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1 获取单选框中的值</span></span><br><span class="line">    <span class="keyword">let</span> gender = e.detail.value</span><br><span class="line">    <span class="comment">// 2 把值 赋值给 data中的数据</span></span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      <span class="comment">// gender:gender</span></span><br><span class="line">      gender,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Page(&#123;</span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">gender</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">handleChange</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 1 获取单选框中的值</span></span><br><span class="line">    <span class="keyword">let</span> gender = e.detail.value</span><br><span class="line">    <span class="comment">// 2 把值 赋值给 data中的数据</span></span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      <span class="comment">// gender:gender</span></span><br><span class="line">      gender,</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
 <h3 id="复选框-checkbox"><a href="#复选框-checkbox" class="headerlink" title="复选框 checkbox"></a>复选框 checkbox</h3><p>和单选框相同 checkbox-group</p>
 <h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>创建注册组件</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;component&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;usingComponents&quot;</span>: &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>使用组件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//<span class="selector-class">.json</span></span><br><span class="line">&#123;</span><br><span class="line">  &quot;usingComponents&quot;: &#123;</span><br><span class="line">    &quot;<span class="selector-tag">my-header</span>&quot;: &quot;/<span class="selector-tag">components</span>/<span class="selector-tag">myHeader</span>/<span class="selector-tag">myHeader</span>&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//<span class="selector-class">.wxml</span></span><br><span class="line">&lt;<span class="selector-tag">my-header</span>&gt;&lt;/<span class="selector-tag">my-header</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//<span class="selector-class">.json</span></span><br><span class="line">&#123;</span><br><span class="line">  &quot;usingComponents&quot;: &#123;</span><br><span class="line">    <span class="string">&quot;my-header&quot;</span>: <span class="string">&quot;/components/myHeader/myHeader&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//<span class="selector-class">.wxml</span></span><br><span class="line">&lt;my-<span class="selector-tag">header</span>&gt;&lt;/my-<span class="selector-tag">header</span>&gt;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/taiaiac.gitee.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"># 微信小程序</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%AD%90%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/" rel="prev" title="子父组件传值">
+      <i class="fa fa-chevron-left"></i> 子父组件传值
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="next" title="文件上传">
+      文件上传 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#text"><span class="nav-number">1.1.</span> <span class="nav-text">text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#view"><span class="nav-number">1.2.</span> <span class="nav-text">view</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checkbox"><span class="nav-number">1.3.</span> <span class="nav-text">checkbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%AF%AD%E6%B3%95"><span class="nav-number">1.4.</span> <span class="nav-text">模板字符串语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97-gt-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">运算 &#x3D;&gt; 表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.6.</span> <span class="nav-text">列表循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.7.</span> <span class="nav-text">对象循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#block"><span class="nav-number">1.8.</span> <span class="nav-text">block</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93"><span class="nav-number">1.9.</span> <span class="nav-text">条件渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hidden"><span class="nav-number">1.10.</span> <span class="nav-text">hidden</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%E4%B8%8B%E7%94%A8%E5%93%AA%E4%B8%AA"><span class="nav-number">1.11.</span> <span class="nav-text">什么场景下用哪个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css"><span class="nav-number">1.12.</span> <span class="nav-text">css</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-%E4%B8%AD%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6%E7%9A%84%E5%BC%95%E5%85%A5"><span class="nav-number">1.13.</span> <span class="nav-text">css 中外部文件的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-less"><span class="nav-number">1.14.</span> <span class="nav-text">使用 less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E6%8C%89%E6%96%87%E5%AD%97%E5%A4%8D%E5%88%B6-selectable"><span class="nav-number">1.15.</span> <span class="nav-text">长按文字复制 selectable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#image-%E5%9B%BE%E7%89%87%E6%A0%87%E7%AD%BE"><span class="nav-number">1.16.</span> <span class="nav-text">image 图片标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AE%E6%92%AD%E5%9B%BE-swiper"><span class="nav-number">1.17.</span> <span class="nav-text">轮播图 swiper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E8%88%AA%E7%BB%84%E4%BB%B6-navigator"><span class="nav-number">1.18.</span> <span class="nav-text">导航组件 navigator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rich-text-%E5%AF%8C%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE"><span class="nav-number">1.19.</span> <span class="nav-text">rich-text 富文本标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#button-%E6%A0%87%E7%AD%BE"><span class="nav-number">1.20.</span> <span class="nav-text">button 标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#open-type%EF%BC%9A"><span class="nav-number">1.20.1.</span> <span class="nav-text">open-type：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-contact"><span class="nav-number">1.20.2.</span> <span class="nav-text">1 contact</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-share"><span class="nav-number">1.20.3.</span> <span class="nav-text">2 share</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-getPhoneNumber"><span class="nav-number">1.20.4.</span> <span class="nav-text">3 getPhoneNumber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bindgetphonenumber"><span class="nav-number">1.20.5.</span> <span class="nav-text">bindgetphonenumber</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-getUserInfo"><span class="nav-number">1.20.6.</span> <span class="nav-text">4 getUserInfo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-launchApp"><span class="nav-number">1.20.7.</span> <span class="nav-text">5 launchApp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-openSetting"><span class="nav-number">1.20.8.</span> <span class="nav-text">6 openSetting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-feedback"><span class="nav-number">1.20.9.</span> <span class="nav-text">7 feedback</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E7%9A%84%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87"><span class="nav-number">1.21.</span> <span class="nav-text">小程序中的字体图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#radio-%E5%8D%95%E9%80%89%E6%A1%86"><span class="nav-number">1.22.</span> <span class="nav-text">radio 单选框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E9%80%89%E6%A1%86-checkbox"><span class="nav-number">1.23.</span> <span class="nav-text">复选框 checkbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6"><span class="nav-number">1.24.</span> <span class="nav-text">组件</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Z.A.M."
+      src="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+  <p class="site-author-name" itemprop="name">Z.A.M.</p>
+  <div class="site-description" itemprop="description">所有不利,都是 能力不足 导致的. <br> By <东京喰种>.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/taiaiac.gitee.io/archives/">
+        
+          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/taiaiac.gitee.io/categories/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/taiaiac.gitee.io/tags/">
+          
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
 
         
-            <section class="post-copyright">
-                
-                
-                
-                    <p class="copyright-item">
-                        <span>License:</span>
-                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
-                    </p>
-                
-                
-                     <p class="copyright-item">
-                         <span>Slogan:</span>
-                         <span>Do you believe in <strong>DESTINY</strong>?</span>
-                     </p>
-                
 
-            </section>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Z.A.M.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+<div>
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/01/2020 18:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",1000);
+</script>
         
-        <section class="post-tags">
-            <div>
-                <span>Tag(s):</span>
-                <span class="tag">
-                    
-                    
-                        <a href="/taiaiac.gitee.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"># 微信小程序</a>
-                    
-                        
-                </span>
-            </div>
-            <div>
-                <a href="javascript:window.history.back();">back</a>
-                <span>· </span>
-                <a href="/taiaiac.gitee.io/">home</a>
-            </div>
-        </section>
-        <section class="post-nav">
-            
-                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%8B%E4%BB%B6/">事件</a>
-            
-            
-            <a class="next" rel="next" href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%AD%90%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/">子父组件传值</a>
-            
-        </section>
 
 
-    </article>
-</div>
-</div>
-      <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
 
-    </div>
-    <script
-      type="text/javascript"
-      color="96,98,102"
-      opacity="0.7"
-      zIndex="-2"
-      count="99"
-      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
-    ></script>
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/taiaiac.gitee.io/lib/anime.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/taiaiac.gitee.io/js/utils.js"></script>
+
+<script src="/taiaiac.gitee.io/js/motion.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/schemes/pisces.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/taiaiac.gitee.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
