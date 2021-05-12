@@ -194,7 +194,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%8B%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
@@ -208,7 +208,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" class="post-title-link" itemprop="url">文件上传</a>
+            <a href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%8B%E4%BB%B6/" class="post-title-link" itemprop="url">事件</a>
         </h2>
 
         <div class="post-meta">
@@ -225,7 +225,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-13 14:18:22" itemprop="dateModified" datetime="2021-03-13T14:18:22+08:00">2021-03-13</time>
+                <time title="修改时间：2020-12-31 09:02:41" itemprop="dateModified" datetime="2020-12-31T09:02:41+08:00">2020-12-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,7 +233,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">大前端</span></a>
+                  <a href="/taiaiac.gitee.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a>
                 </span>
             </span>
 
@@ -248,13 +248,74 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-upload</span></span></span><br><span class="line"><span class="tag">  <span class="attr">action</span>=<span class="string">&quot;http://106.14.7.156:18620/api/v1/contract/upload&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:on-success</span>=<span class="string">&quot;handleChange&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:on-error</span>=<span class="string">&quot;handleChange&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:file-list</span>=<span class="string">&quot;fileList&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:headers</span>=<span class="string">&quot;headersToken&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">name</span>=<span class="string">&quot;filename&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:limit</span>=<span class="string">&quot;1&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:on-remove</span>=<span class="string">&quot;reset&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">size</span>=<span class="string">&quot;small&quot;</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>点击上传<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-upload</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>action：上传的地址</p>
-<p>on-success：上传成功的钩子函数，用来获取 saveName（文件名）</p>
+          <h2 id="定义段与⽰例⽅法"><a href="#定义段与⽰例⽅法" class="headerlink" title="定义段与⽰例⽅法"></a>定义段与⽰例⽅法</h2><p>Component 构造器可⽤于定义组件，调⽤ Component 构造器时可以指定组件的属性、数据、⽅法 等。</p>
+<table>
+<thead>
+<tr>
+<th align="center">定义段</th>
+<th align="center">类型</th>
+<th align="center">是 否 必 填</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">properties</td>
+<td align="center">Object Map</td>
+<td align="center">否</td>
+<td align="left">组件的对外属性，是属性名到属性设置的映射表，参⻅下⽂</td>
+</tr>
+<tr>
+<td align="center">data</td>
+<td align="center">Object</td>
+<td align="center">否</td>
+<td align="left">组件的内部数据，和 properties ⼀同⽤于组件的模板渲</td>
+</tr>
+<tr>
+<td align="center">observers</td>
+<td align="center">Object</td>
+<td align="center">否</td>
+<td align="left">组件数据字段监听器，⽤于监听 properties 和 data 的变化，参⻅ 数据监听器</td>
+</tr>
+<tr>
+<td align="center">methods</td>
+<td align="center">Object</td>
+<td align="center">否</td>
+<td align="left">组件的⽅法，包括事件响应函数和任意的⾃定义⽅法，关于 事件响应函数的使⽤，参⻅ 组件事件</td>
+</tr>
+<tr>
+<td align="center">created</td>
+<td align="center">Function</td>
+<td align="center">否</td>
+<td align="left">组件⽣命周期函数，在组件实例刚刚被创建时执⾏，注意此 时不能调⽤ setData ，参⻅ 组件⽣命周期</td>
+</tr>
+<tr>
+<td align="center">attached</td>
+<td align="center">Function</td>
+<td align="center">否</td>
+<td align="left">组件⽣命周期函数，在组件实例进⼊⻚⾯节点树时执⾏，参 ⻅ 组件⽣命周期</td>
+</tr>
+<tr>
+<td align="center">ready</td>
+<td align="center">Function</td>
+<td align="center">否</td>
+<td align="left">组件⽣命周期函数，在组件布局完成后执⾏，参⻅ 组件⽣命 周期</td>
+</tr>
+<tr>
+<td align="center">moved</td>
+<td align="center">Function</td>
+<td align="center">否</td>
+<td align="left">组件⽣命周期函数，在组件实例被移动到节点树另⼀个位置 时执⾏，参⻅ 组件⽣命周期</td>
+</tr>
+<tr>
+<td align="center">detached</td>
+<td align="center">Function</td>
+<td align="center">否</td>
+<td align="left">组件⽣命周期函数，在组件实例被从⻚⾯节点树移除时执 ⾏，参⻅ 组件⽣命周期</td>
+</tr>
+</tbody></table>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/%E5%A4%A7%E5%89%8D%E7%AB%AF/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/#more" rel="contents">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%BA%8B%E4%BB%B6/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1160,7 +1221,14 @@
     });
   }
 </script>
-
+<script
+      type="text/javascript"
+      color="0,205,205"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
         </div>
           
   
@@ -1199,20 +1267,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">151</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/taiaiac.gitee.io/categories/">
           
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/taiaiac.gitee.io/tags/">
           
-        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
