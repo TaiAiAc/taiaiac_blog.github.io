@@ -194,6 +194,128 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/" class="post-title-link" itemprop="url">节点选择器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:26:26" itemprop="dateModified" datetime="2020-12-31T09:26:26+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="5-种获得元素的方式"><a href="#5-种获得元素的方式" class="headerlink" title="5 种获得元素的方式"></a>5 种获得元素的方式</h2><ul>
+<li><h4 id="1、通过-id-获得的元素，可以直接使用，不要获得元素"><a href="#1、通过-id-获得的元素，可以直接使用，不要获得元素" class="headerlink" title="1、通过 id 获得的元素，可以直接使用，不要获得元素"></a>1、通过 id 获得的元素，可以直接使用，不要获得元素</h4><ul>
+<li><pre><code class="javascript">let id = document.getElementById(&#39;id&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 2、通过类名获得元素集合 `HTMLCollection`不是数组，不能用`forEach`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let class = document.getElementsByClassName(&#x27;class&#x27;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach"><a href="#3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach" class="headerlink" title="3、通过标签名获得元素集合 HTMLCollection不是数组，不能用forEach"></a>3、通过标签名获得元素集合 <code>HTMLCollection</code>不是数组，不能用<code>forEach</code></h4><ul>
+<li><pre><code class="javascript">let div = document.getElementsByTagName(&#39;div&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 4、使用`css`的选择器,只找第一个元素</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let css = document.querySelector(&#x27;.css&#x27;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach"><a href="#5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach" class="headerlink" title="5、使用css的选择器,找全部,NodeList类型，不是数组，不能用forEach"></a>5、使用<code>css</code>的选择器,找全部,<code>NodeList</code>类型，不是数组，不能用<code>forEach</code></h4><ul>
+<li><pre><code class="javascript">let item = document.querySelectorAll(&#39;.item&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 节点选择器</span><br><span class="line"></span><br><span class="line">- ### 1、子元素</span><br><span class="line"></span><br><span class="line">  - #### 所有子元素`children`</span><br><span class="line"></span><br><span class="line">    - ```javascript</span><br><span class="line">      let children = ul.children</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><h4 id="第一个firstElementChild"><a href="#第一个firstElementChild" class="headerlink" title="第一个firstElementChild"></a>第一个<code>firstElementChild</code></h4><ul>
+<li><pre><code class="javascript">let first = ul.firstElementChild
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 最后一个`lastElementChild`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let last = ul.lastElementChild</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="2、兄弟元素"><a href="#2、兄弟元素" class="headerlink" title="2、兄弟元素"></a>2、兄弟元素</h3><ul>
+<li><h4 id="上一个previousElementSibling"><a href="#上一个previousElementSibling" class="headerlink" title="上一个previousElementSibling"></a>上一个<code>previousElementSibling</code></h4><ul>
+<li><pre><code class="javascript">let prev = ul.previousElementSibling
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 下一个`nextElementSibling`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let next = ul.nextElementSibling</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="3、父级元素"><a href="#3、父级元素" class="headerlink" title="3、父级元素"></a>3、父级元素</h3><ul>
+<li><h3 id="父级parentElement"><a href="#父级parentElement" class="headerlink" title="父级parentElement"></a>父级<code>parentElement</code></h3><ul>
+<li><pre><code class="javascript">let parent = ul.parentElement
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -939,80 +1061,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/layui/%E5%88%86%E9%A1%B5%E5%A4%84%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/layui/%E5%88%86%E9%A1%B5%E5%A4%84%E7%90%86/" class="post-title-link" itemprop="url">分页处理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:30:33" itemprop="dateModified" datetime="2020-12-31T09:30:33+08:00">2020-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/layui/" itemprop="url" rel="index"><span itemprop="name">layui</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 页面加载请求数据</span></span><br><span class="line">  <span class="comment">// async await 取出数据</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getAjax</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 取出的数据res  使用promis保存数据</span></span><br><span class="line">    <span class="keyword">let</span> res = <span class="keyword">await</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve</span>) </span>&#123;</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">        <span class="comment">//模拟请求的远程数据</span></span><br><span class="line">        <span class="attr">url</span>: <span class="string">&#x27;../JSON/case.json&#x27;</span>,</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">        <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">        <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">          resolve(res)</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 分页组件</span></span><br><span class="line">    layui.use([<span class="string">&#x27;laypage&#x27;</span>, <span class="string">&#x27;layer&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> laypage = layui.laypage,</span><br><span class="line">        layer = layui.layer</span><br><span class="line">      <span class="comment">//自定义首页、尾页、上一页、下一页文本</span></span><br><span class="line">      laypage.render(&#123;</span><br><span class="line">        <span class="attr">elem</span>: <span class="string">&#x27;demo&#x27;</span>, <span class="comment">//id</span></span><br><span class="line">        <span class="attr">count</span>: res.length, <span class="comment">//数据总数</span></span><br><span class="line">        <span class="attr">limit</span>: <span class="number">12</span>, <span class="comment">//每页显示的条数</span></span><br><span class="line">        <span class="attr">groups</span>: <span class="number">5</span>, <span class="comment">//连续出现的页码个数</span></span><br><span class="line">        <span class="attr">theme</span>: <span class="string">&#x27;#c00000&#x27;</span>, <span class="comment">//背景</span></span><br><span class="line">        <span class="attr">first</span>: <span class="string">&#x27;首页&#x27;</span>,</span><br><span class="line">        <span class="attr">last</span>: <span class="string">&#x27;尾页&#x27;</span>,</span><br><span class="line">        <span class="attr">prev</span>: <span class="string">&#x27;&lt;em&gt;←&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        <span class="attr">next</span>: <span class="string">&#x27;&lt;em&gt;→&lt;/em&gt;&#x27;</span>,</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 描述</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>obj 当前的对象</span></span><br><span class="line"><span class="comment">         * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>first 分页的第一页</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="attr">jump</span>: <span class="function"><span class="keyword">function</span> (<span class="params">obj, first</span>) </span>&#123;</span><br><span class="line">          <span class="comment">//当前页pageNum</span></span><br><span class="line">          <span class="keyword">let</span> pageNum = obj.curr</span><br><span class="line">          <span class="comment">// 首个下标start</span></span><br><span class="line">          <span class="keyword">let</span> start = (pageNum - <span class="number">1</span>) * <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="comment">// 末尾下标end</span></span><br><span class="line">          <span class="keyword">let</span> end = start + <span class="built_in">this</span>.limit</span><br><span class="line">          <span class="keyword">if</span> (end &gt;= <span class="built_in">this</span>.count) &#123;</span><br><span class="line">            end = <span class="built_in">this</span>.count</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">// 不是第一页的时候清空页面元素</span></span><br><span class="line">          <span class="keyword">if</span> (!first) &#123;</span><br><span class="line">            $(<span class="string">&#x27;.case-item-append&#x27;</span>).empty()</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="comment">//获得数组指定区段的元素，进行页面拼接</span></span><br><span class="line">          <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt; end; i++) &#123;</span><br><span class="line">            setItem(res[i])</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  getAjax()</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setItem</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> layuiCol = $(<span class="string">`&lt;div class=&quot;layui-col-md4 case-item&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-border&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-LT&quot;&gt;禁止转载&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-bg&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-head&quot;&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;div class=&quot;case-item-text&quot;&gt;</span></span><br><span class="line"><span class="string">    &lt;h4&gt;<span class="subst">$&#123;obj.title&#125;</span>&lt;/h4&gt;</span></span><br><span class="line"><span class="string">    &lt;div&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;设计师：&lt;i&gt;<span class="subst">$&#123;obj.name&#125;</span>&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;面积：&lt;i&gt;<span class="subst">$&#123;obj.acreage&#125;</span>.00㎡&lt;/i&gt;&lt;/span&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;p&gt;工程地址：&lt;i&gt;<span class="subst">$&#123;obj.site&#125;</span>&lt;/i&gt;&lt;/p&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;`</span>)</span><br><span class="line"></span><br><span class="line">  $(<span class="string">&#x27;.case-item-append&#x27;</span>).append(layuiCol)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-bg:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.bg,</span><br><span class="line">  &#125;)</span><br><span class="line">  $(<span class="string">&#x27;.case-item-head:last&#x27;</span>).css(&#123;</span><br><span class="line">    <span class="string">&#x27;background-image&#x27;</span>: obj.head,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1091,7 +1139,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">152</span>
+          <span class="site-state-item-count">153</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
