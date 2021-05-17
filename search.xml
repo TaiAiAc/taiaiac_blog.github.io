@@ -15022,4 +15022,66 @@ let stu = students.find((item) =&gt; &#123;
         <tag>ui框架</tag>
       </tags>
   </entry>
+  <entry>
+    <title>JS数组reduce()方法详解及高级技巧</title>
+    <url>/taiaiac.gitee.io/2021/05/17/Javascript/JS%E6%95%B0%E7%BB%84reduce()%E6%96%B9%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8A%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<blockquote>
+<p>reduce()方法可以搞定的东西，for循环，或者forEach方法有时候也可以搞定，那为啥要用reduce()？这个问题，之前我也想过，要说原因还真找不到，唯一能找到的是：通往成功的道路有很多，但是总有一条路是最捷径的，亦或许reduce()逼格更高…</p>
+</blockquote>
+<h4 id="1、语法"><a href="#1、语法" class="headerlink" title="1、语法"></a>1、语法</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line">arr<span class="selector-class">.reduce</span>(callback,<span class="selector-attr">[initialValue]</span>)</span><br></pre></td></tr></table></figure>
+
+<p>reduce 为数组中的每一个元素依次执行回调函数，不包括数组中被删除或从未被赋值的元素，接受四个参数：初始值（或者上一次回调函数的返回值），当前元素值，当前索引，调用 reduce 的数组。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">callback （执行数组中每个值的函数，包含四个参数）</span><br><span class="line"></span><br><span class="line">    <span class="number">1</span>、previousValue （上一次调用回调返回的值，或者是提供的初始值（initialValue））</span><br><span class="line">    <span class="number">2</span>、currentValue （数组中当前被处理的元素）</span><br><span class="line">    <span class="number">3</span>、index （当前元素在数组中的索引）</span><br><span class="line">    <span class="number">4</span>、array （调用 reduce 的数组）</span><br><span class="line"></span><br><span class="line">initialValue （作为第一次调用 callback 的第一个参数。）</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、实例解析-initialValue-参数"><a href="#2、实例解析-initialValue-参数" class="headerlink" title="2、实例解析 initialValue 参数"></a>2、实例解析 initialValue 参数</h4><p>先看第一个例子：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr, sum);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打印结果：<br> 1 2 1<br> 3 3 2<br> 6 4 3<br> [1, 2, 3, 4] 10</p>
+</blockquote>
+<p>这里可以看出，上面的例子index是从1开始的，第一次的prev的值是数组的第一个值。数组长度是4，但是reduce函数循环3次。</p>
+<p>再看第二个例子：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;，<span class="number">0</span>) <span class="comment">//注意这里设置了初始值</span></span><br><span class="line"><span class="built_in">console</span>.log(arr, sum);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打印结果：<br> 0 1 0<br> 1 2 1<br> 3 3 2<br> 6 4 3<br> [1, 2, 3, 4] 10</p>
+</blockquote>
+<p>这个例子index是从0开始的，第一次的prev的值是我们设置的初始值0，数组长度是4，reduce函数循环4次。</p>
+<p>结论：<code>如果没有提供initialValue，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供initialValue，从索引0开始。</code></p>
+<p>注意：如果这个数组为空，运用reduce是什么情况？</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//报错，&quot;TypeError: Reduce of empty array with no initial value&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>但是要是我们设置了初始值就不会报错，如下：</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;，<span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr, sum); <span class="comment">// [] 0</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>所以一般来说我们提供初始值通常更安全</strong></p>
+<h4 id="3、reduce的简单用法"><a href="#3、reduce的简单用法" class="headerlink" title="3、reduce的简单用法"></a>3、reduce的简单用法</h4><p>当然最简单的就是我们常用的数组求和，求乘积了。</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x+y)</span><br><span class="line"><span class="keyword">var</span> mul = arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x*y)</span><br><span class="line"><span class="built_in">console</span>.log( sum ); <span class="comment">//求和，10</span></span><br><span class="line"><span class="built_in">console</span>.log( mul ); <span class="comment">//求乘积，24</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4、reduce的高级用法"><a href="#4、reduce的高级用法" class="headerlink" title="4、reduce的高级用法"></a>4、reduce的高级用法</h4><p>（1）计算数组中每个元素出现的次数</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">&#x27;Alice&#x27;</span>, <span class="string">&#x27;Bob&#x27;</span>, <span class="string">&#x27;Tiff&#x27;</span>, <span class="string">&#x27;Bruce&#x27;</span>, <span class="string">&#x27;Alice&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> nameNum = names.reduce(<span class="function">(<span class="params">pre,cur</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(cur <span class="keyword">in</span> pre)&#123;</span><br><span class="line">    pre[cur]++</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    pre[cur] = <span class="number">1</span> </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> pre</span><br><span class="line">&#125;,&#123;&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(nameNum); <span class="comment">//&#123;Alice: 2, Bob: 1, Tiff: 1, Bruce: 1&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）数组去重</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line"><span class="keyword">let</span> newArr = arr.reduce(<span class="function">(<span class="params">pre,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!pre.includes(cur))&#123;</span><br><span class="line">      <span class="keyword">return</span> pre.concat(cur)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> pre</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="built_in">console</span>.log(newArr);<span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<p>（3）将二维数组转化为一维</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [[<span class="number">0</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>]]</span><br><span class="line"><span class="keyword">let</span> newArr = arr.reduce(<span class="function">(<span class="params">pre,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pre.concat(cur)</span><br><span class="line">&#125;,[])</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// [0, 1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p>（3）将多维数组转化为一维</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [[<span class="number">0</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>,[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]]]</span><br><span class="line"><span class="keyword">const</span> newArr = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> arr.reduce(<span class="function">(<span class="params">pre,cur</span>)=&gt;</span>pre.concat(<span class="built_in">Array</span>.isArray(cur)?newArr(cur):cur),[])</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(newArr(arr)); <span class="comment">//[0, 1, 2, 3, 4, 5, 6, 7]</span></span><br></pre></td></tr></table></figure>
+
+<p>（4）、对象里的属性求和</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> result = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">subject</span>: <span class="string">&#x27;math&#x27;</span>,</span><br><span class="line">        <span class="attr">score</span>: <span class="number">10</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">subject</span>: <span class="string">&#x27;chinese&#x27;</span>,</span><br><span class="line">        <span class="attr">score</span>: <span class="number">20</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">subject</span>: <span class="string">&#x27;english&#x27;</span>,</span><br><span class="line">        <span class="attr">score</span>: <span class="number">30</span></span><br><span class="line">    &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = result.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cur.score + prev;</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sum) <span class="comment">//60</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>作者：<em>littleTank</em><br>链接：<a href="https://www.jianshu.com/p/e375ba1cfc47">https://www.jianshu.com/p/e375ba1cfc47</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
 </search>

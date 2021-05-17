@@ -194,6 +194,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/03/13/ajax/vue%E4%B8%AD%E5%B0%81%E8%A3%85request/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2021/03/13/ajax/vue%E4%B8%AD%E5%B0%81%E8%A3%85request/" class="post-title-link" itemprop="url">vue中封装request</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-13 14:38:10" itemprop="dateCreated datePublished" datetime="2021-03-13T14:38:10+08:00">2021-03-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-13 17:25:13" itemprop="dateModified" datetime="2021-05-13T17:25:13+08:00">2021-05-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<h2 id="全局request文件"><a href="#全局request文件" class="headerlink" title="全局request文件"></a>全局request文件</h2></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @/utils/request.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; getToken &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/auth&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; Toast, Dialog &#125; <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> request = axios.create(&#123;</span><br><span class="line">    <span class="attr">baseURL</span>: <span class="string">&#x27;http://192.168.0.123:8098&#x27;</span>,</span><br><span class="line">    <span class="attr">timeout</span>: <span class="number">5000</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求拦截器，在请求头中添加token</span></span><br><span class="line">axios.interceptors.request.use(</span><br><span class="line">    <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">        config.headers[<span class="string">&#x27;accessToken&#x27;</span>] = getToken()</span><br><span class="line">        <span class="keyword">return</span> config</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">// axios响应拦截器</span></span><br><span class="line">request.interceptors.response.use(</span><br><span class="line">    <span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> res = response.data</span><br><span class="line">        <span class="keyword">switch</span> (res.code + <span class="string">&#x27;&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">                <span class="keyword">return</span> res</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;3&#x27;</span>:</span><br><span class="line">                Dialog.confirm(&#123;</span><br><span class="line">                    <span class="attr">title</span>: <span class="string">&#x27;确认登出？&#x27;</span>,</span><br><span class="line">                    <span class="attr">message</span>: <span class="string">&#x27;你已经登出, 你可以取消登录页面, 或者重新登录&#x27;</span></span><br><span class="line">                &#125;)</span><br><span class="line">                    .then(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">this</span>.$router.push(<span class="string">&#x27;/login&#x27;</span>)</span><br><span class="line">                &#125;)</span><br><span class="line">                    .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(err)</span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="attr">default</span>:</span><br><span class="line">                Toast(&#123;</span><br><span class="line">                    <span class="attr">message</span>: res.msg || <span class="string">&#x27;错误&#x27;</span>,</span><br><span class="line">                    <span class="attr">type</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">                    <span class="attr">duration</span>: <span class="number">2000</span></span><br><span class="line">                &#125;)</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(<span class="keyword">new</span> <span class="built_in">Error</span>(res.msg || <span class="string">&#x27;错误&#x27;</span>))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;err&#x27;</span> + error) <span class="comment">// for debug</span></span><br><span class="line">        Toast(&#123;</span><br><span class="line">            <span class="attr">message</span>: error || <span class="string">&#x27;请求超时&#x27;</span>,</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">            <span class="attr">duration</span>: <span class="number">2000</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> request</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>使用</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2021/03/13/ajax/vue%E4%B8%AD%E5%B0%81%E8%A3%85request/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/03/13/VUE3/vue3%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8Band%E8%B5%84%E6%BA%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -948,87 +1037,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/01/27/utils/js-cookie%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2021/01/27/utils/js-cookie%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" class="post-title-link" itemprop="url">js-cookie中文文档</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-01-27 09:07:22" itemprop="dateCreated datePublished" datetime="2021-01-27T09:07:22+08:00">2021-01-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-12 10:53:55" itemprop="dateModified" datetime="2021-05-12T10:53:55+08:00">2021-05-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/utils/" itemprop="url" rel="index"><span itemprop="name">utils</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="js-cookie中文文档"><a href="#js-cookie中文文档" class="headerlink" title="js-cookie中文文档"></a>js-cookie中文文档</h1><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>js-cookie是一个简单的，轻量级的<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/js-cookie">处理cookies的js API</a>。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2021/01/27/utils/js-cookie%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1107,7 +1115,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">152</span>
+          <span class="site-state-item-count">153</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
