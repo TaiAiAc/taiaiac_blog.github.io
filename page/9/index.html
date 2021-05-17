@@ -194,6 +194,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/" class="post-title-link" itemprop="url">模仿百度分页</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:00" itemprop="dateModified" datetime="2020-12-31T09:27:00+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge,chrome=1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>模仿百度分页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;../img/logo.png&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/jquery-3.5.1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">      * &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">line-height</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">        <span class="attribute">font-size</span>: <span class="number">14px</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.active</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.prev-page</span>,</span></span><br><span class="line"><span class="css">      <span class="selector-class">.next-page</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">80px</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> currentPage = <span class="number">1</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> total = <span class="number">20</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="keyword">function</span> <span class="title">appendList</span>(<span class="params">pageNum</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//1、先删除所有的page-item</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> pageItem = $(<span class="string">&#x27;.page-item&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (pageItem) &#123;</span></span><br><span class="line"><span class="javascript">          pageItem.remove()</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//2、判断prev-page</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> prevPage = $(<span class="string">&#x27;.prev-page&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        pageNum &gt; <span class="number">1</span> ? prevPage.show() : prevPage.hide()</span></span><br><span class="line"><span class="javascript">        <span class="comment">//3、确定当前页码的范围</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> start = pageNum &lt;= <span class="number">6</span> ? <span class="number">1</span> : pageNum - <span class="number">5</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> end = start + <span class="number">9</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//如果超过总条数时，等于总条数</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (end &gt;= total) &#123;</span></span><br><span class="line"><span class="javascript">          end = total</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用循环拼接元素</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt;= end; i++) &#123;</span></span><br><span class="line"><span class="javascript">          <span class="keyword">let</span> a = $(<span class="string">`&lt;a class=&quot;page-item&quot;&gt;<span class="subst">$&#123;i&#125;</span>&lt;/a&gt;`</span>)</span></span><br><span class="line"><span class="javascript">          <span class="comment">//给点击的元素添加</span></span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (pageNum == i) &#123;</span></span><br><span class="line"><span class="javascript">            a = $(<span class="string">`&lt;a class=&quot;page-item active&quot;&gt;<span class="subst">$&#123;i&#125;</span>&lt;/a&gt;`</span>)</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          a.insertBefore($(<span class="string">&#x27;.next-page&#x27;</span>))</span></span><br><span class="line"><span class="javascript">          <span class="comment">//给a元素绑定事件</span></span></span><br><span class="line"><span class="javascript">          a.click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">let</span> index = <span class="built_in">parseInt</span>(a.html())</span></span><br><span class="line"><span class="javascript">            appendList(index)</span></span><br><span class="line"><span class="javascript">            currentPage = index</span></span><br><span class="line"><span class="javascript">          &#125;)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//页面首次加载第一页</span></span></span><br><span class="line"><span class="javascript">        appendList(<span class="number">1</span>)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//点击下一页的操作</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">&#x27;.next-page&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          currentPage++</span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (currentPage &gt;= total) &#123;</span></span><br><span class="line"><span class="javascript">            currentPage = total</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          appendList(currentPage)</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//点击上一页的操作</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">&#x27;.prev-page&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          currentPage--</span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (currentPage &lt;= <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">            currentPage = <span class="number">1</span></span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          appendList(currentPage)</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;page&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;page-inner&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;prev-page&quot;</span>&gt;</span><span class="symbol">&amp;lt;</span>上一页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;next-page&quot;</span>&gt;</span>下一页<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -972,89 +1046,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/%E5%8E%9F%E7%94%9Fjs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/%E5%8E%9F%E7%94%9Fjs/" class="post-title-link" itemprop="url">原生js Ajax获取远程数据</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:15:28" itemprop="dateModified" datetime="2020-12-31T09:15:28+08:00">2020-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Ajax-获取远程数据"><a href="#Ajax-获取远程数据" class="headerlink" title="Ajax 获取远程数据"></a>Ajax 获取远程数据</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//async 表示异步的 经常修饰函数，表示函数的return值是promise对象</span></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getMsg</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> result = request(</span><br><span class="line">    <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">    <span class="literal">null</span>,</span><br><span class="line">    <span class="string">&#x27;GET&#x27;</span></span><br><span class="line">  )</span><br><span class="line">  <span class="comment">//await 表示等待异步执行的结果，只能存在于async修饰的函数</span></span><br><span class="line">  <span class="keyword">let</span> res = <span class="keyword">await</span> result</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">  <span class="comment">//在页面渲染render</span></span><br><span class="line">  app.lastElementChild.innerHTML = res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">url, params, method</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//promise是一个容器，存放未来异步代码执行的结果</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> xmlRequest</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</span><br><span class="line">      <span class="comment">//IE6+和其它浏览器支持</span></span><br><span class="line">      xmlRequest = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">//IE6、IE5浏览器支持</span></span><br><span class="line">      xmlRequest = <span class="keyword">new</span> ActiveXObject(<span class="string">&#x27;Microsoft.XMLHTTP&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//3、监听xmlRequest生命周期的状态</span></span><br><span class="line">    xmlRequest.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (xmlRequest.readyState === <span class="number">4</span> &amp;&amp; xmlRequest.status === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="comment">//4、获取响应信息</span></span><br><span class="line">        <span class="keyword">let</span> res = xmlRequest.respons</span><br><span class="line">        <span class="comment">//使用Promise 保存异步结果</span></span><br><span class="line">        resolve(res)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 发送请求</span></span><br><span class="line">    <span class="keyword">if</span> (method.toLowerCase() === <span class="string">&#x27;get&#x27;</span>) &#123;</span><br><span class="line">      xmlRequest.open(<span class="string">&#x27;get&#x27;</span>, url + <span class="string">&#x27;/?&#x27;</span> + params, <span class="literal">true</span>)</span><br><span class="line">      xmlRequest.send()</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.toLowerCase() === <span class="string">&#x27;post&#x27;</span>) &#123;</span><br><span class="line">      xmlRequest.open(<span class="string">&#x27;post&#x27;</span>, url, <span class="literal">true</span>)</span><br><span class="line">      xmlRequest.setRequestHeader(</span><br><span class="line">        <span class="string">&#x27;content-type&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span></span><br><span class="line">      )</span><br><span class="line">      xmlRequest.send(params)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1、创建对象"><a href="#1、创建对象" class="headerlink" title="1、创建对象"></a>1、创建对象</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/%E5%8E%9F%E7%94%9Fjs/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1133,7 +1124,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -194,6 +194,89 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/04/26/%E7%BB%84%E4%BB%B6/%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9A%84%E7%BB%9F%E4%B8%80%E5%B0%81%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2021/04/26/%E7%BB%84%E4%BB%B6/%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9A%84%E7%BB%9F%E4%B8%80%E5%B0%81%E8%A3%85/" class="post-title-link" itemprop="url">对话框的统一封装</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-26 16:34:27" itemprop="dateCreated datePublished" datetime="2021-04-26T16:34:27+08:00">2021-04-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-05-12 10:49:50" itemprop="dateModified" datetime="2021-05-12T10:49:50+08:00">2021-05-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">组件</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="话不多说都在代码里了"><a href="#话不多说都在代码里了" class="headerlink" title="话不多说都在代码里了"></a>话不多说都在代码里了</h2><blockquote>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ElMessageBox, ElMessage &#125; <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 一些操作拦截,强制用户行为等场景</span></span><br><span class="line"><span class="comment"> * 弹窗提示,只能点击确认键退出</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>content &#x27;这是一段内容&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>btnText &#x27;按钮文字&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isAlertBox = <span class="keyword">async</span> (content, btnText) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> ElMessageBox.alert(content, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: btnText,</span><br><span class="line">    <span class="attr">distinguishCancelAndClose</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">showClose</span>: <span class="literal">false</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 删除对话框(确认删除,取消删除)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isDelConfirmBox = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="keyword">await</span> ElMessageBox.confirm(<span class="string">&#x27;此操作将永久删除, 是否继续?&#x27;</span>, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;确定&#x27;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;warning&#x27;</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (flag === <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    ElMessage.success(<span class="string">&#x27;删除成功!&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ElMessage.info(<span class="string">&#x27;已取消删除&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 带有输入框验证功能的弹框,返回输入状态和输入的值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>text  提示语</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>test  正则表达式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>msg   正则验证提示语</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isPromptBox = <span class="keyword">async</span> (text, test, msg) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; action, value &#125; = <span class="keyword">await</span> ElMessageBox.prompt(<span class="string">`请输入<span class="subst">$&#123;text&#125;</span>`</span>, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;确定&#x27;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">    <span class="attr">inputPattern</span>: test,</span><br><span class="line">    <span class="attr">inputErrorMessage</span>: <span class="string">`<span class="subst">$&#123;msg&#125;</span>格式不正确`</span>,</span><br><span class="line">    <span class="attr">inputValue</span>: <span class="string">&#x27;初始文本&#x27;</span>,</span><br><span class="line">    <span class="attr">center</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">buttonSize</span>: <span class="string">&#x27;small&#x27;</span></span><br><span class="line">    <span class="comment">// inputPattern: /[\w!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+(?:\.[\w!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (action == <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    ElMessage.success(<span class="string">&#x27;录入成功!&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> value</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ElMessage.info(<span class="string">&#x27;取消输入&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 区分取消与关闭</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> <span class="variable">text</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>confirmText=&#x27;确认&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>cancelText=&#x27;取消&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> * confirm 确认操作</span></span><br><span class="line"><span class="comment"> * cancel  取消操作</span></span><br><span class="line"><span class="comment"> * close  不执行操作</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isConfirmBox = <span class="keyword">async</span> (</span><br><span class="line">  text,</span><br><span class="line">  confirmText = <span class="string">&#x27;确认&#x27;</span>,</span><br><span class="line">  cancelText = <span class="string">&#x27;取消&#x27;</span></span><br><span class="line">) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="keyword">await</span> ElMessageBox.confirm(text, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">distinguishCancelAndClose</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">confirmButtonText</span>: confirmText,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: cancelText,</span><br><span class="line">    <span class="attr">center</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">buttonSize</span>: <span class="string">&#x27;small&#x27;</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (flag == <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;右&#x27;</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (flag == <span class="string">&#x27;close&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> ElMessage.info(<span class="string">&#x27;取消操作&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;左&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2021/04/26/%E7%BB%84%E4%BB%B6/%E5%AF%B9%E8%AF%9D%E6%A1%86%E7%9A%84%E7%BB%9F%E4%B8%80%E5%B0%81%E8%A3%85/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/04/13/%E5%A4%A7%E5%89%8D%E7%AB%AF/vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E6%80%9D%E8%B7%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -947,93 +1030,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/03/13/ajax/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B0%81%E8%A3%85request/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2021/03/13/ajax/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B0%81%E8%A3%85request/" class="post-title-link" itemprop="url">微信小程序中封装request</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-13 14:38:38" itemprop="dateCreated datePublished" datetime="2021-03-13T14:38:38+08:00">2021-03-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-13 17:25:05" itemprop="dateModified" datetime="2021-05-13T17:25:05+08:00">2021-05-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<h2 id="全局request文件"><a href="#全局request文件" class="headerlink" title="全局request文件"></a>全局request文件</h2></blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> URL = <span class="string">&#x27;https://v1.hitokoto.cn&#x27;</span></span><br><span class="line"><span class="keyword">const</span> header = header || &#123;</span><br><span class="line">  <span class="string">&#x27;content-type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;accessToken&#x27;</span>: getApp().globalData.token</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">data, path, method</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    wx.request(&#123;</span><br><span class="line">      <span class="attr">url</span>: URL + path,</span><br><span class="line">      header,</span><br><span class="line">      data,</span><br><span class="line">      method,</span><br><span class="line">      <span class="comment">// 状态码处理</span></span><br><span class="line">      <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(res);</span><br><span class="line">          resolve(res)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">switch</span> (res) &#123;</span><br><span class="line">          <span class="keyword">case</span> <span class="string">&#x27;状态码&#x27;</span>:</span><br><span class="line">            resolve(res)</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">          <span class="attr">default</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">fail</span>: <span class="function"><span class="params">err</span> =&gt;</span> reject(err)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="attr">get</span>: <span class="function">(<span class="params">data, path = <span class="string">&#x27;&#x27;</span></span>) =&gt;</span> request(data, path, <span class="string">&#x27;GET&#x27;</span>),</span><br><span class="line">  <span class="attr">post</span>: <span class="function">(<span class="params">data, path = <span class="string">&#x27;&#x27;</span></span>) =&gt;</span> request(data, path, <span class="string">&#x27;POST&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<h4 id="存放token"><a href="#存放token" class="headerlink" title="存放token"></a>存放token</h4><p>app.js</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2021/03/13/ajax/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%B0%81%E8%A3%85request/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1112,7 +1108,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-count">154</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
