@@ -975,7 +975,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/echarts/%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7%E5%92%8C%E5%BC%95%E5%85%A5/">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/html%E3%80%81css/video%E6%A0%87%E7%AD%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
@@ -989,7 +989,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/taiaiac.gitee.io/2020/12/30/echarts/%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7%E5%92%8C%E5%BC%95%E5%85%A5/" class="post-title-link" itemprop="url">echarts基础属性和引入</a>
+            <a href="/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/video%E6%A0%87%E7%AD%BE/" class="post-title-link" itemprop="url">video标签</a>
         </h2>
 
         <div class="post-meta">
@@ -1006,7 +1006,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:17:19" itemprop="dateModified" datetime="2020-12-31T09:17:19+08:00">2020-12-31</time>
+                <time title="修改时间：2020-12-31 09:22:55" itemprop="dateModified" datetime="2020-12-31T09:22:55+08:00">2020-12-31</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1014,7 +1014,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/echarts/" itemprop="url" rel="index"><span itemprop="name">echarts</span></a>
+                  <a href="/taiaiac.gitee.io/categories/HTML%E3%80%81CSS/" itemprop="url" rel="index"><span itemprop="name">HTML、CSS</span></a>
                 </span>
             </span>
 
@@ -1029,16 +1029,52 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-line">line</a>（折线图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-bar">bar</a>（柱状图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-pie">pie</a>（饼图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-scatter">scatter</a>（散点图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-graph">graph</a>（关系图）、<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html#series-tree">tree</a>（树图）、…</p>
-<h2 id="局部引入"><a href="#局部引入" class="headerlink" title="局部引入"></a>局部引入</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入 ECharts 主模块</span></span><br><span class="line"><span class="keyword">const</span> echarts = <span class="built_in">require</span>(<span class="string">&#x27;echarts/dist/echarts&#x27;</span>)</span><br><span class="line"><span class="comment">// 或者import</span></span><br><span class="line"><span class="keyword">import</span> echarts <span class="keyword">from</span> <span class="string">&#x27;echarts&#x27;</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/echarts/%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7%E5%92%8C%E5%BC%95%E5%85%A5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <table>
+<thead>
+<tr>
+<th align="center"><strong>属性</strong></th>
+<th align="center"><strong>值</strong></th>
+<th align="center"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">autoplay</td>
+<td align="center">autoplay</td>
+<td align="center">如果出现该属性，则视频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td align="center">controls</td>
+<td align="center">controls</td>
+<td align="center">如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center"><em>loop</em></td>
+<td align="center">如果出现该属性，则当媒介文件完成播放后再次开始播放。</td>
+</tr>
+<tr>
+<td align="center">muted</td>
+<td align="center">muted</td>
+<td align="center">规定视频的音频输出应该被静音。</td>
+</tr>
+<tr>
+<td align="center">poster</td>
+<td align="center"><em>URL</em></td>
+<td align="center">规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">preload</td>
+<td align="center">如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td align="center">src</td>
+<td align="center"><em>url</em></td>
+<td align="center">要播放的视频的 URL。</td>
+</tr>
+</tbody></table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;.../xx.mp4&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">controls</span>=<span class="string">&quot;controls&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">autoplay</span></span></span><br><span class="line"><span class="tag">  <span class="attr">loop</span></span></span><br><span class="line"><span class="tag">  <span class="attr">controls</span></span></span><br><span class="line"><span class="tag">  <span class="attr">muted</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -1131,20 +1167,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">154</span>
+          <span class="site-state-item-count">152</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/taiaiac.gitee.io/categories/">
           
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/taiaiac.gitee.io/tags/">
           
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
