@@ -1193,7 +1193,6 @@
 
 <h3 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h3><p>对数组每一项都运行传入的函数，返回由每次函数调用的结果构成的数组</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> mapResult = numbers.map(<span class="function">(<span class="params">item, index, array</span>) =&gt;</span> item * <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(mapResult) <span class="comment">// 2,4,6,8,10,8,6,4,2</span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Javascript</category>
@@ -1650,10 +1649,10 @@
 <p>作者：张培跃<br>链接：<a href="https://www.jianshu.com/p/e984c3619019">https://www.jianshu.com/p/e984c3619019</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
-        <tag>工具</tag>
+        <tag>NodeJS</tag>
       </tags>
   </entry>
   <entry>
@@ -2379,7 +2378,7 @@ let stu = students.find((item) =&gt; &#123;
 <p>使用：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># npm init</span></span><br><span class="line">yarn init</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm install --save 包名</span></span><br><span class="line">yarn add 包名</span><br><span class="line"></span><br><span class="line"><span class="comment"># 离线安装</span></span><br><span class="line">yarn add 包名@版本号 --offline</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm install</span></span><br><span class="line">yarn install</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm uninstall 包名</span></span><br><span class="line">yarn remove 包名</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm install -g 包名</span></span><br><span class="line">yarn global add 包名</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm uninstall -g 包名</span></span><br><span class="line">yarn global remove 包名</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
         <tag>NodeJS</tag>
@@ -2651,7 +2650,7 @@ let stu = students.find((item) =&gt; &#123;
 
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
         <tag>NodeJS</tag>
@@ -2860,7 +2859,7 @@ let stu = students.find((item) =&gt; &#123;
 </ul>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
         <tag>NodeJS</tag>
@@ -2912,7 +2911,7 @@ let stu = students.find((item) =&gt; &#123;
 
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
         <tag>NodeJS</tag>
@@ -2969,7 +2968,7 @@ let stu = students.find((item) =&gt; &#123;
 
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>NodeJS</category>
       </categories>
       <tags>
         <tag>NodeJS</tag>
