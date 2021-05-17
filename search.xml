@@ -15145,4 +15145,42 @@ let stu = students.find((item) =&gt; &#123;
         <tag>Javascript</tag>
       </tags>
   </entry>
+  <entry>
+    <title>原生微信小程序中使用vant</title>
+    <url>/taiaiac.gitee.io/2021/05/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%94%9F%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E4%BD%BF%E7%94%A8vant/</url>
+    <content><![CDATA[<h2 id="原生微信小程序中使用vant"><a href="#原生微信小程序中使用vant" class="headerlink" title="原生微信小程序中使用vant"></a>原生微信小程序中使用vant</h2><blockquote>
+<p>官网地址</p>
+<p><a href="https://vant-contrib.gitee.io/vant-weapp/#/home">https://vant-contrib.gitee.io/vant-weapp/#/home</a></p>
+</blockquote>
+<h3 id="1-装包"><a href="#1-装包" class="headerlink" title="1.装包"></a>1.装包</h3><p>装包前设置微信开发者工具中的设置</p>
+<ul>
+<li><p>设置  –&gt;  工具 —&gt; 构建npm</p>
+</li>
+<li><p>右上角 —&gt;  详情  —&gt;  使用npm模块</p>
+</li>
+<li><p>打开终端</p>
+<ul>
+<li><code>yarn add @vant/weapp --production</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h3><ul>
+<li><p>将 app.json 中的 <code>&quot;style&quot;: &quot;v2&quot;</code> 去除，小程序的<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style">新版基础组件</a>强行加上了许多样式，难以覆盖，不关闭将造成部分组件样式混乱。</p>
+</li>
+<li><p>开发者工具创建的项目，<code>miniprogramRoot</code> 默认为 <code>miniprogram</code>，<code>package.json</code> 在其外部，npm 构建无法正常工作。</p>
+<p>需要手动在 <code>project.config.json</code> 内添加如下配置，使开发者工具可以正确索引到 npm 依赖的位置。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="attr">&quot;setting&quot;</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="attr">&quot;packNpmManually&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;packNpmRelationList&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;packageJsonPath&quot;</span>: <span class="string">&quot;./package.json&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;miniprogramNpmDistDir&quot;</span>: <span class="string">&quot;./miniprogram/&quot;</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意： 由于目前新版开发者工具创建的小程序目录文件结构问题，npm构建的文件目录为miniprogram_npm，并且开发工具会默认在当前目录下创建miniprogram_npm的文件名，所以新版本的miniprogramNpmDistDir配置为’./‘即可</p>
+</li>
+</ul>
+<h3 id="3-组件的使用"><a href="#3-组件的使用" class="headerlink" title="3.组件的使用"></a>3.组件的使用</h3><p>根据官方文档来具体使用</p>
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>ui框架</tag>
+      </tags>
+  </entry>
 </search>
