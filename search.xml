@@ -15054,4 +15054,39 @@ let stu = students.find((item) =&gt; &#123;
         <tag>Ajax</tag>
       </tags>
   </entry>
+  <entry>
+    <title>react基础</title>
+    <url>/taiaiac.gitee.io/2021/05/15/react/react%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h2><blockquote>
+<p>官方文档</p>
+<p><a href="https://reactjs.bootcss.com/">https://reactjs.bootcss.com/</a></p>
+</blockquote>
+<blockquote>
+<p>移动端</p>
+<p><a href="https://reactnative.cn/">https://reactnative.cn/</a></p>
+</blockquote>
+<blockquote>
+<p>服务端渲染</p>
+<p><a href="https://www.nextjs.cn/">https://www.nextjs.cn/</a></p>
+</blockquote>
+<blockquote>
+<p>React 的轻量级替代方案</p>
+<p><a href="https://www.preactjs.com.cn/">https://www.preactjs.com.cn/</a></p>
+</blockquote>
+<blockquote>
+<p>配套ui : Ant Design of React</p>
+<p><a href="https://ant-design.gitee.io/docs/react/introduce-cn">https://ant-design.gitee.io/docs/react/introduce-cn</a></p>
+<p>ProComponents</p>
+<p><a href="https://procomponents.ant.design/">https://procomponents.ant.design/</a></p>
+<p>Ant Design Charts</p>
+<p><a href="https://charts.ant.design/zh-CN/">https://charts.ant.design/zh-CN/</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>react</category>
+      </categories>
+      <tags>
+        <tag>react</tag>
+      </tags>
+  </entry>
 </search>
