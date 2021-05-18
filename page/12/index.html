@@ -194,6 +194,81 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/prettierrc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/vue/prettierrc/" class="post-title-link" itemprop="url">prettierrc配置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:37:58" itemprop="dateModified" datetime="2020-12-31T09:37:58+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>.prettierrc 文件常见配置</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// tab缩进大小,默认为2</span></span><br><span class="line">  <span class="attr">&quot;tabWidth&quot;</span>: <span class="number">4</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 使用tab缩进，默认false</span></span><br><span class="line">  <span class="attr">&quot;useTabs&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 使用分号, 默认true</span></span><br><span class="line">  <span class="attr">&quot;semi&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 使用单引号, 默认false(在jsx中配置无效, 默认都是双引号)</span></span><br><span class="line">  <span class="attr">&quot;singleQuote&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 行尾逗号,默认none,可选 none|es5|all</span></span><br><span class="line">  <span class="comment">// es5 包括es5中的数组、对象</span></span><br><span class="line">  <span class="comment">// all 包括函数对象等所有可选</span></span><br><span class="line">  <span class="attr">&quot;TrailingCooma&quot;</span>: <span class="string">&quot;all&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 对象中的空格 默认true</span></span><br><span class="line">  <span class="comment">// true: &#123; foo: bar &#125;</span></span><br><span class="line">  <span class="comment">// false: &#123;foo: bar&#125;</span></span><br><span class="line">  <span class="attr">&quot;bracketSpacing&quot;</span>: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// JSX标签闭合位置 默认false</span></span><br><span class="line">  <span class="comment">// false: &lt;div</span></span><br><span class="line">  <span class="comment">//          className=&quot;&quot;</span></span><br><span class="line">  <span class="comment">//          style=&#123;&#123;&#125;&#125;</span></span><br><span class="line">  <span class="comment">//       &gt;</span></span><br><span class="line">  <span class="comment">// true: &lt;div</span></span><br><span class="line">  <span class="comment">//          className=&quot;&quot;</span></span><br><span class="line">  <span class="comment">//          style=&#123;&#123;&#125;&#125; &gt;</span></span><br><span class="line">  <span class="attr">&quot;jsxBracketSameLine&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 箭头函数参数括号 默认avoid 可选 avoid| always</span></span><br><span class="line">  <span class="comment">// avoid 能省略括号的时候就省略 例如x =&gt; x</span></span><br><span class="line">  <span class="comment">// always 总是有括号</span></span><br><span class="line">  <span class="attr">&quot;arrowParens&quot;</span>: <span class="string">&quot;avoid&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/vue-cli%EF%BC%88vue%E8%84%9A%E6%89%8B%E6%9E%B6%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -918,87 +993,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/taiaiac.gitee.io/2020/12/30/vue/vue%E7%9A%84%E5%90%84%E7%A7%8D%E5%BC%95%E5%85%A5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/vue/%E6%8C%87%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/vue/%E6%8C%87%E4%BB%A4/" class="post-title-link" itemprop="url">指令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-06 17:13:44" itemprop="dateModified" datetime="2021-01-06T17:13:44+08:00">2021-01-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="指令（Directive）"><a href="#指令（Directive）" class="headerlink" title="指令（Directive）"></a>指令（Directive）</h2><h3 id="是特殊的带有-v-前缀的特性"><a href="#是特殊的带有-v-前缀的特性" class="headerlink" title="是特殊的带有 v- 前缀的特性"></a>是特殊的带有 v- 前缀的特性</h3><p><img src="../imgs/image-20201019172856880.png" alt="image"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/vue/%E6%8C%87%E4%BB%A4/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
