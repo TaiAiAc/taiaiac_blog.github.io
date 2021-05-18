@@ -15197,7 +15197,7 @@ let stu = students.find((item) =&gt; &#123;
   </entry>
   <entry>
     <title>Fetch</title>
-    <url>/taiaiac.gitee.io/2021/03/02/ajax/Fetch/</url>
+    <url>/taiaiac.gitee.io/2021/05/18/ajax/Fetch/</url>
     <content><![CDATA[<h1 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a>Fetch</h1><p>fetch是一种HTTP数据请求的方式，是XMLHttpRequest的一种替代方案。fetch不是ajax的进一步封装，而是原生js。Fetch函数就是原生js，没有使用XMLHttpRequest对象。</p>
 <h3 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h3><ul>
 <li>使用步骤<br> 1.创建XmlHttpRequest对象<br> 2.调用open方法设置基本请求信息<br> 3.设置发送的数据，发送请求<br> 4.注册监听的回调函数<br> 5.拿到返回值，对页面进行更新</li>
