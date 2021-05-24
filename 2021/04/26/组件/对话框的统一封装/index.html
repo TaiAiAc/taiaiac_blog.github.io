@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Z.A.M.">
+
+
+
+    <meta name="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+
+
+
+<title>对话框的统一封装 | Z. A. M.’s Blog</title>
+
+
+
+    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/taiaiac.gitee.io/js/script.js"></script>
+    
+    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 5.4.0"></head>
+  <body>
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
+                
+                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">对话框的统一封装</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Z.A.M.</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">四月 26, 2021&nbsp;&nbsp;16:34:27</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/taiaiac.gitee.io/categories/%E7%BB%84%E4%BB%B6/">组件</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h2 id="话不多说都在代码里了"><a href="#话不多说都在代码里了" class="headerlink" title="话不多说都在代码里了"></a>话不多说都在代码里了</h2><blockquote>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3></blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ElMessageBox, ElMessage &#125; <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 一些操作拦截,强制用户行为等场景</span></span><br><span class="line"><span class="comment"> * 弹窗提示,只能点击确认键退出</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>content &#x27;这是一段内容&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>btnText &#x27;按钮文字&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isAlertBox = <span class="keyword">async</span> (content, btnText) =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> ElMessageBox.alert(content, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: btnText,</span><br><span class="line">    <span class="attr">distinguishCancelAndClose</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">showClose</span>: <span class="literal">false</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 删除对话框(确认删除,取消删除)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isDelConfirmBox = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="keyword">await</span> ElMessageBox.confirm(<span class="string">&#x27;此操作将永久删除, 是否继续?&#x27;</span>, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;确定&#x27;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&#x27;warning&#x27;</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (flag === <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    ElMessage.success(<span class="string">&#x27;删除成功!&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ElMessage.info(<span class="string">&#x27;已取消删除&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 带有输入框验证功能的弹框,返回输入状态和输入的值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>text  提示语</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>test  正则表达式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>msg   正则验证提示语</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isPromptBox = <span class="keyword">async</span> (text, test, msg) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; action, value &#125; = <span class="keyword">await</span> ElMessageBox.prompt(<span class="string">`请输入<span class="subst">$&#123;text&#125;</span>`</span>, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">confirmButtonText</span>: <span class="string">&#x27;确定&#x27;</span>,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">    <span class="attr">inputPattern</span>: test,</span><br><span class="line">    <span class="attr">inputErrorMessage</span>: <span class="string">`<span class="subst">$&#123;msg&#125;</span>格式不正确`</span>,</span><br><span class="line">    <span class="attr">inputValue</span>: <span class="string">&#x27;初始文本&#x27;</span>,</span><br><span class="line">    <span class="attr">center</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">buttonSize</span>: <span class="string">&#x27;small&#x27;</span></span><br><span class="line">    <span class="comment">// inputPattern: /[\w!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+(?:\.[\w!#$%&amp;&#x27;*+/=?^_`&#123;|&#125;~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (action == <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    ElMessage.success(<span class="string">&#x27;录入成功!&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> value</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ElMessage.info(<span class="string">&#x27;取消输入&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * 区分取消与关闭</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2021-04-26</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> <span class="variable">text</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>confirmText=&#x27;确认&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;String&#125;</span> </span>cancelText=&#x27;取消&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;Promise&#125;</span>  </span>返回一个promise对象执行异步操作,需要处理</span></span><br><span class="line"><span class="comment"> * confirm 确认操作</span></span><br><span class="line"><span class="comment"> * cancel  取消操作</span></span><br><span class="line"><span class="comment"> * close  不执行操作</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isConfirmBox = <span class="keyword">async</span> (</span><br><span class="line">  text,</span><br><span class="line">  confirmText = <span class="string">&#x27;确认&#x27;</span>,</span><br><span class="line">  cancelText = <span class="string">&#x27;取消&#x27;</span></span><br><span class="line">) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> flag = <span class="keyword">await</span> ElMessageBox.confirm(text, <span class="string">&#x27;提示&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">distinguishCancelAndClose</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">confirmButtonText</span>: confirmText,</span><br><span class="line">    <span class="attr">cancelButtonText</span>: cancelText,</span><br><span class="line">    <span class="attr">center</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">buttonSize</span>: <span class="string">&#x27;small&#x27;</span></span><br><span class="line">  &#125;).catch(<span class="function">(<span class="params">e</span>) =&gt;</span> e)</span><br><span class="line">  <span class="keyword">if</span> (flag == <span class="string">&#x27;confirm&#x27;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;右&#x27;</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (flag == <span class="string">&#x27;close&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> ElMessage.info(<span class="string">&#x27;取消操作&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;左&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3></blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-row</span> <span class="attr">:gutter</span>=<span class="string">&quot;20&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-content bg-purple&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;isAlert&quot;</span>&gt;</span>_isAlert<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&lt;/el-col</span><br><span class="line">    &gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-content bg-purple&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;success&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;isDelConfirm&quot;</span></span></span><br><span class="line"><span class="tag">          &gt;</span>_isDelConfirm&lt;/el-button</span><br><span class="line">        &gt;</span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&lt;/el-col</span><br><span class="line">    &gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-content bg-purple&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;isPrompt&quot;</span>&gt;</span>_isPrompt<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&lt;/el-col</span><br><span class="line">    &gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;6&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;grid-content bg-purple&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;success&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;isConfirm&quot;</span>&gt;</span>_isConfirm<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span>&lt;/el-col</span><br><span class="line">    &gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123;</span></span><br><span class="line"><span class="javascript">  isAlertBox,</span></span><br><span class="line"><span class="javascript">  isDelConfirmBox,</span></span><br><span class="line"><span class="javascript">  isPromptBox,</span></span><br><span class="line"><span class="javascript">  isConfirmBox</span></span><br><span class="line"><span class="javascript">&#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/messageBox&#x27;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ElMessage &#125; <span class="keyword">from</span> <span class="string">&#x27;element-plus&#x27;</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> isAlert = <span class="keyword">async</span> () =&gt; &#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">await</span> isAlertBox(<span class="string">&#x27;提示内容&#x27;</span>, <span class="string">&#x27;按钮文字&#x27;</span>)</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> isDelConfirm = <span class="keyword">async</span> () =&gt; &#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">await</span> isDelConfirmBox()</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> isPrompt = <span class="keyword">async</span> () =&gt; &#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> data = <span class="keyword">await</span> isPromptBox(<span class="string">&#x27;提示文字&#x27;</span>, <span class="regexp">/^[0-9]*$/</span>, <span class="string">&#x27;数字&#x27;</span>)</span></span><br><span class="line"><span class="javascript">  <span class="keyword">if</span> (data) &#123;</span></span><br><span class="line"><span class="javascript">    ElMessage.success(data)</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> isConfirm = <span class="keyword">async</span> () =&gt; &#123;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> flag = <span class="keyword">await</span> isConfirmBox(<span class="string">&#x27;提示文字&#x27;</span>, <span class="string">&#x27;右边&#x27;</span>, <span class="string">&#x27;左边&#x27;</span>)</span></span><br><span class="line"><span class="javascript">  <span class="keyword">if</span> (flag === <span class="string">&#x27;右&#x27;</span>) &#123;</span></span><br><span class="line"><span class="javascript">    ElMessage.success(<span class="string">&#x27;点击了右边&#x27;</span>)</span></span><br><span class="line"><span class="javascript">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (flag === <span class="string">&#x27;左&#x27;</span>) &#123;</span></span><br><span class="line"><span class="javascript">    ElMessage.warning(<span class="string">&#x27;点击了左边&#x27;</span>)</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.el-row</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">  &amp;<span class="selector-pseudo">:last-child</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">margin-bottom</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">  &#125;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.el-col</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.bg-purple-dark</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">background</span>: <span class="number">#99a9bf</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.bg-purple</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">background</span>: <span class="number">#d3dce6</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.bg-purple-light</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">background</span>: <span class="number">#e5e9f2</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.grid-content</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">min-height</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">  <span class="attribute">padding</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.row-bg</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="css">  <span class="attribute">background-color</span>: <span class="number">#f9fafc</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="#">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/taiaiac.gitee.io/tags/%E7%BB%84%E4%BB%B6/"># 组件</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/taiaiac.gitee.io/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/taiaiac.gitee.io/2021/04/29/apline/alpine%E7%9A%84demo%E7%BB%83%E4%B9%A0/">alpine的demo练习</a>
+            
+            
+            <a class="next" rel="next" href="/taiaiac.gitee.io/2021/04/13/%E5%A4%A7%E5%89%8D%E7%AB%AF/vue%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%9D%83%E9%99%90%E6%80%9D%E8%B7%AF/">vue后台管理权限思路</a>
+            
+        </section>
+
+
+    </article>
+</div>
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+    <script
+      type="text/javascript"
+      color="96,98,102"
+      opacity="0.7"
+      zIndex="-2"
+      count="99"
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
+    ></script>
+  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
