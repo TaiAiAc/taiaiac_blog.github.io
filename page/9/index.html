@@ -1,178 +1,1268 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/taiaiac.gitee.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/taiaiac.gitee.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/taiaiac.gitee.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/taiaiac.gitee.io/images/logo.svg" color="#222">
 
-    <meta name="author" content="Z.A.M.">
-
-
-
-    <meta name="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-
-
-
-<title>Z. A. M.’s Blog</title>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/main.css">
 
 
+<link rel="stylesheet" href="/taiaiac.gitee.io/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gitee.com","root":"/taiaiac.gitee.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
+  <meta name="description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Z. A. M.’s Blog">
+<meta property="og:url" content="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/9/index.html">
+<meta property="og:site_name" content="Z. A. M.’s Blog">
+<meta property="og:description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Z.A.M.">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
-
+<link rel="canonical" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/9/">
 
 
-    
-    
-        
-    
-
-
-  <meta name="generator" content="Hexo 5.4.0"></head>
-  <body>
-    <div class="wrapper">
-      <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
 </script>
-      <div class="main"> <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/taiaiac.gitee.io/"><img src="/taiaiac.gitee.io/image/header.jpg"></a>
-        </div>
-        <div class="nickname">Z. A. M.</div>
-        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> By &lt;东京喰种&gt;.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/taiaiac.gitee.io/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/taiaiac.gitee.io/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/taiaiac.gitee.io/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Link" href="/taiaiac.gitee.io/about">
-                        
-                        
-                            <i class="iconfont icon-link"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
-</div>
- 
 
+  <title>Z. A. M.’s Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?926d1ac4f837ede8bead2fd3007162d6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/taiaiac.gitee.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Z. A. M.’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/taiaiac.gitee.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/taiaiac.gitee.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/taiaiac.gitee.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/taiaiac.gitee.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/%E8%A1%A8%E6%A0%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E8%A1%A8%E6%A0%BC/" class="post-title-link" itemprop="url">表格</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:31:14" itemprop="dateModified" datetime="2020-12-31T09:31:14+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/MySQl/" itemprop="url" rel="index"><span itemprop="name">MySQl</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.启动服务</span><br><span class="line">C:\Users\root&gt;mysql -u root -p</span><br><span class="line"><span class="number">2</span>.查看创建的数据库</span><br><span class="line">mysql&gt; show databases;</span><br><span class="line"><span class="number">2</span>.创建数据库`kgc`</span><br><span class="line">mysql&gt; create database kgc;</span><br><span class="line"><span class="number">3</span>.切换或使用数据库</span><br><span class="line">mysql&gt; use kgc;</span><br><span class="line"><span class="number">4</span>.删除数据库</span><br><span class="line">mysql&gt; drop database kgc;</span><br><span class="line"><span class="number">5</span>.创建表格</span><br><span class="line">mysql&gt; create <span class="selector-tag">table</span> `student`(</span><br><span class="line">-&gt;     `id` bigint(<span class="number">10</span>) primary key auto_increment comment &#x27;用户id&#x27;,</span><br><span class="line">-&gt;     `username` varchar(<span class="number">50</span>) not null unique comment &#x27;用户名&#x27;,</span><br><span class="line">-&gt;     `password` varchar(<span class="number">50</span>) not null comment &#x27;密码&#x27;,</span><br><span class="line">-&gt;     `score` bigint(<span class="number">3</span>) not null comment &#x27;分数&#x27;</span><br><span class="line">-&gt;     );</span><br><span class="line"><span class="number">6</span>.查看表</span><br><span class="line">mysql&gt; show tables;</span><br><span class="line"><span class="number">7</span>.查看表结构</span><br><span class="line">mysql&gt; desc student;</span><br><span class="line"><span class="number">8</span>.查看创建表语句</span><br><span class="line">mysql&gt; show create <span class="selector-tag">table</span> student;</span><br><span class="line"><span class="number">9</span>.删除表</span><br><span class="line">mysql&gt; drop <span class="selector-tag">table</span> student;</span><br><span class="line"><span class="number">10</span>.插入数据</span><br><span class="line">mysql&gt; insert into student(id,username,password,score) values(<span class="number">1</span>,&#x27;tom&#x27;,&#x27;tom123&#x27;,<span class="number">70</span>);</span><br><span class="line"><span class="number">11</span>. 批量添加数据</span><br><span class="line">mysql&gt; insert into student(username,password,score) values</span><br><span class="line">-&gt; (&#x27;tom1&#x27;,&#x27;tom123&#x27;,<span class="number">80</span>),</span><br><span class="line">-&gt; (&#x27;tom2&#x27;,&#x27;tom1234&#x27;,<span class="number">90</span>),</span><br><span class="line">-&gt; (&#x27;tom3&#x27;,&#x27;admin&#x27;,<span class="number">100</span>);</span><br><span class="line">数据简单的查询语句，select命令</span><br><span class="line">mysql&gt; select <span class="number">1</span>*<span class="number">2</span> as res;</span><br><span class="line">mysql&gt; select pow(<span class="number">2</span>,<span class="number">3</span>) as res;</span><br><span class="line">mysql&gt; select id,username <span class="selector-tag">from</span> student;</span><br><span class="line">mysql&gt; select * <span class="selector-tag">from</span> student;</span><br><span class="line">mysql&gt; select * <span class="selector-tag">from</span> student where password != &#x27;tom123&#x27;;</span><br><span class="line">mysql&gt; select * <span class="selector-tag">from</span> student where score &gt;<span class="number">60</span> and id &gt;<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">create <span class="selector-tag">table</span> `<span class="selector-tag">main</span>`(</span><br><span class="line">`id` bigint(<span class="number">10</span>) primary key auto_increment comment &#x27;用户&#x27;,</span><br><span class="line"> `name` varchar(<span class="number">50</span>) not null comment &#x27;用户名&#x27;,</span><br><span class="line"> `age` bigint(<span class="number">3</span>) not null comment &#x27;年龄&#x27;,</span><br><span class="line">`gender` varchar(<span class="number">50</span>) not null comment &#x27;性别&#x27;,</span><br><span class="line">`birthday` varchar(<span class="number">50</span>) not null comment &#x27;生日&#x27;,</span><br><span class="line">`photo` varchar(<span class="number">50</span>) not null comment &#x27;照片&#x27;,</span><br><span class="line">`phone` varchar(<span class="number">50</span>) not null comment &#x27;电话&#x27;,</span><br><span class="line">`<span class="selector-tag">address</span>` varchar(<span class="number">50</span>) not null comment &#x27;地址&#x27;,</span><br><span class="line">`email` varchar(<span class="number">50</span>) not null comment &#x27;邮箱&#x27;,</span><br><span class="line">`dientynum` varchar(<span class="number">50</span>) not null comment &#x27;身份证号&#x27;</span><br><span class="line"> );</span><br><span class="line"> insert into <span class="selector-tag">main</span>(name,age,gender,birthday,photo,phone,<span class="selector-tag">address</span>,email,dientynum) values</span><br><span class="line">    -&gt; (&#x27;bob&#x27;,&#x27;<span class="number">40</span>&#x27;,&#x27;男&#x27;,&#x27;<span class="number">1990</span>-<span class="number">09</span>-<span class="number">09</span> <span class="number">12</span>:<span class="number">30</span>:<span class="number">23</span><span class="string">&#x27;,&quot;/upload/15000000552.jpg&quot;,&#x27;</span><span class="number">13988889999</span><span class="string">&#x27;,&#x27;</span>不详<span class="string">&#x27;,&#x27;</span><span class="number">528627554</span>@qq.com<span class="string">&#x27;,&#x27;</span><span class="number">3404623136059</span><span class="string">&#x27;);</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/js%E4%BA%8B%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/js%E4%BA%8B%E4%BB%B6/" class="post-title-link" itemprop="url">事件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:59" itemprop="dateModified" datetime="2020-12-31T09:27:59+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">当以下情况发生时，出现此事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>onclick</code></td>
+<td align="center">鼠标点击某个对象</td>
+</tr>
+<tr>
+<td align="center"><code>ondblclick</code></td>
+<td align="center">鼠标双击某个对象</td>
+</tr>
+<tr>
+<td align="center"><code>onmousemove</code></td>
+<td align="center">鼠标被移动</td>
+</tr>
+<tr>
+<td align="center"><code>onmouseout</code></td>
+<td align="center">鼠标从某元素移开</td>
+</tr>
+<tr>
+<td align="center"><code>onmouseover</code></td>
+<td align="center">鼠标被移到某元素之上</td>
+</tr>
+<tr>
+<td align="center"><code>onmousedown</code></td>
+<td align="center">某个鼠标按键被按下</td>
+</tr>
+<tr>
+<td align="center"><code>onmouseup</code></td>
+<td align="center">某个鼠标按键被松开</td>
+</tr>
+<tr>
+<td align="center"><code>onmouseenter</code></td>
+<td align="center">鼠标进入</td>
+</tr>
+<tr>
+<td align="center"><code>onmouseleave</code></td>
+<td align="center">鼠标离开</td>
+</tr>
+</tbody></table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/js%E4%BA%8B%E4%BB%B6/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/scroll%E7%9B%91%E5%90%AC%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/scroll%E7%9B%91%E5%90%AC%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/" class="post-title-link" itemprop="url">scroll监听加载页面</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:28:23" itemprop="dateModified" datetime="2020-12-31T09:28:23+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">window</span>).on(<span class="string">&#x27;scroll&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height()</span><br><span class="line">  <span class="keyword">var</span> windowHeight = $(<span class="built_in">window</span>).height()</span><br><span class="line">  <span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop()</span><br><span class="line">  <span class="keyword">if</span> (windowHeight + scrollTop - scrollHeight &gt; -<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      getAjax(<span class="number">4</span>)</span><br><span class="line">    &#125;, <span class="number">500</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>首先要清楚 3 个定义:</p>
+<ol>
+<li><p>文档高度</p>
+<p>这是整个页面的高度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可视窗口高度</p>
+<p>这是你看到的浏览器可视屏幕高度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> windowHeight = $(<span class="built_in">window</span>).height()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>滚动条滚动高度</p>
+<p>滚动条下滑过的高度</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scrollTop = $(<span class="built_in">window</span>).scrollTop()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/scroll%E7%9B%91%E5%90%AC%E5%8A%A0%E8%BD%BD%E9%A1%B5%E9%9D%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/window/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/window/" class="post-title-link" itemprop="url">window</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:28:33" itemprop="dateModified" datetime="2020-12-31T09:28:33+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Window-–-代表浏览器中一个打开的窗口："><a href="#Window-–-代表浏览器中一个打开的窗口：" class="headerlink" title="Window – 代表浏览器中一个打开的窗口："></a><strong>Window – 代表浏览器中一个打开的窗口：</strong></h1><p><strong>对象属性</strong><br>　　 window //窗口自身<br>　　 window.self //引用本窗户 window=window.self<br>　　 window.name //为窗口命名<br>　　 window.defaultStatus //设定窗户状态栏信息<br>　　 window.location //URL 地址，配备布置这个属性可以打开新的页面</p>
+<p><strong>对象方法</strong><br>　　 window.alert(“text”) //提示信息会话框<br>　　 window.confirm(“text”) //确认会话框<br>　　 window.prompt(“text”) //要求键盘输入会话框<br>　　 window.setIntervel(“action”,time) //每一隔指定的时间(毫秒)就执行一次操作<br>　　 window.clearInterval() //清除时间配备布置作用就是终止轮回<br>　　 window.setTimeout(action,time) //隔了指定的时间(毫秒)执行一次操作<br>　　 window.open() //打开新的窗口<br>　　 window.close() //关闭窗口</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/window/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E5%80%92%E8%AE%A1%E6%97%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%80%92%E8%AE%A1%E6%97%B6/" class="post-title-link" itemprop="url">倒计时</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:31" itemprop="dateModified" datetime="2020-12-31T09:25:31+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实现5天的倒计时</span></span><br><span class="line"><span class="comment">//月份会自动加一，（year,month,day,hrs）(年，月，日，小时)</span></span><br><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2020</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">8</span>) <span class="comment">//2020-10-01 08:00:00</span></span><br><span class="line"><span class="comment">//系统时间会自动更新</span></span><br><span class="line"><span class="keyword">let</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line"><span class="comment">//getTime()是时间对象自带的方法，获得的是毫秒数</span></span><br><span class="line"><span class="keyword">let</span> seconds = <span class="built_in">parseInt</span>((date.getTime() - today.getTime()) / <span class="number">1000</span>)</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-18</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;any&#125;</span> </span>times 指定日期的秒数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">;(<span class="function"><span class="keyword">function</span> <span class="title">countDown</span>(<span class="params">times</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//递归边界</span></span><br><span class="line">  <span class="keyword">if</span> (times &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> d = <span class="built_in">parseInt</span>(times / <span class="number">86400</span>)</span><br><span class="line">  <span class="keyword">let</span> h = <span class="built_in">parseInt</span>((times - d * <span class="number">86400</span>) / <span class="number">3600</span>)</span><br><span class="line">  h = (h + <span class="string">&#x27;&#x27;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">  <span class="keyword">let</span> m = <span class="built_in">parseInt</span>((times - d * <span class="number">86400</span> - h * <span class="number">3600</span>) / <span class="number">60</span>)</span><br><span class="line">  m = (m + <span class="string">&#x27;&#x27;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">  <span class="keyword">let</span> s = times - d * <span class="number">86400</span> - h * <span class="number">3600</span> - m * <span class="number">60</span></span><br><span class="line">  s = (s + <span class="string">&#x27;&#x27;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">  <span class="keyword">let</span> str = d + <span class="string">&#x27;天&#x27;</span> + h + <span class="string">&#x27;:&#x27;</span> + m + <span class="string">&#x27;:&#x27;</span> + s</span><br><span class="line">  <span class="comment">//向id=app元素中，写入html内容</span></span><br><span class="line">  app.innerHTML = str</span><br><span class="line">  <span class="comment">//递归调用 ,1后执行一次</span></span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    times--</span><br><span class="line">    countDown(times)</span><br><span class="line">  &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;)(seconds)</span><br><span class="line"></span><br><span class="line"><span class="comment">//countDown(seconds)</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/" class="post-title-link" itemprop="url">上下左右下拉列表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:43" itemprop="dateModified" datetime="2020-12-31T09:27:43+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;mine&quot;</span>&gt;</span>我的<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 遮罩层 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;mask&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cover&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#app</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">320px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span> <span class="selector-class">.mine</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">2rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">2rem</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ddd</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">align-items</span>: center;</span><br><span class="line">  <span class="attribute">justify-content</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span> <span class="selector-class">.mask</span> <span class="selector-class">.list</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#444343</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">2.4rem</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">transition</span>: all <span class="number">0.2s</span> linear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#app</span> <span class="selector-class">.mask</span> <span class="selector-class">.cover</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: black;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.3</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cover = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.cover&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> mine = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.mine&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> list = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.list&#x27;</span>)</span><br><span class="line"></span><br><span class="line">cover.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.style.display = <span class="string">&#x27;none&#x27;</span></span><br><span class="line">  list.style.height = <span class="string">&#x27;0&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">mine.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  cover.style.display = <span class="string">&#x27;block&#x27;</span></span><br><span class="line">  list.style.height = <span class="string">&#x27;100vh&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E4%B8%8A%E4%B8%8B%E5%B7%A6%E5%8F%B3%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/" class="post-title-link" itemprop="url">回到顶部</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:26:01" itemprop="dateModified" datetime="2020-12-31T09:26:01+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">&quot;toTop&quot;</span>&gt;</span>goTop<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#app</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">5000px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#toTop</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#toTop</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#787878</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> tops</span><br><span class="line">onscroll = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  tops = <span class="built_in">parseInt</span>(<span class="built_in">document</span>.documentElement.scrollTop)</span><br><span class="line">  <span class="keyword">if</span> (tops &gt; <span class="number">1000</span>) &#123;</span><br><span class="line">    toTop.style.display = <span class="string">&#x27;block&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (tops &lt; <span class="number">1000</span>) &#123;</span><br><span class="line">    toTop.style.display = <span class="string">&#x27;none&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">toTop.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> id = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    tops -= <span class="number">2</span></span><br><span class="line">    <span class="keyword">if</span> (tops &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">      tops = <span class="number">0</span></span><br><span class="line">      <span class="built_in">clearInterval</span>(id)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.documentElement.scrollTop = tops</span><br><span class="line">  &#125;, <span class="number">1</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/" class="post-title-link" itemprop="url">定时器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:53" itemprop="dateModified" datetime="2020-12-31T09:25:53+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="定时器有以下两个方法："><a href="#定时器有以下两个方法：" class="headerlink" title="定时器有以下两个方法："></a>定时器有以下两个方法：</h2><ul>
+<li><h4 id="setInterval-：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到-clearInterval-被调用或窗口被关闭。"><a href="#setInterval-：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到-clearInterval-被调用或窗口被关闭。" class="headerlink" title="setInterval() ：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。"></a><code>setInterval()</code> ：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到 <code>clearInterval()</code> 被调用或窗口被关闭。</h4></li>
+<li><h4 id="setTimeout-：在指定的毫秒数后调用函数或计算表达式。"><a href="#setTimeout-：在指定的毫秒数后调用函数或计算表达式。" class="headerlink" title="setTimeout() ：在指定的毫秒数后调用函数或计算表达式。"></a><code>setTimeout()</code> ：在指定的毫秒数后调用函数或计算表达式。</h4><hr>
+</li>
+<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a><code>setInterval()</code></h2><ul>
+<li><pre><code class="javascript">setInterval(code, time)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    | **参数** |                          描述                          |</span><br><span class="line">    | :------: | :----------------------------------------------------: |</span><br><span class="line">    |   code   |          必需。要调用的函数或要执行的代码串。          |</span><br><span class="line">    |  `time`  | 必须。周期性执行或调用 code 之间的时间间隔，以毫秒计。 |</span><br><span class="line"></span><br><span class="line">- ## `setTimeout()`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    setTimeout(code, time)</span><br></pre></td></tr></table></figure>
+
+| **参数** |                       描述                       |
+| :------: | :----------------------------------------------: |
+|   code   | 必需。要调用的函数后要执行的 JavaScript 代码串。 |
+|  `time`  |        必需。在执行代码前需等待的毫秒数。        |
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="停止时钟"><a href="#停止时钟" class="headerlink" title="停止时钟"></a>停止时钟</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/" class="post-title-link" itemprop="url">日期格式化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:21" itemprop="dateModified" datetime="2020-12-31T09:27:21+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="comment">//日期格式化函数</span></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">dateFormat</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> yyyy = now.getFullYear()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> MM = (now.getMonth() + <span class="number">1</span> + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> dd = (now.getDate() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> hh = (now.getHours() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> mm = (now.getMinutes() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> ss = (now.getSeconds() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> st = <span class="string">`<span class="subst">$&#123;yyyy&#125;</span>-<span class="subst">$&#123;MM&#125;</span>-<span class="subst">$&#123;dd&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/" class="post-title-link" itemprop="url">点击特效</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:45" itemprop="dateModified" datetime="2020-12-31T09:25:45+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">/* 鼠标点击文字特效 */</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> f_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> c_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">&quot;body&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> font = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;斗地主&quot;</span>, <span class="string">&quot;吃火锅&quot;</span>, <span class="string">&quot;打豆豆&quot;</span>, <span class="string">&quot;饮酒&quot;</span>, <span class="string">&quot;吃肉&quot;</span>, <span class="string">&quot;狼人杀&quot;</span>, <span class="string">&quot;耍流氓&quot;</span>, <span class="string">&quot;耍无赖&quot;</span>, <span class="string">&quot;身体健康&quot;</span>, <span class="string">&quot;阖家幸福&quot;</span>, <span class="string">&quot;生猴子&quot;</span>, <span class="string">&quot;蒸羊羔儿&quot;</span>, <span class="string">&quot;蒸熊掌&quot;</span>, <span class="string">&quot;蒸鹿尾儿&quot;</span>, <span class="string">&quot;烧花鸭&quot;</span>, <span class="string">&quot;烧雏鸡&quot;</span>, <span class="string">&quot;烧子鹅&quot;</span>, <span class="string">&quot;炉猪&quot;</span>, <span class="string">&quot;炉鸭&quot;</span>, <span class="string">&quot;酱鸡&quot;</span>, <span class="string">&quot;腊肉&quot;</span>, <span class="string">&quot;松花&quot;</span>, <span class="string">&quot;小肚儿&quot;</span>, <span class="string">&quot;晾肉&quot;</span>, <span class="string">&quot;香肠儿&quot;</span>, <span class="string">&quot;什锦苏盘儿&quot;</span>, <span class="string">&quot;熏鸡白肚儿&quot;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> color = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&#x27;#ff0000&#x27;</span>, <span class="string">&#x27;#eb4310&#x27;</span>, <span class="string">&#x27;#f6941d&#x27;</span>, <span class="string">&#x27;#fbb417&#x27;</span>, <span class="string">&#x27;#ffff00&#x27;</span>, <span class="string">&#x27;#cdd541&#x27;</span>, <span class="string">&#x27;#99cc33&#x27;</span>, <span class="string">&#x27;#3f9337&#x27;</span>, <span class="string">&#x27;#219167&#x27;</span>, <span class="string">&#x27;#239676&#x27;</span>, <span class="string">&#x27;#24998d&#x27;</span>, <span class="string">&#x27;#1f9baa&#x27;</span>, <span class="string">&#x27;#0080ff&#x27;</span>, <span class="string">&#x27;#3366cc&#x27;</span>, <span class="string">&#x27;#333399&#x27;</span>, <span class="string">&#x27;#003366&#x27;</span>, <span class="string">&#x27;#800080&#x27;</span>, <span class="string">&#x27;#a1488e&#x27;</span>, <span class="string">&#x27;#c71585&#x27;</span>, <span class="string">&#x27;#bd2158&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> $i = $(<span class="string">&quot;&lt;span /&gt;&quot;</span>).text(font[f_idx]);</span></span><br><span class="line"><span class="javascript">            f_idx = (f_idx + <span class="number">1</span>) % font.length;</span></span><br><span class="line"><span class="javascript">            c_idx = (c_idx + <span class="number">1</span>) % color.length;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> x = e.pageX,</span></span><br><span class="line"><span class="javascript">                y = e.pageY;</span></span><br><span class="line"><span class="javascript">            $i.css(&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;z-index&quot;</span>: <span class="number">99999999999999999999999999999999999999999999999999999999999999999999999999</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;top&quot;</span>: y - <span class="number">20</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;left&quot;</span>: x,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;position&quot;</span>: <span class="string">&quot;absolute&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;font-weight&quot;</span>: <span class="string">&quot;bold&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;color&quot;</span>: color[c_idx]</span></span><br><span class="line"><span class="javascript">            &#125;);</span></span><br><span class="line"><span class="javascript">            $(<span class="string">&quot;body&quot;</span>).append($i);</span></span><br><span class="line"><span class="javascript">            $i.animate(&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;top&quot;</span>: y - <span class="number">180</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;opacity&quot;</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="number">1500</span>,</span></span><br><span class="line"><span class="javascript">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    $i.remove();</span></span><br><span class="line"><span class="javascript">                &#125;);</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125;);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/taiaiac.gitee.io/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/taiaiac.gitee.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/taiaiac.gitee.io/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/17/">17</a><a class="extend next" rel="next" href="/taiaiac.gitee.io/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 <script
-  type="text/javascript"
-  color="96,98,102"
-  opacity="0.7"
-  zIndex="-2"
-  count="99"
-  src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
-></script>
-</div>
-      <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
-
-    </div>
-    <script
       type="text/javascript"
-      color="96,98,102"
+      color="0,205,205"
       opacity="0.7"
       zIndex="-2"
       count="99"
       src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
     ></script>
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Z.A.M."
+      src="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+  <p class="site-author-name" itemprop="name">Z.A.M.</p>
+  <div class="site-description" itemprop="description">所有不利,都是 能力不足 导致的. <br> By <东京喰种>.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/taiaiac.gitee.io/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/taiaiac.gitee.io/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/taiaiac.gitee.io/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Z.A.M.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+<div>
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/01/2020 18:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",1000);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/taiaiac.gitee.io/lib/anime.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/taiaiac.gitee.io/js/utils.js"></script>
+
+<script src="/taiaiac.gitee.io/js/motion.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/schemes/pisces.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/taiaiac.gitee.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

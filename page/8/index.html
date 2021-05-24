@@ -1,178 +1,1275 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/taiaiac.gitee.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/taiaiac.gitee.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/taiaiac.gitee.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/taiaiac.gitee.io/images/logo.svg" color="#222">
 
-    <meta name="author" content="Z.A.M.">
-
-
-
-    <meta name="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-
-
-
-<title>Z. A. M.’s Blog</title>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/main.css">
 
 
+<link rel="stylesheet" href="/taiaiac.gitee.io/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gitee.com","root":"/taiaiac.gitee.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
+  <meta name="description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Z. A. M.’s Blog">
+<meta property="og:url" content="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/8/index.html">
+<meta property="og:site_name" content="Z. A. M.’s Blog">
+<meta property="og:description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Z.A.M.">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
-
+<link rel="canonical" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/8/">
 
 
-    
-    
-        
-    
-
-
-  <meta name="generator" content="Hexo 5.4.0"></head>
-  <body>
-    <div class="wrapper">
-      <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
 </script>
-      <div class="main"> <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/taiaiac.gitee.io/"><img src="/taiaiac.gitee.io/image/header.jpg"></a>
-        </div>
-        <div class="nickname">Z. A. M.</div>
-        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> By &lt;东京喰种&gt;.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/taiaiac.gitee.io/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/taiaiac.gitee.io/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/taiaiac.gitee.io/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Link" href="/taiaiac.gitee.io/about">
-                        
-                        
-                            <i class="iconfont icon-link"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
-</div>
- 
 
+  <title>Z. A. M.’s Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?926d1ac4f837ede8bead2fd3007162d6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/taiaiac.gitee.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Z. A. M.’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/taiaiac.gitee.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/taiaiac.gitee.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/taiaiac.gitee.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/taiaiac.gitee.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2021/01/04/hexo/hexo%E7%BE%8E%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2021/01/04/hexo/hexo%E7%BE%8E%E5%8C%96/" class="post-title-link" itemprop="url">hexo美化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-04 14:53:06" itemprop="dateCreated datePublished" datetime="2021-01-04T14:53:06+08:00">2021-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-07 09:59:25" itemprop="dateModified" datetime="2021-01-07T09:59:25+08:00">2021-01-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="添加卡通人物（看板娘）"><a href="#添加卡通人物（看板娘）" class="headerlink" title="添加卡通人物（看板娘）"></a>添加卡通人物（看板娘）</h2><h4 id="下载项目"><a href="#下载项目" class="headerlink" title="下载项目"></a>下载项目</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2021/01/04/hexo/hexo%E7%BE%8E%E5%8C%96/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">hexo基本使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-31 14:03:56" itemprop="dateCreated datePublished" datetime="2020-12-31T14:03:56+08:00">2020-12-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-05 14:05:32" itemprop="dateModified" datetime="2021-01-05T14:05:32+08:00">2021-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-Hexo-介绍"><a href="#1-Hexo-介绍" class="headerlink" title="1.Hexo 介绍"></a>1.Hexo 介绍</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>官网地址：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/31/hexo/hexo%E4%BD%BF%E7%94%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/" class="post-title-link" itemprop="url">Git手动提交</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:20:19" itemprop="dateModified" datetime="2020-12-31T09:20:19+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如何用命令将本地项目上传到 git<br>1、（先进入项目文件夹）通过命令 git init 把这个目录变成 git 可以管理的仓库<br>git init</p>
+<p>2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件<br>git add .</p>
+<p>3、用命令 git commit 告诉 Git，把文件提交到仓库。引号内为提交说明<br>git commit -m ‘first commit’</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Git/Git%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="post-title-link" itemprop="url">Git命令行</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:19:59" itemprop="dateModified" datetime="2020-12-31T09:19:59+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Git-全局设置"><a href="#Git-全局设置" class="headerlink" title="Git 全局设置:"></a>Git 全局设置:</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="selector-class">.name</span> &quot;爱民艾米&quot;</span><br><span class="line">git config --global user<span class="selector-class">.email</span> &quot;<span class="number">528627554</span><span class="keyword">@qq</span>.com&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Git/%E5%91%BD%E4%BB%A4%E8%A1%8C/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Git学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-06 18:20:51" itemprop="dateModified" datetime="2021-01-06T18:20:51+08:00">2021-01-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Git/" itemprop="url" rel="index"><span itemprop="name">Git</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Git">维基百科 - Git</a></p>
+</blockquote>
+<h3 id="学习资源介绍"><a href="#学习资源介绍" class="headerlink" title="学习资源介绍"></a>学习资源介绍</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Git/Git%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ES6/import/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/ES6/import/" class="post-title-link" itemprop="url">import</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:19:31" itemprop="dateModified" datetime="2020-12-31T09:19:31+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="HTML-部分"><a href="#HTML-部分" class="headerlink" title="HTML 部分"></a>HTML 部分</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./demo.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="HTML-引入的-js-文件（demo-js）"><a href="#HTML-引入的-js-文件（demo-js）" class="headerlink" title="HTML 引入的 js 文件（demo.js）"></a>HTML 引入的 js 文件（demo.js）</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ES6/import/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/mysql-day02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/" class="post-title-link" itemprop="url">MySQL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:31:59" itemprop="dateModified" datetime="2020-12-31T09:31:59+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/MySQl/" itemprop="url" rel="index"><span itemprop="name">MySQl</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-- 这是sql的注释</span><br><span class="line"># sql的注释</span><br><span class="line"><span class="comment">/*sql的注释*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1、创建表格-person"><a href="#1、创建表格-person" class="headerlink" title="1、创建表格 person"></a>1、创建表格 person</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql-day02/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ES6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/ES6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">箭头函数</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-05 14:11:30" itemprop="dateModified" datetime="2021-01-05T14:11:30+08:00">2021-01-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p><strong>箭头函数表达式</strong>的语法比<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<code>this</code>，<code>arguments</code>，<code>super</code>或<code>new.target</code>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(param1, param2, …, paramN) =&gt; &#123; statements &#125;</span><br><span class="line">(param1, param2, …, paramN) =&gt; expression</span><br><span class="line"><span class="comment">//相当于：(param1, param2, …, paramN) =&gt;&#123; return expression; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当只有一个参数时，圆括号是可选的：</span></span><br><span class="line">(singleParam) =&gt; &#123; statements &#125;</span><br><span class="line">singleParam =&gt; &#123; statements &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有参数的函数应该写成一对圆括号。</span></span><br><span class="line">() =&gt; &#123; statements &#125;</span><br></pre></td></tr></table></figure>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ES6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Mysql学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:32:17" itemprop="dateModified" datetime="2020-12-31T09:32:17+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/MySQl/" itemprop="url" rel="index"><span itemprop="name">MySQl</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><code>MySQL</code>安装过程</p>
+<h2 id="1、卸载服务"><a href="#1、卸载服务" class="headerlink" title="1、卸载服务"></a>1、卸载服务</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>）使用控制面板进行卸载程序</span><br><span class="line"><span class="number">2</span>）卸载结束看一下安装目录中是否还有文件，清空目录</span><br><span class="line"><span class="number">3</span>）查看window中是否还有服务，删除服务名称，</span><br><span class="line">使用管理权限启动终端，执行 sc delete MySQL80</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/MySQl/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/MySQl/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/MySQl/%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E6%80%BB%E7%BB%93/" class="post-title-link" itemprop="url">查询数据总结</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:31:33" itemprop="dateModified" datetime="2020-12-31T09:31:33+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/MySQl/" itemprop="url" rel="index"><span itemprop="name">MySQl</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、服务端"><a href="#1、服务端" class="headerlink" title="1、服务端"></a>1、服务端</h1><ul>
+<li><h2 id="1、创建项目"><a href="#1、创建项目" class="headerlink" title="1、创建项目"></a>1、创建项目</h2><ul>
+<li><p>```css<br>express –view==ejs projectname</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- ## 2、安装依赖</span><br><span class="line">  - ```css</span><br><span class="line">    cd projectname</span><br></pre></td></tr></table></figure></li>
+<li><p>```css<br>cnpm i mysql -S</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- ```css</span><br><span class="line">  cnpm i md5 -S</span><br></pre></td></tr></table></figure></li>
+<li><p>```css<br>cnpm i body-parser -S</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- ## 3、创建数据库连接模块 mysqlbd.js</span><br><span class="line">  - 引入 mysql 模块</span><br><span class="line">  - 创建链接函数 getConnetion()返回数据连接对象</span><br><span class="line">  - 读取配置文件中 数据库连接参数</span><br><span class="line">  - ```css</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;user&quot;:&quot;root&quot;,</span><br><span class="line">        &quot;password&quot;:&quot;root&quot;,</span><br><span class="line">        &quot;host&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">        &quot;port&quot;:&quot;3306&quot;,</span><br><span class="line">        &quot;database&quot;:&quot;这里填密码&quot;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>导出 getConnetion 函数</p>
+<ul>
+<li>```css<br>exports.getConnetion=getConnetion<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- ## 4、在 users.js 中创建/login 路由</span><br><span class="line">  - ```css</span><br><span class="line">    router.post(&quot;/login&quot;,urlencodedParser,function(req,res)&#123;</span><br><span class="line">    			//执行的数据库操作和返回数据操作</span><br><span class="line">    		&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="5、在-users-js-中引入模块-mysqlbd-js-用于创建连接"><a href="#5、在-users-js-中引入模块-mysqlbd-js-用于创建连接" class="headerlink" title="5、在 users.js 中引入模块 mysqlbd.js,用于创建连接"></a>5、在 users.js 中引入模块 mysqlbd.js,用于创建连接</h2><ul>
+<li>```css<br>let mysql = reuqire(“../utils/mysqlbd.js”)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- ## 6、根据用户名和密码查询用户</span><br><span class="line">  - 获得数据库连接对象</span><br><span class="line">  - ```js</span><br><span class="line">    let cnt = await mysql.getConnetion()</span><br></pre></td></tr></table></figure></li>
+<li>建立连接</li>
+<li>```css<br>cnt.connect()<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- 编写 sql 语句</span><br><span class="line">- ```js</span><br><span class="line">  let sql = `select u.*,r.rolename from smbms_user u ,smbms_role r </span><br><span class="line">  			where userName=? and userPassword =? and r.id = u.userRole`</span><br></pre></td></tr></table></figure></li>
+<li>准备参数</li>
+<li>```js<br>let arr = [params.userName, md5(params.userPassword, ‘utf-8’)]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 执行查询操作</span><br><span class="line">- ```js</span><br><span class="line">  cnt.query(sql,arr,function(err,results,fields)&#123;</span><br><span class="line">  				//err:查询错误时的对象</span><br><span class="line">  				//results 查询结果集=[&#123;&#125;,&#123;&#125;....]</span><br><span class="line">  				//fields 查询的字段名称</span><br><span class="line">  				6)返回查询结果</span><br><span class="line">  					res.send(results)</span><br><span class="line">  				7)关闭连接</span><br><span class="line">  					cnt.end()</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h2 id="7、在服务端-app-js-添加跨域"><a href="#7、在服务端-app-js-添加跨域" class="headerlink" title="7、在服务端 app.js 添加跨域"></a>7、在服务端 app.js 添加跨域</h2></li>
+<li><p>```js<br>app.all(‘<em>‘, function (req, res, next) {<br>  res.header(‘Access-Control-Allow-Origin’, ‘</em>‘)<br>  res.header(‘Access-Control-Allow-Headers’, ‘*’)<br>  next()<br>})</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- ## 8、启动服务</span><br><span class="line">  - ```css</span><br><span class="line">    npm start</span><br><span class="line">    cd bin ---&gt; node www</span><br></pre></td></tr></table></figure></li>
+<li><h2 id="9、监听客户端请求"><a href="#9、监听客户端请求" class="headerlink" title="9、监听客户端请求"></a>9、监听客户端请求</h2><ul>
+<li>在客户端发起请求</li>
+<li>```css<br>url=”<a target="_blank" rel="noopener" href="http://127.0.0.1:3000/users/login&quot;">http://127.0.0.1:3000/users/login&quot;</a><br>method=”post”<br>data={usernName:”root123”,userPassword:”root123”}<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 2、客户端</span><br><span class="line"></span><br><span class="line">- ## 1、创建项目 node-express-client</span><br><span class="line">- ## 2、img、 html、css、js 等文件夹和文件</span><br><span class="line">- ## 3、在 login.html 中添加 axios.js 依赖</span><br><span class="line">- ```html</span><br><span class="line">  &lt;script src=&quot;../js/axios.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h2 id="4、发起登录请求"><a href="#4、发起登录请求" class="headerlink" title="4、发起登录请求"></a>4、发起登录请求</h2><ul>
+<li><p>​ 1)在用户名和密码框输入值</p>
+</li>
+<li><p>​ 2)点击登录按钮触发表单提交事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">form.onsubmit = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>​ 3)阻止表单的默认提交事件</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e<span class="selector-class">.preventDefault</span>()</span><br><span class="line">e<span class="selector-class">.returnValue</span>  = false</span><br></pre></td></tr></table></figure></li>
+<li><p>​ 4)获得表单数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> userName = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#user&#x27;</span>).value</span><br><span class="line"><span class="keyword">let</span> userPassword = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#mima&#x27;</span>).value</span><br></pre></td></tr></table></figure></li>
+<li><p>​ 5)使用 axios 发起登录请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="string">&#x27;http://127.0.0.1:3000/users/login&#x27;</span></span><br><span class="line"><span class="keyword">let</span> data = &#123; usernName, userPassword &#125;</span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">data</span>: res &#125; = axios.post(url, data)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​ 6)解析服务器返回的数据<br>​ res 判断空<br>​ res.length===0 —&gt;提示错误信息(错误的用户名或密码)</p>
+</li>
+<li><p>​ 7)根据数据执行页面跳转<br>​</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">res<span class="selector-class">.length</span>!==<span class="number">0</span></span><br><span class="line">location<span class="selector-class">.replace</span>(&quot;welcome<span class="selector-class">.html</span>&quot;)</span><br><span class="line">sessionStorage<span class="selector-class">.setItem</span>(&quot;USER_LOGIN&quot;,JSON<span class="selector-class">.stringify</span>(res<span class="selector-attr">[0]</span>))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h2 id="5、在-welcome-html-界面"><a href="#5、在-welcome-html-界面" class="headerlink" title="5、在 welcome.html 界面"></a>5、在 welcome.html 界面</h2><ul>
+<li><p>​ 1)把 sessionStorage 中取出缓存数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = sessionStorage.getItem(<span class="string">&#x27;USER_LOGIN&#x27;</span>)</span><br><span class="line"><span class="keyword">let</span> user = <span class="built_in">JSON</span>.parse(str)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​ 2) 把用户信息写到页面中<br>​</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">users<span class="selector-class">.innerHTML</span> = user<span class="selector-class">.userName</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h2 id="6、点击用户管理按钮跳转到用户列表页面"><a href="#6、点击用户管理按钮跳转到用户列表页面" class="headerlink" title="6、点击用户管理按钮跳转到用户列表页面"></a>6、点击用户管理按钮跳转到用户列表页面</h2></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/taiaiac.gitee.io/page/7/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/taiaiac.gitee.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/taiaiac.gitee.io/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/17/">17</a><a class="extend next" rel="next" href="/taiaiac.gitee.io/page/9/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 <script
-  type="text/javascript"
-  color="96,98,102"
-  opacity="0.7"
-  zIndex="-2"
-  count="99"
-  src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
-></script>
-</div>
-      <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
-
-    </div>
-    <script
       type="text/javascript"
-      color="96,98,102"
+      color="0,205,205"
       opacity="0.7"
       zIndex="-2"
       count="99"
       src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
     ></script>
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Z.A.M."
+      src="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+  <p class="site-author-name" itemprop="name">Z.A.M.</p>
+  <div class="site-description" itemprop="description">所有不利,都是 能力不足 导致的. <br> By <东京喰种>.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/taiaiac.gitee.io/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/taiaiac.gitee.io/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/taiaiac.gitee.io/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Z.A.M.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+<div>
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/01/2020 18:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",1000);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/taiaiac.gitee.io/lib/anime.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/taiaiac.gitee.io/js/utils.js"></script>
+
+<script src="/taiaiac.gitee.io/js/motion.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/schemes/pisces.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/taiaiac.gitee.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>

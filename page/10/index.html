@@ -1,178 +1,1252 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/taiaiac.gitee.io/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/taiaiac.gitee.io/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/taiaiac.gitee.io/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/taiaiac.gitee.io/images/logo.svg" color="#222">
 
-    <meta name="author" content="Z.A.M.">
-
-
-
-    <meta name="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-
-
-
-<title>Z. A. M.’s Blog</title>
+<link rel="stylesheet" href="/taiaiac.gitee.io/css/main.css">
 
 
+<link rel="stylesheet" href="/taiaiac.gitee.io/lib/font-awesome/css/all.min.css">
 
-    <link rel="icon" href="/taiaiac.gitee.io/favicon.ico">
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"gitee.com","root":"/taiaiac.gitee.io/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
+  <meta name="description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Z. A. M.’s Blog">
+<meta property="og:url" content="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/10/index.html">
+<meta property="og:site_name" content="Z. A. M.’s Blog">
+<meta property="og:description" content="所有不利,都是 能力不足 导致的.  By .">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Z.A.M.">
+<meta name="twitter:card" content="summary">
 
-
-
-    <!-- stylesheets list from _config.yml -->
-    
-    <link rel="stylesheet" href="/taiaiac.gitee.io/css/style.css">
-    
-
-
-
-    <!-- scripts list from _config.yml -->
-    
-    <script src="/taiaiac.gitee.io/js/script.js"></script>
-    
-    <script src="/taiaiac.gitee.io/js/tocbot.min.js"></script>
-    
-
+<link rel="canonical" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/page/10/">
 
 
-    
-    
-        
-    
-
-
-  <meta name="generator" content="Hexo 5.4.0"></head>
-  <body>
-    <div class="wrapper">
-      <header>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header header-logo"><a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a></div>
-            <div class="menu navbar-right">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
-            </div>
-        </div>
-    </nav>
-
-    
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="/taiaiac.gitee.io/">TaiAiAc&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
-                </div>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
-            </div>
-            <div class="menu" id="mobile-menu">
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/archives">文档</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/category">分类</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/tag">标签</a>
-                
-                    <a class="menu-item" href="/taiaiac.gitee.io/about">关于</a>
-                
-            </div>
-        </div>
-    </nav>
-
-</header>
-<script>
-    var mobileBtn = function f() {
-        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
-        var mobileMenu = document.getElementById("mobile-menu");
-        if(toggleMenu.classList.contains("active")){
-           toggleMenu.classList.remove("active")
-            mobileMenu.classList.remove("active")
-        }else{
-            toggleMenu.classList.add("active")
-            mobileMenu.classList.add("active")
-        }
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
 </script>
-      <div class="main"> <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/taiaiac.gitee.io/"><img src="/taiaiac.gitee.io/image/header.jpg"></a>
-        </div>
-        <div class="nickname">Z. A. M.</div>
-        <div class="description"><p>所有不利,都是 <strong>能力不足</strong> 导致的. <br> By &lt;东京喰种&gt;.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Blog" href="/taiaiac.gitee.io/archives">
-                        
-                        
-                            <i class="iconfont icon-blog"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Category" href="/taiaiac.gitee.io/category">
-                        
-                        
-                            <i class="iconfont icon-category"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Tags" href="/taiaiac.gitee.io/tag">
-                        
-                        
-                            <i class="iconfont icon-tags"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Link" href="/taiaiac.gitee.io/about">
-                        
-                        
-                            <i class="iconfont icon-link"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
-</div>
- 
 
+  <title>Z. A. M.’s Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?926d1ac4f837ede8bead2fd3007162d6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/taiaiac.gitee.io/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Z. A. M.’s Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/taiaiac.gitee.io/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/taiaiac.gitee.io/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/taiaiac.gitee.io/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/taiaiac.gitee.io/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/" class="post-title-link" itemprop="url">模仿百度分页</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:00" itemprop="dateModified" datetime="2020-12-31T09:27:00+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge,chrome=1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>模仿百度分页<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;shortcut icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;../img/logo.png&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/x-icon&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/jquery-3.5.1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">      * &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">line-height</span>: <span class="number">36px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">        <span class="attribute">font-size</span>: <span class="number">14px</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.active</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-class">.prev-page</span>,</span></span><br><span class="line"><span class="css">      <span class="selector-class">.next-page</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">80px</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#4e6ef2</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> currentPage = <span class="number">1</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> total = <span class="number">20</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      <span class="function"><span class="keyword">function</span> <span class="title">appendList</span>(<span class="params">pageNum</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//1、先删除所有的page-item</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> pageItem = $(<span class="string">&#x27;.page-item&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (pageItem) &#123;</span></span><br><span class="line"><span class="javascript">          pageItem.remove()</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//2、判断prev-page</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> prevPage = $(<span class="string">&#x27;.prev-page&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        pageNum &gt; <span class="number">1</span> ? prevPage.show() : prevPage.hide()</span></span><br><span class="line"><span class="javascript">        <span class="comment">//3、确定当前页码的范围</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> start = pageNum &lt;= <span class="number">6</span> ? <span class="number">1</span> : pageNum - <span class="number">5</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> end = start + <span class="number">9</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">//如果超过总条数时，等于总条数</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (end &gt;= total) &#123;</span></span><br><span class="line"><span class="javascript">          end = total</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//使用循环拼接元素</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">for</span> (<span class="keyword">let</span> i = start; i &lt;= end; i++) &#123;</span></span><br><span class="line"><span class="javascript">          <span class="keyword">let</span> a = $(<span class="string">`&lt;a class=&quot;page-item&quot;&gt;<span class="subst">$&#123;i&#125;</span>&lt;/a&gt;`</span>)</span></span><br><span class="line"><span class="javascript">          <span class="comment">//给点击的元素添加</span></span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (pageNum == i) &#123;</span></span><br><span class="line"><span class="javascript">            a = $(<span class="string">`&lt;a class=&quot;page-item active&quot;&gt;<span class="subst">$&#123;i&#125;</span>&lt;/a&gt;`</span>)</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          a.insertBefore($(<span class="string">&#x27;.next-page&#x27;</span>))</span></span><br><span class="line"><span class="javascript">          <span class="comment">//给a元素绑定事件</span></span></span><br><span class="line"><span class="javascript">          a.click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">let</span> index = <span class="built_in">parseInt</span>(a.html())</span></span><br><span class="line"><span class="javascript">            appendList(index)</span></span><br><span class="line"><span class="javascript">            currentPage = index</span></span><br><span class="line"><span class="javascript">          &#125;)</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">      $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//页面首次加载第一页</span></span></span><br><span class="line"><span class="javascript">        appendList(<span class="number">1</span>)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//点击下一页的操作</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">&#x27;.next-page&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          currentPage++</span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (currentPage &gt;= total) &#123;</span></span><br><span class="line"><span class="javascript">            currentPage = total</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          appendList(currentPage)</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//点击上一页的操作</span></span></span><br><span class="line"><span class="javascript">        $(<span class="string">&#x27;.prev-page&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          currentPage--</span></span><br><span class="line"><span class="javascript">          <span class="keyword">if</span> (currentPage &lt;= <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">            currentPage = <span class="number">1</span></span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">          appendList(currentPage)</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;page&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;page-inner&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;prev-page&quot;</span>&gt;</span><span class="symbol">&amp;lt;</span>上一页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;next-page&quot;</span>&gt;</span>下一页<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/" class="post-title-link" itemprop="url">正则</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:52" itemprop="dateModified" datetime="2020-12-31T09:27:52+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h5 id="一-限定符"><a href="#一-限定符" class="headerlink" title="(一)限定符"></a>(一)限定符</h5><p>1、<code>?</code>:它前面的字符需要出现 0 次或 1 次</p>
+<blockquote>
+<p>例如：<code>used?</code>可以匹配到<code>use</code>和<code>used</code></p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%AD%A3%E5%88%99/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E7%99%BE%E5%8F%B6%E7%AA%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%99%BE%E5%8F%B6%E7%AA%97/" class="post-title-link" itemprop="url">百叶窗</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:10" itemprop="dateModified" datetime="2020-12-31T09:25:10+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge,chrome=1&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>百叶窗手风琴<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;../js/jquery-1.12.4.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css">      * &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">box-sizing</span>: border-box;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-id">#box</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">1202px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">10px</span> auto;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-id">#box</span> <span class="selector-tag">ul</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="number">#ddd</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-id">#box</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="comment">/* border: 1px solid red; */</span></span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="css">        <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="css">        <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="css">        <span class="attribute">justify-content</span>: center;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css">      <span class="selector-id">#box</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> <span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">        <span class="attribute">font-size</span>: <span class="number">24px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="number">#fff</span>;</span></span><br><span class="line"><span class="css">      &#125;</span></span><br><span class="line"><span class="css">      <span class="comment">/* img &#123;</span></span></span><br><span class="line"><span class="comment"><span class="css">      width: 600px;</span></span></span><br><span class="line"><span class="comment"><span class="css">      height: 500px;</span></span></span><br><span class="line"><span class="comment"><span class="css">    &#125; */</span></span></span><br><span class="line"><span class="css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">      $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> num = <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">let</span> list = $(<span class="string">&#x27;#box li&#x27;</span>)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//设置每个li背景图片</span></span></span><br><span class="line"><span class="javascript">        list.each(<span class="function"><span class="keyword">function</span> (<span class="params">index, item</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          num = index + <span class="number">1</span></span></span><br><span class="line"><span class="javascript">          $(item).css(<span class="string">&#x27;background-image&#x27;</span>, <span class="string">`url(../img/p<span class="subst">$&#123;num&#125;</span>.jpg)`</span>)</span></span><br><span class="line"><span class="javascript">          <span class="built_in">console</span>.log(<span class="string">`../img/p<span class="subst">$&#123;num&#125;</span>.jpg`</span>)</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//li鼠标移入的效果</span></span></span><br><span class="line"><span class="javascript">        list.mouseenter(</span></span><br><span class="line"><span class="javascript">          <span class="comment">//鼠标移入的效果</span></span></span><br><span class="line"><span class="javascript">          <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//让当前的hover元素先停止动画，再执行一个动画</span></span></span><br><span class="line"><span class="javascript">            $(<span class="built_in">this</span>)</span></span><br><span class="line"><span class="javascript">              .stop()</span></span><br><span class="line"><span class="javascript">              .animate(</span></span><br><span class="line"><span class="javascript">                &#123;</span></span><br><span class="line"><span class="javascript">                  <span class="attr">width</span>: <span class="number">400</span>,</span></span><br><span class="line"><span class="javascript">                  <span class="attr">opacity</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="number">600</span></span></span><br><span class="line"><span class="javascript">              )</span></span><br><span class="line"><span class="javascript">              .siblings()</span></span><br><span class="line"><span class="javascript">              .stop()</span></span><br><span class="line"><span class="javascript">              .animate(</span></span><br><span class="line"><span class="javascript">                &#123;</span></span><br><span class="line"><span class="javascript">                  <span class="comment">//li的其它兄弟元素的样式，注意避免溢出，所以不设置160，设置150</span></span></span><br><span class="line"><span class="javascript">                  <span class="comment">// &quot;width&quot;: 150,</span></span></span><br><span class="line"><span class="javascript">                  <span class="comment">// 自己设置的宽度</span></span></span><br><span class="line"><span class="javascript">                  <span class="attr">width</span>: <span class="number">160</span>,</span></span><br><span class="line"><span class="javascript">                  <span class="attr">opacity</span>: <span class="number">0.3</span>,</span></span><br><span class="line"><span class="javascript">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="number">600</span></span></span><br><span class="line"><span class="javascript">              )</span></span><br><span class="line"><span class="javascript">          &#125;</span></span><br><span class="line"><span class="javascript">        )</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">        $(<span class="string">&#x27;#box&#x27;</span>).mouseleave(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          list.stop().animate(</span></span><br><span class="line"><span class="javascript">            &#123;</span></span><br><span class="line"><span class="javascript">              <span class="attr">width</span>: <span class="number">200</span>,</span></span><br><span class="line"><span class="javascript">              <span class="attr">opacity</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="number">600</span></span></span><br><span class="line"><span class="javascript">          )</span></span><br><span class="line"><span class="javascript">        &#125;)</span></span><br><span class="line"><span class="javascript">      &#125;)</span></span><br><span class="line"><span class="javascript">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>成都<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>理想<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>南方姑娘<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>少年锦时<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>我们的时光<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span>&gt;</span>鼓楼<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8/" class="post-title-link" itemprop="url">节点选择器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:26:26" itemprop="dateModified" datetime="2020-12-31T09:26:26+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="5-种获得元素的方式"><a href="#5-种获得元素的方式" class="headerlink" title="5 种获得元素的方式"></a>5 种获得元素的方式</h2><ul>
+<li><h4 id="1、通过-id-获得的元素，可以直接使用，不要获得元素"><a href="#1、通过-id-获得的元素，可以直接使用，不要获得元素" class="headerlink" title="1、通过 id 获得的元素，可以直接使用，不要获得元素"></a>1、通过 id 获得的元素，可以直接使用，不要获得元素</h4><ul>
+<li><pre><code class="javascript">let id = document.getElementById(&#39;id&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 2、通过类名获得元素集合 `HTMLCollection`不是数组，不能用`forEach`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let class = document.getElementsByClassName(&#x27;class&#x27;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach"><a href="#3、通过标签名获得元素集合-HTMLCollection不是数组，不能用forEach" class="headerlink" title="3、通过标签名获得元素集合 HTMLCollection不是数组，不能用forEach"></a>3、通过标签名获得元素集合 <code>HTMLCollection</code>不是数组，不能用<code>forEach</code></h4><ul>
+<li><pre><code class="javascript">let div = document.getElementsByTagName(&#39;div&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 4、使用`css`的选择器,只找第一个元素</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let css = document.querySelector(&#x27;.css&#x27;)</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><h4 id="5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach"><a href="#5、使用css的选择器-找全部-NodeList类型，不是数组，不能用forEach" class="headerlink" title="5、使用css的选择器,找全部,NodeList类型，不是数组，不能用forEach"></a>5、使用<code>css</code>的选择器,找全部,<code>NodeList</code>类型，不是数组，不能用<code>forEach</code></h4><ul>
+<li><pre><code class="javascript">let item = document.querySelectorAll(&#39;.item&#39;)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 节点选择器</span><br><span class="line"></span><br><span class="line">- ### 1、子元素</span><br><span class="line"></span><br><span class="line">  - #### 所有子元素`children`</span><br><span class="line"></span><br><span class="line">    - ```javascript</span><br><span class="line">      let children = ul.children</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><h4 id="第一个firstElementChild"><a href="#第一个firstElementChild" class="headerlink" title="第一个firstElementChild"></a>第一个<code>firstElementChild</code></h4><ul>
+<li><pre><code class="javascript">let first = ul.firstElementChild
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 最后一个`lastElementChild`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let last = ul.lastElementChild</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="2、兄弟元素"><a href="#2、兄弟元素" class="headerlink" title="2、兄弟元素"></a>2、兄弟元素</h3><ul>
+<li><h4 id="上一个previousElementSibling"><a href="#上一个previousElementSibling" class="headerlink" title="上一个previousElementSibling"></a>上一个<code>previousElementSibling</code></h4><ul>
+<li><pre><code class="javascript">let prev = ul.previousElementSibling
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- #### 下一个`nextElementSibling`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    let next = ul.nextElementSibling</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="3、父级元素"><a href="#3、父级元素" class="headerlink" title="3、父级元素"></a>3、父级元素</h3><ul>
+<li><h3 id="父级parentElement"><a href="#父级parentElement" class="headerlink" title="父级parentElement"></a>父级<code>parentElement</code></h3><ul>
+<li><pre><code class="javascript">let parent = ul.parentElement
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/" class="post-title-link" itemprop="url">获取视口宽高</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:26:15" itemprop="dateModified" datetime="2020-12-31T09:26:15+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="window-对象和-document-对象"><a href="#window-对象和-document-对象" class="headerlink" title="window 对象和 document 对象"></a><strong>window 对象和 document 对象</strong></h2><ul>
+<li>window 对象表示浏览器打开的窗口，window 可省略，常见的 window 属性有 innerWidth，parseInt，parseFloat</li>
+<li>document 对象属于 window 对象，表示一个 DOM 树</li>
+</ul>
+<h2 id="视口宽高"><a href="#视口宽高" class="headerlink" title="视口宽高"></a><strong>视口宽高</strong></h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%8E%B7%E5%8F%96%E8%A7%86%E5%8F%A3%E5%AE%BD%E9%AB%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/" class="post-title-link" itemprop="url">请求数据拼接</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:12" itemprop="dateModified" datetime="2020-12-31T09:27:12+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no&quot;</span></span></span><br><span class="line"><span class="tag">    /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>响应式布局<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/common.css&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;css/dangdang.css&quot;</span> /&gt;</span></span><br><span class="line">    //引入axios插件</span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/axios.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- banner --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;images/jmsj_hw150316g.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 2、导航列表 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;nav-list&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 3、图文列表 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;goods-list&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/append.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 请求数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    axios</span><br><span class="line">      .get(<span class="string">&#x27;http://127.0.0.1:5500/%E7%A7%BB%E5%8A%A8%E7%AB%AF/js/msg.json&#x27;</span>)</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">rander</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//解构，必要</span></span><br><span class="line">  <span class="keyword">let</span> &#123; arrNav, goodList &#125; = <span class="keyword">await</span> request()</span><br><span class="line">  <span class="built_in">console</span>.log(arrNav)</span><br><span class="line">  <span class="built_in">console</span>.log(goodList)</span><br><span class="line">  <span class="comment">//先拼接ul</span></span><br><span class="line">  <span class="keyword">let</span> ul = <span class="string">&#x27;&lt;ul&gt;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arrNav.length; i++) &#123;</span><br><span class="line">    ul += <span class="string">`&lt;li&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;item&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;text&quot;&gt;<span class="subst">$&#123;arrNav[i]&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;arrow-right&quot;&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/li&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  ul += <span class="string">&#x27;&lt;/ul&gt;&#x27;</span></span><br><span class="line">  <span class="keyword">let</span> navList = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;nav-list&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">  <span class="built_in">console</span>.log(navList)</span><br><span class="line">  navList.innerHTML = ul</span><br><span class="line"></span><br><span class="line">  <span class="comment">//拼接商品</span></span><br><span class="line">  <span class="keyword">let</span> goods = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; goodList.length; i++) &#123;</span><br><span class="line">    goods += <span class="string">`&lt;div class=&quot;goods-wrap&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;item&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;img src=&quot;<span class="subst">$&#123;goodList[i].goodsImg&#125;</span>&quot; alt=&quot;&quot; class=&quot;goods-img&quot; /&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&#x27;goods-desc&#x27;&gt;<span class="subst">$&#123;goodList[i].goodsDesc&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&#x27;price&#x27;&gt;￥<span class="subst">$&#123;goodList[i].price&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;price-befor&quot;&gt;￥<span class="subst">$&#123;goodList[i][<span class="string">&#x27;price-befor&#x27;</span>]&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;buy&quot;&gt;点击购买&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">let</span> gdsList = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;goods-list&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">  gdsList.innerHTML = goods</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一加载页面，就渲染数据</span></span><br><span class="line">;(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  rander()</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;arrNav&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;小说&quot;</span>,</span><br><span class="line">    <span class="string">&quot;青春动漫&quot;</span>,</span><br><span class="line">    <span class="string">&quot;经济管理&quot;</span>,</span><br><span class="line">    <span class="string">&quot;历史文化&quot;</span>,</span><br><span class="line">    <span class="string">&quot;人文社科&quot;</span>,</span><br><span class="line">    <span class="string">&quot;孕产育儿&quot;</span>,</span><br><span class="line">    <span class="string">&quot;旅游美食&quot;</span>,</span><br><span class="line">    <span class="string">&quot;中小学教辅&quot;</span>,</span><br><span class="line">    <span class="string">&quot;外语考试&quot;</span>,</span><br><span class="line">    <span class="string">&quot;文学艺术&quot;</span>,</span><br><span class="line">    <span class="string">&quot;成功励志&quot;</span>,</span><br><span class="line">    <span class="string">&quot;传记&quot;</span>,</span><br><span class="line">    <span class="string">&quot;哲学心理&quot;</span>,</span><br><span class="line">    <span class="string">&quot;亲子家教&quot;</span>,</span><br><span class="line">    <span class="string">&quot;保健养生&quot;</span>,</span><br><span class="line">    <span class="string">&quot;科技&quot;</span>,</span><br><span class="line">    <span class="string">&quot;童书&quot;</span>,</span><br><span class="line">    <span class="string">&quot;教材&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;goodList&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book0.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book1.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book2.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book3.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book4.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book5.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book6.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;goodsImg&quot;</span>: <span class="string">&quot;images/book7.jpg&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;goodsDesc&quot;</span>: <span class="string">&quot;狼图腾(修订版)（一部描绘、研究蒙古草原狼的“旷世奇书”）&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;price&quot;</span>: <span class="number">19.9</span>,</span><br><span class="line">      <span class="attr">&quot;price-befor&quot;</span>: <span class="number">39.9</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%8B%BC%E6%8E%A5/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/" class="post-title-link" itemprop="url">url模块</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-06 17:19:29" itemprop="dateModified" datetime="2021-01-06T17:19:29+08:00">2021-01-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/NodeJS/" itemprop="url" rel="index"><span itemprop="name">NodeJS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="../imgs/image-20201018150415630.png" alt="image-20201018150415630"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment">// 解析请求路径</span></span><br><span class="line">url.parse(request.url, <span class="literal">true</span>)</span><br><span class="line"><span class="comment">// 取出路径</span></span><br><span class="line">url.parse(request.url, <span class="literal">true</span>).pathname</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 引入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>)</span><br><span class="line"><span class="comment">// 引入url模块</span></span><br><span class="line"><span class="keyword">const</span> url = <span class="built_in">require</span>(<span class="string">&#x27;url&#x27;</span>)</span><br><span class="line"><span class="comment">// 引入外部模块（文件）</span></span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&#x27;../util/utils.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定服务的ip和port</span></span><br><span class="line"><span class="keyword">const</span> ip = <span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line"><span class="keyword">const</span> port = <span class="number">4000</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用http模块创建服务</span></span><br><span class="line"><span class="keyword">const</span> server = http.createServer(<span class="function"><span class="keyword">function</span> (<span class="params">request, response</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 解析请求路径</span></span><br><span class="line">  <span class="keyword">let</span> reqUrl = url.parse(request.url)</span><br><span class="line">  <span class="comment">// 取出路径</span></span><br><span class="line">  <span class="keyword">let</span> pathname = reqUrl.pathname</span><br><span class="line">  <span class="comment">// 获取后缀给出反应</span></span><br><span class="line">  <span class="keyword">if</span> (pathname === <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">    response.write(<span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname === <span class="string">&#x27;/favicon.ico&#x27;</span>) &#123;</span><br><span class="line">    response.write(<span class="string">&#x27;favicon.ico&#x27;</span>)</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (pathname === <span class="string">&#x27;/login&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// 使用外部引入的函数解析</span></span><br><span class="line">    <span class="keyword">let</span> object = util.format(reqUrl.query)</span><br><span class="line">    <span class="comment">// 转化成json字符串显示页面</span></span><br><span class="line">    response.write(<span class="built_in">JSON</span>.stringify(object))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//表示响应结束</span></span><br><span class="line">  response.end(<span class="string">&#x27;end&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定服务运行的端口号</span></span><br><span class="line">server.listen(port, ip, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Server is running on: &#x27;</span> + port + <span class="string">&#x27;!&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;http://127.0.0.1:4000&#x27;</span>)</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Node.js/url%E6%A8%A1%E5%9D%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">JS中使用 Ajax 来进行请求的几种方式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:15:22" itemprop="dateModified" datetime="2020-12-31T09:15:22+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-什么是-AJAX"><a href="#1-什么是-AJAX" class="headerlink" title="1.什么是 AJAX"></a>1.什么是 AJAX</h2><p>术语 AJAX 表示 <strong>异步的 JavaScript 和 XML</strong>。</p>
+<p><strong>AJAX</strong> 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/axios/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/" class="post-title-link" itemprop="url">Axios Ajax获取远程数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:14:16" itemprop="dateModified" datetime="2020-12-31T09:14:16+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Ajax-获取数据"><a href="#Ajax-获取数据" class="headerlink" title="Ajax 获取数据"></a>Ajax 获取数据</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 请求数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    axios</span><br><span class="line">      .get(<span class="string">&#x27;http://127.0.0.1:5500/%E7%A7%BB%E5%8A%A8%E7%AB%AF/js/msg.json&#x27;</span>)</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">rander</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; arrNav, goodList &#125; = <span class="keyword">await</span> request()</span><br><span class="line">  <span class="built_in">console</span>.log(arrNav)</span><br><span class="line">  <span class="built_in">console</span>.log(goodList)</span><br><span class="line">  <span class="comment">//先拼接ul</span></span><br><span class="line">  <span class="keyword">let</span> ul = <span class="string">&#x27;&lt;ul&gt;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arrNav.length; i++) &#123;</span><br><span class="line">    ul += <span class="string">`&lt;li&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;item&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;text&quot;&gt;<span class="subst">$&#123;arrNav[i]&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;arrow-right&quot;&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/li&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  ul += <span class="string">&#x27;&lt;/ul&gt;&#x27;</span></span><br><span class="line">  <span class="comment">//拼接商品</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一加载页面，就渲染数据</span></span><br><span class="line">;(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  rander()</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">;(<span class="function"><span class="keyword">function</span> <span class="title">activeItems</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">    items[i].onclick = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//main.innerHTML = &#x27;首页&#x27;</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="keyword">let</span> data = <span class="keyword">await</span> requst(&#123;</span><br><span class="line">            <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">            <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="built_in">console</span>.log(data)</span><br><span class="line">          <span class="comment">//把data中的数据在页面渲染</span></span><br><span class="line">          rander(data)</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">          <span class="comment">//处理异常</span></span><br><span class="line">          <span class="built_in">console</span>.log(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">1</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;搜索&#x27;</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">2</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;购物车&#x27;</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">3</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;我的&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 封装的请求方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;any&#125;</span> <span class="variable">option</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">requst</span>(<span class="params">option</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//option=&#123;method:&#x27;&#x27;,url:&quot;&quot;,data:&#123;&#125;&#125;</span></span><br><span class="line">  <span class="comment">//axios请求默认是异步的，无法直接返回请求结果值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    axios</span><br><span class="line">      .get(option.url)</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//获得请求结果</span></span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//发生异常</span></span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 在页面渲染数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;any&#125;</span> <span class="variable">arr</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rander</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="comment">//判断参数的合法性，主要是判空和判断数据类型</span></span><br><span class="line">  <span class="keyword">if</span> (!arr) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//找到元素</span></span><br><span class="line">  <span class="comment">//拼接字符串</span></span><br><span class="line">  <span class="keyword">let</span> st = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    st += <span class="string">`&lt;div class=&quot;goods-wrap&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&#x27;img-warp&#x27;&gt;</span></span><br><span class="line"><span class="string">            &lt;img src=&quot;<span class="subst">$&#123;arr[i].imgUrl&#125;</span>&quot; alt=&quot;&quot; class=&quot;goods-img&quot; /&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;goods-content&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-name&quot;&gt;<span class="subst">$&#123;arr[i].name&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-desc&quot;&gt;<span class="subst">$&#123;arr[i].desc&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-num&quot;&gt;<span class="subst">$&#123;arr[i].num&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&#x27;goods-op&#x27;&gt;</span></span><br><span class="line"><span class="string">            &lt;button class=&quot;add-btn&quot; data-obj=&quot;<span class="subst">$&#123;arr[i].name&#125;</span>&quot; &gt;加入购物&lt;/button&gt;</span></span><br><span class="line"><span class="string">            &lt;button class=&quot;collect-btn&quot;&gt;点击收藏&lt;/button&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//对新添加的元素进行事件绑定</span></span><br><span class="line">  <span class="keyword">let</span> addBtn = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;add-btn&#x27;</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; addBtn.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>)</span><br><span class="line">    addBtn[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//页面加载结束就执行的函数</span></span><br><span class="line">;(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="keyword">await</span> requst(&#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">  rander(data)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/axios/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/" class="post-title-link" itemprop="url">jQuery Ajax获取远程数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:14:35" itemprop="dateModified" datetime="2020-12-31T09:14:35+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Ajax-获取数据"><a href="#Ajax-获取数据" class="headerlink" title="Ajax 获取数据"></a>Ajax 获取数据</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="comment">//请求地址</span></span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;https://192.168.102.32.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求方法</span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">  <span class="comment">//是否异步</span></span><br><span class="line">  <span class="attr">async</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//是否使用缓存</span></span><br><span class="line">  <span class="attr">cache</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//请求失败执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">error</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//在发送请求前执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">beforeSend</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//启动进度条</span></span><br><span class="line">    NProgress.start()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求成功执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">    <span class="keyword">let</span> app = $(<span class="string">&#x27;#app&#x27;</span>)</span><br><span class="line">    res.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> div = <span class="string">`渲染数据`</span></span><br><span class="line">      app.append(div)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求结束执行函数</span></span><br><span class="line">  <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//结束进度条</span></span><br><span class="line">    NProgress.done()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/taiaiac.gitee.io/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/taiaiac.gitee.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/taiaiac.gitee.io/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/taiaiac.gitee.io/page/17/">17</a><a class="extend next" rel="next" href="/taiaiac.gitee.io/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 <script
-  type="text/javascript"
-  color="96,98,102"
-  opacity="0.7"
-  zIndex="-2"
-  count="99"
-  src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
-></script>
-</div>
-      <footer id="footer" class="footer">
-    <div class="copyright">
-        <span>© Z.A.M. | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
-    </div>
-</footer>
-
-    </div>
-    <script
       type="text/javascript"
-      color="96,98,102"
+      color="0,205,205"
       opacity="0.7"
       zIndex="-2"
       count="99"
       src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"
     ></script>
-  <script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Z.A.M."
+      src="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+  <p class="site-author-name" itemprop="name">Z.A.M.</p>
+  <div class="site-description" itemprop="description">所有不利,都是 能力不足 导致的. <br> By <东京喰种>.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/taiaiac.gitee.io/archives/">
+        
+          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/taiaiac.gitee.io/categories/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/taiaiac.gitee.io/tags/">
+          
+        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Z.A.M.</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+<div>
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+</div>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/01/2020 18:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",1000);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/taiaiac.gitee.io/lib/anime.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.min.js"></script>
+  <script src="/taiaiac.gitee.io/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/taiaiac.gitee.io/js/utils.js"></script>
+
+<script src="/taiaiac.gitee.io/js/motion.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/schemes/pisces.js"></script>
+
+
+<script src="/taiaiac.gitee.io/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/taiaiac.gitee.io/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/taiaiac.gitee.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/taiaiac.gitee.io/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":200,"height":434},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
 </html>
