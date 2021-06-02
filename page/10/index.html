@@ -194,6 +194,252 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/" class="post-title-link" itemprop="url">定时器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:53" itemprop="dateModified" datetime="2020-12-31T09:25:53+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="定时器有以下两个方法："><a href="#定时器有以下两个方法：" class="headerlink" title="定时器有以下两个方法："></a>定时器有以下两个方法：</h2><ul>
+<li><h4 id="setInterval-：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到-clearInterval-被调用或窗口被关闭。"><a href="#setInterval-：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到-clearInterval-被调用或窗口被关闭。" class="headerlink" title="setInterval() ：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。"></a><code>setInterval()</code> ：按照指定的周期（以毫秒计）来调用函数或计算表达式。方法会不停地调用函数，直到 <code>clearInterval()</code> 被调用或窗口被关闭。</h4></li>
+<li><h4 id="setTimeout-：在指定的毫秒数后调用函数或计算表达式。"><a href="#setTimeout-：在指定的毫秒数后调用函数或计算表达式。" class="headerlink" title="setTimeout() ：在指定的毫秒数后调用函数或计算表达式。"></a><code>setTimeout()</code> ：在指定的毫秒数后调用函数或计算表达式。</h4><hr>
+</li>
+<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a><code>setInterval()</code></h2><ul>
+<li><pre><code class="javascript">setInterval(code, time)
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    | **参数** |                          描述                          |</span><br><span class="line">    | :------: | :----------------------------------------------------: |</span><br><span class="line">    |   code   |          必需。要调用的函数或要执行的代码串。          |</span><br><span class="line">    |  `time`  | 必须。周期性执行或调用 code 之间的时间间隔，以毫秒计。 |</span><br><span class="line"></span><br><span class="line">- ## `setTimeout()`</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    setTimeout(code, time)</span><br></pre></td></tr></table></figure>
+
+| **参数** |                       描述                       |
+| :------: | :----------------------------------------------: |
+|   code   | 必需。要调用的函数后要执行的 JavaScript 代码串。 |
+|  `time`  |        必需。在执行代码前需等待的毫秒数。        |
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="停止时钟"><a href="#停止时钟" class="headerlink" title="停止时钟"></a>停止时钟</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/Javascript/%E5%AE%9A%E6%97%B6%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E5%8C%96/" class="post-title-link" itemprop="url">日期格式化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:27:21" itemprop="dateModified" datetime="2020-12-31T09:27:21+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="comment">//日期格式化函数</span></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">dateFormat</span>(<span class="params"></span>)</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> yyyy = now.getFullYear()</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> MM = (now.getMonth() + <span class="number">1</span> + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> dd = (now.getDate() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> hh = (now.getHours() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> mm = (now.getMinutes() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> ss = (now.getSeconds() + <span class="string">&quot;&quot;</span>).padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>)</span></span><br><span class="line"><span class="javascript">      <span class="keyword">let</span> st = <span class="string">`<span class="subst">$&#123;yyyy&#125;</span>-<span class="subst">$&#123;MM&#125;</span>-<span class="subst">$&#123;dd&#125;</span> <span class="subst">$&#123;hh&#125;</span>:<span class="subst">$&#123;mm&#125;</span>:<span class="subst">$&#123;ss&#125;</span>`</span></span></span><br><span class="line"><span class="javascript">      &#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
+      <meta itemprop="name" content="Z.A.M.">
+      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Z. A. M.’s Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/taiaiac.gitee.io/2020/12/30/Javascript/%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/" class="post-title-link" itemprop="url">点击特效</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-31 09:25:45" itemprop="dateModified" datetime="2020-12-31T09:25:45+08:00">2020-12-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/taiaiac.gitee.io/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">/* 鼠标点击文字特效 */</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> f_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> c_idx = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">    jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        $(<span class="string">&quot;body&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> font = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;斗地主&quot;</span>, <span class="string">&quot;吃火锅&quot;</span>, <span class="string">&quot;打豆豆&quot;</span>, <span class="string">&quot;饮酒&quot;</span>, <span class="string">&quot;吃肉&quot;</span>, <span class="string">&quot;狼人杀&quot;</span>, <span class="string">&quot;耍流氓&quot;</span>, <span class="string">&quot;耍无赖&quot;</span>, <span class="string">&quot;身体健康&quot;</span>, <span class="string">&quot;阖家幸福&quot;</span>, <span class="string">&quot;生猴子&quot;</span>, <span class="string">&quot;蒸羊羔儿&quot;</span>, <span class="string">&quot;蒸熊掌&quot;</span>, <span class="string">&quot;蒸鹿尾儿&quot;</span>, <span class="string">&quot;烧花鸭&quot;</span>, <span class="string">&quot;烧雏鸡&quot;</span>, <span class="string">&quot;烧子鹅&quot;</span>, <span class="string">&quot;炉猪&quot;</span>, <span class="string">&quot;炉鸭&quot;</span>, <span class="string">&quot;酱鸡&quot;</span>, <span class="string">&quot;腊肉&quot;</span>, <span class="string">&quot;松花&quot;</span>, <span class="string">&quot;小肚儿&quot;</span>, <span class="string">&quot;晾肉&quot;</span>, <span class="string">&quot;香肠儿&quot;</span>, <span class="string">&quot;什锦苏盘儿&quot;</span>, <span class="string">&quot;熏鸡白肚儿&quot;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> color = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&#x27;#ff0000&#x27;</span>, <span class="string">&#x27;#eb4310&#x27;</span>, <span class="string">&#x27;#f6941d&#x27;</span>, <span class="string">&#x27;#fbb417&#x27;</span>, <span class="string">&#x27;#ffff00&#x27;</span>, <span class="string">&#x27;#cdd541&#x27;</span>, <span class="string">&#x27;#99cc33&#x27;</span>, <span class="string">&#x27;#3f9337&#x27;</span>, <span class="string">&#x27;#219167&#x27;</span>, <span class="string">&#x27;#239676&#x27;</span>, <span class="string">&#x27;#24998d&#x27;</span>, <span class="string">&#x27;#1f9baa&#x27;</span>, <span class="string">&#x27;#0080ff&#x27;</span>, <span class="string">&#x27;#3366cc&#x27;</span>, <span class="string">&#x27;#333399&#x27;</span>, <span class="string">&#x27;#003366&#x27;</span>, <span class="string">&#x27;#800080&#x27;</span>, <span class="string">&#x27;#a1488e&#x27;</span>, <span class="string">&#x27;#c71585&#x27;</span>, <span class="string">&#x27;#bd2158&#x27;</span>);</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> $i = $(<span class="string">&quot;&lt;span /&gt;&quot;</span>).text(font[f_idx]);</span></span><br><span class="line"><span class="javascript">            f_idx = (f_idx + <span class="number">1</span>) % font.length;</span></span><br><span class="line"><span class="javascript">            c_idx = (c_idx + <span class="number">1</span>) % color.length;</span></span><br><span class="line"><span class="javascript">            <span class="keyword">var</span> x = e.pageX,</span></span><br><span class="line"><span class="javascript">                y = e.pageY;</span></span><br><span class="line"><span class="javascript">            $i.css(&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;z-index&quot;</span>: <span class="number">99999999999999999999999999999999999999999999999999999999999999999999999999</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;top&quot;</span>: y - <span class="number">20</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;left&quot;</span>: x,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;position&quot;</span>: <span class="string">&quot;absolute&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;font-weight&quot;</span>: <span class="string">&quot;bold&quot;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&quot;color&quot;</span>: color[c_idx]</span></span><br><span class="line"><span class="javascript">            &#125;);</span></span><br><span class="line"><span class="javascript">            $(<span class="string">&quot;body&quot;</span>).append($i);</span></span><br><span class="line"><span class="javascript">            $i.animate(&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;top&quot;</span>: y - <span class="number">180</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="string">&quot;opacity&quot;</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">                &#125;,</span></span><br><span class="line"><span class="javascript">                <span class="number">1500</span>,</span></span><br><span class="line"><span class="javascript">                <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    $i.remove();</span></span><br><span class="line"><span class="javascript">                &#125;);</span></span><br><span class="line"><span class="javascript">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125;);</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/Javascript/%E6%A8%A1%E4%BB%BF%E7%99%BE%E5%BA%A6%E5%88%86%E9%A1%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -798,254 +1044,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">JS中使用 Ajax 来进行请求的几种方式</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:15:22" itemprop="dateModified" datetime="2020-12-31T09:15:22+08:00">2020-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-什么是-AJAX"><a href="#1-什么是-AJAX" class="headerlink" title="1.什么是 AJAX"></a>1.什么是 AJAX</h2><p>术语 AJAX 表示 <strong>异步的 JavaScript 和 XML</strong>。</p>
-<p><strong>AJAX</strong> 在 JS 中用于发出异步网络请求来获取资源。当然，不像名称所暗示的那样，资源并不局限于 XML，还用于获取 JSON、HTML 或纯文本等资源。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/JS%E4%B8%AD%E4%BD%BF%E7%94%A8%20Ajax%20%E6%9D%A5%E8%BF%9B%E8%A1%8C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/axios/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/axios/" class="post-title-link" itemprop="url">Axios Ajax获取远程数据</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:14:16" itemprop="dateModified" datetime="2020-12-31T09:14:16+08:00">2020-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Ajax-获取数据"><a href="#Ajax-获取数据" class="headerlink" title="Ajax 获取数据"></a>Ajax 获取数据</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 请求数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-21</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    axios</span><br><span class="line">      .get(<span class="string">&#x27;http://127.0.0.1:5500/%E7%A7%BB%E5%8A%A8%E7%AB%AF/js/msg.json&#x27;</span>)</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">rander</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> &#123; arrNav, goodList &#125; = <span class="keyword">await</span> request()</span><br><span class="line">  <span class="built_in">console</span>.log(arrNav)</span><br><span class="line">  <span class="built_in">console</span>.log(goodList)</span><br><span class="line">  <span class="comment">//先拼接ul</span></span><br><span class="line">  <span class="keyword">let</span> ul = <span class="string">&#x27;&lt;ul&gt;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arrNav.length; i++) &#123;</span><br><span class="line">    ul += <span class="string">`&lt;li&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;item&quot;&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;text&quot;&gt;<span class="subst">$&#123;arrNav[i]&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">              &lt;div class=&quot;arrow-right&quot;&gt;&lt;span&gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/li&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  ul += <span class="string">&#x27;&lt;/ul&gt;&#x27;</span></span><br><span class="line">  <span class="comment">//拼接商品</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一加载页面，就渲染数据</span></span><br><span class="line">;(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  rander()</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">;(<span class="function"><span class="keyword">function</span> <span class="title">activeItems</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">    items[i].onclick = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (i === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">//main.innerHTML = &#x27;首页&#x27;</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="keyword">let</span> data = <span class="keyword">await</span> requst(&#123;</span><br><span class="line">            <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">            <span class="attr">url</span>: <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">            <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">          &#125;)</span><br><span class="line">          <span class="built_in">console</span>.log(data)</span><br><span class="line">          <span class="comment">//把data中的数据在页面渲染</span></span><br><span class="line">          rander(data)</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">          <span class="comment">//处理异常</span></span><br><span class="line">          <span class="built_in">console</span>.log(e)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">1</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;搜索&#x27;</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">2</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;购物车&#x27;</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i === <span class="number">3</span>) &#123;</span><br><span class="line">        main.innerHTML = <span class="string">&#x27;我的&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)()</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 封装的请求方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;any&#125;</span> <span class="variable">option</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">requst</span>(<span class="params">option</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//option=&#123;method:&#x27;&#x27;,url:&quot;&quot;,data:&#123;&#125;&#125;</span></span><br><span class="line">  <span class="comment">//axios请求默认是异步的，无法直接返回请求结果值</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span> (<span class="params">resolve, reject</span>) </span>&#123;</span><br><span class="line">    axios</span><br><span class="line">      .get(option.url)</span><br><span class="line">      .then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//获得请求结果</span></span><br><span class="line">        resolve(res.data)</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//发生异常</span></span><br><span class="line">        reject(e)</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 描述 在页面渲染数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date </span>2020-09-17</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;any&#125;</span> <span class="variable">arr</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;any&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rander</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="comment">//判断参数的合法性，主要是判空和判断数据类型</span></span><br><span class="line">  <span class="keyword">if</span> (!arr) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (arr.length === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//找到元素</span></span><br><span class="line">  <span class="comment">//拼接字符串</span></span><br><span class="line">  <span class="keyword">let</span> st = <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    st += <span class="string">`&lt;div class=&quot;goods-wrap&quot;&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&#x27;img-warp&#x27;&gt;</span></span><br><span class="line"><span class="string">            &lt;img src=&quot;<span class="subst">$&#123;arr[i].imgUrl&#125;</span>&quot; alt=&quot;&quot; class=&quot;goods-img&quot; /&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&quot;goods-content&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-name&quot;&gt;<span class="subst">$&#123;arr[i].name&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-desc&quot;&gt;<span class="subst">$&#123;arr[i].desc&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">            &lt;div class=&quot;goods-num&quot;&gt;<span class="subst">$&#123;arr[i].num&#125;</span>&lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">          &lt;div class=&#x27;goods-op&#x27;&gt;</span></span><br><span class="line"><span class="string">            &lt;button class=&quot;add-btn&quot; data-obj=&quot;<span class="subst">$&#123;arr[i].name&#125;</span>&quot; &gt;加入购物&lt;/button&gt;</span></span><br><span class="line"><span class="string">            &lt;button class=&quot;collect-btn&quot;&gt;点击收藏&lt;/button&gt;</span></span><br><span class="line"><span class="string">          &lt;/div&gt;</span></span><br><span class="line"><span class="string">        &lt;/div&gt;`</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//对新添加的元素进行事件绑定</span></span><br><span class="line">  <span class="keyword">let</span> addBtn = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;add-btn&#x27;</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; addBtn.length; i++) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>)</span><br><span class="line">    addBtn[i].onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="built_in">this</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//页面加载结束就执行的函数</span></span><br><span class="line">;(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> data = <span class="keyword">await</span> requst(&#123;</span><br><span class="line">    <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;https://web17.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">    <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">  rander(data)</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/axios/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/aidemin/taiaiac.gitee.io.git/2020/12/30/ajax/jQuery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="http://aimin-img.oss-cn-hangzhou.aliyuncs.com/%E5%A4%B4%E5%83%8F/header.jpg">
-      <meta itemprop="name" content="Z.A.M.">
-      <meta itemprop="description" content="所有不利,都是 能力不足 导致的. <br> By <东京喰种>.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Z. A. M.’s Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/" class="post-title-link" itemprop="url">jQuery Ajax获取远程数据</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-12-30 14:56:03" itemprop="dateCreated datePublished" datetime="2020-12-30T14:56:03+08:00">2020-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-31 09:14:35" itemprop="dateModified" datetime="2020-12-31T09:14:35+08:00">2020-12-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/taiaiac.gitee.io/categories/Ajax/" itemprop="url" rel="index"><span itemprop="name">Ajax</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Ajax-获取数据"><a href="#Ajax-获取数据" class="headerlink" title="Ajax 获取数据"></a>Ajax 获取数据</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">  <span class="comment">//请求地址</span></span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;https://192.168.102.32.oss-cn-hangzhou.aliyuncs.com/list.json&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求方法</span></span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  <span class="comment">//请求参数</span></span><br><span class="line">  <span class="attr">data</span>: &#123;&#125;,</span><br><span class="line">  <span class="comment">//是否异步</span></span><br><span class="line">  <span class="attr">async</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="comment">//是否使用缓存</span></span><br><span class="line">  <span class="attr">cache</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="comment">//请求失败执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">error</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//在发送请求前执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">beforeSend</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//启动进度条</span></span><br><span class="line">    NProgress.start()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求成功执行的函数</span></span><br><span class="line">  <span class="function"><span class="title">success</span>(<span class="params">res</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res)</span><br><span class="line">    <span class="keyword">let</span> app = $(<span class="string">&#x27;#app&#x27;</span>)</span><br><span class="line">    res.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> div = <span class="string">`渲染数据`</span></span><br><span class="line">      app.append(div)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//请求结束执行函数</span></span><br><span class="line">  <span class="function"><span class="title">complete</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="comment">//结束进度条</span></span><br><span class="line">    NProgress.done()</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/taiaiac.gitee.io/2020/12/30/ajax/jQuery/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1124,7 +1122,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/taiaiac.gitee.io/archives/">
         
-          <span class="site-state-item-count">162</span>
+          <span class="site-state-item-count">163</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
