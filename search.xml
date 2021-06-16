@@ -3056,18 +3056,21 @@ let stu = students.find((item) =&gt; &#123;
     <title>vue3学习教程and资源</title>
     <url>/taiaiac.gitee.io/2021/03/13/VUE3/vue3%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8Band%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<blockquote>
-<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p>vue3</p>
-<p><a href="https://vue3js.cn/docs/zh/">https://vue3js.cn/docs/zh/</a></p>
-<p>Vue Router</p>
-<p><a href="https://router.vuejs.org/zh/">https://router.vuejs.org/zh/</a></p>
-<p>vuex</p>
-<p><a href="https://vuex.vuejs.org/zh/">https://vuex.vuejs.org/zh/</a></p>
-<p>vuepress</p>
-<p><a href="https://vuepress.vuejs.org/zh/guide/">https://vuepress.vuejs.org/zh/guide/</a></p>
-<p>vite</p>
-<p><a href="https://vitejs.dev/">https://vitejs.dev/</a></p>
-<p>ui框架</p>
+<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><h3 id="vue3"><a href="#vue3" class="headerlink" title="vue3"></a>vue3</h3><p><a href="https://vue3js.cn/docs/zh/">https://vue3js.cn/docs/zh/</a></p>
+<h4 id="Vue-Router"><a href="#Vue-Router" class="headerlink" title="Vue Router"></a>Vue Router</h4><p><a href="https://router.vuejs.org/zh/">https://router.vuejs.org/zh/</a></p>
+<h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p><a href="https://vuex.vuejs.org/zh/">https://vuex.vuejs.org/zh/</a></p>
+<h4 id="vuepress"><a href="#vuepress" class="headerlink" title="vuepress"></a>vuepress</h4><p><a href="https://vuepress.vuejs.org/zh/guide/">https://vuepress.vuejs.org/zh/guide/</a></p>
+<h4 id="vite"><a href="#vite" class="headerlink" title="vite"></a>vite</h4><p><a href="https://vitejs.dev/">https://vitejs.dev/</a></p>
+<h4 id="ui框架"><a href="#ui框架" class="headerlink" title="ui框架"></a>ui框架</h4><p>element-plus</p>
 <p><a href="https://element-plus.gitee.io/#/zh-CN/guide/design">https://element-plus.gitee.io/#/zh-CN/guide/design</a></p>
+<p>Ant Design Vue</p>
+<p><a href="https://2x.antdv.com/docs/vue/getting-started-cn">https://2x.antdv.com/docs/vue/getting-started-cn</a></p>
+<p>naiveui</p>
+<p><a href="https://www.naiveui.com/zh-CN/os-theme/components/button">https://www.naiveui.com/zh-CN/os-theme/components/button</a></p>
+<p>vant</p>
+<p><a href="https://vant-contrib.gitee.io/vant/v3/#/zh-CN">https://vant-contrib.gitee.io/vant/v3/#/zh-CN</a></p>
+<h3 id="vue-mini"><a href="#vue-mini" class="headerlink" title="vue mini"></a>vue mini</h3><p>vue3语法编写小程序</p>
+<p><a href="https://vuemini.org/">https://vuemini.org/</a></p>
 </blockquote>
 <blockquote>
 <h3 id="文档笔记"><a href="#文档笔记" class="headerlink" title="文档笔记"></a>文档笔记</h3><p><a href="https://juejin.cn/post/6866373381424414734/">https://juejin.cn/post/6866373381424414734/</a></p>
@@ -3079,6 +3082,8 @@ let stu = students.find((item) =&gt; &#123;
 <p><a href="https://www.bilibili.com/video/BV1vX4y1K7bQ">https://www.bilibili.com/video/BV1vX4y1K7bQ</a></p>
 <p>vite插件开发指南</p>
 <p><a href="https://www.bilibili.com/video/BV1jb4y1R7UV">https://www.bilibili.com/video/BV1jb4y1R7UV</a></p>
+<p>vueconf</p>
+<p><a href="https://www.bilibili.com/video/BV1s5411g7wr">https://www.bilibili.com/video/BV1s5411g7wr</a></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -3852,7 +3857,7 @@ let stu = students.find((item) =&gt; &#123;
     <url>/taiaiac.gitee.io/2020/12/30/html%E3%80%81css/%E8%8D%A7%E5%85%89%E8%BE%B9%E6%A1%86/</url>
     <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#060c21</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  place-items: center;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#060c21</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">2</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">40px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">235deg</span>, <span class="number">#89ff00</span>, <span class="number">#060c21</span>, <span class="number">#00bcd4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#060c21</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Poppins&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#060c21</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*一个溢出的盒子作为边框，添加背景后形成光源效果*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="comment">/*元素堆叠顺序*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*另一个溢出的盒子，模糊形成光晕效果*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">2</span>;</span><br><span class="line">    <span class="comment">/*添加模糊滤镜*/</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">40px</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="comment">/*三色渐变，中间为背景色，融入背景*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">235deg</span>, <span class="number">#89ff00</span>, <span class="number">#060c21</span>, <span class="number">#00bcd4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>HTML、CSS</category>
@@ -4000,7 +4005,25 @@ let stu = students.find((item) =&gt; &#123;
   <entry>
     <title>nuxtjs基础</title>
     <url>/taiaiac.gitee.io/2021/03/16/nuxt/nuxtjs%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
+    <content><![CDATA[<h2 id="什么是服务器端渲染-SSR-？"><a href="#什么是服务器端渲染-SSR-？" class="headerlink" title="什么是服务器端渲染 (SSR)？"></a>什么是服务器端渲染 (SSR)？</h2><p>Vue.js 是构建客户端应用程序的框架。默认情况下，可以在浏览器中输出 Vue 组件，进行生成 DOM 和操作 DOM。然而，也可以将同一个组件渲染为服务器端的 HTML 字符串，将它们直接发送到浏览器，最后将这些静态标记”激活”为客户端上完全可交互的应用程序。</p>
+<p>服务器渲染的 Vue.js 应用程序也可以被认为是”同构”或”通用”，因为应用程序的大部分代码都可以在<strong>服务器</strong>和<strong>客户端</strong>上运行。</p>
+<h2 id="为什么使用服务器端渲染-SSR-？"><a href="#为什么使用服务器端渲染-SSR-？" class="headerlink" title="为什么使用服务器端渲染 (SSR)？"></a>为什么使用服务器端渲染 (SSR)？</h2><p>与传统 SPA (单页应用程序 (Single-Page Application)) 相比，服务器端渲染 (SSR) 的优势主要在于：</p>
+<ul>
+<li><p>更好的 SEO，由于搜索引擎爬虫抓取工具可以直接查看完全渲染的页面。</p>
+<p>请注意，截至目前，Google 和 Bing 可以很好对同步 JavaScript 应用程序进行索引。在这里，同步是关键。如果你的应用程序初始展示 loading 菊花图，然后通过 Ajax 获取内容，抓取工具并不会等待异步完成后再行抓取页面内容。也就是说，如果 SEO 对你的站点至关重要，而你的页面又是异步获取内容，则你可能需要服务器端渲染(SSR)解决此问题。</p>
+</li>
+<li><p>更快的内容到达时间 (time-to-content)，特别是对于缓慢的网络情况或运行缓慢的设备。无需等待所有的 JavaScript 都完成下载并执行，才显示服务器渲染的标记，所以你的用户将会更快速地看到完整渲染的页面。通常可以产生更好的用户体验，并且对于那些「内容到达时间(time-to-content) 与转化率直接相关」的应用程序而言，服务器端渲染 (SSR) 至关重要。</p>
+</li>
+</ul>
+<p>使用服务器端渲染 (SSR) 时还需要有一些权衡之处：</p>
+<ul>
+<li>开发条件所限。浏览器特定的代码，只能在某些生命周期钩子函数 (lifecycle hook) 中使用；一些外部扩展库 (external library) 可能需要特殊处理，才能在服务器渲染应用程序中运行。</li>
+<li>涉及构建设置和部署的更多要求。与可以部署在任何静态文件服务器上的完全静态单页面应用程序 (SPA) 不同，服务器渲染应用程序，需要处于 Node.js server 运行环境。</li>
+<li>更多的服务器端负载。在 Node.js 中渲染完整的应用程序，显然会比仅仅提供静态文件的 server 更加大量占用 CPU 资源 (CPU-intensive - CPU 密集)，因此如果你预料在高流量环境 (high traffic) 下使用，请准备相应的服务器负载，并明智地采用缓存策略。</li>
+</ul>
+<p>在对你的应用程序使用服务器端渲染 (SSR) 之前，你应该问的第一个问题是，是否真的需要它。这主要取决于内容到达时间 (time-to-content) 对应用程序的重要程度。例如，如果你正在构建一个内部仪表盘，初始加载时的额外几百毫秒并不重要，这种情况下去使用服务器端渲染 (SSR) 将是一个小题大作之举。然而，内容到达时间 (time-to-content) 要求是绝对关键的指标，在这种情况下，服务器端渲染 (SSR) 可以帮助你实现最佳的初始加载性能。</p>
+<h2 id="服务器端渲染-vs-预渲染-SSR-vs-Prerendering"><a href="#服务器端渲染-vs-预渲染-SSR-vs-Prerendering" class="headerlink" title="服务器端渲染 vs 预渲染 (SSR vs Prerendering)"></a>服务器端渲染 vs 预渲染 (SSR vs Prerendering)</h2><p>如果你调研服务器端渲染 (SSR) 只是用来改善少数营销页面（例如 <code>/</code>, <code>/about</code>, <code>/contact</code> 等）的 SEO，那么你可能需要<strong>预渲染</strong>。无需使用 web 服务器实时动态编译 HTML，而是使用预渲染方式，在构建时 (build time) 简单地生成针对特定路由的静态 HTML 文件。优点是设置预渲染更简单，并可以将你的前端作为一个完全静态的站点。</p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><blockquote>
 <p><a href="https://www.nuxtjs.cn/guide">https://www.nuxtjs.cn/guide</a></p>
 </blockquote>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><blockquote>
@@ -4046,7 +4069,12 @@ let stu = students.find((item) =&gt; &#123;
 <blockquote>
 <p> 部署后的启动入口文件路径</p>
 </blockquote>
-<p>node_modules/nuxt/bin/nuxt.js</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">node_modules/nuxt/bin/nuxt.js</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <p>0.0.0.0意味着<strong>监听每一个可用的网络接口</strong> 这样 无论是内网还是外网都可以访问了</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server: &#123;</span><br><span class="line">    port: 3000,</span><br><span class="line">    host: &#x27;0.0.0.0&#x27;,</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
@@ -15653,6 +15681,331 @@ match
       </categories>
       <tags>
         <tag>utils</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>video标签</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/video%E6%A0%87%E7%AD%BE/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center"><strong>属性</strong></th>
+<th align="center"><strong>值</strong></th>
+<th align="center"><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">autoplay</td>
+<td align="center">autoplay</td>
+<td align="center">如果出现该属性，则视频在就绪后马上播放。</td>
+</tr>
+<tr>
+<td align="center">controls</td>
+<td align="center">controls</td>
+<td align="center">如果出现该属性，则向用户显示控件，比如播放按钮。</td>
+</tr>
+<tr>
+<td align="center">loop</td>
+<td align="center"><em>loop</em></td>
+<td align="center">如果出现该属性，则当媒介文件完成播放后再次开始播放。</td>
+</tr>
+<tr>
+<td align="center">muted</td>
+<td align="center">muted</td>
+<td align="center">规定视频的音频输出应该被静音。</td>
+</tr>
+<tr>
+<td align="center">poster</td>
+<td align="center"><em>URL</em></td>
+<td align="center">规定视频下载时显示的图像，或者在用户点击播放按钮前显示的图像。</td>
+</tr>
+<tr>
+<td align="center">preload</td>
+<td align="center">preload</td>
+<td align="center">如果出现该属性，则视频在页面加载时进行加载，并预备播放。如果使用 “autoplay”，则忽略该属性。</td>
+</tr>
+<tr>
+<td align="center">src</td>
+<td align="center"><em>url</em></td>
+<td align="center">要播放的视频的 URL。</td>
+</tr>
+</tbody></table>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span></span></span><br><span class="line"><span class="tag">  <span class="attr">src</span>=<span class="string">&quot;.../xx.mp4&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">controls</span>=<span class="string">&quot;controls&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">autoplay</span></span></span><br><span class="line"><span class="tag">  <span class="attr">loop</span></span></span><br><span class="line"><span class="tag">  <span class="attr">controls</span></span></span><br><span class="line"><span class="tag">  <span class="attr">muted</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文本溢出省略</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E7%9C%81%E7%95%A5/</url>
+    <content><![CDATA[<h2 id="不支持多行文本溢出显示省略号"><a href="#不支持多行文本溢出显示省略号" class="headerlink" title="不支持多行文本溢出显示省略号"></a>不支持多行文本溢出显示省略号</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
+
+<h2 id="WebKit-浏览器或移动端的页面"><a href="#WebKit-浏览器或移动端的页面" class="headerlink" title="WebKit 浏览器或移动端的页面"></a>WebKit 浏览器或移动端的页面</h2><p>这个属性比较合适 WebKit 浏览器或移动端（绝大部分是 WebKit 内核的）浏览器。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">overflow</span>: hidden;</span><br><span class="line"><span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line"><span class="attribute">display</span>: -webkit-box;</span><br><span class="line">-webkit-line-clamp: <span class="number">2</span>;</span><br><span class="line">-webkit-box-orient: vertical;</span><br></pre></td></tr></table></figure>
+
+<p>在 WebKit 浏览器或移动端（绝大部分是 WebKit 内核的浏览器）的页面实现比较简单，可以直接使用 WebKit 的 CSS 扩展属性(WebKit 是私有属性)<code>-webkit-line-clamp</code> ；注意：这是一个 不规范的属性（<a href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-UnsupportedProperties">unsupported WebKit property</a>），它没有出现在 CSS 规范草案中。</p>
+<p><code>-webkit-line-clamp</code>用来限制在一个块元素显示的文本的行数。 为了实现该效果，它需要组合其他的 WebKit 属性。查看 <code>text-overflow</code> 属性文档：<a href="https://www.html.cn/book/css/webkit/text/line-clamp.htm">https://www.html.cn/book/css/webkit/text/line-clamp.htm</a></p>
+<p>常见结合属性：</p>
+<ol>
+<li><code>display: -webkit-box;</code> 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示 。</li>
+<li><code>-webkit-box-orient</code> 必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式 。</li>
+<li><code>text-overflow: ellipsis;</code>，可以用来多行文本的情况下，用省略号“…”隐藏超出范围的文本 。查看 <code>text-overflow</code> 属性文档：<a href="https://www.html.cn/book/css/properties/user-interface/text-overflow.htm">https://www.html.cn/book/css/properties/user-interface/text-overflow.htm</a></li>
+</ol>
+<h3 id="跨浏览器兼容的方案"><a href="#跨浏览器兼容的方案" class="headerlink" title="跨浏览器兼容的方案"></a>跨浏览器兼容的方案</h3><p>比较靠谱简单的做法就是设置相对定位的容器高度，用包含省略号(…)的元素模拟实现；</p>
+<p>例如：</p>
+<p>css 代码:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.4em</span>; <span class="comment">/* 3 times the line-height to show 3 lines */</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">4.2em</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;...&#x27;</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span> <span class="number">1px</span> <span class="number">45px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">/newimg88/2014/09/ellipsis_bg.png</span>) repeat-y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>看 demo：</p>
+<iframe allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="265" name="cp_embed_1" scrolling="no" src="https://codepen.io/feiwen8772/embed/gQJXzO?height=265&amp;theme-id=0&amp;slug-hash=gQJXzO&amp;default-tab=result&amp;animations=run&amp;editable=&amp;embed-version=2&amp;user=feiwen8772&amp;name=cp_embed_1" title="CodePen Embed" loading="lazy" id="cp_embed_gQJXzO" style="box-sizing: border-box; max-width: 100%; display: block; margin: 0px auto 16px; width: 718px; overflow: hidden;"></iframe>
+
+<p>这里注意几点：</p>
+<ol>
+<li>height 高度真好是<code>line-height</code>的 3 倍；</li>
+<li>结束的省略好用了半透明的 png 做了减淡的效果，或者设置背景颜色；</li>
+<li>IE6-7 不显示<code>content</code>内容，所以要兼容 IE6-7 可以是在内容中加入一个标签，比如用<code>&lt;span class=&quot;line-clamp&quot;&gt;...&lt;/span&gt;</code>去模拟；</li>
+<li>要支持 IE8，需要将<code>::after</code>替换成<code>:after</code>；</li>
+</ol>
+<h3 id="JavaScript-方案"><a href="#JavaScript-方案" class="headerlink" title="JavaScript 方案"></a>JavaScript 方案</h3><p>用 js 也可以根据上面的思路去模拟，实现也很简单，推荐几个做类似工作的成熟小工具：</p>
+<h4 id="1-Clamp-js"><a href="#1-Clamp-js" class="headerlink" title="1.Clamp.js"></a>1.Clamp.js</h4><p>下载及文档地址：<a href="https://github.com/josephschmitt/Clamp.js">https://github.com/josephschmitt/Clamp.js</a><br>使用也非常简单：</p>
+<p>js 代码:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;clamp-this-module&#x27;</span>)</span><br><span class="line">$clamp(<span class="built_in">module</span>, &#123; <span class="attr">clamp</span>: <span class="number">3</span> &#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-jQuery-插件-jQuery-dotdotdot"><a href="#2-jQuery-插件-jQuery-dotdotdot" class="headerlink" title="2.jQuery 插件-jQuery.dotdotdot"></a>2.jQuery 插件-jQuery.dotdotdot</h4><p>这个使用起来也很方便：</p>
+<p>js 代码:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">&quot;#wrapper&quot;</span>).dotdotdot(&#123;        <span class="comment">//  configuration goes here    &#125;);</span></span><br><span class="line"></span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>滚动条设置</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E6%BB%9A%E5%8A%A8%E6%9D%A1%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="webkit-scrollbar-滚动条的设置"><a href="#webkit-scrollbar-滚动条的设置" class="headerlink" title="::-webkit-scrollbar 滚动条的设置"></a>::-webkit-scrollbar 滚动条的设置</h1><ul>
+<li>::-webkit-scrollbar 滚动条整体部分</li>
+<li>::-webkit-scrollbar-thumb 滚动条里面的小方块，能上下左右移动（取决于是垂直滚动条还是水平滚动条）</li>
+<li>::-webkit-scrollbar-track 滚动条的轨道（里面装有 thumb）</li>
+<li>::-webkit-scrollbar-button 滚动条轨道两端的按钮，允许通过点击微调小方块的位置</li>
+<li>::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）</li>
+<li>::-webkit-scrollbar-corner 边角，及两个滚动条的交汇处</li>
+<li>::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件</li>
+</ul>
+<h5 id="自定义滚动条简单版："><a href="#自定义滚动条简单版：" class="headerlink" title="自定义滚动条简单版："></a>自定义滚动条简单版：</h5><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span>::-webkit-scrollbar &#123;</span><br><span class="line">  width: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*定义滚动条的轨道，内阴影及圆角*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span>::-webkit-scrollbar-track &#123;</span><br><span class="line">  -webkit-box-shadow: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f5f5f5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*定义滑块，内阴影及圆角*/</span></span><br><span class="line"><span class="selector-class">.scrollbar</span>::-webkit-scrollbar-thumb &#123;</span><br><span class="line">  /*width: <span class="number">10px</span>;*/</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.3</span>);</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#555</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>斜切</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E6%96%9C%E5%88%87/</url>
+    <content><![CDATA[<p>HTML</p>
+<p><img src="https://img-blog.csdnimg.cn/20181203161923958.png" alt="img"></p>
+<hr>
+<p>效果图及 css 写法</p>
+<p><img src="https://img-blog.csdnimg.cn/20181203161008518.png" alt="img"></p>
+<p><img src="https://img-blog.csdnimg.cn/20181203161512333.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.rectangle</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">305px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">135deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) top right;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20181203161831624.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"> <span class="selector-class">.rectangle</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">305px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">75px</span>;</span><br><span class="line">    <span class="attribute">background</span>: </span><br><span class="line">            <span class="built_in">linear-gradient</span>(-<span class="number">135deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) top right;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/2018120317221413.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.rectangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">305px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">75px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) bottom right,</span><br><span class="line">    <span class="built_in">linear-gradient</span>(-<span class="number">135deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) top right;</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20181203172333678.png" alt="img"></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.rectangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">305px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">75px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">135deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) top left, <span class="built_in">linear-gradient</span>(</span><br><span class="line">        <span class="number">45deg</span>,</span><br><span class="line">        transparent <span class="number">52px</span>,</span><br><span class="line">        <span class="number">#ffffff</span> <span class="number">0</span></span><br><span class="line">      ) bottom left,</span><br><span class="line">    <span class="built_in">linear-gradient</span>(-<span class="number">45deg</span>, transparent <span class="number">52px</span>, <span class="number">#ffffff</span> <span class="number">0</span>) bottom right, <span class="built_in">linear-gradient</span>(</span><br><span class="line">        -<span class="number">135deg</span>,</span><br><span class="line">        transparent <span class="number">52px</span>,</span><br><span class="line">        <span class="number">#ffffff</span> <span class="number">0</span></span><br><span class="line">      ) top right;</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>边框流光</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E8%BE%B9%E6%A1%86%E6%B5%81%E5%85%89/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span></span><br><span class="line">        可放内容</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;animate-border&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="sass-文件"><a href="#sass-文件" class="headerlink" title="sass 文件"></a>sass 文件</h1><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="comment">/* border: 1px solid rgba(32,254,255,.3); */</span></span><br><span class="line">  <span class="comment">/* 宽高和相对定位是一定要给的,因为这会影响.animate-border子元素的定位 */</span></span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/* 利用伪元素和两个i元素产生4条线 */</span></span><br><span class="line">  <span class="selector-class">.animate-border</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    &amp;<span class="selector-pseudo">::before</span>,</span><br><span class="line">    &amp;<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">i</span> &#123;</span><br><span class="line">      <span class="attribute">position</span>: absolute;</span><br><span class="line">      <span class="attribute">display</span>: inline-block;</span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">2px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">      <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">left</span>: -<span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">background-image</span>: linear-gradient(<span class="number">90deg</span>, transparent, <span class="number">#03e9f4</span>);</span><br><span class="line">      <span class="comment">/* name  duration timing-function delay iteration-count diraction */</span></span><br><span class="line">      <span class="attribute">animation</span>: one <span class="number">4s</span> linear infinite;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">i</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>) &#123;</span><br><span class="line">      <span class="attribute">top</span>: -<span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">background-image</span>: linear-gradient(<span class="number">180deg</span>, transparent, <span class="number">#03e9f4</span>);</span><br><span class="line">      <span class="attribute">animation</span>: two <span class="number">4s</span> linear <span class="number">1s</span> infinite;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;<span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">      <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">right</span>: -<span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">background-image</span>: linear-gradient(-<span class="number">90deg</span>, transparent, <span class="number">#03e9f4</span>);</span><br><span class="line">      <span class="attribute">animation</span>: three <span class="number">4s</span> linear <span class="number">2s</span> infinite;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">i</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">      <span class="attribute">bottom</span>: -<span class="number">100%</span>;</span><br><span class="line">      <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">      <span class="attribute">background-image</span>: linear-gradient(<span class="number">360deg</span>, transparent, <span class="number">#03e9f4</span>);</span><br><span class="line">      <span class="attribute">animation</span>: four <span class="number">4s</span> linear <span class="number">3s</span> infinite;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> one &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  50%,</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> two &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  50%,</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> three &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  50%,</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> four &#123;</span><br><span class="line">  0% &#123;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  50%,</span><br><span class="line">  100% &#123;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>荧光边框</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E8%8D%A7%E5%85%89%E8%BE%B9%E6%A1%86/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#060c21</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Poppins&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#060c21</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*一个溢出的盒子作为边框，添加背景后形成光源效果*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="comment">/*元素堆叠顺序*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*另一个溢出的盒子，模糊形成光晕效果*/</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#FFFFFF</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">2</span>;</span><br><span class="line">    <span class="comment">/*添加模糊滤镜*/</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">40px</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="comment">/*三色渐变，中间为背景色，融入背景*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">235deg</span>, <span class="number">#89ff00</span>, <span class="number">#060c21</span>, <span class="number">#00bcd4</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>炫光按钮</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E7%82%AB%E5%85%89%E6%8C%89%E9%92%AE/</url>
+    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="comment">/* background: linear-gradient(90deg, #845EC2, #5EC291, #ffeb3b, #C28C5E); */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>, -<span class="number">50%</span>);</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, <span class="number">#03a9f4</span>, <span class="number">#f441a5</span>, <span class="number">#ffeb3b</span>, <span class="number">#03a9f4</span>);</span><br><span class="line">  <span class="comment">/* background: linear-gradient(90deg, #845EC2, #5EC291, #ffeb3b, #C28C5E); */</span></span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">400%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">  <span class="comment">/* 大写 */</span></span><br><span class="line">  <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, <span class="number">#03a9f4</span>, <span class="number">#f441a5</span>, <span class="number">#ffeb3b</span>, <span class="number">#03a9f4</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">400%</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">20px</span>);</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: sun <span class="number">8s</span> infinite;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">animation</span>: sun <span class="number">8s</span> infinite;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> sun &#123;</span><br><span class="line">  <span class="number">100%</span> &#123;</span><br><span class="line">    <span class="attribute">background-position</span>: -<span class="number">400%</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>流光<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>遮罩层</title>
+    <url>/taiaiac.gitee.io/2020/12/30/HTML_Css/%E9%81%AE%E7%BD%A9%E5%B1%82/</url>
+    <content><![CDATA[<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box2&quot;</span>&gt;</span>遮罩层<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.1</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">400px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.1</span>);</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box1</span><span class="selector-pseudo">:hover</span> + <span class="selector-class">.box2</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0.8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>霓虹灯效果</title>
+    <url>/taiaiac.gitee.io/2021/06/11/HTML_Css/%E9%9C%93%E8%99%B9%E7%81%AF%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;text-effect&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>J<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>Q<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>u<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>e<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>r<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>y<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Css"><a href="#Css" class="headerlink" title="Css"></a>Css</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#2c2c54</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Monoton&#x27;</span>, cursive;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">animation</span>: animate linear <span class="number">2000ms</span> infinite;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 等待时间设置 */</span></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">1</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">0s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">100ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">3</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">200ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">4</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">300ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">5</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">400ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">6</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">500ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">7</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">600ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">8</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">700ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">9</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">800ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.text-effect</span> <span class="selector-tag">span</span><span class="selector-pseudo">:nth-child</span>(<span class="number">10</span>n) &#123;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">900ms</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> animate &#123;</span><br><span class="line">    <span class="number">0%</span> &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.3</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="number">100%</span> &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">        <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">80px</span> Red, <span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> orange, <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> DarkRed;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">only (限定某种设备) </span></span><br><span class="line"><span class="comment">screen 彩色电脑屏幕</span></span><br><span class="line"><span class="comment">and  被称为关键字，其他关键字还包括  not (排除某种设备)</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">990px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.text-effect</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">65px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">767px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.text-effect</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">479px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.text-effect</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">36px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> <span class="keyword">only</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">359px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.text-effect</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">27px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>HTML、CSS</category>
+      </categories>
+      <tags>
+        <tag>HTML、CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub上部署hexo博客</title>
+    <url>/taiaiac.gitee.io/2021/06/10/hexo/GitHub%E4%B8%8A%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="GitHub上部署hexo博客"><a href="#GitHub上部署hexo博客" class="headerlink" title="GitHub上部署hexo博客"></a>GitHub上部署hexo博客</h1><p>今天gitee上部署的博客被莫名其妙封禁了,也没办法重新部署,只好在github上重新部署了一下  </p>
+<h2 id="1-创建仓库"><a href="#1-创建仓库" class="headerlink" title="1.创建仓库"></a>1.创建仓库</h2><ul>
+<li>右上角创建新仓库</li>
+<li>仓库名+<code>.github.io</code></li>
+<li>settings</li>
+<li>Pages</li>
+<li>启用Pages服务</li>
+<li>添加基础配置</li>
+</ul>
+<h2 id="2-更改配置文件-config-yml"><a href="#2-更改配置文件-config-yml" class="headerlink" title="2.更改配置文件 _config.yml"></a>2.更改配置文件 <code>_config.yml</code></h2><ul>
+<li>配置项目地址<code>url</code><ul>
+<li>项目地址为仓库地址</li>
+<li>如 : <em><a href="https://github.com/TaiAiAc/taiaiac_blog.github.io">https://github.com/TaiAiAc/taiaiac_blog.github.io</a></em></li>
+</ul>
+</li>
+<li>配置项目根目录<code>root</code><ul>
+<li>根目录为仓库名</li>
+<li>如 :  <em>/taiaiac_blog.github.io</em> </li>
+</ul>
+</li>
+<li>配置仓库地址 <code>repo</code><ul>
+<li>仓库地址</li>
+<li>如 :  <a href="https://github.com/TaiAiAc/taiaiac_blog.github.io">https://github.com/TaiAiAc/taiaiac_blog.github.io</a> </li>
+</ul>
+</li>
+</ul>
+<h2 id="3-配置自定义域名"><a href="#3-配置自定义域名" class="headerlink" title="3.配置自定义域名"></a>3.配置自定义域名</h2><h4 id="前置-需要拥有域名"><a href="#前置-需要拥有域名" class="headerlink" title="前置:需要拥有域名"></a>前置:需要拥有域名</h4><h4 id="一级域名配置"><a href="#一级域名配置" class="headerlink" title="一级域名配置"></a>一级域名配置</h4><ul>
+<li>需要dns解析</li>
+<li>解析后添加记录</li>
+<li>添加远程仓库地址</li>
+<li>添加一级域名解析</li>
+</ul>
+<p>需要终端ping+仓库名,得到的ip填入@的记录值中</p>
+<table>
+<thead>
+<tr>
+<th align="center">主机记录</th>
+<th align="center">记录类型</th>
+<th align="center">记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">@</td>
+<td align="center">A</td>
+<td align="center">如:  0.0.0.0</td>
+</tr>
+<tr>
+<td align="center">www</td>
+<td align="center">CNAME</td>
+<td align="center">如:    taiaiac_blog.github.io.</td>
+</tr>
+</tbody></table>
+<h4 id="二级域名配置"><a href="#二级域名配置" class="headerlink" title="二级域名配置"></a>二级域名配置</h4><p>多一步骤  , 增加一条解析二级域名的操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">主机记录</th>
+<th align="center">记录类型</th>
+<th align="center">记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">@</td>
+<td align="center">A</td>
+<td align="center">如:  0.0.0.0</td>
+</tr>
+<tr>
+<td align="center">www</td>
+<td align="center">CNAME</td>
+<td align="center">如:    taiaiac_blog.github.io.</td>
+</tr>
+<tr>
+<td align="center">如: zhang</td>
+<td align="center">CNAME</td>
+<td align="center">如:    taiaiac_blog.github.io.</td>
+</tr>
+</tbody></table>
+<h2 id="4-添加远程地址"><a href="#4-添加远程地址" class="headerlink" title="4.添加远程地址"></a>4.添加远程地址</h2><p>自定义域名后需要再次修改配置</p>
+<ul>
+<li>url 修改为当前域名地址</li>
+<li>root  修改为 <code>/</code></li>
+<li>远程仓库地址不变</li>
+</ul>
+<h2 id="5-添加CNAME文件"><a href="#5-添加CNAME文件" class="headerlink" title="5.添加CNAME文件"></a>5.添加<code>CNAME</code>文件</h2><p>自定义域名通过CNAME文件中填写的地址为博客地址,hexo每次更新都会覆盖仓库内容,需要每次手动添加<code>CNAME</code>文件</p>
+<p>文件内容为</p>
+<p>如 : <a href="http://www.baidu.com/">www.baidu.com</a></p>
+<p>填写: </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">baidu.com</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
